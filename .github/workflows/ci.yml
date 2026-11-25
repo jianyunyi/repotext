@@ -1,0 +1,49 @@
+name: RepoTest CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  GOTOOLCHAIN: local
+  REPOTEST_RUNNER_ENABLED: "0"
+  REPOTEST_AC008_ACCEPTED: "0"
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: Go tests
+        run: go test -p=1 -count=1 ./...
+      - name: Go vet
+        run: go vet ./...
+      - name: Go build
+        run: go build ./...
+
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - name: Go tests
+        run: go test -p=1 -count=1 ./...
+      - name: Go vet
+        run: go vet ./...
+      - name: Go build
+        run: go build ./...
+      - name: Shell syntax
+        run: |
+          for script in scripts/*.sh; do
+            sh -n "$script" || exit 1
+          done
+      - name: Health probe boundaries
+        run: python3 scripts/test-check-health.py

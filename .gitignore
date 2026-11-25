@@ -1,0 +1,17 @@
+/work/
+__pycache__/
+*.py[cod]
+*.exe
+*.test
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+/repotest
+/repotest-backup

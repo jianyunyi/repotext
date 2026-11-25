@@ -1,0 +1,30 @@
+[Unit]
+Description=RepoTest local repository test service
+Wants=network-online.target
+After=network-online.target docker.service
+Requires=docker.service
+
+[Service]
+Type=simple
+User=repotest
+Group=repotest
+SupplementaryGroups=docker
+EnvironmentFile=/etc/repotest/repotest.env
+ExecStart=/usr/local/libexec/repotest
+Restart=on-failure
+RestartSec=5s
+TimeoutStopSec=30s
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateDevices=true
+LockPersonality=true
+MemoryDenyWriteExecute=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+ReadWritePaths=/var/lib/repotest
+
+[Install]
+WantedBy=multi-user.target
