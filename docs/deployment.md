@@ -2,6 +2,16 @@
 
 This document describes a dry-runable deployment package. It does not authorize installation, service enablement, LAN exposure, or execution of untrusted repositories.
 
+## Current target continuation (2026-11-25)
+
+The user explicitly approved the reviewed [2026-11-25 target plan](superpowers/plans/2026-11-25-s5-target-deployment.md). Installation, fixed work storage, DB/WAL/SHM recovery drill and monitoring passed in r22; full Linux acceptance r23 passed (164 tests, no skips/failures). The target now has an active loopback-only service with runner/LAN disabled. Seven-day observation began at `2026-11-25T06:36:33Z`; its candidate end is `2026-12-02T06:36:33Z`. Installation PASS and an initial archived sample do not accept that future observation window.
+
+The deployed files are preserved byte-for-byte in `deploy/var-lib-repotest-work.mount`, `deploy/repotest-work.conf`, `deploy/repotest-health.service`, `deploy/repotest-health.timer`, `deploy/repotest-health-export.service`, `deploy/repotest-health-export.timer` and `scripts/export-health.sh`. The work drop-in is installed as `/etc/systemd/system/repotest.service.d/work-mount.conf`; the exporter is installed executable as `/usr/local/libexec/repotest-export-health`. Five-minute health sampling uses only the health unit journal, including state/storage fields even after probe failure. Hourly root-private JSON exports advance an adjacent since/until checkpoint only after valid export under a nonblocking `flock`; inclusive boundaries are deduplicated by `__CURSOR`. This automates the approved observation archiving, with a shorter window than the original daily procedure. Account for missing samples, rotation and incidents at final acceptance.
+
+Actual installation/recovery evidence is in private `/var/backups/repotest-deployment.bMqjzCah`; the stopped-service original DB/WAL/SHM set is in `/var/lib/repotest/restore-before.AFxt6ttl`. Observation files/checkpoints live under root-owned 0700 `/var/backups/repotest`. These directories contain no material intended for Git. Use `systemctl list-timers repotest-health.timer repotest-health-export.timer` and only the observer-unit journal for monitoring; the main service journal contains pairing codes and must be kept private/redacted.
+
+The generic installation excerpt below does not create a fixed-capacity work mount. Provision the approved persistent work filesystem and install its mount dependency/startup check before starting the service. The target plan recommends a new preallocated 2 GiB ext4 image, `mkfs.ext4 -E nodiscard` and allocated-block verification, a dedicated mount unit and `mountpoint` ExecStartPre; fail if any target object already exists. Startup needs bounded health readiness, and restore must demonstrate identifiable state rather than only an empty database. Default runner/LAN remain disabled; repeat hard-quota pressure and HTTP cleanup against the new persistent mount before any runner activation. The host filesystem's observed ext4 type is not proof of the hosting platform's lifecycle retention policy.
+
 ## Layout
 
 - `deploy/repotest.service` is a systemd template for a dedicated `repotest` user.
@@ -106,7 +116,7 @@ systemctl start repotest.service
 sh scripts/check-health.sh http://127.0.0.1:8080/healthz
 ```
 
-The backup command verifies both source and restored output before startup. Any failed step blocks subsequent steps; keep the service stopped and retain `recovery_dir`. To undo a failed restore, preserve the replacement database and its sidecars separately, then restore the complete original set from `recovery_dir` while stopped, confirm ownership and integrity, and rerun the preflight. This procedure still requires an actual target service restore drill; the instructions alone are not acceptance evidence.
+The backup command verifies both source and restored output before startup. Any failed step blocks subsequent steps; keep the service stopped and retain `recovery_dir`. To undo a failed restore, preserve the replacement database and its sidecars separately, then restore the complete original set from `recovery_dir` while stopped, confirm ownership and integrity, and rerun the preflight. The r22 actual target drill exercised this procedure with a real preserved DB/WAL/SHM set and a synthetic record; instructions alone remain insufficient for a new target.
 
 ## Monitoring and rollback
 
@@ -122,4 +132,4 @@ Rollback is: stop the service, restore the previous binary and verified database
 
 The smoke set is Windows Go tests, vet and build plus the current `scripts/verify-linux-acceptance.sh` entry point, which includes S4 isolation/quota/HTTP cleanup and S5 backup/health/preflight. Historical r10/r14 results do not verify later repairs. Preflight now rejects symlinks in any database/work path component, including dangling database links and trailing-slash paths, and validates loopback ports in the service's supported 0–65535 range. Port 0 is an ephemeral development listener; the default deployment and health probe use the explicit port 8080.
 
-Actual target installation, service restore drill and seven-day observation remain incomplete S5 evidence; stability is not accepted before that observation. Public exposure and unfamiliar-user execution require a separate scope decision. Default runner and LAN settings remain disabled.
+Actual target installation and the service restore drill passed in r22. Seven-day observation remains incomplete S5 evidence; stability is not accepted before that observation. Public exposure and unfamiliar-user execution require a separate scope decision. Default runner and LAN settings remain disabled.

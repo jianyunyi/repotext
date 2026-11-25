@@ -1,0 +1,10 @@
+[Unit]
+Description=RepoTest fixed-capacity work filesystem
+Before=repotest.service
+[Mount]
+What=/var/lib/repotest-work.ext4
+Where=/var/lib/repotest/work
+Type=ext4
+Options=loop,nodev,nosuid,noexec
+[Install]
+WantedBy=local-fs.target

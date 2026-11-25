@@ -1,0 +1,9 @@
+[Unit]
+Description=Archive RepoTest health observation hourly
+[Timer]
+OnCalendar=hourly
+AccuracySec=1s
+Persistent=true
+Unit=repotest-health-export.service
+[Install]
+WantedBy=timers.target

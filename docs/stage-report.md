@@ -1,10 +1,82 @@
 # RepoTest 阶段报告
 
 <!-- 状态块 -->
-当前阶段：S5 部署与运维；状态：进行中；2026-11-24 原目录合并、本机回归及Linux r17全套通过，目标部署准备待运行
-未关闭阻断项：ISSUE-010 实际systemd安装/恢复/7天观察；延期风险：ISSUE-004；待决策：目标systemd/权限/已有服务事实及具体安装方案，代理内SSH读取仍受管拒绝（用户授权已明确）；下一步：按deployment.md运行准备入口收集事实和二进制SHA，七天观察未开始；执行默认关闭。
+当前阶段：S5 部署与运维；状态：进行中；2026-11-25 r22实际安装/工作盘/恢复/监控及r23完整Linux回归通过，七天观察进行中
+未关闭阻断项：ISSUE-010 七天覆盖未完成；ISSUE-025/017/013已关闭；延期风险：ISSUE-004；待决策：无，用户已批准具体部署并在中断后continue。下一步：2026-12-02 14:36:33 +08:00后检查完整样本/缺失/故障及退出回归；runner/LAN关闭。实际主机重启和平台生命周期持久性未测，不外推。
 
-## 2026-11-24 · Linux r17通过与部署准备
+## 2026-11-25 · S5 实际安装、恢复与观察启动
+
+### 结论与状态
+
+实际部署、固定work容量、恢复演练和监控启动通过，S5整体进行中，七天尚未到。用户“批准”覆盖instabox-test-env上的具体新安装/2 GiB盘/恢复/监控；后续continue保留原授权。Full/连续执行；基线a7fe305加本轮开始的6个文档.snapshot，位置work/s5-install-20261125-r22/baseline。产品Go/前端字节未修改；新增7个部署配置取回目标实际字节并核对SHA，保存在deploy/及scripts/export-health.sh。独立s5_execution_review复核执行脚本及运行证据；s5_monitor_prepare单独实现监控并运行本机检查，最终复核记录见同目录。
+
+### 需要你决定的事
+
+无。安装/演练/健康观察授权已满足，未重复索取。七天观察窗口从2026-11-25T06:36:33Z开始，候选结束2026-12-02T06:36:33Z（北京时间两日均14:36:33）；达到时间不自动等于覆盖通过，须计算实际采样、缺失和故障。未启用runner/LAN或执行主机重启。
+
+### 已完成、优化与代价、未完成
+
+- 预检固定六产物SHA、root/systemd/docker、路径与端口；root私有副本二次哈希后安装两个二进制、默认环境、专用账户/home及unit，健康启动。main active、NRestarts0，home/work0700、DB/image/env0600。root私有证据/var/backups/repotest-deployment.bMqjzCah。
+- 2 GiB镜像大小2147483648字节，实际分配2147487744；nodiscard格式化、nodev/nosuid/noexec。真实repotest用户请求写2415919104字节，写到2022703104时ENOSPC并只删除自己压力文件；有效容量小于镜像总大小。私有mount namespace卸载准确work后同一guard rc32，宿主挂载仍在；停自有mount后service依赖恢复挂载且健康。额外临时systemd fixture的ExecStartPre status32、主touch未执行并清理/reset自身单元，未使真实主服务启动失败。
+- 停服无repotest进程，baseline备份，种子不可用synthetic session hash与原表计数；备份后fixture writer修改revoked1并无checkpoint退出，实际DB/WAL/SHM三件套全部保留到/var/lib/repotest/restore-before.AFxt6ttl；恢复验revoked0、清理种子、表计数原后全相等、完整性ok、属主/模式/preflight后健康启动。该新服务原计数全零，不虚构真实task/report数据恢复。
+- 安装五分钟health timer、小时root私有JSON导出timer/helper。source限定health unit，失败仍记录state/df；导出flock防重叠、成功有效JSON后推进相邻窗口checkpoint，按__CURSOR去重，未公开主服务配对码日志。首条完整样本已保存，06:49:27Z最终核对3条HEALTH_PASS/0FAIL、2个archives/33个unique entries，LastTrigger06:45Z证明真实定时执行，主服务异常重启0。
+- Windows test/vet/build/gofmt通过；完整Linux r23为164 PASS/0 SKIP/0 FAIL、stderr0/transfer_error null，包含S4资源/断网/硬quota/HTTP成功取消/最终清理与S5备份/health/preflight。
+
+复用现有Go、SQLite、systemd、ext4与已装flock/Python，无新增第三方依赖。增加root盘约2 GiB预分配及4个observer units/helper维护成本；小时归档将原批准的手工日窗口自动化，降低采样被轮转前未保存的机会，未测量性能收益。所有数据库、源包、原始日志和归档保留在私有work/或目标备份目录，不入Git。七天覆盖、主机重启、平台生命周期持久性、默认关闭部署的runner执行稳定性未完成/未验；新持久work上的runner HTTP变体须在将来启用前验证。
+
+### 告警与代码错误
+
+本轮安装、恢复和回归未发现新增产品代码错误。install/monitor stderr只有systemd为本次unit创建启用链接的信息；实际unit verify为空日志。预期ENOSPC、guard32及拒绝端口失败均为通过的失败路径检查，不计产品FAIL。中断前安装和mount已完成，续接先只读确认健康/未执行restore，未重跑安装或覆写旧资源。ISSUE-025/017/013运行证据已关闭；ISSUE-010七天覆盖未关闭，ISSUE-004风险延期。
+
+### 验收、证据和度量
+
+当轮分组结果由work/s5-install-20261125-r22/verified-summary.json列出；安装/挂载/恢复/monitor/final各自保留脚本SHA、stdout/stderr、exit/remote_exit/transfer_error。Windows与Linux分别有fresh logs；r23源包在归一化前84文件逐字节核验，Go/S4/S5通过。新增7配置另以目标实际SHA核验，其中export脚本和4个Python片段通过语法、本机cursor去重、导出失败/invalid/busy时checkpoint保持检查，且真实systemd运行/首样本归档通过。既有Go未变；不把7天未来结果或静态阅读计为运行PASS。
+
+14 PASS、0 FAIL、0 BLOCKED、1 NOT RUN（七天覆盖）。实现7文件、测试0文件、文档6文件；增删行与基线/终点SHA按真实diff写在diff-stat.json，包含新增配置，不含work检查片段、日志、二进制或缓存。实现返工0轮，文档返工1轮：独立复核修正README/deployment/plan旧状态；脚本首次成功，无产品修复；额外fixture门禁验证是补齐同项集成证据，不删除或放松标准。阻塞0次：沿用已存SSH权限规则，用户主动中断后从真实检查点恢复，不作为授权/环境阻塞。
+
+检查点保留用户指定GitHub上的版本、代码/文档SHA、每项实际日志和root恢复集；回退只停止本次health/export observers、RepoTest和自有mount并保留全部数据，不自动删账户/盘/备份。恢复失败按已保存完整三件套回退后再验integrity/ownership/preflight，实际本轮未发生失败回退。
+
+### 沟通与后续
+
+当前三文档和README统一为已批准、已安装/恢复/监控、七天进行中；问题权威字段在optimization-design.md总表，准备阶段的待批准/NOT RUN是下方历史。新operator配置已按目标字节保存，源码/文档与部署入口对应，产品默认关闭边界一致。持续观察只记录default-off服务；七天窗口结束后需重算真实样本/缺失/故障并重跑退出smoke再决定S5是否通过。
+
+## 历史：2026-11-25 · S5 目标部署准备与方案复核
+
+### 结论与状态
+
+部署准备已实现并在实际目标验证；S5整体待沟通，未实际安装。Git基线a7fe305a33fe554b5975f2c86e62e440fecf1faa，已按用户请求推送Github；本轮仅文档差异，工作区文件哈希及度量保存到work/s5-deploy-preparation-20261125-r20。Full/连续执行；独立s5_deployment_review检查实际r20日志、unit/env/备份源码和最终具体计划。完整Linux累积回归仍引用r17历史证据，本轮新增r21 S5夹具不代替实际服务验收。
+
+### 需要你决定的事
+
+批准在现有instabox-test-env上按superpowers/plans/2026-11-25-s5-target-deployment.md进行首次安装：创建专用账户/目录，安装核验二进制，建立2 GiB预分配ext4工作镜像及mount依赖，启动loopback/default-off服务，执行只触及该新服务数据库的备份恢复演练，启用五分钟health timer开始观察。当前约4.04 GiB根盘可用；镜像预分配后约余2 GiB。该容量是基于S4实测的推荐方案，用户尚未批准。无需重新批准既有SSH读取/临时构建。目标卷在托管平台的生命周期持久性须向平台设置核对；未从df推断永久保留。
+
+最终额外只读核对：/data/home位于独立/data盘(/dev/vdb)，可用16,509,224 KiB约15.7 GiB；/var/lib位于根盘(/dev/vda)。完整Linux smoke的第二个2 GiB临时quota镜像不争用部署剩余根盘空间，执行前仍须重查。新增probe/mount/drop-in/health unit路径不存在；该事实解决独立复核提出的容量关联疑问，不等于实际持久挂载验收。
+
+### 做了什么、优化与代价、未完成
+
+执行r20准备、核验84文件传输与六产物哈希；目标systemd running、sudo有效UID0、无既有repotest账户/服务/部署路径，8080无监听。准备产物位于/tmp/repotest-s5-prepared.oKH4ntJ9，计划锚定日志中的精确SHA。重跑Windows test/vet/build与目标r21 S5备份/health/路径门禁。更新设计/问题总表/运维入口及Git现状，修正旧顶层阶段状态。
+
+复用现有Go/SQLite、probe、systemd和已装挂载工具；只补具体安装计划，无新依赖或产品逻辑。预期收益为确保工作容量、挂载失效保护和恢复证据，未测量性能提升；成本是2 GiB预分配与新mount/health units维护。实际安装、持久mount/失效验证、恢复和七天观察NOT RUN；未启用runner/LAN。新持久work盘不能沿用临时盘的AC-008容量结论，runner启用前需重跑该盘压力与HTTP回归。
+
+### 告警与代码错误
+
+- ISSUE-025，S1部署验收缺口：通用安装只mkdir work。独立复核提出mount依赖/失效门禁；二次审阅发现mkfs默认discard可能使已分配镜像打孔，计划改-E nodiscard并检查blocks。方案已准备，实际验收前不关闭。
+- ISSUE-010实际部署/恢复/观察缺口和ISSUE-004共享内核/rootful风险仍保留。本轮Go及S5夹具检查未发现新增产品代码错误。
+- r19未提权SSH配置拒绝，随后r20提权解除。附加只读探测先遭Windows参数转义错误，再遭stdin BOM/CRLF异常，结果不作为完整PASS；保留target-facts.log和target-facts-verified.stderr.log为历史，后用简单无复杂引号SSH命令成功核实UID0、工具路径和磁盘，最终事实汇总记录其实际stdout。未修改SSH配置或用替代凭据绕过管理限制。
+
+### 验收与检查证据
+
+当轮结果以work/s5-deploy-preparation-20261125-r20/verified-summary.json为准。检查对象：a7fe305产品源码与工作区文档；r20/r21均在归一化CRLF前验证84源文件。准备（target/artifact）、Windows tests/vet/build、Linux S5 backup/health/preflight/static-unit、计划shell语法、独立复核和文档一致性分别列当前结果。实际install、persistent-mount failure、restore、seven-day observation均NOT RUN。历史探测失败不算当前产品测试FAIL，仍保留原证据。最小逻辑证据映射：备份独占/竞态/完整性→AC-009/r21六Go测试；health200/201/userinfo/hostname→AC-009/r21四场景；链接/权限/端口/default-off→AC-009/r21预检场景；mount/start/restore新增方案→ISSUE-025/010，目前只有准备和审查、运行NOT RUN。Windows和Linux变体分别报告，静态unit不证明服务安装。
+
+最终计数为12 PASS、0 FAIL、0 BLOCKED、4 NOT RUN（包括实际运行、哈希/语法及独立文档复核分组，复核PASS不作为安装PASS）。度量：6个文档文件、+277/-11行；实现/测试文件0，返工2轮，阻塞事件1次且已解除。来源为实际git diff与新增计划diff；独立代理最终另行重算84源哈希、核对六产物锚定及状态块，未发现剩余须修正项。平台卷生命周期持久性未核实，保留为安装前事实项。
+
+### 阶段度量、检查点与后续
+
+真实git diff及新增计划逐行计数分类保存到work/s5-deploy-preparation-20261125-r20/diff-stat.json，完整patch和终点文件SHA保存同目录；基线为a7fe305，终点为工作区文件SHA。本轮不改实现或测试文件；文档返工2轮（第一轮补nodiscard/已有probe拒覆盖及timer范围，第二轮补相邻完整日志导出窗口与成功后推进checkpoint）；补充探测的转义/编码输送修正单列操作尝试，未改产品。r19沙箱权限为一个阻塞事件，r20解除；具体部署等待批准是现有ISSUE-010授权关卡，未新算技术阻塞。排除work内归档、二进制、日志、缓存和检查副本。
+
+全文一致性：当前三文档状态统一为r20准备通过、实际安装待批准，ISSUE-010/025未关闭、ISSUE-004延期；Git现状与S3/r17退出状态已更新。2026-11-24及更早SSH拒绝/准备未运行保留为历史，由本节取代；不再据旧记录重复索要读取授权。恢复文档差异仅取回本轮精确文件，未执行目标服务回退。取得具体授权后按计划安装，成功安装/演练后才能开始真实七天观察。
+
+## 历史：2026-11-24 · Linux r17通过与部署准备
 
 用户在自己的PowerShell运行完整入口，r17于22:39 +08:00完成，exit_code=remote_exit_code=0、transfer_error=null、stderr0字节。主代理重新核对83文件manifest、tar及当前字节与目标逐项OK，并核对全套标记；Linux全量164 PASS/0 SKIP/0 FAIL，S4 CPU/PID/内存/只读/断网、硬quota、HTTP成功与取消、最终容器/网络清理均PASS；S5备份、health四场景及私有目录/链接/端口fixture全部PASS。目标证据 work/s5-linux-20261124-r17/verified-summary.json；原r16配置拒绝只作历史，不再将Linux回归标为阻塞。
 

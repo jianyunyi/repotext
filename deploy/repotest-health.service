@@ -1,0 +1,13 @@
+[Unit]
+Description=RepoTest health and storage observation
+[Service]
+Type=oneshot
+User=repotest
+Group=repotest
+ExecStart=/bin/sh /usr/local/libexec/repotest-check-health http://127.0.0.1:8080/healthz
+ExecStopPost=/usr/bin/systemctl show repotest.service -p ActiveState -p SubState -p NRestarts
+ExecStopPost=/usr/bin/df -P / /var/lib/repotest /var/lib/repotest/work
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true

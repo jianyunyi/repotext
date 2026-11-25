@@ -1,11 +1,12 @@
 # RepoTest 优化与修复设计
 
 <!-- 状态块 -->
-更新：2026-11-24；状态：进行中；当前维护目录 F:/repotext；合并和r17 Linux全套通过，ISSUE-021及Linux修复欠账已关闭。未关闭阻断项：ISSUE-010 实际安装/恢复/7天观察；延期风险 ISSUE-004；待决策：目标systemd/权限/现有服务事实与具体安装方案；代理内SSH读取仍受管拒绝，用户授权已经满足。下一步：执行准备入口，核对事实与二进制SHA再部署/恢复，观察未开始；默认runner/LAN关闭。权威目标证据 work/s5-linux-20261124-r17/verified-summary.json。
+更新：2026-11-25；状态：进行中；当前维护目录 F:/repotext。未关闭阻断项：ISSUE-010 七天观察未完成；延期风险 ISSUE-004。r22实际安装/固定work/恢复/监控与r23完整Linux回归通过，ISSUE-025/017/013已关闭；待决策：无，用户已批准具体部署。下一步核验2026-12-02T06:36:33Z后七天覆盖与退出回归；runner/LAN关闭。下方旧待授权/准备NOT RUN记述均为历史。
 
 ## 问题总表
 | 问题编号 | 所属阶段/验收 | 级别 | 类型 | 概要 | 状态 | 决策来源 |
 |---|---|---|---|---|---|---|
+| ISSUE-025 | S5/AC-009、AC-008工作盘 | S1 | 部署验收缺口 | 通用安装段只mkdir work，未建立持久固定容量挂载及失效启动门禁 | 已关闭；r22预分配/ENOSPC/隔离namespace同一guard拒绝/宿主依赖重挂载及cleanup PASS | 用户明确批准具体2 GiB工作盘与安装方案 |
 | ISSUE-024 | S5/AC-009 | S2 | 诊断准确性 | sudo -n true 被误标为安装权限，受限sudoers可能高估 | 已关闭；三场景RED/GREEN、八shell语法、84文件源包与独立复核PASS | 独立复核反馈；用户continue授权覆盖 |
 | ISSUE-022 | S5/AC-009 | S2 | 验证工具缺陷 | SSH 提前退出时 CopyTo 异常跳过 stdout/stderr/result 保存 | 已关闭；三场景 RED/GREEN、本轮 r16 完整失败日志与独立复核 | 2026-11-24 用户授权合并并继续 Linux 验收 |
 | ISSUE-023 | S5/AC-009 | S2 | 检查材料位置错误 | 本轮解包 .go 副本进入 go ./... 扫描导致首轮编译失败 | 已关闭；改为 _package，go list 5包，Go/vet/build 当前复验通过 | 本轮合并材料必要修正 |
@@ -14,21 +15,32 @@
 | ISSUE-014 | S3/AC-004 | S1 | 用户流程缺口 | 会话撤销缺生产管理入口 | 已关闭；同字节旧包Windows/Chrome及r17 Linux Go会话回归通过 | 原单用户和设备撤销需求 |
 | ISSUE-015 | S3/AC-002/003 | S1 | 用户流程缺口 | LAN 浏览器配对/只读页面缺失 | 已关闭；同字节旧包Windows/Chrome及r17 Linux LAN回归通过 | 原 LAN 只读与配对需求 |
 | ISSUE-016 | S3/AC-005 | S1 | 用户流程缺口 | 活动态删除控件与迟到响应隔离缺失 | 已关闭；旧包浏览器及r17 Linux删除/取消/资源清理通过 | 原删除/取消需求 |
-| ISSUE-017 | S5/AC-009 | S1 | 文档缺陷 | 安装说明缺二进制/属主/unit 与 reload | 已补齐说明；实际安装 NOT RUN | 既有 S5 准备授权 |
+| ISSUE-017 | S5/AC-009 | S1 | 文档缺陷 | 安装说明缺二进制/属主/unit 与 reload | 已关闭；r22实际二进制哈希/属主/权限/unit verify及健康启动PASS | 用户明确批准实际安装 |
 | ISSUE-018 | S5/AC-009 | S2 | 验证缺口 | CI 多路径 sh -n 仅覆盖首文件 | 已改逐文件检查，本轮七脚本 syntax PASS | 既有 S5 验证要求 |
 | ISSUE-019 | S5/AC-009 | S2 | 验证缺口 | Linux 入口缺 S5、传输清单未覆盖全部被验文件 | 已关闭；r17传输83文件全部OK，完整S4/S5入口通过 | 既有 S5 验证要求 |
 | ISSUE-011 | S5/AC-009 | S1 | 错误 | 并发备份失败时无条件删除目标，可能删除成功备份 | 已关闭；r17 Linux全量及S5备份竞争/失败清理回归PASS | 继续 S5 的既有修复授权 |
 | ISSUE-012 | S5/AC-009 | S1 | 错误 | health URL 的 userinfo 可绕过 loopback 限制；curl --fail 接受 201 | 已关闭；r17 Linux HTTP200/201/userinfo/hostname四场景PASS | 继续 S5 的既有修复授权 |
-| ISSUE-013 | S5/AC-009 | S1 | 文档缺陷 | 恢复流程缺少 WAL/SHM、属主和启动前完整性检查 | 说明已修正并独立复核；实际恢复 NOT RUN，归 ISSUE-010 | 继续 S5 的既有修复授权 |
+| ISSUE-013 | S5/AC-009 | S1 | 文档缺陷 | 恢复流程缺少 WAL/SHM、属主和启动前完整性检查 | 已关闭；r22实际完整三件套保留、备份恢复/演练行清理/integrity及健康PASS | 用户明确批准恢复演练 |
 | ISSUE-009 | S4/AC-008 | S1 | 错误/环境限制 | Linux 实测暴露 Git PAX 元数据误拒、依赖容器未打开 stdin、锁测试目录权限及目标 `.local` 0775 | 已关闭；r12 Linux 全套、quota 工作盘和 HTTP e2e 通过 | 用户授权继续 Linux 验收及必要修复；外部权限已具体审批 |
 | ISSUE-001 | S1/AC-002 | S1 | 风险 | LAN 只读与本机变更授权边界必须由后端强制 | LAN allowlist、loopback-only mutation 与 Host/Origin 检查已实现；loopback CSRF token 与 Host/Origin 已实现并通过本机及 Debian 进程验证；LAN listener 已绑定部署接口 allowlist；关闭依据见 ISSUE-008 的 2026-11-19 Linux 复验 | 用户明确 LAN 只读；实现措施为助手建议 |
 | ISSUE-002 | S1/AC-003 | S1 | 错误 | 旧 POST /tasks 曾绕过预览确认 | 当前 POST `/api/v1/tasks` 仅接受一次性持久化 preview token；固定 commit、loopback + CSRF 验证后事务创建 task/outbox。handler、任务/报告页面和目标 Linux HTTP worker 链路已通过 r8 验证；默认启动仍 runner disabled | 用户已授权继续 S4；仍沿用预览后明确确认 |
 | ISSUE-003 | S3/AC-002 | S1 | 风险 | cancel 管理路由未验证本机来源 | loopbackOnly + loopback IP Host/Origin 已实现；本机取消成功、LAN 来源拒绝测试通过 | 用户明确本机控制、LAN 只读 |
 | ISSUE-004 | S1/AC-008 | S1 | 限制 | 容器共享宿主 Linux 内核；rootful daemon 与其他应用共宿主 | AC-008 r10 已通过（含 ext4 工作盘硬 quota）；风险仍保留，执行不面向陌生代码或公网 | 用户已授权继续 S4；验收门槛来自修订设计 |
-| ISSUE-010 | S5/AC-009 | S1 | 验收缺口 | 实际 systemd 安装、备份恢复演练和长期观察尚未完成 | 产物与 dry-run 已完成；部署和 7 天观察待授权/验收；默认执行关闭 | 用户授权完成 S4 后进入 S5；具体产物为助手实施 |
+| ISSUE-010 | S5/AC-009 | S1 | 验收缺口 | 七天实际观察覆盖尚未完成 | r22安装/恢复/监控与r23回归PASS；观察2026-11-25T06:36:33Z开始，七天未到，不关闭 | 用户明确批准安装/恢复/健康观察并中断后continue |
+
 | ISSUE-005 | S1/AC-009 | S2 | 限制 | Linux 主机可用，但架构、内核、cgroups、容器运行时事实未核验 | 已核验：Debian 13 x86_64、cgroup v2、Docker 29.8.2；部署阶段仍需独立 quota/运维验收 | 用户提供环境事实，实际能力须现场读取 |
 | ISSUE-006 | S1/AC-007 | S2 | 风险 | 结果复用键需固定 Go、runner、配置 digest，唯一性和完成窗口需实现 | 已实现并通过 SQLite 并发、版本差异、完成窗口和重启 claim/lease 测试 | 用户明确缓存维度 |
 | ISSUE-007 | S3/AC-002/005 | S1 | 缺陷 | loopback 删除路由缺失、双 listener 非原子启动、localhost bind 可绕过来源策略 | 已关闭；本轮及后续 ISSUE-008/S4 集成验证通过 | 用户确认本机操作与 LAN 只读；实现为助手建议 |
+
+## ISSUE-025：持久工作盘与具体部署门禁
+
+- 发现基线：a7fe305；独立 s5_deployment_review 读取通用安装流程，确认其仅创建 /var/lib/repotest/work 普通目录，与 deployment.md 固定容量要求有差距。此为准备阶段历史观察；实际关闭依据见下述r22记录。
+- 影响及同类路径：通用 deployment.md 安装段与 deploy/repotest.service 缺持久挂载依赖；check-deployment.sh 只检查绝对路径/链接/权限/runner门禁，不证明磁盘硬容量。prepare-s5-deployment.sh 是临时构建和事实采集，不应为部署或容量兜底。既有 S4 临时2 GiB盘验收不证明新持久盘。
+- 方案：2026-11-25具体计划中新建2 GiB ext4镜像、专用mount unit、RequiresMountsFor和mountpoint ExecStartPre；镜像独占创建拒覆盖，fallocate后mkfs -E nodiscard防止打孔，并检查实际blocks×512。工作盘挂载后专用属主0700，nodev/nosuid/noexec；默认runner/LAN关闭。
+- 同次准备补有界健康等待，真实恢复用明确synthetic session验证状态，health timer只记录无秘密字段。无新依赖或产品代码改动；预期收益为堵住部署容量/启动与验收缺口，未测量性能收益。2 GiB预分配消耗目标约半数当前可用根盘空间，需明确批准并记录剩余量。
+- 复验：当前计划shell语法和独立审阅只能证明准备；实际mounted source/options/permissions、镜像分配、mount失效阻止启动、服务恢复与观察均按计划执行后才可关闭。启用runner前在持久work上重复AC-008压力/HTTP资源清理，不以静态unit检查代替。
+- 回退：先停健康timer，再停RepoTest和自有mount；保留镜像/DB/原始日志，不自动删除账户或数据。用户已明确批准该目标安装/挂载/恢复/观察；未自动删除账户或数据，未执行服务回退。
+- 当前关闭依据：r22 install/mount实际exit0，镜像大小2147483648、分配2147487744字节，repotest压力写2022703104字节后ENOSPC并清理；私有mount namespace卸载准确work后同一ExecStartPre命令rc32拒绝，宿主挂载仍保留；停自有mount后systemd依赖重挂载/健康PASS。该隔离变体验证不声称真实主服务发生启动失败；在新持久work上启用runner前仍需该变体HTTP执行/资源清理验证。
 
 ## ISSUE-024：准备脚本的sudo权限事实
 
@@ -88,6 +100,7 @@
 - 另有验收工具问题：Windows .NET SSH stdin 在压缩包前添加 UTF-8 BOM，远端 `od` 实测为 `ef bb bf 1f 8b`。驱动改用无 BOM 的 Console.InputEncoding，r3 已成功传输。Windows .NET Framework 不支持 StandardInputEncoding 的尝试未到达目标机。
 
 ## ISSUE-010：S5 部署与运维交付
+当前进展（2026-11-25）：r20准备exit0/stderr0，84源文件及六产物校验；r21 Linux备份/健康/预检/静态unit夹具通过，Windows test/vet/build通过。SSH沙箱直接调用仍拒绝配置，但提权现已正常；目标事实不再阻塞。具体计划见superpowers/plans/2026-11-25-s5-target-deployment.md，独立复核补充ISSUE-025；实际安装/恢复/观察待批准。以下2026-11-24及r12内容保留为历史，不表示本轮部署完成。
 - 2026-11-24 r17完整目标Linux回归已通过，164测试PASS/0SKIP/0FAIL，资源/HTTP/quota/备份/health/preflight均通过；详见 work/s5-linux-20261124-r17/verified-summary.json。用户在代理沙箱外运行，代理内SSH配置读取仍受管拒绝。接下来复用deployment.md的临时构建与既定安装布局，先收集PID1/systemd、权限、已有账户/文件及8080占用事实，构建两二进制并记录SHA；保存私有临时准备目录，不写服务/账户/实际数据库。已有部署存在时不能直接套用新安装步骤。后续部署方案须以目标事实与精确二进制为依据，7天观察尚未开始。此准备工作由用户继续P5授权覆盖，实际部署仍按既定具体目标/动作边界确认。
 - 范围：systemd 服务模板、默认关闭执行的环境模板、SQLite 一致性备份/恢复说明、healthz 监控探针、Windows/Linux CI 和 r10 全流程 smoke。
 - 约束：只生成和 dry-run，不部署、不启用 LAN、不修改目标机现有服务；rootful Docker socket 风险继续显式记录。

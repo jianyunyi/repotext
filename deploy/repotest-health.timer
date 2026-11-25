@@ -1,0 +1,9 @@
+[Unit]
+Description=Check RepoTest every five minutes
+[Timer]
+OnCalendar=*:0/5
+AccuracySec=1s
+Persistent=true
+Unit=repotest-health.service
+[Install]
+WantedBy=timers.target
