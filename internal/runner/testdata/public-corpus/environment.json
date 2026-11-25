@@ -1,0 +1,12 @@
+{
+  "concurrency": 1,
+  "fault_injection": false,
+  "host_goarch": "amd64",
+  "host_goos": "linux",
+  "image_go_version": "go1.27.1",
+  "image_id": "sha256:8a5910f31396cd4d89662f56c68b3ae31d374308270a1c3bd96672ee5ed43414",
+  "kind": "unmodified_pinned_public_repository_execution",
+  "offline_command": "set -eu\nmkdir -p /work/src /work/cache /work/modules /work/tmp\ntar -xf - -C /work\ncd /work/src\ntest -f go.mod\nexec go test -json -cover -count=1 -mod=readonly -p=2 -parallel=2 ./...",
+  "per_repository_deadline_seconds": 300,
+  "source_manifest_sha256": "088acfdc45488f0b5daa78a666f42005d898a58f9b86202be406b73fc7b09c01"
+}

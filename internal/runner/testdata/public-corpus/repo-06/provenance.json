@@ -1,0 +1,19 @@
+{
+  "commit": "bbf40bb0e4f47860677c7115b2eaa5b3413ce23e",
+  "error": "",
+  "exit_code": 1,
+  "fault_injection": false,
+  "finished_at": "2026-11-25T12:29:08.198305414Z",
+  "phases": [
+    "clone",
+    "deps",
+    "test"
+  ],
+  "raw_sha256": "8f366ddef8ba2b60b74accf26a6acbe090a98b9c734b6f919fa9595cfbff1e10",
+  "raw_truncated": false,
+  "repo_url": "https://github.com/tidwall/gjson",
+  "report_sha256": "9f6f336a5c2ec96571d6abbcaee308550e53f7ac48a65b406bc7ebd5e9b9fd6b",
+  "source_modified": false,
+  "started_at": "2026-11-25T12:28:43.20904315Z",
+  "timed_out": false
+}

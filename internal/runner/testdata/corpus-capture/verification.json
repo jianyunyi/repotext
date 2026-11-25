@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "checked_cases": 24,
+  "source_hashes_verified": true,
+  "raw_hashes_verified": true,
+  "raw_complete": true,
+  "paths_relative_to_manifest": true,
+  "independent_coverprofiles_verified": true,
+  "runtime": "owned fixtures only"
+}

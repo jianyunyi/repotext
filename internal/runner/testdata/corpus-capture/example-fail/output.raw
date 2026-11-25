@@ -1,0 +1,13 @@
+{"Time":"2026-11-25T19:06:40.2798462+08:00","Action":"start","Package":"example.invalid/repotest-owned-corpus/example-fail"}
+{"Time":"2026-11-25T19:06:41.3656993+08:00","Action":"run","Package":"example.invalid/repotest-owned-corpus/example-fail","Test":"ExampleDouble"}
+{"Time":"2026-11-25T19:06:41.3656993+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/example-fail","Test":"ExampleDouble","Output":"=== RUN   ExampleDouble\n"}
+{"Time":"2026-11-25T19:06:41.3656993+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/example-fail","Test":"ExampleDouble","Output":"--- FAIL: ExampleDouble (0.00s)\n"}
+{"Time":"2026-11-25T19:06:41.3656993+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/example-fail","Test":"ExampleDouble","Output":"got:\n"}
+{"Time":"2026-11-25T19:06:41.3711768+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/example-fail","Test":"ExampleDouble","Output":"4\n"}
+{"Time":"2026-11-25T19:06:41.3711768+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/example-fail","Test":"ExampleDouble","Output":"want:\n"}
+{"Time":"2026-11-25T19:06:41.3711768+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/example-fail","Test":"ExampleDouble","Output":"5\n"}
+{"Time":"2026-11-25T19:06:41.3711768+08:00","Action":"fail","Package":"example.invalid/repotest-owned-corpus/example-fail","Test":"ExampleDouble","Elapsed":0}
+{"Time":"2026-11-25T19:06:41.3711768+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/example-fail","Output":"FAIL\n"}
+{"Time":"2026-11-25T19:06:41.3711768+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/example-fail","Output":"coverage: 100.0% of statements\n"}
+{"Time":"2026-11-25T19:06:41.3775433+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/example-fail","Output":"FAIL\texample.invalid/repotest-owned-corpus/example-fail\t1.097s\n"}
+{"Time":"2026-11-25T19:06:41.3775433+08:00","Action":"fail","Package":"example.invalid/repotest-owned-corpus/example-fail","Elapsed":1.098}

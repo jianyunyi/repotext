@@ -1,0 +1,6 @@
+{"ImportPath":"example.invalid/repotest-owned-corpus/build-fail [example.invalid/repotest-owned-corpus/build-fail.test]","Action":"build-output","Output":"# example.invalid/repotest-owned-corpus/build-fail [example.invalid/repotest-owned-corpus/build-fail.test]\n"}
+{"ImportPath":"example.invalid/repotest-owned-corpus/build-fail [example.invalid/repotest-owned-corpus/build-fail.test]","Action":"build-output","Output":".\\source.go:2:179: undefined: ownedUndefinedSymbol\n"}
+{"ImportPath":"example.invalid/repotest-owned-corpus/build-fail [example.invalid/repotest-owned-corpus/build-fail.test]","Action":"build-fail"}
+{"Time":"2026-11-25T19:06:27.1581614+08:00","Action":"start","Package":"example.invalid/repotest-owned-corpus/build-fail"}
+{"Time":"2026-11-25T19:06:27.1581614+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/build-fail","Output":"FAIL\texample.invalid/repotest-owned-corpus/build-fail [build failed]\n"}
+{"Time":"2026-11-25T19:06:27.1586935+08:00","Action":"fail","Package":"example.invalid/repotest-owned-corpus/build-fail","Elapsed":0.001,"FailedBuild":"example.invalid/repotest-owned-corpus/build-fail [example.invalid/repotest-owned-corpus/build-fail.test]"}

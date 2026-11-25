@@ -38,18 +38,49 @@ type Task struct {
 	FinishedAt   *time.Time `json:"finished_at,omitempty"`
 }
 type Package struct {
-	ImportPath  string   `json:"import_path"`
-	Status      string   `json:"status"`
-	ElapsedMS   int64    `json:"elapsed_ms,omitempty"`
-	CoveragePct *float64 `json:"coverage_pct,omitempty"`
-	Output      string   `json:"output,omitempty"`
+	ImportPath      string           `json:"import_path"`
+	Status          string           `json:"status"`
+	ElapsedMS       int64            `json:"elapsed_ms,omitempty"`
+	CoveragePct     *float64         `json:"coverage_pct,omitempty"`
+	Output          string           `json:"output,omitempty"`
+	OutputTruncated bool             `json:"output_truncated,omitempty"`
+	Tests           []TestCase       `json:"tests,omitempty"`
+	FailureLocation *FailureLocation `json:"failure_location,omitempty"`
+}
+type FailureLocation struct {
+	Path      string `json:"path"`
+	Line      int    `json:"line"`
+	GitHubURL string `json:"github_url,omitempty"`
+}
+type TestCase struct {
+	Name            string           `json:"name"`
+	Parent          string           `json:"parent,omitempty"`
+	Status          string           `json:"status"`
+	ElapsedMS       int64            `json:"elapsed_ms,omitempty"`
+	Output          string           `json:"output,omitempty"`
+	OutputTruncated bool             `json:"output_truncated,omitempty"`
+	FailureLocation *FailureLocation `json:"failure_location,omitempty"`
+}
+type ReportSummary struct {
+	Passed          int `json:"passed"`
+	Failed          int `json:"failed"`
+	Skipped         int `json:"skipped"`
+	Incomplete      int `json:"incomplete"`
+	PackageFailures int `json:"package_failures"`
+	DroppedCases    int `json:"dropped_cases,omitempty"`
 }
 type Report struct {
-	TaskID    string    `json:"task_id"`
-	GoVersion string    `json:"go_version,omitempty"`
-	GOOS      string    `json:"goos"`
-	GOARCH    string    `json:"goarch"`
-	NoTests   bool      `json:"no_tests"`
-	Truncated bool      `json:"truncated"`
-	Packages  []Package `json:"packages"`
+	TaskID          string         `json:"task_id"`
+	GoVersion       string         `json:"go_version,omitempty"`
+	GOOS            string         `json:"goos"`
+	GOARCH          string         `json:"goarch"`
+	NoTests         bool           `json:"no_tests"`
+	Truncated       bool           `json:"truncated"`
+	Packages        []Package      `json:"packages"`
+	RepoURL         string         `json:"repo_url,omitempty"`
+	Commit          string         `json:"commit,omitempty"`
+	Summary         *ReportSummary `json:"summary,omitempty"`
+	Incomplete      bool           `json:"incomplete,omitempty"`
+	Output          string         `json:"output,omitempty"`
+	OutputTruncated bool           `json:"output_truncated,omitempty"`
 }

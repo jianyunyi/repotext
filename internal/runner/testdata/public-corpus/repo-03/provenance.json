@@ -1,0 +1,19 @@
+{
+  "commit": "b4617d0b9670ad14039b2739167fd35a60f557c5",
+  "error": "",
+  "exit_code": 0,
+  "fault_injection": false,
+  "finished_at": "2026-11-25T12:28:09.181782712Z",
+  "phases": [
+    "clone",
+    "deps",
+    "test"
+  ],
+  "raw_sha256": "3d39a82c108570dcb2195cd721de727b621bb1a9e8c4d389b071d33bca837831",
+  "raw_truncated": false,
+  "repo_url": "https://github.com/gorilla/mux",
+  "report_sha256": "d5ab8c53a425dc3af8de474d9433b5f932ce42c000289ec15655057d1c06d8f7",
+  "source_modified": false,
+  "started_at": "2026-11-25T12:27:38.556791378Z",
+  "timed_out": false
+}

@@ -1,0 +1,2 @@
+mode: set
+example.invalid/repotest-owned-corpus/zero-coverage/source.go:3.24,3.40 1 0

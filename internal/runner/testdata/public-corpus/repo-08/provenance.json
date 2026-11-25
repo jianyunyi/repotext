@@ -1,0 +1,19 @@
+{
+  "commit": "99bc99e0bf0edc147e82765f2848167922a5c644",
+  "error": "",
+  "exit_code": 0,
+  "fault_injection": false,
+  "finished_at": "2026-11-25T12:30:24.800473544Z",
+  "phases": [
+    "clone",
+    "deps",
+    "test"
+  ],
+  "raw_sha256": "2bbe91c41ef3052c5b2d88b107fbd05faeb93e5ac403f4ab19ff72faa491ee33",
+  "raw_truncated": false,
+  "repo_url": "https://github.com/go-chi/chi",
+  "report_sha256": "894e9e1828ea065ef4e5015fe8bf7735335f7c2db35e1f83232b731eaae2556a",
+  "source_modified": false,
+  "started_at": "2026-11-25T12:29:26.910581748Z",
+  "timed_out": false
+}

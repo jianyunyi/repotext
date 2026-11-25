@@ -1,0 +1,10 @@
+{"Time":"2026-11-25T19:06:30.5564403+08:00","Action":"start","Package":"example.invalid/repotest-owned-corpus/zero-coverage"}
+{"Time":"2026-11-25T19:06:31.9361612+08:00","Action":"run","Package":"example.invalid/repotest-owned-corpus/zero-coverage","Test":"TestOwned"}
+{"Time":"2026-11-25T19:06:31.9361612+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/zero-coverage","Test":"TestOwned","Output":"=== RUN   TestOwned\n"}
+{"Time":"2026-11-25T19:06:31.9366743+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/zero-coverage","Test":"TestOwned","Output":"    owned_test.go:6: no production function called\n"}
+{"Time":"2026-11-25T19:06:31.9366743+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/zero-coverage","Test":"TestOwned","Output":"--- PASS: TestOwned (0.00s)\n"}
+{"Time":"2026-11-25T19:06:31.9418788+08:00","Action":"pass","Package":"example.invalid/repotest-owned-corpus/zero-coverage","Test":"TestOwned","Elapsed":0}
+{"Time":"2026-11-25T19:06:31.9424091+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/zero-coverage","Output":"PASS\n"}
+{"Time":"2026-11-25T19:06:31.9424091+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/zero-coverage","Output":"coverage: 0.0% of statements\n"}
+{"Time":"2026-11-25T19:06:31.9468028+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/zero-coverage","Output":"ok  \texample.invalid/repotest-owned-corpus/zero-coverage\t1.389s\tcoverage: 0.0% of statements\n"}
+{"Time":"2026-11-25T19:06:31.9468028+08:00","Action":"pass","Package":"example.invalid/repotest-owned-corpus/zero-coverage","Elapsed":1.3900000000000001}

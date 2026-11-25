@@ -77,9 +77,9 @@ func (e DockerExecutor) Execute(ctx context.Context, task domain.Task, setPhase 
 	}
 	result, err := runOfflineGoWithPhases(ctx, e.ImageID, source, setPhase)
 	if errors.Is(err, context.DeadlineExceeded) {
-		return Execution{ExitCode: result.ExitCode, TimedOut: true, Output: result.Output, Truncated: result.Truncated, Report: offlineReport(task, e.GoVersion, result)}, err
+		return Execution{ExitCode: result.ExitCode, TimedOut: true, Output: result.Output, Truncated: result.Truncated, Report: offlineReportWithSource(task, e.GoVersion, result, source)}, err
 	}
-	return Execution{ExitCode: result.ExitCode, Output: result.Output, Truncated: result.Truncated, Report: offlineReport(task, e.GoVersion, result)}, err
+	return Execution{ExitCode: result.ExitCode, Output: result.Output, Truncated: result.Truncated, Report: offlineReportWithSource(task, e.GoVersion, result, source)}, err
 }
 
 func (e DockerExecutor) ensureWorkDir() (string, error) {

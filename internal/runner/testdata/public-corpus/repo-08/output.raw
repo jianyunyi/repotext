@@ -1,0 +1,574 @@
+{"Time":"2026-11-25T12:29:56.155834046Z","Action":"start","Package":"github.com/go-chi/chi/v5"}
+{"Time":"2026-11-25T12:29:56.157920687Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestRoutePattern"}
+{"Time":"2026-11-25T12:29:56.157996878Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestRoutePattern","Output":"=== RUN   TestRoutePattern\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.158022398Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestRoutePattern","Output":"--- PASS: TestRoutePattern (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.158024528Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestRoutePattern","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.158030448Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxBasic"}
+{"Time":"2026-11-25T12:29:56.158032468Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxBasic","Output":"=== RUN   TestMuxBasic\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.159540789Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxBasic","Output":"--- PASS: TestMuxBasic (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.159550929Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxBasic","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.159553299Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxMounts"}
+{"Time":"2026-11-25T12:29:56.159554849Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxMounts","Output":"=== RUN   TestMuxMounts\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.160092889Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxMounts","Output":"--- PASS: TestMuxMounts (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.160135309Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxMounts","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.160142519Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxPlain"}
+{"Time":"2026-11-25T12:29:56.160144519Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxPlain","Output":"=== RUN   TestMuxPlain\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.160516379Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxPlain","Output":"--- PASS: TestMuxPlain (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.160519189Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxPlain","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.160523279Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxEmptyRoutes"}
+{"Time":"2026-11-25T12:29:56.160524549Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxEmptyRoutes","Output":"=== RUN   TestMuxEmptyRoutes\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.160572949Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxEmptyRoutes","Output":"--- PASS: TestMuxEmptyRoutes (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.160586049Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxEmptyRoutes","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.160588539Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxTrailingSlash"}
+{"Time":"2026-11-25T12:29:56.160590149Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxTrailingSlash","Output":"=== RUN   TestMuxTrailingSlash\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.16113129Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxTrailingSlash","Output":"--- PASS: TestMuxTrailingSlash (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.16114641Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxTrailingSlash","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.16114956Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxNestedNotFound"}
+{"Time":"2026-11-25T12:29:56.16115106Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxNestedNotFound","Output":"=== RUN   TestMuxNestedNotFound\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.1614036Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxNestedNotFound","Output":"--- PASS: TestMuxNestedNotFound (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.16140798Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxNestedNotFound","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.16141105Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMethodNotAllowed"}
+{"Time":"2026-11-25T12:29:56.16141302Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMethodNotAllowed","Output":"=== RUN   TestMethodNotAllowed\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.16149878Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMethodNotAllowed/Registered_Method"}
+{"Time":"2026-11-25T12:29:56.1615028Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMethodNotAllowed/Registered_Method","Output":"=== RUN   TestMethodNotAllowed/Registered_Method\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.16170903Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMethodNotAllowed/Registered_Method","Output":"--- PASS: TestMethodNotAllowed/Registered_Method (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.16171932Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMethodNotAllowed/Registered_Method","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.16172527Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMethodNotAllowed/Unregistered_Method"}
+{"Time":"2026-11-25T12:29:56.161727Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMethodNotAllowed/Unregistered_Method","Output":"=== RUN   TestMethodNotAllowed/Unregistered_Method\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.1618345Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMethodNotAllowed/Unregistered_Method","Output":"--- PASS: TestMethodNotAllowed/Unregistered_Method (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.16183791Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMethodNotAllowed/Unregistered_Method","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.1618846Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMethodNotAllowed","Output":"--- PASS: TestMethodNotAllowed (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.16189416Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMethodNotAllowed","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.16189626Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxNestedMethodNotAllowed"}
+{"Time":"2026-11-25T12:29:56.16189737Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxNestedMethodNotAllowed","Output":"=== RUN   TestMuxNestedMethodNotAllowed\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.162593511Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxNestedMethodNotAllowed","Output":"--- PASS: TestMuxNestedMethodNotAllowed (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.162610281Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxNestedMethodNotAllowed","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.162612811Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxComplicatedNotFound"}
+{"Time":"2026-11-25T12:29:56.162614531Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxComplicatedNotFound","Output":"=== RUN   TestMuxComplicatedNotFound\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.162642481Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxComplicatedNotFound/pre"}
+{"Time":"2026-11-25T12:29:56.162652361Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxComplicatedNotFound/pre","Output":"=== RUN   TestMuxComplicatedNotFound/pre\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.163427911Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxComplicatedNotFound/pre","Output":"--- PASS: TestMuxComplicatedNotFound/pre (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.163433721Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxComplicatedNotFound/pre","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.163436801Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxComplicatedNotFound/post"}
+{"Time":"2026-11-25T12:29:56.163438091Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxComplicatedNotFound/post","Output":"=== RUN   TestMuxComplicatedNotFound/post\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.164151382Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxComplicatedNotFound/post","Output":"--- PASS: TestMuxComplicatedNotFound/post (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.164157482Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxComplicatedNotFound/post","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.164159822Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxComplicatedNotFound","Output":"--- PASS: TestMuxComplicatedNotFound (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.164166382Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxComplicatedNotFound","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.164168802Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxWith"}
+{"Time":"2026-11-25T12:29:56.164173062Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxWith","Output":"=== RUN   TestMuxWith\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.164408102Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxWith","Output":"--- PASS: TestMuxWith (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.164413002Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxWith","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.164425472Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestRouterFromMuxWith"}
+{"Time":"2026-11-25T12:29:56.164426872Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestRouterFromMuxWith","Output":"=== RUN   TestRouterFromMuxWith\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.164428932Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestRouterFromMuxWith","Output":"=== PAUSE TestRouterFromMuxWith\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.164469452Z","Action":"pause","Package":"github.com/go-chi/chi/v5","Test":"TestRouterFromMuxWith"}
+{"Time":"2026-11-25T12:29:56.164471082Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxMiddlewareStack"}
+{"Time":"2026-11-25T12:29:56.164472342Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxMiddlewareStack","Output":"=== RUN   TestMuxMiddlewareStack\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.164735022Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxMiddlewareStack","Output":"--- PASS: TestMuxMiddlewareStack (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.164740212Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxMiddlewareStack","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.164741682Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxRouteGroups"}
+{"Time":"2026-11-25T12:29:56.164742902Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxRouteGroups","Output":"=== RUN   TestMuxRouteGroups\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.165027773Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxRouteGroups","Output":"--- PASS: TestMuxRouteGroups (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.165032733Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxRouteGroups","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.165035023Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxBig"}
+{"Time":"2026-11-25T12:29:56.165036473Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxBig","Output":"=== RUN   TestMuxBig\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.165967533Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxBig","Output":"--- PASS: TestMuxBig (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.165972413Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxBig","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.165975093Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxSubroutesBasic"}
+{"Time":"2026-11-25T12:29:56.165976353Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxSubroutesBasic","Output":"=== RUN   TestMuxSubroutesBasic\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.166303663Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxSubroutesBasic","Output":"--- PASS: TestMuxSubroutesBasic (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.166310293Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxSubroutesBasic","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.166312003Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxSubroutes"}
+{"Time":"2026-11-25T12:29:56.166313293Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxSubroutes","Output":"=== RUN   TestMuxSubroutes\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.166626664Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxSubroutes","Output":"--- PASS: TestMuxSubroutes (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.166631034Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxSubroutes","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.166635144Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestSingleHandler"}
+{"Time":"2026-11-25T12:29:56.166636614Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestSingleHandler","Output":"=== RUN   TestSingleHandler\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.166663774Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestSingleHandler","Output":"--- PASS: TestSingleHandler (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.166665344Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestSingleHandler","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.166679904Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestServeHTTPExistingContext"}
+{"Time":"2026-11-25T12:29:56.166686924Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestServeHTTPExistingContext","Output":"=== RUN   TestServeHTTPExistingContext\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.166688694Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestServeHTTPExistingContext","Output":"--- PASS: TestServeHTTPExistingContext (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.166690794Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestServeHTTPExistingContext","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.166745454Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestNestedGroups"}
+{"Time":"2026-11-25T12:29:56.166747984Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestNestedGroups","Output":"=== RUN   TestNestedGroups\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.167244234Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestNestedGroups","Output":"--- PASS: TestNestedGroups (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.167260624Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestNestedGroups","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.167265894Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMiddlewarePanicOnLateUse"}
+{"Time":"2026-11-25T12:29:56.167267444Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMiddlewarePanicOnLateUse","Output":"=== RUN   TestMiddlewarePanicOnLateUse\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.167270624Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMiddlewarePanicOnLateUse","Output":"--- PASS: TestMiddlewarePanicOnLateUse (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.167273044Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMiddlewarePanicOnLateUse","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.167307194Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMountingExistingPath"}
+{"Time":"2026-11-25T12:29:56.167322274Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMountingExistingPath","Output":"=== RUN   TestMountingExistingPath\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.167346224Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMountingExistingPath","Output":"--- PASS: TestMountingExistingPath (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.167350284Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMountingExistingPath","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.167397074Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMountingSimilarPattern"}
+{"Time":"2026-11-25T12:29:56.167400784Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMountingSimilarPattern","Output":"=== RUN   TestMountingSimilarPattern\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.167714474Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMountingSimilarPattern","Output":"--- PASS: TestMountingSimilarPattern (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.167725354Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMountingSimilarPattern","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.167727844Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxEmptyParams"}
+{"Time":"2026-11-25T12:29:56.167730094Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxEmptyParams","Output":"=== RUN   TestMuxEmptyParams\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.167924145Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxEmptyParams","Output":"--- PASS: TestMuxEmptyParams (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.167929015Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxEmptyParams","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.167931115Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxMissingParams"}
+{"Time":"2026-11-25T12:29:56.167932335Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxMissingParams","Output":"=== RUN   TestMuxMissingParams\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.168228855Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxMissingParams","Output":"--- PASS: TestMuxMissingParams (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.168234055Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxMissingParams","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.168235685Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxWildcardRoute"}
+{"Time":"2026-11-25T12:29:56.168236915Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxWildcardRoute","Output":"=== RUN   TestMuxWildcardRoute\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.168243435Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxWildcardRoute","Output":"--- PASS: TestMuxWildcardRoute (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.168245015Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxWildcardRoute","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.168288015Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxWildcardRouteCheckTwo"}
+{"Time":"2026-11-25T12:29:56.168290835Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxWildcardRouteCheckTwo","Output":"=== RUN   TestMuxWildcardRouteCheckTwo\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.168308105Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxWildcardRouteCheckTwo","Output":"--- PASS: TestMuxWildcardRouteCheckTwo (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.168310995Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxWildcardRouteCheckTwo","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.168335945Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxRegexp"}
+{"Time":"2026-11-25T12:29:56.168338465Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxRegexp","Output":"=== RUN   TestMuxRegexp\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.168518065Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxRegexp","Output":"--- PASS: TestMuxRegexp (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.168522215Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxRegexp","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.168524155Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxRegexp2"}
+{"Time":"2026-11-25T12:29:56.168550785Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxRegexp2","Output":"=== RUN   TestMuxRegexp2\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.168764745Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxRegexp2","Output":"--- PASS: TestMuxRegexp2 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.168774055Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxRegexp2","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.168775785Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxRegexp3"}
+{"Time":"2026-11-25T12:29:56.168777035Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxRegexp3","Output":"=== RUN   TestMuxRegexp3\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.169082885Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxRegexp3","Output":"--- PASS: TestMuxRegexp3 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.169087785Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxRegexp3","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.169089465Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxSubrouterWildcardParam"}
+{"Time":"2026-11-25T12:29:56.169090615Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxSubrouterWildcardParam","Output":"=== RUN   TestMuxSubrouterWildcardParam\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.169429056Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxSubrouterWildcardParam","Output":"--- PASS: TestMuxSubrouterWildcardParam (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:56.169433936Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxSubrouterWildcardParam","Elapsed":0}
+{"Time":"2026-11-25T12:29:56.169436016Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxContextIsThreadSafe"}
+{"Time":"2026-11-25T12:29:56.169437336Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxContextIsThreadSafe","Output":"=== RUN   TestMuxContextIsThreadSafe\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.479008133Z","Action":"start","Package":"github.com/go-chi/chi/v5/middleware"}
+{"Time":"2026-11-25T12:29:59.481489325Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor"}
+{"Time":"2026-11-25T12:29:59.481531845Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor","Output":"=== RUN   TestCompressor\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.481688735Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/no_expected_encodings_due_to_no_accepted_encodings"}
+{"Time":"2026-11-25T12:29:59.481694405Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/no_expected_encodings_due_to_no_accepted_encodings","Output":"=== RUN   TestCompressor/no_expected_encodings_due_to_no_accepted_encodings\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.482971196Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/no_expected_encodings_due_to_no_accepted_encodings","Output":"--- PASS: TestCompressor/no_expected_encodings_due_to_no_accepted_encodings (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.482982346Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/no_expected_encodings_due_to_no_accepted_encodings","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.482988916Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/no_expected_encodings_due_to_content_type"}
+{"Time":"2026-11-25T12:29:59.482992736Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/no_expected_encodings_due_to_content_type","Output":"=== RUN   TestCompressor/no_expected_encodings_due_to_content_type\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.483715506Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/no_expected_encodings_due_to_content_type","Output":"--- PASS: TestCompressor/no_expected_encodings_due_to_content_type (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.483723896Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/no_expected_encodings_due_to_content_type","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.483729356Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/gzip_is_only_encoding"}
+{"Time":"2026-11-25T12:29:59.483730826Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/gzip_is_only_encoding","Output":"=== RUN   TestCompressor/gzip_is_only_encoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.483816226Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/gzip_is_only_encoding","Output":"--- PASS: TestCompressor/gzip_is_only_encoding (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.483818706Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/gzip_is_only_encoding","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.483820556Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/gzip_is_preferred_over_deflate"}
+{"Time":"2026-11-25T12:29:59.483821886Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/gzip_is_preferred_over_deflate","Output":"=== RUN   TestCompressor/gzip_is_preferred_over_deflate\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.483865886Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/gzip_is_preferred_over_deflate","Output":"--- PASS: TestCompressor/gzip_is_preferred_over_deflate (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.483867516Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/gzip_is_preferred_over_deflate","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.483868786Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/deflate_is_used"}
+{"Time":"2026-11-25T12:29:59.483870006Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/deflate_is_used","Output":"=== RUN   TestCompressor/deflate_is_used\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.484289527Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/deflate_is_used","Output":"--- PASS: TestCompressor/deflate_is_used (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.484296197Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/deflate_is_used","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.484298017Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/nop_is_preferred"}
+{"Time":"2026-11-25T12:29:59.484299167Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/nop_is_preferred","Output":"=== RUN   TestCompressor/nop_is_preferred\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.484360247Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/nop_is_preferred","Output":"--- PASS: TestCompressor/nop_is_preferred (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.484381267Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor/nop_is_preferred","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.484582287Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor","Output":"--- PASS: TestCompressor (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.484585817Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressor","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.484587217Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards"}
+{"Time":"2026-11-25T12:29:59.484588647Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards","Output":"=== RUN   TestCompressorWildcards\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.484592467Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/defaults"}
+{"Time":"2026-11-25T12:29:59.484593747Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/defaults","Output":"=== RUN   TestCompressorWildcards/defaults\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.484595587Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/defaults","Output":"--- PASS: TestCompressorWildcards/defaults (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.484596987Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/defaults","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.484598237Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/no_wildcard"}
+{"Time":"2026-11-25T12:29:59.484599397Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/no_wildcard","Output":"=== RUN   TestCompressorWildcards/no_wildcard\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.553795856Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/no_wildcard","Output":"--- PASS: TestCompressorWildcards/no_wildcard (0.07s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.553857656Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/no_wildcard","Elapsed":0.07}
+{"Time":"2026-11-25T12:29:59.553864966Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/invalid_wildcard_#1"}
+{"Time":"2026-11-25T12:29:59.553867006Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/invalid_wildcard_#1","Output":"=== RUN   TestCompressorWildcards/invalid_wildcard_#1\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.553877206Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/invalid_wildcard_#1","Output":"--- PASS: TestCompressorWildcards/invalid_wildcard_#1 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.553879456Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/invalid_wildcard_#1","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.553881056Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/invalid_wildcard_#2"}
+{"Time":"2026-11-25T12:29:59.553882276Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/invalid_wildcard_#2","Output":"=== RUN   TestCompressorWildcards/invalid_wildcard_#2\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.553884266Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/invalid_wildcard_#2","Output":"--- PASS: TestCompressorWildcards/invalid_wildcard_#2 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.553885866Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/invalid_wildcard_#2","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.553888136Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/valid_wildcard"}
+{"Time":"2026-11-25T12:29:59.553889306Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/valid_wildcard","Output":"=== RUN   TestCompressorWildcards/valid_wildcard\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.555247367Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/valid_wildcard","Output":"--- PASS: TestCompressorWildcards/valid_wildcard (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.555260937Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/valid_wildcard","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.555265997Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/mixed"}
+{"Time":"2026-11-25T12:29:59.555268937Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/mixed","Output":"=== RUN   TestCompressorWildcards/mixed\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.555271747Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/mixed","Output":"--- PASS: TestCompressorWildcards/mixed (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.555273517Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards/mixed","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.555275297Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards","Output":"--- PASS: TestCompressorWildcards (0.07s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.555277027Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestCompressorWildcards","Elapsed":0.07}
+{"Time":"2026-11-25T12:29:59.555279487Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset"}
+{"Time":"2026-11-25T12:29:59.555280567Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset","Output":"=== RUN   TestContentCharset\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.555284297Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset","Output":"=== PAUSE TestContentCharset\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.555285417Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset"}
+{"Time":"2026-11-25T12:29:59.555286887Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestSplit"}
+{"Time":"2026-11-25T12:29:59.555288367Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestSplit","Output":"=== RUN   TestSplit\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.555291677Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestSplit","Output":"=== PAUSE TestSplit\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.555292777Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestSplit"}
+{"Time":"2026-11-25T12:29:59.555294827Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncoding"}
+{"Time":"2026-11-25T12:29:59.555295867Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncoding","Output":"=== RUN   TestContentEncoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.555309927Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncoding","Output":"=== PAUSE TestContentEncoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.555311067Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncoding"}
+{"Time":"2026-11-25T12:29:59.555312577Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware"}
+{"Time":"2026-11-25T12:29:59.555313667Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware","Output":"=== RUN   TestContentEncodingMiddleware\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.555315167Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware","Output":"=== PAUSE TestContentEncodingMiddleware\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.555316227Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware"}
+{"Time":"2026-11-25T12:29:59.555319877Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType"}
+{"Time":"2026-11-25T12:29:59.555320977Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType","Output":"=== RUN   TestContentType\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.555323397Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType","Output":"=== PAUSE TestContentType\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.555324487Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType"}
+{"Time":"2026-11-25T12:29:59.555325787Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestGetHead"}
+{"Time":"2026-11-25T12:29:59.555327137Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestGetHead","Output":"=== RUN   TestGetHead\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.555329077Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestGetHead","Output":"--- PASS: TestGetHead (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.555337137Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestGetHead","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.555361337Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRequestLogger"}
+{"Time":"2026-11-25T12:29:59.555366897Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRequestLogger","Output":"=== RUN   TestRequestLogger\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.555372758Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRequestLogger","Output":"2026/11/25 12:29:59 \"GET http://example.com/ HTTP/1.1\" from 192.0.2.1:1234 - 000 0B in 2.75µs\n"}
+{"Time":"2026-11-25T12:29:59.555379608Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRequestLogger","Output":"--- PASS: TestRequestLogger (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.555385098Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRequestLogger","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.555390438Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRequestLoggerReadFrom"}
+{"Time":"2026-11-25T12:29:59.555405988Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRequestLoggerReadFrom","Output":"=== RUN   TestRequestLoggerReadFrom\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.557690699Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRequestLoggerReadFrom","Output":"2026/11/25 12:29:59 \"GET http://example.com/ HTTP/1.1\" from 192.0.2.1:1234 - 200 9B in 2.586292ms\n"}
+{"Time":"2026-11-25T12:29:59.557710889Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRequestLoggerReadFrom","Output":"--- PASS: TestRequestLoggerReadFrom (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.557716539Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRequestLoggerReadFrom","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.557742799Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestWrapWriterHTTP2"}
+{"Time":"2026-11-25T12:29:59.557749259Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestWrapWriterHTTP2","Output":"=== RUN   TestWrapWriterHTTP2\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.660634943Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestWrapWriterHTTP2","Output":"--- PASS: TestWrapWriterHTTP2 (0.10s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.660682153Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestWrapWriterHTTP2","Elapsed":0.1}
+{"Time":"2026-11-25T12:29:59.660689733Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestXRealIP"}
+{"Time":"2026-11-25T12:29:59.660691723Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestXRealIP","Output":"=== RUN   TestXRealIP\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.660698513Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestXRealIP","Output":"--- PASS: TestXRealIP (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.660701133Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestXRealIP","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.660703063Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestXForwardForIP"}
+{"Time":"2026-11-25T12:29:59.660704473Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestXForwardForIP","Output":"=== RUN   TestXForwardForIP\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.660706633Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestXForwardForIP","Output":"--- PASS: TestXForwardForIP (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.660708263Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestXForwardForIP","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.660710983Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestXForwardForXRealIPPrecedence"}
+{"Time":"2026-11-25T12:29:59.660712243Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestXForwardForXRealIPPrecedence","Output":"=== RUN   TestXForwardForXRealIPPrecedence\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.660714753Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestXForwardForXRealIPPrecedence","Output":"--- PASS: TestXForwardForXRealIPPrecedence (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.660716133Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestXForwardForXRealIPPrecedence","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.660717393Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestIvalidIP"}
+{"Time":"2026-11-25T12:29:59.660718403Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestIvalidIP","Output":"=== RUN   TestIvalidIP\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.660719983Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestIvalidIP","Output":"--- PASS: TestIvalidIP (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.660721373Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestIvalidIP","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.660722613Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRecoverer"}
+{"Time":"2026-11-25T12:29:59.660723693Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRecoverer","Output":"=== RUN   TestRecoverer\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.661278233Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRecoverer","Output":"--- PASS: TestRecoverer (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.661330463Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRecoverer","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.661349583Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRecovererAbortHandler"}
+{"Time":"2026-11-25T12:29:59.661351443Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRecovererAbortHandler","Output":"=== RUN   TestRecovererAbortHandler\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.661354103Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRecovererAbortHandler","Output":"--- PASS: TestRecovererAbortHandler (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.661355603Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRecovererAbortHandler","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.661357163Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRequestID"}
+{"Time":"2026-11-25T12:29:59.661370883Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRequestID","Output":"=== RUN   TestRequestID\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.661372953Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRequestID","Output":"--- PASS: TestRequestID (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.661374413Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRequestID","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.661375593Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestStripSlashes"}
+{"Time":"2026-11-25T12:29:59.661376933Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestStripSlashes","Output":"=== RUN   TestStripSlashes\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.661667194Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestStripSlashes","Output":"--- PASS: TestStripSlashes (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.661670134Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestStripSlashes","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.661671784Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestStripSlashesInRoute"}
+{"Time":"2026-11-25T12:29:59.661673104Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestStripSlashesInRoute","Output":"=== RUN   TestStripSlashesInRoute\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.662007904Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestStripSlashesInRoute","Output":"--- PASS: TestStripSlashesInRoute (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.662056134Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestStripSlashesInRoute","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.662059214Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRedirectSlashes"}
+{"Time":"2026-11-25T12:29:59.662060374Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRedirectSlashes","Output":"=== RUN   TestRedirectSlashes\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.662478444Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRedirectSlashes","Output":"--- PASS: TestRedirectSlashes (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.662508384Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestRedirectSlashes","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.662510904Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestStripSlashesWithNilContext"}
+{"Time":"2026-11-25T12:29:59.662512444Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestStripSlashesWithNilContext","Output":"=== RUN   TestStripSlashesWithNilContext\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.662701294Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestStripSlashesWithNilContext","Output":"--- PASS: TestStripSlashesWithNilContext (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:59.662703574Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestStripSlashesWithNilContext","Elapsed":0}
+{"Time":"2026-11-25T12:29:59.662705404Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestThrottleBacklog"}
+{"Time":"2026-11-25T12:29:59.662706474Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestThrottleBacklog","Output":"=== RUN   TestThrottleBacklog\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.36954942Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxContextIsThreadSafe","Output":"--- PASS: TestMuxContextIsThreadSafe (4.20s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.36969043Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxContextIsThreadSafe","Elapsed":4.2}
+{"Time":"2026-11-25T12:30:00.36969826Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestEscapedURLParams"}
+{"Time":"2026-11-25T12:30:00.36970021Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestEscapedURLParams","Output":"=== RUN   TestEscapedURLParams\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.37019837Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestEscapedURLParams","Output":"--- PASS: TestEscapedURLParams (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.37020463Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestEscapedURLParams","Elapsed":0}
+{"Time":"2026-11-25T12:30:00.37020705Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestCustomHTTPMethod"}
+{"Time":"2026-11-25T12:30:00.3702085Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestCustomHTTPMethod","Output":"=== RUN   TestCustomHTTPMethod\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.370530031Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestCustomHTTPMethod","Output":"--- PASS: TestCustomHTTPMethod (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.370542161Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestCustomHTTPMethod","Elapsed":0}
+{"Time":"2026-11-25T12:30:00.370546481Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestMuxMatch"}
+{"Time":"2026-11-25T12:30:00.370548561Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxMatch","Output":"=== RUN   TestMuxMatch\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.370553141Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestMuxMatch","Output":"--- PASS: TestMuxMatch (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.370554981Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestMuxMatch","Elapsed":0}
+{"Time":"2026-11-25T12:30:00.370557181Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestServerBaseContext"}
+{"Time":"2026-11-25T12:30:00.370558291Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestServerBaseContext","Output":"=== RUN   TestServerBaseContext\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.370819921Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestServerBaseContext","Output":"--- PASS: TestServerBaseContext (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.370824161Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestServerBaseContext","Elapsed":0}
+{"Time":"2026-11-25T12:30:00.370831811Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestTree"}
+{"Time":"2026-11-25T12:30:00.370833441Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestTree","Output":"=== RUN   TestTree\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.370967031Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestTree","Output":"--- PASS: TestTree (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.371011611Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestTree","Elapsed":0}
+{"Time":"2026-11-25T12:30:00.371016341Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestTreeMoar"}
+{"Time":"2026-11-25T12:30:00.371017941Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestTreeMoar","Output":"=== RUN   TestTreeMoar\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.371024201Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestTreeMoar","Output":"--- PASS: TestTreeMoar (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.371027381Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestTreeMoar","Elapsed":0}
+{"Time":"2026-11-25T12:30:00.371030761Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestTreeRegexp"}
+{"Time":"2026-11-25T12:30:00.371032611Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestTreeRegexp","Output":"=== RUN   TestTreeRegexp\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.371034601Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestTreeRegexp","Output":"--- PASS: TestTreeRegexp (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.371036381Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestTreeRegexp","Elapsed":0}
+{"Time":"2026-11-25T12:30:00.371039891Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestTreeRegexpRecursive"}
+{"Time":"2026-11-25T12:30:00.371041641Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestTreeRegexpRecursive","Output":"=== RUN   TestTreeRegexpRecursive\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.371053221Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestTreeRegexpRecursive","Output":"--- PASS: TestTreeRegexpRecursive (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.371055201Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestTreeRegexpRecursive","Elapsed":0}
+{"Time":"2026-11-25T12:30:00.371057701Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestTreeRegexMatchWholeParam"}
+{"Time":"2026-11-25T12:30:00.371059151Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestTreeRegexMatchWholeParam","Output":"=== RUN   TestTreeRegexMatchWholeParam\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.371065781Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestTreeRegexMatchWholeParam","Output":"--- PASS: TestTreeRegexMatchWholeParam (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.371071621Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestTreeRegexMatchWholeParam","Elapsed":0}
+{"Time":"2026-11-25T12:30:00.371073981Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestTreeFindPattern"}
+{"Time":"2026-11-25T12:30:00.371075391Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestTreeFindPattern","Output":"=== RUN   TestTreeFindPattern\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.371077671Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestTreeFindPattern","Output":"--- PASS: TestTreeFindPattern (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.371083411Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestTreeFindPattern","Elapsed":0}
+{"Time":"2026-11-25T12:30:00.371084911Z","Action":"run","Package":"github.com/go-chi/chi/v5","Test":"TestWalker"}
+{"Time":"2026-11-25T12:30:00.371086001Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"=== RUN   TestWalker\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.371170131Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: GET /\n"}
+{"Time":"2026-11-25T12:30:00.371195631Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: GET /favicon.ico\n"}
+{"Time":"2026-11-25T12:30:00.371204131Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: GET /folders/\n"}
+{"Time":"2026-11-25T12:30:00.371219311Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: GET /folders/public\n"}
+{"Time":"2026-11-25T12:30:00.371227851Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: GET /hubs/{hubID}/view\n"}
+{"Time":"2026-11-25T12:30:00.371239531Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: GET /hubs/{hubID}/view/*\n"}
+{"Time":"2026-11-25T12:30:00.371247291Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: POST /hubs/{hubSlug}/view/*\n"}
+{"Time":"2026-11-25T12:30:00.371586061Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: GET /hubs/{hubID}/\n"}
+{"Time":"2026-11-25T12:30:00.371592511Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: GET /hubs/{hubID}/posts/\n"}
+{"Time":"2026-11-25T12:30:00.371595501Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: GET /hubs/{hubID}/touch\n"}
+{"Time":"2026-11-25T12:30:00.371596971Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: GET /hubs/{hubID}/webhooks/*\n"}
+{"Time":"2026-11-25T12:30:00.371598571Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: PATCH /hubs/{hubID}/webhooks/*\n"}
+{"Time":"2026-11-25T12:30:00.371647691Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: BOO /hubs/{hubID}/webhooks/*\n"}
+{"Time":"2026-11-25T12:30:00.371658871Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: OPTIONS /hubs/{hubID}/webhooks/*\n"}
+{"Time":"2026-11-25T12:30:00.371661011Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: HEAD /hubs/{hubID}/webhooks/*\n"}
+{"Time":"2026-11-25T12:30:00.371777511Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: POST /hubs/{hubID}/webhooks/*\n"}
+{"Time":"2026-11-25T12:30:00.371781331Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: TRACE /hubs/{hubID}/webhooks/*\n"}
+{"Time":"2026-11-25T12:30:00.371785431Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: CONNECT /hubs/{hubID}/webhooks/*\n"}
+{"Time":"2026-11-25T12:30:00.371786941Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: DELETE /hubs/{hubID}/webhooks/*\n"}
+{"Time":"2026-11-25T12:30:00.371788381Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: PUT /hubs/{hubID}/webhooks/*\n"}
+{"Time":"2026-11-25T12:30:00.371789981Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: GET /suggestions\n"}
+{"Time":"2026-11-25T12:30:00.371791421Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"    tree_test.go:517: GET /woot/{wootID}/*\n"}
+{"Time":"2026-11-25T12:30:00.371794631Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Output":"--- PASS: TestWalker (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.371796211Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestWalker","Elapsed":0}
+{"Time":"2026-11-25T12:30:00.371798161Z","Action":"cont","Package":"github.com/go-chi/chi/v5","Test":"TestRouterFromMuxWith"}
+{"Time":"2026-11-25T12:30:00.371799751Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestRouterFromMuxWith","Output":"=== CONT  TestRouterFromMuxWith\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.372199132Z","Action":"output","Package":"github.com/go-chi/chi/v5","Test":"TestRouterFromMuxWith","Output":"--- PASS: TestRouterFromMuxWith (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.372206112Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Test":"TestRouterFromMuxWith","Elapsed":0}
+{"Time":"2026-11-25T12:30:00.372208002Z","Action":"output","Package":"github.com/go-chi/chi/v5","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:00.372740642Z","Action":"output","Package":"github.com/go-chi/chi/v5","Output":"coverage: 95.5% of statements\n"}
+{"Time":"2026-11-25T12:30:00.374753564Z","Action":"output","Package":"github.com/go-chi/chi/v5","Output":"ok  \tgithub.com/go-chi/chi/v5\t4.218s\tcoverage: 95.5% of statements\n"}
+{"Time":"2026-11-25T12:30:00.374771604Z","Action":"pass","Package":"github.com/go-chi/chi/v5","Elapsed":4.219}
+{"Time":"2026-11-25T12:30:03.673577733Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestThrottleBacklog","Output":"--- PASS: TestThrottleBacklog (4.01s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:03.673634043Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestThrottleBacklog","Elapsed":4.01}
+{"Time":"2026-11-25T12:30:03.673642743Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestThrottleClientTimeout"}
+{"Time":"2026-11-25T12:30:03.673646663Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestThrottleClientTimeout","Output":"=== RUN   TestThrottleClientTimeout\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:08.675421301Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestThrottleClientTimeout","Output":"--- PASS: TestThrottleClientTimeout (5.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:08.675464881Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestThrottleClientTimeout","Elapsed":5}
+{"Time":"2026-11-25T12:30:08.675471541Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestThrottleTriggerGatewayTimeout"}
+{"Time":"2026-11-25T12:30:08.675472941Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestThrottleTriggerGatewayTimeout","Output":"=== RUN   TestThrottleTriggerGatewayTimeout\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:18.679908956Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestThrottleTriggerGatewayTimeout","Output":"--- PASS: TestThrottleTriggerGatewayTimeout (10.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:18.679956816Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestThrottleTriggerGatewayTimeout","Elapsed":10}
+{"Time":"2026-11-25T12:30:18.679971416Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestThrottleMaximum"}
+{"Time":"2026-11-25T12:30:18.679973766Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestThrottleMaximum","Output":"=== RUN   TestThrottleMaximum\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68225996Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestThrottleMaximum","Output":"--- PASS: TestThrottleMaximum (6.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68230748Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestThrottleMaximum","Elapsed":6}
+{"Time":"2026-11-25T12:30:24.6823148Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestURLFormat"}
+{"Time":"2026-11-25T12:30:24.68231666Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestURLFormat","Output":"=== RUN   TestURLFormat\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68274965Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestURLFormat","Output":"--- PASS: TestURLFormat (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68275805Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestURLFormat","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68276015Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestURLFormatInSubRouter"}
+{"Time":"2026-11-25T12:30:24.68276124Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestURLFormatInSubRouter","Output":"=== RUN   TestURLFormatInSubRouter\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68293869Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestURLFormatInSubRouter","Output":"--- PASS: TestURLFormatInSubRouter (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68294601Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestURLFormatInSubRouter","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68294899Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestHttpFancyWriterRemembersWroteHeaderWhenFlushed"}
+{"Time":"2026-11-25T12:30:24.68295088Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestHttpFancyWriterRemembersWroteHeaderWhenFlushed","Output":"=== RUN   TestHttpFancyWriterRemembersWroteHeaderWhenFlushed\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68296292Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestHttpFancyWriterRemembersWroteHeaderWhenFlushed","Output":"--- PASS: TestHttpFancyWriterRemembersWroteHeaderWhenFlushed (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68296428Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestHttpFancyWriterRemembersWroteHeaderWhenFlushed","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68296806Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestHttp2FancyWriterRemembersWroteHeaderWhenFlushed"}
+{"Time":"2026-11-25T12:30:24.68296923Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestHttp2FancyWriterRemembersWroteHeaderWhenFlushed","Output":"=== RUN   TestHttp2FancyWriterRemembersWroteHeaderWhenFlushed\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68297129Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestHttp2FancyWriterRemembersWroteHeaderWhenFlushed","Output":"--- PASS: TestHttp2FancyWriterRemembersWroteHeaderWhenFlushed (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68297263Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestHttp2FancyWriterRemembersWroteHeaderWhenFlushed","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68297421Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset"}
+{"Time":"2026-11-25T12:30:24.68297545Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset","Output":"=== CONT  TestContentCharset\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68297706Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset"}
+{"Time":"2026-11-25T12:30:24.68297826Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset","Output":"=== RUN   TestContentCharset/should_accept_requests_with_a_matching_charset\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68298367Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset","Output":"=== PAUSE TestContentCharset/should_accept_requests_with_a_matching_charset\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68298494Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset"}
+{"Time":"2026-11-25T12:30:24.68298714Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_be_case-insensitive"}
+{"Time":"2026-11-25T12:30:24.68298824Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_be_case-insensitive","Output":"=== RUN   TestContentCharset/should_be_case-insensitive\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.6829906Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_be_case-insensitive","Output":"=== PAUSE TestContentCharset/should_be_case-insensitive\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.6829917Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_be_case-insensitive"}
+{"Time":"2026-11-25T12:30:24.68299838Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset_with_extra_values"}
+{"Time":"2026-11-25T12:30:24.68299974Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset_with_extra_values","Output":"=== RUN   TestContentCharset/should_accept_requests_with_a_matching_charset_with_extra_values\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68300172Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset_with_extra_values","Output":"=== PAUSE TestContentCharset/should_accept_requests_with_a_matching_charset_with_extra_values\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68300288Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset_with_extra_values"}
+{"Time":"2026-11-25T12:30:24.68300895Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset_when_multiple_charsets_are_supported"}
+{"Time":"2026-11-25T12:30:24.68301018Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset_when_multiple_charsets_are_supported","Output":"=== RUN   TestContentCharset/should_accept_requests_with_a_matching_charset_when_multiple_charsets_are_supported\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68301311Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset_when_multiple_charsets_are_supported","Output":"=== PAUSE TestContentCharset/should_accept_requests_with_a_matching_charset_when_multiple_charsets_are_supported\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68301455Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset_when_multiple_charsets_are_supported"}
+{"Time":"2026-11-25T12:30:24.68301614Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_no_charset_if_empty_charset_headers_are_allowed"}
+{"Time":"2026-11-25T12:30:24.68301738Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_no_charset_if_empty_charset_headers_are_allowed","Output":"=== RUN   TestContentCharset/should_accept_requests_with_no_charset_if_empty_charset_headers_are_allowed\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68301892Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_no_charset_if_empty_charset_headers_are_allowed","Output":"=== PAUSE TestContentCharset/should_accept_requests_with_no_charset_if_empty_charset_headers_are_allowed\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68302012Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_no_charset_if_empty_charset_headers_are_allowed"}
+{"Time":"2026-11-25T12:30:24.68302146Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_no_charset_if_empty_charset_headers_are_not_allowed"}
+{"Time":"2026-11-25T12:30:24.68302247Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_no_charset_if_empty_charset_headers_are_not_allowed","Output":"=== RUN   TestContentCharset/should_not_accept_requests_with_no_charset_if_empty_charset_headers_are_not_allowed\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.683024Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_no_charset_if_empty_charset_headers_are_not_allowed","Output":"=== PAUSE TestContentCharset/should_not_accept_requests_with_no_charset_if_empty_charset_headers_are_not_allowed\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68302624Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_no_charset_if_empty_charset_headers_are_not_allowed"}
+{"Time":"2026-11-25T12:30:24.68302777Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_a_mismatching_charset"}
+{"Time":"2026-11-25T12:30:24.6830323Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_a_mismatching_charset","Output":"=== RUN   TestContentCharset/should_not_accept_requests_with_a_mismatching_charset\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68303402Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_a_mismatching_charset","Output":"=== PAUSE TestContentCharset/should_not_accept_requests_with_a_mismatching_charset\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68303517Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_a_mismatching_charset"}
+{"Time":"2026-11-25T12:30:24.68303669Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_a_mismatching_charset_even_if_empty_charsets_are_allowed"}
+{"Time":"2026-11-25T12:30:24.68303776Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_a_mismatching_charset_even_if_empty_charsets_are_allowed","Output":"=== RUN   TestContentCharset/should_not_accept_requests_with_a_mismatching_charset_even_if_empty_charsets_are_allowed\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68304015Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_a_mismatching_charset_even_if_empty_charsets_are_allowed","Output":"=== PAUSE TestContentCharset/should_not_accept_requests_with_a_mismatching_charset_even_if_empty_charsets_are_allowed\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68304124Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_a_mismatching_charset_even_if_empty_charsets_are_allowed"}
+{"Time":"2026-11-25T12:30:24.68304286Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset"}
+{"Time":"2026-11-25T12:30:24.68304386Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset","Output":"=== CONT  TestContentCharset/should_accept_requests_with_a_matching_charset\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68304574Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset","Output":"--- PASS: TestContentCharset/should_accept_requests_with_a_matching_charset (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68304741Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68304826Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType"}
+{"Time":"2026-11-25T12:30:24.68304927Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType","Output":"=== CONT  TestContentType\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68305106Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type"}
+{"Time":"2026-11-25T12:30:24.68305317Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type","Output":"=== RUN   TestContentType/should_accept_requests_with_a_matching_content_type\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.6830548Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type","Output":"=== PAUSE TestContentType/should_accept_requests_with_a_matching_content_type\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68305608Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type"}
+{"Time":"2026-11-25T12:30:24.6830585Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type_no_charset"}
+{"Time":"2026-11-25T12:30:24.68305965Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type_no_charset","Output":"=== RUN   TestContentType/should_accept_requests_with_a_matching_content_type_no_charset\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68306128Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type_no_charset","Output":"=== PAUSE TestContentType/should_accept_requests_with_a_matching_content_type_no_charset\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68306243Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type_no_charset"}
+{"Time":"2026-11-25T12:30:24.68306444Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content-type_with_extra_values"}
+{"Time":"2026-11-25T12:30:24.68306555Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content-type_with_extra_values","Output":"=== RUN   TestContentType/should_accept_requests_with_a_matching_content-type_with_extra_values\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68306711Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content-type_with_extra_values","Output":"=== PAUSE TestContentType/should_accept_requests_with_a_matching_content-type_with_extra_values\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68306827Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content-type_with_extra_values"}
+{"Time":"2026-11-25T12:30:24.68306965Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type_when_multiple_content_types_are_supported"}
+{"Time":"2026-11-25T12:30:24.6830707Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type_when_multiple_content_types_are_supported","Output":"=== RUN   TestContentType/should_accept_requests_with_a_matching_content_type_when_multiple_content_types_are_supported\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68307238Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type_when_multiple_content_types_are_supported","Output":"=== PAUSE TestContentType/should_accept_requests_with_a_matching_content_type_when_multiple_content_types_are_supported\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68307363Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type_when_multiple_content_types_are_supported"}
+{"Time":"2026-11-25T12:30:24.6830769Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_not_accept_requests_with_a_mismatching_content_type"}
+{"Time":"2026-11-25T12:30:24.68307801Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_not_accept_requests_with_a_mismatching_content_type","Output":"=== RUN   TestContentType/should_not_accept_requests_with_a_mismatching_content_type\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68308037Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_not_accept_requests_with_a_mismatching_content_type","Output":"=== PAUSE TestContentType/should_not_accept_requests_with_a_mismatching_content_type\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68308153Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_not_accept_requests_with_a_mismatching_content_type"}
+{"Time":"2026-11-25T12:30:24.68308272Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_not_accept_requests_with_a_mismatching_content_type_even_if_multiple_content_types_are_allowed"}
+{"Time":"2026-11-25T12:30:24.68308431Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_not_accept_requests_with_a_mismatching_content_type_even_if_multiple_content_types_are_allowed","Output":"=== RUN   TestContentType/should_not_accept_requests_with_a_mismatching_content_type_even_if_multiple_content_types_are_allowed\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.6830864Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_not_accept_requests_with_a_mismatching_content_type_even_if_multiple_content_types_are_allowed","Output":"=== PAUSE TestContentType/should_not_accept_requests_with_a_mismatching_content_type_even_if_multiple_content_types_are_allowed\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68308763Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_not_accept_requests_with_a_mismatching_content_type_even_if_multiple_content_types_are_allowed"}
+{"Time":"2026-11-25T12:30:24.68308887Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type"}
+{"Time":"2026-11-25T12:30:24.68308986Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type","Output":"=== CONT  TestContentType/should_accept_requests_with_a_matching_content_type\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68309207Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type","Output":"--- PASS: TestContentType/should_accept_requests_with_a_matching_content_type (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68309353Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68309439Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware"}
+{"Time":"2026-11-25T12:30:24.68309531Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware","Output":"=== CONT  TestContentEncodingMiddleware\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68309725Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_no_encoding"}
+{"Time":"2026-11-25T12:30:24.68309836Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_no_encoding","Output":"=== RUN   TestContentEncodingMiddleware/Support_no_encoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68310212Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_no_encoding","Output":"=== PAUSE TestContentEncodingMiddleware/Support_no_encoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68310334Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_no_encoding"}
+{"Time":"2026-11-25T12:30:24.6831077Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_gzip_encoding"}
+{"Time":"2026-11-25T12:30:24.68310879Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_gzip_encoding","Output":"=== RUN   TestContentEncodingMiddleware/Support_gzip_encoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68311063Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_gzip_encoding","Output":"=== PAUSE TestContentEncodingMiddleware/Support_gzip_encoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68311187Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_gzip_encoding"}
+{"Time":"2026-11-25T12:30:24.68311337Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/No_support_for_br_encoding"}
+{"Time":"2026-11-25T12:30:24.68311436Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/No_support_for_br_encoding","Output":"=== RUN   TestContentEncodingMiddleware/No_support_for_br_encoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68311666Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/No_support_for_br_encoding","Output":"=== PAUSE TestContentEncodingMiddleware/No_support_for_br_encoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68311785Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/No_support_for_br_encoding"}
+{"Time":"2026-11-25T12:30:24.68311946Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_for_gzip_and_deflate_encoding"}
+{"Time":"2026-11-25T12:30:24.6831205Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_for_gzip_and_deflate_encoding","Output":"=== RUN   TestContentEncodingMiddleware/Support_for_gzip_and_deflate_encoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68312335Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_for_gzip_and_deflate_encoding","Output":"=== PAUSE TestContentEncodingMiddleware/Support_for_gzip_and_deflate_encoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.6831245Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_for_gzip_and_deflate_encoding"}
+{"Time":"2026-11-25T12:30:24.68312585Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_for_deflate_and_gzip_encoding"}
+{"Time":"2026-11-25T12:30:24.68312688Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_for_deflate_and_gzip_encoding","Output":"=== RUN   TestContentEncodingMiddleware/Support_for_deflate_and_gzip_encoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68312885Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_for_deflate_and_gzip_encoding","Output":"=== PAUSE TestContentEncodingMiddleware/Support_for_deflate_and_gzip_encoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68313106Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_for_deflate_and_gzip_encoding"}
+{"Time":"2026-11-25T12:30:24.68313331Z","Action":"run","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/No_support_for_deflate_and_br_encoding"}
+{"Time":"2026-11-25T12:30:24.68313468Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/No_support_for_deflate_and_br_encoding","Output":"=== RUN   TestContentEncodingMiddleware/No_support_for_deflate_and_br_encoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68313676Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/No_support_for_deflate_and_br_encoding","Output":"=== PAUSE TestContentEncodingMiddleware/No_support_for_deflate_and_br_encoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68313778Z","Action":"pause","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/No_support_for_deflate_and_br_encoding"}
+{"Time":"2026-11-25T12:30:24.68313927Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_no_encoding"}
+{"Time":"2026-11-25T12:30:24.68314022Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_no_encoding","Output":"=== CONT  TestContentEncodingMiddleware/Support_no_encoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.6831424Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_no_encoding","Output":"--- PASS: TestContentEncodingMiddleware/Support_no_encoding (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.6831437Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_no_encoding","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68314455Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncoding"}
+{"Time":"2026-11-25T12:30:24.68314557Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncoding","Output":"=== CONT  TestContentEncoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68314831Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncoding","Output":"--- PASS: TestContentEncoding (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68314973Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncoding","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68315066Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestSplit"}
+{"Time":"2026-11-25T12:30:24.68315163Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestSplit","Output":"=== CONT  TestSplit\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68315316Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestSplit","Output":"--- PASS: TestSplit (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68315443Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestSplit","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68315538Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_a_mismatching_charset_even_if_empty_charsets_are_allowed"}
+{"Time":"2026-11-25T12:30:24.68315657Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_a_mismatching_charset_even_if_empty_charsets_are_allowed","Output":"=== CONT  TestContentCharset/should_not_accept_requests_with_a_mismatching_charset_even_if_empty_charsets_are_allowed\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68316013Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_a_mismatching_charset_even_if_empty_charsets_are_allowed","Output":"--- PASS: TestContentCharset/should_not_accept_requests_with_a_mismatching_charset_even_if_empty_charsets_are_allowed (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68316179Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_a_mismatching_charset_even_if_empty_charsets_are_allowed","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68316275Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_a_mismatching_charset"}
+{"Time":"2026-11-25T12:30:24.68316375Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_a_mismatching_charset","Output":"=== CONT  TestContentCharset/should_not_accept_requests_with_a_mismatching_charset\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68316524Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_a_mismatching_charset","Output":"--- PASS: TestContentCharset/should_not_accept_requests_with_a_mismatching_charset (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68316652Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_a_mismatching_charset","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68316744Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_no_charset_if_empty_charset_headers_are_not_allowed"}
+{"Time":"2026-11-25T12:30:24.68316848Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_no_charset_if_empty_charset_headers_are_not_allowed","Output":"=== CONT  TestContentCharset/should_not_accept_requests_with_no_charset_if_empty_charset_headers_are_not_allowed\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.6831751Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_no_charset_if_empty_charset_headers_are_not_allowed","Output":"--- PASS: TestContentCharset/should_not_accept_requests_with_no_charset_if_empty_charset_headers_are_not_allowed (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68317663Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_not_accept_requests_with_no_charset_if_empty_charset_headers_are_not_allowed","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68317758Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_no_charset_if_empty_charset_headers_are_allowed"}
+{"Time":"2026-11-25T12:30:24.68317868Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_no_charset_if_empty_charset_headers_are_allowed","Output":"=== CONT  TestContentCharset/should_accept_requests_with_no_charset_if_empty_charset_headers_are_allowed\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68318067Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_no_charset_if_empty_charset_headers_are_allowed","Output":"--- PASS: TestContentCharset/should_accept_requests_with_no_charset_if_empty_charset_headers_are_allowed (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68318323Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_no_charset_if_empty_charset_headers_are_allowed","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68318424Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset_when_multiple_charsets_are_supported"}
+{"Time":"2026-11-25T12:30:24.6831854Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset_when_multiple_charsets_are_supported","Output":"=== CONT  TestContentCharset/should_accept_requests_with_a_matching_charset_when_multiple_charsets_are_supported\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.6831873Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset_when_multiple_charsets_are_supported","Output":"--- PASS: TestContentCharset/should_accept_requests_with_a_matching_charset_when_multiple_charsets_are_supported (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68318872Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset_when_multiple_charsets_are_supported","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68318956Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset_with_extra_values"}
+{"Time":"2026-11-25T12:30:24.68319067Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset_with_extra_values","Output":"=== CONT  TestContentCharset/should_accept_requests_with_a_matching_charset_with_extra_values\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68319304Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset_with_extra_values","Output":"--- PASS: TestContentCharset/should_accept_requests_with_a_matching_charset_with_extra_values (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68319457Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_accept_requests_with_a_matching_charset_with_extra_values","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68319578Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_be_case-insensitive"}
+{"Time":"2026-11-25T12:30:24.6831975Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_be_case-insensitive","Output":"=== CONT  TestContentCharset/should_be_case-insensitive\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68319914Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_be_case-insensitive","Output":"--- PASS: TestContentCharset/should_be_case-insensitive (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68320076Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset/should_be_case-insensitive","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68320176Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset","Output":"--- PASS: TestContentCharset (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68320319Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentCharset","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68320416Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_not_accept_requests_with_a_mismatching_content_type_even_if_multiple_content_types_are_allowed"}
+{"Time":"2026-11-25T12:30:24.68320617Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_not_accept_requests_with_a_mismatching_content_type_even_if_multiple_content_types_are_allowed","Output":"=== CONT  TestContentType/should_not_accept_requests_with_a_mismatching_content_type_even_if_multiple_content_types_are_allowed\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68320805Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_not_accept_requests_with_a_mismatching_content_type_even_if_multiple_content_types_are_allowed","Output":"--- PASS: TestContentType/should_not_accept_requests_with_a_mismatching_content_type_even_if_multiple_content_types_are_allowed (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68320972Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_not_accept_requests_with_a_mismatching_content_type_even_if_multiple_content_types_are_allowed","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68321475Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_not_accept_requests_with_a_mismatching_content_type"}
+{"Time":"2026-11-25T12:30:24.68321577Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_not_accept_requests_with_a_mismatching_content_type","Output":"=== CONT  TestContentType/should_not_accept_requests_with_a_mismatching_content_type\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68321818Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_not_accept_requests_with_a_mismatching_content_type","Output":"--- PASS: TestContentType/should_not_accept_requests_with_a_mismatching_content_type (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68321968Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_not_accept_requests_with_a_mismatching_content_type","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68322053Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type_when_multiple_content_types_are_supported"}
+{"Time":"2026-11-25T12:30:24.68322171Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type_when_multiple_content_types_are_supported","Output":"=== CONT  TestContentType/should_accept_requests_with_a_matching_content_type_when_multiple_content_types_are_supported\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68322361Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type_when_multiple_content_types_are_supported","Output":"--- PASS: TestContentType/should_accept_requests_with_a_matching_content_type_when_multiple_content_types_are_supported (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68322511Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type_when_multiple_content_types_are_supported","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68322598Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content-type_with_extra_values"}
+{"Time":"2026-11-25T12:30:24.68322739Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content-type_with_extra_values","Output":"=== CONT  TestContentType/should_accept_requests_with_a_matching_content-type_with_extra_values\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68322945Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content-type_with_extra_values","Output":"--- PASS: TestContentType/should_accept_requests_with_a_matching_content-type_with_extra_values (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68323205Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content-type_with_extra_values","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68323328Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type_no_charset"}
+{"Time":"2026-11-25T12:30:24.68323456Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type_no_charset","Output":"=== CONT  TestContentType/should_accept_requests_with_a_matching_content_type_no_charset\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68323681Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type_no_charset","Output":"--- PASS: TestContentType/should_accept_requests_with_a_matching_content_type_no_charset (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68323841Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType/should_accept_requests_with_a_matching_content_type_no_charset","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68323967Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType","Output":"--- PASS: TestContentType (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68324111Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentType","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68324202Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/No_support_for_deflate_and_br_encoding"}
+{"Time":"2026-11-25T12:30:24.683243Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/No_support_for_deflate_and_br_encoding","Output":"=== CONT  TestContentEncodingMiddleware/No_support_for_deflate_and_br_encoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68324782Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/No_support_for_deflate_and_br_encoding","Output":"--- PASS: TestContentEncodingMiddleware/No_support_for_deflate_and_br_encoding (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68324937Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/No_support_for_deflate_and_br_encoding","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68325028Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_for_deflate_and_gzip_encoding"}
+{"Time":"2026-11-25T12:30:24.68325136Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_for_deflate_and_gzip_encoding","Output":"=== CONT  TestContentEncodingMiddleware/Support_for_deflate_and_gzip_encoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68325355Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_for_deflate_and_gzip_encoding","Output":"--- PASS: TestContentEncodingMiddleware/Support_for_deflate_and_gzip_encoding (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68325502Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_for_deflate_and_gzip_encoding","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68325586Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_for_gzip_and_deflate_encoding"}
+{"Time":"2026-11-25T12:30:24.68325698Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_for_gzip_and_deflate_encoding","Output":"=== CONT  TestContentEncodingMiddleware/Support_for_gzip_and_deflate_encoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68325968Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_for_gzip_and_deflate_encoding","Output":"--- PASS: TestContentEncodingMiddleware/Support_for_gzip_and_deflate_encoding (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68326229Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_for_gzip_and_deflate_encoding","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68326337Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/No_support_for_br_encoding"}
+{"Time":"2026-11-25T12:30:24.68326444Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/No_support_for_br_encoding","Output":"=== CONT  TestContentEncodingMiddleware/No_support_for_br_encoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68326612Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/No_support_for_br_encoding","Output":"--- PASS: TestContentEncodingMiddleware/No_support_for_br_encoding (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68327113Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/No_support_for_br_encoding","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68327216Z","Action":"cont","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_gzip_encoding"}
+{"Time":"2026-11-25T12:30:24.68327334Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_gzip_encoding","Output":"=== CONT  TestContentEncodingMiddleware/Support_gzip_encoding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68327502Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_gzip_encoding","Output":"--- PASS: TestContentEncodingMiddleware/Support_gzip_encoding (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68327746Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware/Support_gzip_encoding","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68327872Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware","Output":"--- PASS: TestContentEncodingMiddleware (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.68328009Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Test":"TestContentEncodingMiddleware","Elapsed":0}
+{"Time":"2026-11-25T12:30:24.68328237Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:30:24.683830961Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Output":"coverage: 65.2% of statements\n"}
+{"Time":"2026-11-25T12:30:24.687311503Z","Action":"output","Package":"github.com/go-chi/chi/v5/middleware","Output":"ok  \tgithub.com/go-chi/chi/v5/middleware\t25.208s\tcoverage: 65.2% of statements\n"}
+{"Time":"2026-11-25T12:30:24.687331683Z","Action":"pass","Package":"github.com/go-chi/chi/v5/middleware","Elapsed":25.208}

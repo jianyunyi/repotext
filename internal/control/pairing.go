@@ -125,23 +125,7 @@ func NewLANHandler(api API, p *Pairing, allowedHosts []string) http.Handler {
 		if !lanSessionValid(w, r, p) {
 			return
 		}
-		if api.Store == nil {
-			writeError(w, http.StatusServiceUnavailable, "storage_unavailable")
-			return
-		}
-		store, ok := api.Store.(*SQLiteStore)
-		if !ok {
-			writeError(w, http.StatusNotFound, "log_not_found")
-			return
-		}
-		body, err := store.GetLog(r.Context(), r.PathValue("id"))
-		if err != nil {
-			writeError(w, http.StatusNotFound, "log_not_found")
-			return
-		}
-		w.Header().Set("Content-Type", "text/plain; charset=utf-8")
-		w.WriteHeader(http.StatusOK)
-		_, _ = w.Write(body)
+		api.log(w, r)
 	})
 	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		if r.Method != http.MethodGet || strings.HasPrefix(r.URL.Path, "/api/") {

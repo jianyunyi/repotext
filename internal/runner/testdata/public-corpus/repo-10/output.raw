@@ -1,0 +1,166 @@
+{"Time":"2026-11-25T12:31:11.255967282Z","Action":"start","Package":"github.com/rs/xid"}
+{"Time":"2026-11-25T12:31:11.260633795Z","Action":"run","Package":"github.com/rs/xid","Test":"TestIDPartsExtraction"}
+{"Time":"2026-11-25T12:31:11.260683095Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDPartsExtraction","Output":"=== RUN   TestIDPartsExtraction\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.260696235Z","Action":"run","Package":"github.com/rs/xid","Test":"TestIDPartsExtraction/Test0"}
+{"Time":"2026-11-25T12:31:11.260698065Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDPartsExtraction/Test0","Output":"=== RUN   TestIDPartsExtraction/Test0\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.260702265Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDPartsExtraction/Test0","Output":"--- PASS: TestIDPartsExtraction/Test0 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.260703965Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestIDPartsExtraction/Test0","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.260708815Z","Action":"run","Package":"github.com/rs/xid","Test":"TestIDPartsExtraction/Test1"}
+{"Time":"2026-11-25T12:31:11.260710155Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDPartsExtraction/Test1","Output":"=== RUN   TestIDPartsExtraction/Test1\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.260712505Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDPartsExtraction/Test1","Output":"--- PASS: TestIDPartsExtraction/Test1 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.260714365Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestIDPartsExtraction/Test1","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.260716275Z","Action":"run","Package":"github.com/rs/xid","Test":"TestIDPartsExtraction/Test2"}
+{"Time":"2026-11-25T12:31:11.260718205Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDPartsExtraction/Test2","Output":"=== RUN   TestIDPartsExtraction/Test2\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.260720625Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDPartsExtraction/Test2","Output":"--- PASS: TestIDPartsExtraction/Test2 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.260722635Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestIDPartsExtraction/Test2","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.260724255Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDPartsExtraction","Output":"--- PASS: TestIDPartsExtraction (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.260727035Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestIDPartsExtraction","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.260732425Z","Action":"run","Package":"github.com/rs/xid","Test":"TestPadding"}
+{"Time":"2026-11-25T12:31:11.260733955Z","Action":"output","Package":"github.com/rs/xid","Test":"TestPadding","Output":"=== RUN   TestPadding\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.269494501Z","Action":"output","Package":"github.com/rs/xid","Test":"TestPadding","Output":"--- PASS: TestPadding (0.01s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.269534811Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestPadding","Elapsed":0.01}
+{"Time":"2026-11-25T12:31:11.269545291Z","Action":"run","Package":"github.com/rs/xid","Test":"TestNew"}
+{"Time":"2026-11-25T12:31:11.269547011Z","Action":"output","Package":"github.com/rs/xid","Test":"TestNew","Output":"=== RUN   TestNew\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.269554481Z","Action":"output","Package":"github.com/rs/xid","Test":"TestNew","Output":"--- PASS: TestNew (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.269558611Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestNew","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.269560041Z","Action":"run","Package":"github.com/rs/xid","Test":"TestIDString"}
+{"Time":"2026-11-25T12:31:11.269561311Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDString","Output":"=== RUN   TestIDString\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.269563141Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDString","Output":"--- PASS: TestIDString (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.269566941Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestIDString","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.269568241Z","Action":"run","Package":"github.com/rs/xid","Test":"TestIDEncode"}
+{"Time":"2026-11-25T12:31:11.269569321Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDEncode","Output":"=== RUN   TestIDEncode\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.269571191Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDEncode","Output":"--- PASS: TestIDEncode (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.269576051Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestIDEncode","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.269577421Z","Action":"run","Package":"github.com/rs/xid","Test":"TestFromString"}
+{"Time":"2026-11-25T12:31:11.269578551Z","Action":"output","Package":"github.com/rs/xid","Test":"TestFromString","Output":"=== RUN   TestFromString\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.269580101Z","Action":"output","Package":"github.com/rs/xid","Test":"TestFromString","Output":"--- PASS: TestFromString (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.269583511Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestFromString","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.269584701Z","Action":"run","Package":"github.com/rs/xid","Test":"TestFromStringInvalid"}
+{"Time":"2026-11-25T12:31:11.269585831Z","Action":"output","Package":"github.com/rs/xid","Test":"TestFromStringInvalid","Output":"=== RUN   TestFromStringInvalid\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.269588431Z","Action":"output","Package":"github.com/rs/xid","Test":"TestFromStringInvalid","Output":"--- PASS: TestFromStringInvalid (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.269590581Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestFromStringInvalid","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.269592591Z","Action":"run","Package":"github.com/rs/xid","Test":"TestIDJSONMarshaling"}
+{"Time":"2026-11-25T12:31:11.269593821Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDJSONMarshaling","Output":"=== RUN   TestIDJSONMarshaling\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.270539752Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDJSONMarshaling","Output":"--- PASS: TestIDJSONMarshaling (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.270559432Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestIDJSONMarshaling","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.270563172Z","Action":"run","Package":"github.com/rs/xid","Test":"TestIDJSONUnmarshaling"}
+{"Time":"2026-11-25T12:31:11.270564782Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDJSONUnmarshaling","Output":"=== RUN   TestIDJSONUnmarshaling\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.270567362Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDJSONUnmarshaling","Output":"--- PASS: TestIDJSONUnmarshaling (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.270571682Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestIDJSONUnmarshaling","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.270573352Z","Action":"run","Package":"github.com/rs/xid","Test":"TestIDJSONUnmarshalingError"}
+{"Time":"2026-11-25T12:31:11.270574632Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDJSONUnmarshalingError","Output":"=== RUN   TestIDJSONUnmarshalingError\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.270580502Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDJSONUnmarshalingError","Output":"--- PASS: TestIDJSONUnmarshalingError (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.270584342Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestIDJSONUnmarshalingError","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.270587312Z","Action":"run","Package":"github.com/rs/xid","Test":"TestIDDriverValue"}
+{"Time":"2026-11-25T12:31:11.270589742Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDDriverValue","Output":"=== RUN   TestIDDriverValue\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.270591762Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDDriverValue","Output":"--- PASS: TestIDDriverValue (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.270594882Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestIDDriverValue","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.270596192Z","Action":"run","Package":"github.com/rs/xid","Test":"TestIDDriverScan"}
+{"Time":"2026-11-25T12:31:11.270600432Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDDriverScan","Output":"=== RUN   TestIDDriverScan\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.270602562Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDDriverScan","Output":"--- PASS: TestIDDriverScan (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.270605092Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestIDDriverScan","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.270606552Z","Action":"run","Package":"github.com/rs/xid","Test":"TestIDDriverScanError"}
+{"Time":"2026-11-25T12:31:11.270608722Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDDriverScanError","Output":"=== RUN   TestIDDriverScanError\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.270611712Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDDriverScanError","Output":"--- PASS: TestIDDriverScanError (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.270613132Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestIDDriverScanError","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.270614642Z","Action":"run","Package":"github.com/rs/xid","Test":"TestIDDriverScanByteFromDatabase"}
+{"Time":"2026-11-25T12:31:11.270616032Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDDriverScanByteFromDatabase","Output":"=== RUN   TestIDDriverScanByteFromDatabase\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.270619152Z","Action":"output","Package":"github.com/rs/xid","Test":"TestIDDriverScanByteFromDatabase","Output":"--- PASS: TestIDDriverScanByteFromDatabase (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.270620522Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestIDDriverScanByteFromDatabase","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.270621642Z","Action":"run","Package":"github.com/rs/xid","Test":"TestFromStringQuick"}
+{"Time":"2026-11-25T12:31:11.270622782Z","Action":"output","Package":"github.com/rs/xid","Test":"TestFromStringQuick","Output":"=== RUN   TestFromStringQuick\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.270861032Z","Action":"output","Package":"github.com/rs/xid","Test":"TestFromStringQuick","Output":"--- PASS: TestFromStringQuick (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.270866202Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestFromStringQuick","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.270873692Z","Action":"run","Package":"github.com/rs/xid","Test":"TestFromStringQuickInvalidChars"}
+{"Time":"2026-11-25T12:31:11.270874832Z","Action":"output","Package":"github.com/rs/xid","Test":"TestFromStringQuickInvalidChars","Output":"=== RUN   TestFromStringQuickInvalidChars\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272257683Z","Action":"output","Package":"github.com/rs/xid","Test":"TestFromStringQuickInvalidChars","Output":"--- PASS: TestFromStringQuickInvalidChars (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272275663Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestFromStringQuickInvalidChars","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.272280113Z","Action":"run","Package":"github.com/rs/xid","Test":"TestID_IsNil"}
+{"Time":"2026-11-25T12:31:11.272281893Z","Action":"output","Package":"github.com/rs/xid","Test":"TestID_IsNil","Output":"=== RUN   TestID_IsNil\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272284603Z","Action":"run","Package":"github.com/rs/xid","Test":"TestID_IsNil/ID_not_nil"}
+{"Time":"2026-11-25T12:31:11.272286243Z","Action":"output","Package":"github.com/rs/xid","Test":"TestID_IsNil/ID_not_nil","Output":"=== RUN   TestID_IsNil/ID_not_nil\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272290463Z","Action":"output","Package":"github.com/rs/xid","Test":"TestID_IsNil/ID_not_nil","Output":"--- PASS: TestID_IsNil/ID_not_nil (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272299393Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestID_IsNil/ID_not_nil","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.272300853Z","Action":"run","Package":"github.com/rs/xid","Test":"TestID_IsNil/Nil_ID"}
+{"Time":"2026-11-25T12:31:11.272302113Z","Action":"output","Package":"github.com/rs/xid","Test":"TestID_IsNil/Nil_ID","Output":"=== RUN   TestID_IsNil/Nil_ID\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272303993Z","Action":"output","Package":"github.com/rs/xid","Test":"TestID_IsNil/Nil_ID","Output":"--- PASS: TestID_IsNil/Nil_ID (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272305943Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestID_IsNil/Nil_ID","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.272307823Z","Action":"output","Package":"github.com/rs/xid","Test":"TestID_IsNil","Output":"--- PASS: TestID_IsNil (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272309653Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestID_IsNil","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.272310973Z","Action":"run","Package":"github.com/rs/xid","Test":"TestNilID"}
+{"Time":"2026-11-25T12:31:11.272312863Z","Action":"output","Package":"github.com/rs/xid","Test":"TestNilID","Output":"=== RUN   TestNilID\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272314703Z","Action":"output","Package":"github.com/rs/xid","Test":"TestNilID","Output":"--- PASS: TestNilID (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272316053Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestNilID","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.272317973Z","Action":"run","Package":"github.com/rs/xid","Test":"TestNilID_IsNil"}
+{"Time":"2026-11-25T12:31:11.272319083Z","Action":"output","Package":"github.com/rs/xid","Test":"TestNilID_IsNil","Output":"=== RUN   TestNilID_IsNil\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272320593Z","Action":"output","Package":"github.com/rs/xid","Test":"TestNilID_IsNil","Output":"--- PASS: TestNilID_IsNil (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272321923Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestNilID_IsNil","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.272323243Z","Action":"run","Package":"github.com/rs/xid","Test":"TestFromBytes_Invariant"}
+{"Time":"2026-11-25T12:31:11.272324423Z","Action":"output","Package":"github.com/rs/xid","Test":"TestFromBytes_Invariant","Output":"=== RUN   TestFromBytes_Invariant\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272326463Z","Action":"output","Package":"github.com/rs/xid","Test":"TestFromBytes_Invariant","Output":"--- PASS: TestFromBytes_Invariant (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272328013Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestFromBytes_Invariant","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.272330013Z","Action":"run","Package":"github.com/rs/xid","Test":"TestFromBytes_InvalidBytes"}
+{"Time":"2026-11-25T12:31:11.272331103Z","Action":"output","Package":"github.com/rs/xid","Test":"TestFromBytes_InvalidBytes","Output":"=== RUN   TestFromBytes_InvalidBytes\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272333813Z","Action":"output","Package":"github.com/rs/xid","Test":"TestFromBytes_InvalidBytes","Output":"--- PASS: TestFromBytes_InvalidBytes (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272335143Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestFromBytes_InvalidBytes","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.272336413Z","Action":"run","Package":"github.com/rs/xid","Test":"TestID_Compare"}
+{"Time":"2026-11-25T12:31:11.272337513Z","Action":"output","Package":"github.com/rs/xid","Test":"TestID_Compare","Output":"=== RUN   TestID_Compare\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272338953Z","Action":"output","Package":"github.com/rs/xid","Test":"TestID_Compare","Output":"--- PASS: TestID_Compare (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272341483Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestID_Compare","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.272346513Z","Action":"run","Package":"github.com/rs/xid","Test":"TestSorter_Len"}
+{"Time":"2026-11-25T12:31:11.272348943Z","Action":"output","Package":"github.com/rs/xid","Test":"TestSorter_Len","Output":"=== RUN   TestSorter_Len\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272350573Z","Action":"output","Package":"github.com/rs/xid","Test":"TestSorter_Len","Output":"--- PASS: TestSorter_Len (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272352043Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestSorter_Len","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.272355093Z","Action":"run","Package":"github.com/rs/xid","Test":"TestSorter_Less"}
+{"Time":"2026-11-25T12:31:11.272360153Z","Action":"output","Package":"github.com/rs/xid","Test":"TestSorter_Less","Output":"=== RUN   TestSorter_Less\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272361773Z","Action":"output","Package":"github.com/rs/xid","Test":"TestSorter_Less","Output":"--- PASS: TestSorter_Less (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272363013Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestSorter_Less","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.272364253Z","Action":"run","Package":"github.com/rs/xid","Test":"TestSorter_Swap"}
+{"Time":"2026-11-25T12:31:11.272365213Z","Action":"output","Package":"github.com/rs/xid","Test":"TestSorter_Swap","Output":"=== RUN   TestSorter_Swap\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272366793Z","Action":"output","Package":"github.com/rs/xid","Test":"TestSorter_Swap","Output":"--- PASS: TestSorter_Swap (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272368023Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestSorter_Swap","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.272369223Z","Action":"run","Package":"github.com/rs/xid","Test":"TestSort"}
+{"Time":"2026-11-25T12:31:11.272370343Z","Action":"output","Package":"github.com/rs/xid","Test":"TestSort","Output":"=== RUN   TestSort\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272374703Z","Action":"output","Package":"github.com/rs/xid","Test":"TestSort","Output":"--- PASS: TestSort (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272376103Z","Action":"pass","Package":"github.com/rs/xid","Test":"TestSort","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.272377683Z","Action":"output","Package":"github.com/rs/xid","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.272654794Z","Action":"output","Package":"github.com/rs/xid","Output":"coverage: 95.0% of statements\n"}
+{"Time":"2026-11-25T12:31:11.273654444Z","Action":"output","Package":"github.com/rs/xid","Output":"ok  \tgithub.com/rs/xid\t0.017s\tcoverage: 95.0% of statements\n"}
+{"Time":"2026-11-25T12:31:11.273669024Z","Action":"pass","Package":"github.com/rs/xid","Elapsed":0.018}
+{"Time":"2026-11-25T12:31:11.468577534Z","Action":"start","Package":"github.com/rs/xid/b"}
+{"Time":"2026-11-25T12:31:11.470285325Z","Action":"run","Package":"github.com/rs/xid/b","Test":"TestIDValue"}
+{"Time":"2026-11-25T12:31:11.470330945Z","Action":"output","Package":"github.com/rs/xid/b","Test":"TestIDValue","Output":"=== RUN   TestIDValue\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.470340755Z","Action":"run","Package":"github.com/rs/xid/b","Test":"TestIDValue/non_nil_id"}
+{"Time":"2026-11-25T12:31:11.470343075Z","Action":"output","Package":"github.com/rs/xid/b","Test":"TestIDValue/non_nil_id","Output":"=== RUN   TestIDValue/non_nil_id\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.470349605Z","Action":"output","Package":"github.com/rs/xid/b","Test":"TestIDValue/non_nil_id","Output":"--- PASS: TestIDValue/non_nil_id (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.470355875Z","Action":"pass","Package":"github.com/rs/xid/b","Test":"TestIDValue/non_nil_id","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.470360065Z","Action":"run","Package":"github.com/rs/xid/b","Test":"TestIDValue/nil_id"}
+{"Time":"2026-11-25T12:31:11.470361505Z","Action":"output","Package":"github.com/rs/xid/b","Test":"TestIDValue/nil_id","Output":"=== RUN   TestIDValue/nil_id\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.470365805Z","Action":"output","Package":"github.com/rs/xid/b","Test":"TestIDValue/nil_id","Output":"--- PASS: TestIDValue/nil_id (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.470418095Z","Action":"pass","Package":"github.com/rs/xid/b","Test":"TestIDValue/nil_id","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.470422045Z","Action":"output","Package":"github.com/rs/xid/b","Test":"TestIDValue","Output":"--- PASS: TestIDValue (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.470426465Z","Action":"pass","Package":"github.com/rs/xid/b","Test":"TestIDValue","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.470428945Z","Action":"run","Package":"github.com/rs/xid/b","Test":"TestIDScan"}
+{"Time":"2026-11-25T12:31:11.470430035Z","Action":"output","Package":"github.com/rs/xid/b","Test":"TestIDScan","Output":"=== RUN   TestIDScan\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.470432555Z","Action":"run","Package":"github.com/rs/xid/b","Test":"TestIDScan/bytes_id"}
+{"Time":"2026-11-25T12:31:11.470433565Z","Action":"output","Package":"github.com/rs/xid/b","Test":"TestIDScan/bytes_id","Output":"=== RUN   TestIDScan/bytes_id\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.470435115Z","Action":"output","Package":"github.com/rs/xid/b","Test":"TestIDScan/bytes_id","Output":"--- PASS: TestIDScan/bytes_id (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.470437685Z","Action":"pass","Package":"github.com/rs/xid/b","Test":"TestIDScan/bytes_id","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.470438905Z","Action":"run","Package":"github.com/rs/xid/b","Test":"TestIDScan/nil_id"}
+{"Time":"2026-11-25T12:31:11.470440085Z","Action":"output","Package":"github.com/rs/xid/b","Test":"TestIDScan/nil_id","Output":"=== RUN   TestIDScan/nil_id\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.470441615Z","Action":"output","Package":"github.com/rs/xid/b","Test":"TestIDScan/nil_id","Output":"--- PASS: TestIDScan/nil_id (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.470447145Z","Action":"pass","Package":"github.com/rs/xid/b","Test":"TestIDScan/nil_id","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.470450565Z","Action":"run","Package":"github.com/rs/xid/b","Test":"TestIDScan/wrong_bytes"}
+{"Time":"2026-11-25T12:31:11.470451515Z","Action":"output","Package":"github.com/rs/xid/b","Test":"TestIDScan/wrong_bytes","Output":"=== RUN   TestIDScan/wrong_bytes\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.470453155Z","Action":"output","Package":"github.com/rs/xid/b","Test":"TestIDScan/wrong_bytes","Output":"--- PASS: TestIDScan/wrong_bytes (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.470454665Z","Action":"pass","Package":"github.com/rs/xid/b","Test":"TestIDScan/wrong_bytes","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.470455765Z","Action":"run","Package":"github.com/rs/xid/b","Test":"TestIDScan/unknown_type"}
+{"Time":"2026-11-25T12:31:11.470457015Z","Action":"output","Package":"github.com/rs/xid/b","Test":"TestIDScan/unknown_type","Output":"=== RUN   TestIDScan/unknown_type\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.470459135Z","Action":"output","Package":"github.com/rs/xid/b","Test":"TestIDScan/unknown_type","Output":"--- PASS: TestIDScan/unknown_type (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.470460475Z","Action":"pass","Package":"github.com/rs/xid/b","Test":"TestIDScan/unknown_type","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.470461815Z","Action":"output","Package":"github.com/rs/xid/b","Test":"TestIDScan","Output":"--- PASS: TestIDScan (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.470463075Z","Action":"pass","Package":"github.com/rs/xid/b","Test":"TestIDScan","Elapsed":0}
+{"Time":"2026-11-25T12:31:11.470464435Z","Action":"output","Package":"github.com/rs/xid/b","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:31:11.470730615Z","Action":"output","Package":"github.com/rs/xid/b","Output":"coverage: 100.0% of statements\n"}
+{"Time":"2026-11-25T12:31:11.471182266Z","Action":"output","Package":"github.com/rs/xid/b","Output":"ok  \tgithub.com/rs/xid/b\t0.002s\tcoverage: 100.0% of statements\n"}
+{"Time":"2026-11-25T12:31:11.471195586Z","Action":"pass","Package":"github.com/rs/xid/b","Elapsed":0.003}

@@ -1,0 +1,19 @@
+{
+  "commit": "0f11ee6918f41a04c201eceeadf612a377bc7fbc",
+  "error": "",
+  "exit_code": 0,
+  "fault_injection": false,
+  "finished_at": "2026-11-25T12:27:20.950069414Z",
+  "phases": [
+    "clone",
+    "deps",
+    "test"
+  ],
+  "raw_sha256": "82bf9eb63666988b3dab175ad611affbb3cb5a52e54adfc0c553c28b191aec5a",
+  "raw_truncated": false,
+  "repo_url": "https://github.com/google/uuid",
+  "report_sha256": "9ed7d6699675e3df74c010ac26ad501bb4b190645b18f6f81d8419fc53c6517f",
+  "source_modified": false,
+  "started_at": "2026-11-25T12:27:00.486260207Z",
+  "timed_out": false
+}

@@ -1,0 +1,6 @@
+{"Time":"2026-11-25T19:07:00.4015247+08:00","Action":"start","Package":"example.invalid/repotest-owned-corpus/no-selected-tests"}
+{"Time":"2026-11-25T19:07:01.4290852+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/no-selected-tests","Output":"testing: warning: no tests to run\n"}
+{"Time":"2026-11-25T19:07:01.4290852+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/no-selected-tests","Output":"PASS\n"}
+{"Time":"2026-11-25T19:07:01.4328098+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/no-selected-tests","Output":"coverage: 0.0% of statements\n"}
+{"Time":"2026-11-25T19:07:01.4387196+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/no-selected-tests","Output":"ok  \texample.invalid/repotest-owned-corpus/no-selected-tests\t1.036s\tcoverage: 0.0% of statements [no tests to run]\n"}
+{"Time":"2026-11-25T19:07:01.444089+08:00","Action":"pass","Package":"example.invalid/repotest-owned-corpus/no-selected-tests","Elapsed":1.043}

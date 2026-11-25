@@ -1,0 +1,11 @@
+{"Time":"2026-11-25T19:45:32.2288971+08:00","Action":"start","Package":"example.invalid/quality-probe"}
+{"Time":"2026-11-25T19:45:33.0880962+08:00","Action":"output","Package":"example.invalid/quality-probe","Output":"coverage: 99.9% of statements\n"}
+{"Time":"2026-11-25T19:45:33.0907806+08:00","Action":"output","Package":"example.invalid/quality-probe","Output":"panic: before m.Run\n"}
+{"Time":"2026-11-25T19:45:33.0907806+08:00","Action":"output","Package":"example.invalid/quality-probe","Output":"\n"}
+{"Time":"2026-11-25T19:45:33.0907806+08:00","Action":"output","Package":"example.invalid/quality-probe","Output":"goroutine 1 [running]:\n"}
+{"Time":"2026-11-25T19:45:33.0907806+08:00","Action":"output","Package":"example.invalid/quality-probe","Output":"example.invalid/quality-probe.TestMain(0x7ff7e04d82e0?)\n"}
+{"Time":"2026-11-25T19:45:33.0907806+08:00","Action":"output","Package":"example.invalid/quality-probe","Output":"\tF:/repotext/work/public-report-s1/quality-probe/source_test.go:8 +0x59\n"}
+{"Time":"2026-11-25T19:45:33.0907806+08:00","Action":"output","Package":"example.invalid/quality-probe","Output":"main.main()\n"}
+{"Time":"2026-11-25T19:45:33.0907806+08:00","Action":"output","Package":"example.invalid/quality-probe","Output":"\t_testmain.go:58 +0xa5\n"}
+{"Time":"2026-11-25T19:45:33.0963013+08:00","Action":"output","Package":"example.invalid/quality-probe","Output":"FAIL\texample.invalid/quality-probe\t0.866s\n"}
+{"Time":"2026-11-25T19:45:33.0963013+08:00","Action":"fail","Package":"example.invalid/quality-probe","Elapsed":0.867}

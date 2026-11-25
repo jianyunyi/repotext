@@ -1,0 +1,138 @@
+{"Time":"2026-11-25T12:27:38.273854545Z","Action":"start","Package":"github.com/dustin/go-humanize"}
+{"Time":"2026-11-25T12:27:38.275759297Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestBigByteParsing"}
+{"Time":"2026-11-25T12:27:38.275815567Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestBigByteParsing","Output":"=== RUN   TestBigByteParsing\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.275838877Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestBigByteParsing","Output":"--- PASS: TestBigByteParsing (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.275843697Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestBigByteParsing","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.275848567Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestBigByteErrors"}
+{"Time":"2026-11-25T12:27:38.275852567Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestBigByteErrors","Output":"=== RUN   TestBigByteErrors\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.275933287Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestBigByteErrors","Output":"--- PASS: TestBigByteErrors (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276007647Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestBigByteErrors","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.276018617Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestBigBytes"}
+{"Time":"2026-11-25T12:27:38.276026077Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestBigBytes","Output":"=== RUN   TestBigBytes\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276052817Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestBigBytes","Output":"--- PASS: TestBigBytes (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276071417Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestBigBytes","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.276073347Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestVeryBigBytes"}
+{"Time":"2026-11-25T12:27:38.276074677Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestVeryBigBytes","Output":"=== RUN   TestVeryBigBytes\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276124707Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestVeryBigBytes","Output":"--- PASS: TestVeryBigBytes (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276128927Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestVeryBigBytes","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.276130297Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestVeryVeryBigBytes"}
+{"Time":"2026-11-25T12:27:38.276131817Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestVeryVeryBigBytes","Output":"=== RUN   TestVeryVeryBigBytes\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276136277Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestVeryVeryBigBytes","Output":"--- PASS: TestVeryVeryBigBytes (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276137637Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestVeryVeryBigBytes","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.276138957Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestParseVeryBig"}
+{"Time":"2026-11-25T12:27:38.276140227Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestParseVeryBig","Output":"=== RUN   TestParseVeryBig\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276182397Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestParseVeryBig","Output":"--- PASS: TestParseVeryBig (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276188497Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestParseVeryBig","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.276193537Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestByteParsing"}
+{"Time":"2026-11-25T12:27:38.276198647Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestByteParsing","Output":"=== RUN   TestByteParsing\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276205067Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestByteParsing","Output":"--- PASS: TestByteParsing (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276210077Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestByteParsing","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.276214787Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestByteErrors"}
+{"Time":"2026-11-25T12:27:38.276232117Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestByteErrors","Output":"=== RUN   TestByteErrors\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276241707Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestByteErrors","Output":"--- PASS: TestByteErrors (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276248677Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestByteErrors","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.276254567Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestBytes"}
+{"Time":"2026-11-25T12:27:38.276264017Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestBytes","Output":"=== RUN   TestBytes\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276272417Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestBytes","Output":"--- PASS: TestBytes (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276277607Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestBytes","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.276286667Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestCommas"}
+{"Time":"2026-11-25T12:27:38.276291337Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestCommas","Output":"=== RUN   TestCommas\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276312097Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestCommas","Output":"--- PASS: TestCommas (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276317997Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestCommas","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.276323717Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestCommafWithDigits"}
+{"Time":"2026-11-25T12:27:38.276328487Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestCommafWithDigits","Output":"=== RUN   TestCommafWithDigits\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276334677Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestCommafWithDigits","Output":"--- PASS: TestCommafWithDigits (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276341607Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestCommafWithDigits","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.276347277Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestCommafs"}
+{"Time":"2026-11-25T12:27:38.276352517Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestCommafs","Output":"=== RUN   TestCommafs\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276359087Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestCommafs","Output":"--- PASS: TestCommafs (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276364607Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestCommafs","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.276372757Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestBigCommas"}
+{"Time":"2026-11-25T12:27:38.276390187Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestBigCommas","Output":"=== RUN   TestBigCommas\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276404027Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestBigCommas","Output":"--- PASS: TestBigCommas (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276409837Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestBigCommas","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.276419817Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestVeryBigCommas"}
+{"Time":"2026-11-25T12:27:38.276425247Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestVeryBigCommas","Output":"=== RUN   TestVeryBigCommas\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276441767Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestVeryBigCommas","Output":"--- PASS: TestVeryBigCommas (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276447037Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestVeryBigCommas","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.276456577Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestBigCommafs"}
+{"Time":"2026-11-25T12:27:38.276457827Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestBigCommafs","Output":"=== RUN   TestBigCommafs\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.276462407Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestBigCommafs","Output":"--- PASS: TestBigCommafs (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.341990214Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestBigCommafs","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.342034974Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestFtoa"}
+{"Time":"2026-11-25T12:27:38.342038344Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestFtoa","Output":"=== RUN   TestFtoa\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.342050594Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestFtoa","Output":"--- PASS: TestFtoa (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.342053704Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestFtoa","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.342056174Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestFtoaWithDigits"}
+{"Time":"2026-11-25T12:27:38.342057454Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestFtoaWithDigits","Output":"=== RUN   TestFtoaWithDigits\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.342061574Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestFtoaWithDigits","Output":"--- PASS: TestFtoaWithDigits (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.342064034Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestFtoaWithDigits","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.342065304Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestStripTrailingDigits"}
+{"Time":"2026-11-25T12:27:38.342066554Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestStripTrailingDigits","Output":"=== RUN   TestStripTrailingDigits\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345462496Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestStripTrailingDigits","Output":"--- PASS: TestStripTrailingDigits (0.01s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345508736Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestStripTrailingDigits","Elapsed":0.01}
+{"Time":"2026-11-25T12:27:38.345527056Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestFormatFloat"}
+{"Time":"2026-11-25T12:27:38.345530156Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestFormatFloat","Output":"=== RUN   TestFormatFloat\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345533616Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestFormatFloat","Output":"--- PASS: TestFormatFloat (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345536176Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestFormatFloat","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.345538426Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestOrdinals"}
+{"Time":"2026-11-25T12:27:38.345539486Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestOrdinals","Output":"=== RUN   TestOrdinals\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345544456Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestOrdinals","Output":"--- PASS: TestOrdinals (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345545806Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestOrdinals","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.345547196Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestSI"}
+{"Time":"2026-11-25T12:27:38.345548356Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestSI","Output":"=== RUN   TestSI\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345550986Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestSI","Output":"--- PASS: TestSI (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345554266Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestSI","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.345555626Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestSIWithDigits"}
+{"Time":"2026-11-25T12:27:38.345556886Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestSIWithDigits","Output":"=== RUN   TestSIWithDigits\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345559006Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestSIWithDigits","Output":"--- PASS: TestSIWithDigits (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345560436Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestSIWithDigits","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.345561806Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestBug106"}
+{"Time":"2026-11-25T12:27:38.345562956Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestBug106","Output":"=== RUN   TestBug106\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345564706Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestBug106","Output":"--- PASS: TestBug106 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345566216Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestBug106","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.345567326Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestPast"}
+{"Time":"2026-11-25T12:27:38.345568396Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestPast","Output":"=== RUN   TestPast\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345570886Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestPast","Output":"--- PASS: TestPast (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345572156Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestPast","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.345573436Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestReltimeOffbyone"}
+{"Time":"2026-11-25T12:27:38.345580616Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestReltimeOffbyone","Output":"=== RUN   TestReltimeOffbyone\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345583126Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestReltimeOffbyone","Output":"--- PASS: TestReltimeOffbyone (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345584856Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestReltimeOffbyone","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.345586666Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestFuture"}
+{"Time":"2026-11-25T12:27:38.345587776Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestFuture","Output":"=== RUN   TestFuture\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345595486Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestFuture","Output":"--- PASS: TestFuture (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345596876Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestFuture","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.345599286Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestRange"}
+{"Time":"2026-11-25T12:27:38.345600406Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestRange","Output":"=== RUN   TestRange\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345603216Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestRange","Output":"--- PASS: TestRange (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345604686Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestRange","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.345610476Z","Action":"run","Package":"github.com/dustin/go-humanize","Test":"TestCustomRelTime"}
+{"Time":"2026-11-25T12:27:38.345612146Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestCustomRelTime","Output":"=== RUN   TestCustomRelTime\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345627706Z","Action":"output","Package":"github.com/dustin/go-humanize","Test":"TestCustomRelTime","Output":"--- PASS: TestCustomRelTime (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.345630836Z","Action":"pass","Package":"github.com/dustin/go-humanize","Test":"TestCustomRelTime","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.345632986Z","Action":"output","Package":"github.com/dustin/go-humanize","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.346090577Z","Action":"output","Package":"github.com/dustin/go-humanize","Output":"coverage: 99.7% of statements\n"}
+{"Time":"2026-11-25T12:27:38.347252968Z","Action":"output","Package":"github.com/dustin/go-humanize","Output":"ok  \tgithub.com/dustin/go-humanize\t0.073s\tcoverage: 99.7% of statements\n"}
+{"Time":"2026-11-25T12:27:38.347298868Z","Action":"pass","Package":"github.com/dustin/go-humanize","Elapsed":0.073}
+{"Time":"2026-11-25T12:27:38.473733628Z","Action":"start","Package":"github.com/dustin/go-humanize/english"}
+{"Time":"2026-11-25T12:27:38.475043879Z","Action":"run","Package":"github.com/dustin/go-humanize/english","Test":"TestPluralWord"}
+{"Time":"2026-11-25T12:27:38.475074909Z","Action":"output","Package":"github.com/dustin/go-humanize/english","Test":"TestPluralWord","Output":"=== RUN   TestPluralWord\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.475092949Z","Action":"output","Package":"github.com/dustin/go-humanize/english","Test":"TestPluralWord","Output":"--- PASS: TestPluralWord (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.475095439Z","Action":"pass","Package":"github.com/dustin/go-humanize/english","Test":"TestPluralWord","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.475099399Z","Action":"run","Package":"github.com/dustin/go-humanize/english","Test":"TestPlural"}
+{"Time":"2026-11-25T12:27:38.475100939Z","Action":"output","Package":"github.com/dustin/go-humanize/english","Test":"TestPlural","Output":"=== RUN   TestPlural\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.475103959Z","Action":"output","Package":"github.com/dustin/go-humanize/english","Test":"TestPlural","Output":"--- PASS: TestPlural (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.475105579Z","Action":"pass","Package":"github.com/dustin/go-humanize/english","Test":"TestPlural","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.475106849Z","Action":"run","Package":"github.com/dustin/go-humanize/english","Test":"TestWordSeries"}
+{"Time":"2026-11-25T12:27:38.475107899Z","Action":"output","Package":"github.com/dustin/go-humanize/english","Test":"TestWordSeries","Output":"=== RUN   TestWordSeries\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.475109659Z","Action":"output","Package":"github.com/dustin/go-humanize/english","Test":"TestWordSeries","Output":"--- PASS: TestWordSeries (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.475111309Z","Action":"pass","Package":"github.com/dustin/go-humanize/english","Test":"TestWordSeries","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.475112779Z","Action":"run","Package":"github.com/dustin/go-humanize/english","Test":"TestOxfordWordSeries"}
+{"Time":"2026-11-25T12:27:38.475113949Z","Action":"output","Package":"github.com/dustin/go-humanize/english","Test":"TestOxfordWordSeries","Output":"=== RUN   TestOxfordWordSeries\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.475118909Z","Action":"output","Package":"github.com/dustin/go-humanize/english","Test":"TestOxfordWordSeries","Output":"--- PASS: TestOxfordWordSeries (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.475121379Z","Action":"pass","Package":"github.com/dustin/go-humanize/english","Test":"TestOxfordWordSeries","Elapsed":0}
+{"Time":"2026-11-25T12:27:38.475123529Z","Action":"output","Package":"github.com/dustin/go-humanize/english","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:27:38.475343189Z","Action":"output","Package":"github.com/dustin/go-humanize/english","Output":"coverage: 100.0% of statements\n"}
+{"Time":"2026-11-25T12:27:38.47579924Z","Action":"output","Package":"github.com/dustin/go-humanize/english","Output":"ok  \tgithub.com/dustin/go-humanize/english\t0.002s\tcoverage: 100.0% of statements\n"}
+{"Time":"2026-11-25T12:27:38.47584272Z","Action":"pass","Package":"github.com/dustin/go-humanize/english","Elapsed":0.002}

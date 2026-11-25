@@ -1,0 +1,9 @@
+{"Time":"2026-11-25T19:06:35.6312033+08:00","Action":"start","Package":"example.invalid/repotest-owned-corpus/partial-coverage"}
+{"Time":"2026-11-25T19:06:36.8645355+08:00","Action":"run","Package":"example.invalid/repotest-owned-corpus/partial-coverage","Test":"TestOwned"}
+{"Time":"2026-11-25T19:06:36.8645355+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/partial-coverage","Test":"TestOwned","Output":"=== RUN   TestOwned\n"}
+{"Time":"2026-11-25T19:06:36.8645355+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/partial-coverage","Test":"TestOwned","Output":"--- PASS: TestOwned (0.00s)\n"}
+{"Time":"2026-11-25T19:06:36.8645355+08:00","Action":"pass","Package":"example.invalid/repotest-owned-corpus/partial-coverage","Test":"TestOwned","Elapsed":0}
+{"Time":"2026-11-25T19:06:36.870033+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/partial-coverage","Output":"PASS\n"}
+{"Time":"2026-11-25T19:06:36.8814085+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/partial-coverage","Output":"coverage: 66.7% of statements\n"}
+{"Time":"2026-11-25T19:06:36.8866855+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/partial-coverage","Output":"ok  \texample.invalid/repotest-owned-corpus/partial-coverage\t1.254s\tcoverage: 66.7% of statements\n"}
+{"Time":"2026-11-25T19:06:36.8866855+08:00","Action":"pass","Package":"example.invalid/repotest-owned-corpus/partial-coverage","Elapsed":1.255}

@@ -1,0 +1,244 @@
+{
+  "task_id": "repo-10",
+  "go_version": "go1.27.1",
+  "goos": "linux",
+  "goarch": "amd64",
+  "no_tests": false,
+  "truncated": false,
+  "packages": [
+    {
+      "import_path": "github.com/rs/xid",
+      "status": "passed",
+      "elapsed_ms": 18,
+      "coverage_pct": 95,
+      "output": "PASS\ncoverage: 95.0% of statements\nok  \tgithub.com/rs/xid\t0.017s\tcoverage: 95.0% of statements\n",
+      "tests": [
+        {
+          "name": "TestIDPartsExtraction",
+          "status": "passed",
+          "output": "=== RUN   TestIDPartsExtraction\n--- PASS: TestIDPartsExtraction (0.00s)\n"
+        },
+        {
+          "name": "TestIDPartsExtraction/Test0",
+          "parent": "TestIDPartsExtraction",
+          "status": "passed",
+          "output": "=== RUN   TestIDPartsExtraction/Test0\n--- PASS: TestIDPartsExtraction/Test0 (0.00s)\n"
+        },
+        {
+          "name": "TestIDPartsExtraction/Test1",
+          "parent": "TestIDPartsExtraction",
+          "status": "passed",
+          "output": "=== RUN   TestIDPartsExtraction/Test1\n--- PASS: TestIDPartsExtraction/Test1 (0.00s)\n"
+        },
+        {
+          "name": "TestIDPartsExtraction/Test2",
+          "parent": "TestIDPartsExtraction",
+          "status": "passed",
+          "output": "=== RUN   TestIDPartsExtraction/Test2\n--- PASS: TestIDPartsExtraction/Test2 (0.00s)\n"
+        },
+        {
+          "name": "TestPadding",
+          "status": "passed",
+          "elapsed_ms": 10,
+          "output": "=== RUN   TestPadding\n--- PASS: TestPadding (0.01s)\n"
+        },
+        {
+          "name": "TestNew",
+          "status": "passed",
+          "output": "=== RUN   TestNew\n--- PASS: TestNew (0.00s)\n"
+        },
+        {
+          "name": "TestIDString",
+          "status": "passed",
+          "output": "=== RUN   TestIDString\n--- PASS: TestIDString (0.00s)\n"
+        },
+        {
+          "name": "TestIDEncode",
+          "status": "passed",
+          "output": "=== RUN   TestIDEncode\n--- PASS: TestIDEncode (0.00s)\n"
+        },
+        {
+          "name": "TestFromString",
+          "status": "passed",
+          "output": "=== RUN   TestFromString\n--- PASS: TestFromString (0.00s)\n"
+        },
+        {
+          "name": "TestFromStringInvalid",
+          "status": "passed",
+          "output": "=== RUN   TestFromStringInvalid\n--- PASS: TestFromStringInvalid (0.00s)\n"
+        },
+        {
+          "name": "TestIDJSONMarshaling",
+          "status": "passed",
+          "output": "=== RUN   TestIDJSONMarshaling\n--- PASS: TestIDJSONMarshaling (0.00s)\n"
+        },
+        {
+          "name": "TestIDJSONUnmarshaling",
+          "status": "passed",
+          "output": "=== RUN   TestIDJSONUnmarshaling\n--- PASS: TestIDJSONUnmarshaling (0.00s)\n"
+        },
+        {
+          "name": "TestIDJSONUnmarshalingError",
+          "status": "passed",
+          "output": "=== RUN   TestIDJSONUnmarshalingError\n--- PASS: TestIDJSONUnmarshalingError (0.00s)\n"
+        },
+        {
+          "name": "TestIDDriverValue",
+          "status": "passed",
+          "output": "=== RUN   TestIDDriverValue\n--- PASS: TestIDDriverValue (0.00s)\n"
+        },
+        {
+          "name": "TestIDDriverScan",
+          "status": "passed",
+          "output": "=== RUN   TestIDDriverScan\n--- PASS: TestIDDriverScan (0.00s)\n"
+        },
+        {
+          "name": "TestIDDriverScanError",
+          "status": "passed",
+          "output": "=== RUN   TestIDDriverScanError\n--- PASS: TestIDDriverScanError (0.00s)\n"
+        },
+        {
+          "name": "TestIDDriverScanByteFromDatabase",
+          "status": "passed",
+          "output": "=== RUN   TestIDDriverScanByteFromDatabase\n--- PASS: TestIDDriverScanByteFromDatabase (0.00s)\n"
+        },
+        {
+          "name": "TestFromStringQuick",
+          "status": "passed",
+          "output": "=== RUN   TestFromStringQuick\n--- PASS: TestFromStringQuick (0.00s)\n"
+        },
+        {
+          "name": "TestFromStringQuickInvalidChars",
+          "status": "passed",
+          "output": "=== RUN   TestFromStringQuickInvalidChars\n--- PASS: TestFromStringQuickInvalidChars (0.00s)\n"
+        },
+        {
+          "name": "TestID_IsNil",
+          "status": "passed",
+          "output": "=== RUN   TestID_IsNil\n--- PASS: TestID_IsNil (0.00s)\n"
+        },
+        {
+          "name": "TestID_IsNil/ID_not_nil",
+          "parent": "TestID_IsNil",
+          "status": "passed",
+          "output": "=== RUN   TestID_IsNil/ID_not_nil\n--- PASS: TestID_IsNil/ID_not_nil (0.00s)\n"
+        },
+        {
+          "name": "TestID_IsNil/Nil_ID",
+          "parent": "TestID_IsNil",
+          "status": "passed",
+          "output": "=== RUN   TestID_IsNil/Nil_ID\n--- PASS: TestID_IsNil/Nil_ID (0.00s)\n"
+        },
+        {
+          "name": "TestNilID",
+          "status": "passed",
+          "output": "=== RUN   TestNilID\n--- PASS: TestNilID (0.00s)\n"
+        },
+        {
+          "name": "TestNilID_IsNil",
+          "status": "passed",
+          "output": "=== RUN   TestNilID_IsNil\n--- PASS: TestNilID_IsNil (0.00s)\n"
+        },
+        {
+          "name": "TestFromBytes_Invariant",
+          "status": "passed",
+          "output": "=== RUN   TestFromBytes_Invariant\n--- PASS: TestFromBytes_Invariant (0.00s)\n"
+        },
+        {
+          "name": "TestFromBytes_InvalidBytes",
+          "status": "passed",
+          "output": "=== RUN   TestFromBytes_InvalidBytes\n--- PASS: TestFromBytes_InvalidBytes (0.00s)\n"
+        },
+        {
+          "name": "TestID_Compare",
+          "status": "passed",
+          "output": "=== RUN   TestID_Compare\n--- PASS: TestID_Compare (0.00s)\n"
+        },
+        {
+          "name": "TestSorter_Len",
+          "status": "passed",
+          "output": "=== RUN   TestSorter_Len\n--- PASS: TestSorter_Len (0.00s)\n"
+        },
+        {
+          "name": "TestSorter_Less",
+          "status": "passed",
+          "output": "=== RUN   TestSorter_Less\n--- PASS: TestSorter_Less (0.00s)\n"
+        },
+        {
+          "name": "TestSorter_Swap",
+          "status": "passed",
+          "output": "=== RUN   TestSorter_Swap\n--- PASS: TestSorter_Swap (0.00s)\n"
+        },
+        {
+          "name": "TestSort",
+          "status": "passed",
+          "output": "=== RUN   TestSort\n--- PASS: TestSort (0.00s)\n"
+        }
+      ]
+    },
+    {
+      "import_path": "github.com/rs/xid/b",
+      "status": "passed",
+      "elapsed_ms": 3,
+      "coverage_pct": 100,
+      "output": "PASS\ncoverage: 100.0% of statements\nok  \tgithub.com/rs/xid/b\t0.002s\tcoverage: 100.0% of statements\n",
+      "tests": [
+        {
+          "name": "TestIDValue",
+          "status": "passed",
+          "output": "=== RUN   TestIDValue\n--- PASS: TestIDValue (0.00s)\n"
+        },
+        {
+          "name": "TestIDValue/non_nil_id",
+          "parent": "TestIDValue",
+          "status": "passed",
+          "output": "=== RUN   TestIDValue/non_nil_id\n--- PASS: TestIDValue/non_nil_id (0.00s)\n"
+        },
+        {
+          "name": "TestIDValue/nil_id",
+          "parent": "TestIDValue",
+          "status": "passed",
+          "output": "=== RUN   TestIDValue/nil_id\n--- PASS: TestIDValue/nil_id (0.00s)\n"
+        },
+        {
+          "name": "TestIDScan",
+          "status": "passed",
+          "output": "=== RUN   TestIDScan\n--- PASS: TestIDScan (0.00s)\n"
+        },
+        {
+          "name": "TestIDScan/bytes_id",
+          "parent": "TestIDScan",
+          "status": "passed",
+          "output": "=== RUN   TestIDScan/bytes_id\n--- PASS: TestIDScan/bytes_id (0.00s)\n"
+        },
+        {
+          "name": "TestIDScan/nil_id",
+          "parent": "TestIDScan",
+          "status": "passed",
+          "output": "=== RUN   TestIDScan/nil_id\n--- PASS: TestIDScan/nil_id (0.00s)\n"
+        },
+        {
+          "name": "TestIDScan/wrong_bytes",
+          "parent": "TestIDScan",
+          "status": "passed",
+          "output": "=== RUN   TestIDScan/wrong_bytes\n--- PASS: TestIDScan/wrong_bytes (0.00s)\n"
+        },
+        {
+          "name": "TestIDScan/unknown_type",
+          "parent": "TestIDScan",
+          "status": "passed",
+          "output": "=== RUN   TestIDScan/unknown_type\n--- PASS: TestIDScan/unknown_type (0.00s)\n"
+        }
+      ]
+    }
+  ],
+  "repo_url": "https://github.com/rs/xid",
+  "commit": "47a0ac1e0b750ee1f43718be223bb07601c66a1f",
+  "summary": {
+    "passed": 35,
+    "failed": 0,
+    "skipped": 0,
+    "incomplete": 0,
+    "package_failures": 0
+  }
+}

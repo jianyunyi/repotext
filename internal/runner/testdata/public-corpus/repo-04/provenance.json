@@ -1,0 +1,19 @@
+{
+  "commit": "c3ad8435e7bef96af35732bc0789e5a2278c6d5f",
+  "error": "",
+  "exit_code": 0,
+  "fault_injection": false,
+  "finished_at": "2026-11-25T12:28:32.337656725Z",
+  "phases": [
+    "clone",
+    "deps",
+    "test"
+  ],
+  "raw_sha256": "ebc115523a1d3ed4c7364fc4514a2119a46f3eb6c189d7d85a23cd4202348844",
+  "raw_truncated": false,
+  "repo_url": "https://github.com/google/go-cmp",
+  "report_sha256": "d5a9940656d0791a8c213a966284674e672efbf00bacb62d559385d2ba94423a",
+  "source_modified": false,
+  "started_at": "2026-11-25T12:28:09.187738886Z",
+  "timed_out": false
+}

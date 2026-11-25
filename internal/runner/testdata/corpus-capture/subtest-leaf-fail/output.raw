@@ -1,0 +1,18 @@
+{"Time":"2026-11-25T19:06:19.4053059+08:00","Action":"start","Package":"example.invalid/repotest-owned-corpus/subtest-leaf-fail"}
+{"Time":"2026-11-25T19:06:20.7053526+08:00","Action":"run","Package":"example.invalid/repotest-owned-corpus/subtest-leaf-fail","Test":"TestOwned"}
+{"Time":"2026-11-25T19:06:20.7053526+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/subtest-leaf-fail","Test":"TestOwned","Output":"=== RUN   TestOwned\n"}
+{"Time":"2026-11-25T19:06:20.7053526+08:00","Action":"run","Package":"example.invalid/repotest-owned-corpus/subtest-leaf-fail","Test":"TestOwned/branch"}
+{"Time":"2026-11-25T19:06:20.7053526+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/subtest-leaf-fail","Test":"TestOwned/branch","Output":"=== RUN   TestOwned/branch\n"}
+{"Time":"2026-11-25T19:06:20.7110766+08:00","Action":"run","Package":"example.invalid/repotest-owned-corpus/subtest-leaf-fail","Test":"TestOwned/branch/leaf"}
+{"Time":"2026-11-25T19:06:20.7110766+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/subtest-leaf-fail","Test":"TestOwned/branch/leaf","Output":"=== RUN   TestOwned/branch/leaf\n"}
+{"Time":"2026-11-25T19:06:20.7110766+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/subtest-leaf-fail","Test":"TestOwned/branch/leaf","Output":"    owned_test.go:6: owned leaf failure\n"}
+{"Time":"2026-11-25T19:06:20.7110766+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/subtest-leaf-fail","Test":"TestOwned/branch/leaf","Output":"--- FAIL: TestOwned/branch/leaf (0.00s)\n"}
+{"Time":"2026-11-25T19:06:20.7110766+08:00","Action":"fail","Package":"example.invalid/repotest-owned-corpus/subtest-leaf-fail","Test":"TestOwned/branch/leaf","Elapsed":0}
+{"Time":"2026-11-25T19:06:20.7110766+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/subtest-leaf-fail","Test":"TestOwned/branch","Output":"--- FAIL: TestOwned/branch (0.00s)\n"}
+{"Time":"2026-11-25T19:06:20.7110766+08:00","Action":"fail","Package":"example.invalid/repotest-owned-corpus/subtest-leaf-fail","Test":"TestOwned/branch","Elapsed":0}
+{"Time":"2026-11-25T19:06:20.7110766+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/subtest-leaf-fail","Test":"TestOwned","Output":"--- FAIL: TestOwned (0.00s)\n"}
+{"Time":"2026-11-25T19:06:20.7110766+08:00","Action":"fail","Package":"example.invalid/repotest-owned-corpus/subtest-leaf-fail","Test":"TestOwned","Elapsed":0}
+{"Time":"2026-11-25T19:06:20.7110766+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/subtest-leaf-fail","Output":"FAIL\n"}
+{"Time":"2026-11-25T19:06:20.7110766+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/subtest-leaf-fail","Output":"coverage: 0.0% of statements\n"}
+{"Time":"2026-11-25T19:06:20.7144576+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/subtest-leaf-fail","Output":"FAIL\texample.invalid/repotest-owned-corpus/subtest-leaf-fail\t1.309s\n"}
+{"Time":"2026-11-25T19:06:20.7144576+08:00","Action":"fail","Package":"example.invalid/repotest-owned-corpus/subtest-leaf-fail","Elapsed":1.309}

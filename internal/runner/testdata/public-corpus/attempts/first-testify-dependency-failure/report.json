@@ -1,0 +1,20 @@
+{
+  "task_id": "repo-05",
+  "go_version": "go1.27.1",
+  "goos": "linux",
+  "goarch": "amd64",
+  "no_tests": false,
+  "truncated": false,
+  "packages": [],
+  "repo_url": "https://github.com/stretchr/testify",
+  "commit": "bb548d0473d4e1c9b7bbfd6602c7bf12f7a84dd2",
+  "summary": {
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "incomplete": 0,
+    "package_failures": 0
+  },
+  "incomplete": true,
+  "output": "go: github.com/davecgh/go-spew@v1.1.1: reading http://172.21.0.1:46371/github.com/davecgh/go-spew/@v/v1.1.1.mod: 502 Bad Gateway\n\tserver response: module proxy upstream unavailable\ngo: github.com/pmezard/go-difflib@v1.0.0: reading http://172.21.0.1:46371/github.com/pmezard/go-difflib/@v/v1.0.0.mod: 502 Bad Gateway\n\tserver response: module proxy upstream unavailable\n"
+}

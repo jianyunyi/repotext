@@ -1,0 +1,2147 @@
+{
+  "schema_version": 1,
+  "kind": "owned_fixture_corpus",
+  "actual_go_version": "go version go1.26.3 windows/amd64",
+  "manifest_paths_relative_to": ".",
+  "sourceRoot": "../corpus-source",
+  "records": [
+    {
+      "id": "pass",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/pass",
+      "module_path": "example.invalid/repotest-owned-corpus/pass",
+      "source_files": [
+        {
+          "path": "../corpus-source/pass/go.mod",
+          "sha256": "e244f5489b6482f04f943c15ca3769f47a17b01d3e4c883f53893a3b66272507",
+          "bytes": 59
+        },
+        {
+          "path": "../corpus-source/pass/owned_test.go",
+          "sha256": "8ee685658b1b3b6cf20a9c05e219fbf8e64f3e48fa7678e410b1eb6b396b8909",
+          "bytes": 110
+        },
+        {
+          "path": "../corpus-source/pass/source.go",
+          "sha256": "25ad98da631bad5f720a253606afd63510c36f45a5330ce118aaf105fe638cb1",
+          "bytes": 57
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\pass\\cover.out",
+        "-count=1",
+        "./..."
+      ],
+      "cwd": "../corpus-source/pass",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "success",
+      "exit_code": 0,
+      "duration_seconds": 2.82779,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "pass/output.raw",
+      "raw_sha256": "26e8cb0b275987d18bc389815b6c874928f376115d802af41ff56cb46bad7b63",
+      "raw_bytes": 1408,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "pass/cover.out",
+      "coverprofile_sha256": "c541fab4765ab99313d9dd57838177a77d3b212ba8c854de4e0f7c3cf2eede8d",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/pass",
+            "statements": 1,
+            "covered_statements": 1,
+            "independent_percent": 100.0,
+            "blocks": [
+              {
+                "position": "example.invalid/repotest-owned-corpus/pass/source.go:3.24,3.40",
+                "statements": 1,
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "report_semantic_percent": 100.0,
+        "no_tests_semantic_null": false
+      },
+      "observed": {
+        "events": 9,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "pass"
+        ],
+        "test_terminal_actions": [
+          "pass"
+        ]
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "assertion-fail",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/assertion-fail",
+      "module_path": "example.invalid/repotest-owned-corpus/assertion-fail",
+      "source_files": [
+        {
+          "path": "../corpus-source/assertion-fail/go.mod",
+          "sha256": "7a1e2b25ca1293959171cc569fb4d108213973b1747f34be1ddb1ec0f76c376e",
+          "bytes": 69
+        },
+        {
+          "path": "../corpus-source/assertion-fail/owned_test.go",
+          "sha256": "55b0a99cadea0e880ad844a1867d1c8d533f7a6cd7e02841a5d2fdef8a1805c7",
+          "bytes": 134
+        },
+        {
+          "path": "../corpus-source/assertion-fail/source.go",
+          "sha256": "25ad98da631bad5f720a253606afd63510c36f45a5330ce118aaf105fe638cb1",
+          "bytes": 57
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\assertion-fail\\cover.out",
+        "-count=1",
+        "./..."
+      ],
+      "cwd": "../corpus-source/assertion-fail",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "failure",
+      "exit_code": 1,
+      "duration_seconds": 2.337856,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "assertion-fail/output.raw",
+      "raw_sha256": "6c91e362d6d9b2bd404fcb1469370d2d0c0983c4ac8baa2db5425b7c167d6f2e",
+      "raw_bytes": 1660,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "assertion-fail/cover.out",
+      "coverprofile_sha256": "26084a17b039217da5a71eca5ed5c062caf93e9f4a5130dfe2b190421ef6a364",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/assertion-fail",
+            "statements": 1,
+            "covered_statements": 1,
+            "independent_percent": 100.0,
+            "blocks": [
+              {
+                "position": "example.invalid/repotest-owned-corpus/assertion-fail/source.go:3.24,3.40",
+                "statements": 1,
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "report_semantic_percent": 100.0,
+        "no_tests_semantic_null": false
+      },
+      "observed": {
+        "events": 10,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "fail"
+        ],
+        "test_terminal_actions": [
+          "fail"
+        ]
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "skip",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/skip",
+      "module_path": "example.invalid/repotest-owned-corpus/skip",
+      "source_files": [
+        {
+          "path": "../corpus-source/skip/go.mod",
+          "sha256": "abcaaa1d607a9a6e108d7d1c799b7a157f3ddfe67b17c616429350d7be8ad981",
+          "bytes": 59
+        },
+        {
+          "path": "../corpus-source/skip/owned_test.go",
+          "sha256": "43248c1947a74452c7c410b83bd4a8ad860dba1c7f1f772eac95e681fff0b912",
+          "bytes": 98
+        },
+        {
+          "path": "../corpus-source/skip/source.go",
+          "sha256": "25ad98da631bad5f720a253606afd63510c36f45a5330ce118aaf105fe638cb1",
+          "bytes": 57
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\skip\\cover.out",
+        "-count=1",
+        "./..."
+      ],
+      "cwd": "../corpus-source/skip",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "skipped",
+      "exit_code": 0,
+      "duration_seconds": 2.307101,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "skip/output.raw",
+      "raw_sha256": "9092f1b7c62315c38e95ae4239e221ecb00c777162f28a914b66330514ccc120",
+      "raw_bytes": 1581,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "skip/cover.out",
+      "coverprofile_sha256": "a774a5ba6289e7491ae4c51411c044763b54c5afcf5bc40da61c74dec261a5dc",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/skip",
+            "statements": 1,
+            "covered_statements": 0,
+            "independent_percent": 0.0,
+            "blocks": [
+              {
+                "position": "example.invalid/repotest-owned-corpus/skip/source.go:3.24,3.40",
+                "statements": 1,
+                "count": 0
+              }
+            ]
+          }
+        ],
+        "report_semantic_percent": 0.0,
+        "no_tests_semantic_null": false
+      },
+      "observed": {
+        "events": 10,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "pass"
+        ],
+        "test_terminal_actions": [
+          "skip"
+        ]
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "subtest-leaf-fail",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/subtest-leaf-fail",
+      "module_path": "example.invalid/repotest-owned-corpus/subtest-leaf-fail",
+      "source_files": [
+        {
+          "path": "../corpus-source/subtest-leaf-fail/go.mod",
+          "sha256": "3d51b2f070ba662fadbd1cb58134fe19a3be2b0f8a6589da0ce2e435c93fa029",
+          "bytes": 72
+        },
+        {
+          "path": "../corpus-source/subtest-leaf-fail/owned_test.go",
+          "sha256": "e550aeadb1f888bff27f29777eb4203da124ef6f7a924892aaeeb6e5da9074ee",
+          "bytes": 178
+        },
+        {
+          "path": "../corpus-source/subtest-leaf-fail/source.go",
+          "sha256": "25ad98da631bad5f720a253606afd63510c36f45a5330ce118aaf105fe638cb1",
+          "bytes": 57
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\subtest-leaf-fail\\cover.out",
+        "-count=1",
+        "./..."
+      ],
+      "cwd": "../corpus-source/subtest-leaf-fail",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "failure",
+      "exit_code": 1,
+      "duration_seconds": 2.519724,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "subtest-leaf-fail/output.raw",
+      "raw_sha256": "cd07ff53d10a13e403bcaee88a87c853ece06038a052dd1922389e82c913fc9d",
+      "raw_bytes": 3183,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "subtest-leaf-fail/cover.out",
+      "coverprofile_sha256": "3dfda10b6b9c39025bac7b9236fef68a7bff53f25807298c87f4d295ee254fdc",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/subtest-leaf-fail",
+            "statements": 1,
+            "covered_statements": 0,
+            "independent_percent": 0.0,
+            "blocks": [
+              {
+                "position": "example.invalid/repotest-owned-corpus/subtest-leaf-fail/source.go:3.24,3.40",
+                "statements": 1,
+                "count": 0
+              }
+            ]
+          }
+        ],
+        "report_semantic_percent": 0.0,
+        "no_tests_semantic_null": false
+      },
+      "observed": {
+        "events": 18,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "fail"
+        ],
+        "test_terminal_actions": [
+          "fail",
+          "fail",
+          "fail"
+        ]
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "parallel-interleaved",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/parallel-interleaved",
+      "module_path": "example.invalid/repotest-owned-corpus/parallel-interleaved",
+      "source_files": [
+        {
+          "path": "../corpus-source/parallel-interleaved/go.mod",
+          "sha256": "ee92a12df96959bf1db69a5bea4d93b1b15f464f4d953f7760e9065fb7b77eaf",
+          "bytes": 75
+        },
+        {
+          "path": "../corpus-source/parallel-interleaved/owned_test.go",
+          "sha256": "9967d28f89f9a0503e282416bc49292bb127b1c8d4ac19948471d1fad3faa34c",
+          "bytes": 300
+        },
+        {
+          "path": "../corpus-source/parallel-interleaved/source.go",
+          "sha256": "25ad98da631bad5f720a253606afd63510c36f45a5330ce118aaf105fe638cb1",
+          "bytes": 57
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\parallel-interleaved\\cover.out",
+        "-count=1",
+        "./..."
+      ],
+      "cwd": "../corpus-source/parallel-interleaved",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "success",
+      "exit_code": 0,
+      "duration_seconds": 2.912113,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "parallel-interleaved/output.raw",
+      "raw_sha256": "47682292ddb3eb98e27482f17e717db2c40736a1da900eee044d207f4176a4e0",
+      "raw_bytes": 5262,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "parallel-interleaved/cover.out",
+      "coverprofile_sha256": "7b74e499b5f54061b1b33c2c2005c6b59fa0ae15964feb3fe3ea389fe74681c4",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/parallel-interleaved",
+            "statements": 1,
+            "covered_statements": 1,
+            "independent_percent": 100.0,
+            "blocks": [
+              {
+                "position": "example.invalid/repotest-owned-corpus/parallel-interleaved/source.go:3.24,3.40",
+                "statements": 1,
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "report_semantic_percent": 100.0,
+        "no_tests_semantic_null": false
+      },
+      "observed": {
+        "events": 29,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "pass"
+        ],
+        "test_terminal_actions": [
+          "pass",
+          "pass",
+          "pass"
+        ]
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "panic",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/panic",
+      "module_path": "example.invalid/repotest-owned-corpus/panic",
+      "source_files": [
+        {
+          "path": "../corpus-source/panic/go.mod",
+          "sha256": "228b95a0f283bc7a48f86fd04de0608b1e7a04616a800746cdaca83362d3b609",
+          "bytes": 60
+        },
+        {
+          "path": "../corpus-source/panic/owned_test.go",
+          "sha256": "06650d523e336f04d2af74f21af39c0ac5f91e498bb4990b2dfadd319dc2bdf2",
+          "bytes": 99
+        },
+        {
+          "path": "../corpus-source/panic/source.go",
+          "sha256": "25ad98da631bad5f720a253606afd63510c36f45a5330ce118aaf105fe638cb1",
+          "bytes": 57
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\panic\\cover.out",
+        "-count=1",
+        "./..."
+      ],
+      "cwd": "../corpus-source/panic",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "panic",
+      "exit_code": 1,
+      "duration_seconds": 2.547906,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "panic/output.raw",
+      "raw_sha256": "c8a24c6b5dfa2de606e87966714acbf1a7645c879cffaf26ed9156ec5d22f374",
+      "raw_bytes": 4007,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "panic/cover.out",
+      "coverprofile_sha256": "22b0c386ce56856f44063cacf33009cf7f5bed9328092526b20e546186c2f3b8",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/panic",
+            "statements": 0,
+            "covered_statements": 0,
+            "independent_percent": null,
+            "blocks": []
+          }
+        ],
+        "report_semantic_percent": null,
+        "no_tests_semantic_null": false
+      },
+      "observed": {
+        "events": 22,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "fail"
+        ],
+        "test_terminal_actions": [
+          "fail"
+        ]
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "build-fail",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/build-fail",
+      "module_path": "example.invalid/repotest-owned-corpus/build-fail",
+      "source_files": [
+        {
+          "path": "../corpus-source/build-fail/go.mod",
+          "sha256": "f68f2deb68945a70f5b5eb4b1b21435df16ebe4d04383be475f1571a36856d51",
+          "bytes": 65
+        },
+        {
+          "path": "../corpus-source/build-fail/owned_test.go",
+          "sha256": "370bdc6d9bff194415ae25e0b7c4753ebf3f3f80d62d2ed0e4d031aaf51262d1",
+          "bytes": 94
+        },
+        {
+          "path": "../corpus-source/build-fail/source.go",
+          "sha256": "f1b18780a2de612e8c7627d0ceb152db54de0e3298bfa97334b2f6679450c086",
+          "bytes": 66
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\build-fail\\cover.out",
+        "-count=1",
+        "./..."
+      ],
+      "cwd": "../corpus-source/build-fail",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "build_failure",
+      "exit_code": 1,
+      "duration_seconds": 0.901381,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "build-fail/output.raw",
+      "raw_sha256": "44dc1be725773f4500c1a3ba3c972722eb4d4dc0105c9df5b70eda0389f44a4f",
+      "raw_bytes": 1210,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "build-fail/cover.out",
+      "coverprofile_sha256": "22b0c386ce56856f44063cacf33009cf7f5bed9328092526b20e546186c2f3b8",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/build-fail",
+            "statements": 0,
+            "covered_statements": 0,
+            "independent_percent": null,
+            "blocks": []
+          }
+        ],
+        "report_semantic_percent": null,
+        "no_tests_semantic_null": false
+      },
+      "observed": {
+        "events": 6,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "fail"
+        ],
+        "test_terminal_actions": []
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "no-test-files",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/no-test-files",
+      "module_path": "example.invalid/repotest-owned-corpus/no-test-files",
+      "source_files": [
+        {
+          "path": "../corpus-source/no-test-files/go.mod",
+          "sha256": "dbdf6037b1b925490119e751d12a9dc6e72f71fd548ff9858d575a409b9807e2",
+          "bytes": 68
+        },
+        {
+          "path": "../corpus-source/no-test-files/source.go",
+          "sha256": "25ad98da631bad5f720a253606afd63510c36f45a5330ce118aaf105fe638cb1",
+          "bytes": 57
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\no-test-files\\cover.out",
+        "-count=1",
+        "./..."
+      ],
+      "cwd": "../corpus-source/no-test-files",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "no_tests",
+      "exit_code": 0,
+      "duration_seconds": 2.23596,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "no-test-files/output.raw",
+      "raw_sha256": "b1315758afee92143794685b68d80298f28a89816f4c63d0ec918619dba0e995",
+      "raw_bytes": 493,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "no-test-files/cover.out",
+      "coverprofile_sha256": "e4e77160dc7db3f17d2a689d1229871be1533d3f130d7db3a06b2c0af96b96aa",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/no-test-files",
+            "statements": 1,
+            "covered_statements": 0,
+            "independent_percent": 0.0,
+            "blocks": [
+              {
+                "position": "example.invalid/repotest-owned-corpus/no-test-files/source.go:3.24,3.40",
+                "statements": 1,
+                "count": 0
+              }
+            ]
+          }
+        ],
+        "report_semantic_percent": null,
+        "no_tests_semantic_null": true
+      },
+      "observed": {
+        "events": 3,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "pass"
+        ],
+        "test_terminal_actions": []
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "zero-coverage",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/zero-coverage",
+      "module_path": "example.invalid/repotest-owned-corpus/zero-coverage",
+      "source_files": [
+        {
+          "path": "../corpus-source/zero-coverage/go.mod",
+          "sha256": "96ea8076c25953945ea0e06dc496cc2a4072f6ceffe3d8e67996133d514940f4",
+          "bytes": 68
+        },
+        {
+          "path": "../corpus-source/zero-coverage/owned_test.go",
+          "sha256": "8529d0f8bc2adb8810f405b5e59fcd5f9bcc5bd5deaec8e6c789e00bdcab4f78",
+          "bytes": 109
+        },
+        {
+          "path": "../corpus-source/zero-coverage/source.go",
+          "sha256": "25ad98da631bad5f720a253606afd63510c36f45a5330ce118aaf105fe638cb1",
+          "bytes": 57
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\zero-coverage\\cover.out",
+        "-count=1",
+        "./..."
+      ],
+      "cwd": "../corpus-source/zero-coverage",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "success",
+      "exit_code": 0,
+      "duration_seconds": 2.458432,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "zero-coverage/output.raw",
+      "raw_sha256": "6a0a74691a8366b79975cffc122caadb406ea164a41f1ae16c08bde9156abbac",
+      "raw_bytes": 1705,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "zero-coverage/cover.out",
+      "coverprofile_sha256": "4cb203227c75dc216d974e99ed82df54500b66a81c550d519c24a441b591ee8d",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/zero-coverage",
+            "statements": 1,
+            "covered_statements": 0,
+            "independent_percent": 0.0,
+            "blocks": [
+              {
+                "position": "example.invalid/repotest-owned-corpus/zero-coverage/source.go:3.24,3.40",
+                "statements": 1,
+                "count": 0
+              }
+            ]
+          }
+        ],
+        "report_semantic_percent": 0.0,
+        "no_tests_semantic_null": false
+      },
+      "observed": {
+        "events": 10,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "pass"
+        ],
+        "test_terminal_actions": [
+          "pass"
+        ]
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "full-coverage",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/full-coverage",
+      "module_path": "example.invalid/repotest-owned-corpus/full-coverage",
+      "source_files": [
+        {
+          "path": "../corpus-source/full-coverage/go.mod",
+          "sha256": "ec4fe2e57ceb21c55f4aad997c7d09656e51bc881c8623cafe3dd60966a602b8",
+          "bytes": 68
+        },
+        {
+          "path": "../corpus-source/full-coverage/owned_test.go",
+          "sha256": "9cc0cf13e743b89628fb3fcf357f707859d5614a63e2c763d7b6106296716ee9",
+          "bytes": 108
+        },
+        {
+          "path": "../corpus-source/full-coverage/source.go",
+          "sha256": "25ad98da631bad5f720a253606afd63510c36f45a5330ce118aaf105fe638cb1",
+          "bytes": 57
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\full-coverage\\cover.out",
+        "-count=1",
+        "./..."
+      ],
+      "cwd": "../corpus-source/full-coverage",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "success",
+      "exit_code": 0,
+      "duration_seconds": 2.378751,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "full-coverage/output.raw",
+      "raw_sha256": "b806e02a777d08f0862b8c22492505a704dab0fc85bb35f241b785b03c24dd75",
+      "raw_bytes": 1486,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "full-coverage/cover.out",
+      "coverprofile_sha256": "93f2434997c60d9a16d56d8a3e62894428abb3cbbabfa6ce00d1dfca9c77866c",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/full-coverage",
+            "statements": 1,
+            "covered_statements": 1,
+            "independent_percent": 100.0,
+            "blocks": [
+              {
+                "position": "example.invalid/repotest-owned-corpus/full-coverage/source.go:3.24,3.40",
+                "statements": 1,
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "report_semantic_percent": 100.0,
+        "no_tests_semantic_null": false
+      },
+      "observed": {
+        "events": 9,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "pass"
+        ],
+        "test_terminal_actions": [
+          "pass"
+        ]
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "partial-coverage",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/partial-coverage",
+      "module_path": "example.invalid/repotest-owned-corpus/partial-coverage",
+      "source_files": [
+        {
+          "path": "../corpus-source/partial-coverage/go.mod",
+          "sha256": "73ba07b72637ed7ce3aab935905581e69d18d00ee3ddccedb7847c8bdf0c8ab9",
+          "bytes": 71
+        },
+        {
+          "path": "../corpus-source/partial-coverage/owned_test.go",
+          "sha256": "83b641ef08df32f2f57d7214baa421cc9858c39364817f0f630f53263b8b4cb6",
+          "bytes": 108
+        },
+        {
+          "path": "../corpus-source/partial-coverage/source.go",
+          "sha256": "8b4bcc81539cad45946dfd0151e99d20a64fce8b10aeddc9f9ef20ef8bd6395b",
+          "bytes": 76
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\partial-coverage\\cover.out",
+        "-count=1",
+        "./..."
+      ],
+      "cwd": "../corpus-source/partial-coverage",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "success",
+      "exit_code": 0,
+      "duration_seconds": 2.539035,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "partial-coverage/output.raw",
+      "raw_sha256": "c345c3cad15f080594b0c25265ca53ab9f3695688755d2ade00623c1b747be26",
+      "raw_bytes": 1513,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "partial-coverage/cover.out",
+      "coverprofile_sha256": "2adf7222ff39246327c741c1f0a21b10f6d9f39ed9e061b09fe2fa20ce89ad50",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/partial-coverage",
+            "statements": 3,
+            "covered_statements": 2,
+            "independent_percent": 66.66666666666667,
+            "blocks": [
+              {
+                "position": "example.invalid/repotest-owned-corpus/partial-coverage/source.go:2.24,2.35",
+                "statements": 1,
+                "count": 1
+              },
+              {
+                "position": "example.invalid/repotest-owned-corpus/partial-coverage/source.go:2.35,2.47",
+                "statements": 1,
+                "count": 1
+              },
+              {
+                "position": "example.invalid/repotest-owned-corpus/partial-coverage/source.go:2.49,2.58",
+                "statements": 1,
+                "count": 0
+              }
+            ]
+          }
+        ],
+        "report_semantic_percent": 66.66666666666667,
+        "no_tests_semantic_null": false
+      },
+      "observed": {
+        "events": 9,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "pass"
+        ],
+        "test_terminal_actions": [
+          "pass"
+        ]
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "example-pass",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/example-pass",
+      "module_path": "example.invalid/repotest-owned-corpus/example-pass",
+      "source_files": [
+        {
+          "path": "../corpus-source/example-pass/go.mod",
+          "sha256": "faf7db5ed82f24778833785eb9be5968c0c6bd9f6db0ea07f904c323afdccf72",
+          "bytes": 67
+        },
+        {
+          "path": "../corpus-source/example-pass/owned_test.go",
+          "sha256": "75c447f8460fcb1829f27ed0c9e24e93a531c9e0c2f6875f792a8807a2445ba2",
+          "bytes": 90
+        },
+        {
+          "path": "../corpus-source/example-pass/source.go",
+          "sha256": "25ad98da631bad5f720a253606afd63510c36f45a5330ce118aaf105fe638cb1",
+          "bytes": 57
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\example-pass\\cover.out",
+        "-count=1",
+        "./..."
+      ],
+      "cwd": "../corpus-source/example-pass",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "success",
+      "exit_code": 0,
+      "duration_seconds": 2.217956,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "example-pass/output.raw",
+      "raw_sha256": "699d4710a2e294be69502560eb22cea773bb36c331aedd80140f764e2701d660",
+      "raw_bytes": 1498,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "example-pass/cover.out",
+      "coverprofile_sha256": "3285dcabc0a0d52803e64525da9a846ca538a0caa3e03b91db096c3f6a0c1777",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/example-pass",
+            "statements": 1,
+            "covered_statements": 1,
+            "independent_percent": 100.0,
+            "blocks": [
+              {
+                "position": "example.invalid/repotest-owned-corpus/example-pass/source.go:3.24,3.40",
+                "statements": 1,
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "report_semantic_percent": 100.0,
+        "no_tests_semantic_null": false
+      },
+      "observed": {
+        "events": 9,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "pass"
+        ],
+        "test_terminal_actions": [
+          "pass"
+        ]
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "example-fail",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/example-fail",
+      "module_path": "example.invalid/repotest-owned-corpus/example-fail",
+      "source_files": [
+        {
+          "path": "../corpus-source/example-fail/go.mod",
+          "sha256": "a8b8d200d6445a4ffe78e9700f3b1953e4f8e6e2f2ce33bc8c2c1ed5616aa8f3",
+          "bytes": 67
+        },
+        {
+          "path": "../corpus-source/example-fail/owned_test.go",
+          "sha256": "ee399b940d23a13f999865087438a6c21ba93c9dc8d230d7f88f92a3e6f942b8",
+          "bytes": 90
+        },
+        {
+          "path": "../corpus-source/example-fail/source.go",
+          "sha256": "25ad98da631bad5f720a253606afd63510c36f45a5330ce118aaf105fe638cb1",
+          "bytes": 57
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\example-fail\\cover.out",
+        "-count=1",
+        "./..."
+      ],
+      "cwd": "../corpus-source/example-fail",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "failure",
+      "exit_code": 1,
+      "duration_seconds": 2.197442,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "example-fail/output.raw",
+      "raw_sha256": "ffc243cdc0746768474be1df6a11828369206fc99dadb4661f4a1aeaf718acab",
+      "raw_bytes": 2131,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "example-fail/cover.out",
+      "coverprofile_sha256": "00b8d520bd58dafb546f84481a448ac0ede6312639b664b455ca4a1f278f7114",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/example-fail",
+            "statements": 1,
+            "covered_statements": 1,
+            "independent_percent": 100.0,
+            "blocks": [
+              {
+                "position": "example.invalid/repotest-owned-corpus/example-fail/source.go:3.24,3.40",
+                "statements": 1,
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "report_semantic_percent": 100.0,
+        "no_tests_semantic_null": false
+      },
+      "observed": {
+        "events": 13,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "fail"
+        ],
+        "test_terminal_actions": [
+          "fail"
+        ]
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "deceptive-json-text",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/deceptive-json-text",
+      "module_path": "example.invalid/repotest-owned-corpus/deceptive-json-text",
+      "source_files": [
+        {
+          "path": "../corpus-source/deceptive-json-text/go.mod",
+          "sha256": "586845456e3a3ab4b512cfa4bff2e67e5fb0234ad5df517fa53d7911117b3d08",
+          "bytes": 74
+        },
+        {
+          "path": "../corpus-source/deceptive-json-text/owned_test.go",
+          "sha256": "5a65283f986a709195f9d252930fa6d67cf9f9465cb7b8ce0c7f7e7c3c4caacf",
+          "bytes": 230
+        },
+        {
+          "path": "../corpus-source/deceptive-json-text/source.go",
+          "sha256": "25ad98da631bad5f720a253606afd63510c36f45a5330ce118aaf105fe638cb1",
+          "bytes": 57
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\deceptive-json-text\\cover.out",
+        "-count=1",
+        "./..."
+      ],
+      "cwd": "../corpus-source/deceptive-json-text",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "success",
+      "exit_code": 0,
+      "duration_seconds": 2.974759,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "deceptive-json-text/output.raw",
+      "raw_sha256": "6272aba18f28eec88430e61f4b96a44356e71e37137d2967932adb51f9d56243",
+      "raw_bytes": 1838,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "deceptive-json-text/cover.out",
+      "coverprofile_sha256": "0f2c78662c0dbfb3e00e4676231f54b160946a50e01ddd588d556bd5b626bb6c",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/deceptive-json-text",
+            "statements": 1,
+            "covered_statements": 1,
+            "independent_percent": 100.0,
+            "blocks": [
+              {
+                "position": "example.invalid/repotest-owned-corpus/deceptive-json-text/source.go:3.24,3.40",
+                "statements": 1,
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "report_semantic_percent": 100.0,
+        "no_tests_semantic_null": false
+      },
+      "observed": {
+        "events": 10,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "pass"
+        ],
+        "test_terminal_actions": [
+          "pass"
+        ]
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "deceptive-coverage-text",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/deceptive-coverage-text",
+      "module_path": "example.invalid/repotest-owned-corpus/deceptive-coverage-text",
+      "source_files": [
+        {
+          "path": "../corpus-source/deceptive-coverage-text/go.mod",
+          "sha256": "bd10d3ec46014427eafb883300886852a51b0457c0cbca27b8293ea5d6e6e566",
+          "bytes": 78
+        },
+        {
+          "path": "../corpus-source/deceptive-coverage-text/owned_test.go",
+          "sha256": "709ceaf5f973ccf7ae4ad1fa4f56759ab5018d39a35a7e0f1fae582bfad619af",
+          "bytes": 236
+        },
+        {
+          "path": "../corpus-source/deceptive-coverage-text/source.go",
+          "sha256": "25ad98da631bad5f720a253606afd63510c36f45a5330ce118aaf105fe638cb1",
+          "bytes": 57
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\deceptive-coverage-text\\cover.out",
+        "-count=1",
+        "./..."
+      ],
+      "cwd": "../corpus-source/deceptive-coverage-text",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "success",
+      "exit_code": 0,
+      "duration_seconds": 2.527767,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "deceptive-coverage-text/output.raw",
+      "raw_sha256": "70b0709c68dfddffe4e8dea4b88249ad49a922d5868ed44c063779061c51faeb",
+      "raw_bytes": 2025,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "deceptive-coverage-text/cover.out",
+      "coverprofile_sha256": "c7d348540cd7d254df89d9164328dafa20941a072a2ecff3d48160f326295f21",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/deceptive-coverage-text",
+            "statements": 1,
+            "covered_statements": 1,
+            "independent_percent": 100.0,
+            "blocks": [
+              {
+                "position": "example.invalid/repotest-owned-corpus/deceptive-coverage-text/source.go:3.24,3.40",
+                "statements": 1,
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "report_semantic_percent": 100.0,
+        "no_tests_semantic_null": false
+      },
+      "observed": {
+        "events": 11,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "pass"
+        ],
+        "test_terminal_actions": [
+          "pass"
+        ]
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "malicious-html",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/malicious-html",
+      "module_path": "example.invalid/repotest-owned-corpus/malicious-html",
+      "source_files": [
+        {
+          "path": "../corpus-source/malicious-html/go.mod",
+          "sha256": "0ec3a95c5268ab4280305d6dc6cd85070326e7b92aab2ee9ff102fa1cdec632e",
+          "bytes": 69
+        },
+        {
+          "path": "../corpus-source/malicious-html/owned_test.go",
+          "sha256": "7cec17f71aeb868c8c2c1652941af8e05c266e450f86a4e20658063a3c1cd9d3",
+          "bytes": 239
+        },
+        {
+          "path": "../corpus-source/malicious-html/source.go",
+          "sha256": "25ad98da631bad5f720a253606afd63510c36f45a5330ce118aaf105fe638cb1",
+          "bytes": 57
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\malicious-html\\cover.out",
+        "-count=1",
+        "./..."
+      ],
+      "cwd": "../corpus-source/malicious-html",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "success",
+      "exit_code": 0,
+      "duration_seconds": 2.600605,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "malicious-html/output.raw",
+      "raw_sha256": "c22cc1e22f799bd091437ffabc3cc17efd81872a57a0a248ebc6213054c6b4b3",
+      "raw_bytes": 1849,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "malicious-html/cover.out",
+      "coverprofile_sha256": "ce7f0060b305529915aa8d66f2fd8858ff96a505a968c23090135605b210cf1b",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/malicious-html",
+            "statements": 1,
+            "covered_statements": 1,
+            "independent_percent": 100.0,
+            "blocks": [
+              {
+                "position": "example.invalid/repotest-owned-corpus/malicious-html/source.go:3.24,3.40",
+                "statements": 1,
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "report_semantic_percent": 100.0,
+        "no_tests_semantic_null": false
+      },
+      "observed": {
+        "events": 10,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "pass"
+        ],
+        "test_terminal_actions": [
+          "pass"
+        ]
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "source-path-safety",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/source-path-safety",
+      "module_path": "example.invalid/repotest-owned-corpus/source-path-safety",
+      "source_files": [
+        {
+          "path": "../corpus-source/source-path-safety/go.mod",
+          "sha256": "e3abed76d67a040d4d77c5cb00c307ef02f182d916edc0796a2d9174dde236a4",
+          "bytes": 73
+        },
+        {
+          "path": "../corpus-source/source-path-safety/source path_test.go",
+          "sha256": "ecab7b517cf4c7db3eed7e0ca692d2a5ea6a8bff51bc2bb50f30e6e20d0b618b",
+          "bytes": 230
+        },
+        {
+          "path": "../corpus-source/source-path-safety/source.go",
+          "sha256": "25ad98da631bad5f720a253606afd63510c36f45a5330ce118aaf105fe638cb1",
+          "bytes": 57
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\source-path-safety\\cover.out",
+        "-count=1",
+        "./..."
+      ],
+      "cwd": "../corpus-source/source-path-safety",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "failure",
+      "exit_code": 1,
+      "duration_seconds": 2.591312,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "source-path-safety/output.raw",
+      "raw_sha256": "37ef63171dec0bbbae2ccb363cbfd345c7b322bffc46364c95c0a496903b3c44",
+      "raw_bytes": 2199,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "source-path-safety/cover.out",
+      "coverprofile_sha256": "60bcbd9d681ff91ede05d6029ea03e1cff62f2b3fe578c12f1d17f708071fdf8",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/source-path-safety",
+            "statements": 1,
+            "covered_statements": 0,
+            "independent_percent": 0.0,
+            "blocks": [
+              {
+                "position": "example.invalid/repotest-owned-corpus/source-path-safety/source.go:3.24,3.40",
+                "statements": 1,
+                "count": 0
+              }
+            ]
+          }
+        ],
+        "report_semantic_percent": 0.0,
+        "no_tests_semantic_null": false
+      },
+      "observed": {
+        "events": 12,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "fail"
+        ],
+        "test_terminal_actions": [
+          "fail"
+        ]
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "oversize-output",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/oversize-output",
+      "module_path": "example.invalid/repotest-owned-corpus/oversize-output",
+      "source_files": [
+        {
+          "path": "../corpus-source/oversize-output/go.mod",
+          "sha256": "f2d144874d1c206224c820ca502ad8fc986f789505cb6dabad67d4ac9662cf8a",
+          "bytes": 70
+        },
+        {
+          "path": "../corpus-source/oversize-output/owned_test.go",
+          "sha256": "02850a800173aa4db858f00a3d4ca8950044243edd1253cbc5027cb2da78e0b2",
+          "bytes": 171
+        },
+        {
+          "path": "../corpus-source/oversize-output/source.go",
+          "sha256": "25ad98da631bad5f720a253606afd63510c36f45a5330ce118aaf105fe638cb1",
+          "bytes": 57
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\oversize-output\\cover.out",
+        "-count=1",
+        "./..."
+      ],
+      "cwd": "../corpus-source/oversize-output",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "success",
+      "exit_code": 0,
+      "duration_seconds": 2.246564,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "oversize-output/output.raw",
+      "raw_sha256": "05db5ba704ae6e5f66f7ba5e16c5a974aa5f0b891a0e2ecf33d531f9f68c4767",
+      "raw_bytes": 2724636,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": true,
+      "coverprofile_path": "oversize-output/cover.out",
+      "coverprofile_sha256": "ad6f627d98ce85d9d166fac5bd2dc26efe11800ca050e4283f9c9cb6ff49154b",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/oversize-output",
+            "statements": 1,
+            "covered_statements": 1,
+            "independent_percent": 100.0,
+            "blocks": [
+              {
+                "position": "example.invalid/repotest-owned-corpus/oversize-output/source.go:3.24,3.40",
+                "statements": 1,
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "report_semantic_percent": 100.0,
+        "no_tests_semantic_null": false
+      },
+      "observed": {
+        "events": 2310,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "pass"
+        ],
+        "test_terminal_actions": [
+          "pass"
+        ]
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "go-timeout",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/go-timeout",
+      "module_path": "example.invalid/repotest-owned-corpus/go-timeout",
+      "source_files": [
+        {
+          "path": "../corpus-source/go-timeout/go.mod",
+          "sha256": "a01af3face7abc9122a8bf04e9681e3c956dce8250d3212c725d5511b0aa6eb9",
+          "bytes": 65
+        },
+        {
+          "path": "../corpus-source/go-timeout/owned_test.go",
+          "sha256": "28a0cc7aeb3599acf9b395a45fd6aab29d053dad894ddc0d7d68dcbe32127f8f",
+          "bytes": 141
+        },
+        {
+          "path": "../corpus-source/go-timeout/source.go",
+          "sha256": "25ad98da631bad5f720a253606afd63510c36f45a5330ce118aaf105fe638cb1",
+          "bytes": 57
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\go-timeout\\cover.out",
+        "-count=1",
+        "-timeout=30ms",
+        "./..."
+      ],
+      "cwd": "../corpus-source/go-timeout",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "go_timeout",
+      "exit_code": 1,
+      "duration_seconds": 2.034608,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "go-timeout/output.raw",
+      "raw_sha256": "fe0841b8a87616490310b96ebb5a37ac6d7cad3e575e404e852e5f7b9e3dac74",
+      "raw_bytes": 7621,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "go-timeout/cover.out",
+      "coverprofile_sha256": "e9d30763ecae1bb383e5efe8e81b66a1cfe7c78804f6a75fb81c2662b9a7e18b",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/go-timeout",
+            "statements": 1,
+            "covered_statements": 0,
+            "independent_percent": 0.0,
+            "blocks": [
+              {
+                "position": "example.invalid/repotest-owned-corpus/go-timeout/source.go:3.24,3.40",
+                "statements": 1,
+                "count": 0
+              }
+            ]
+          }
+        ],
+        "report_semantic_percent": 0.0,
+        "no_tests_semantic_null": false
+      },
+      "observed": {
+        "events": 40,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "fail"
+        ],
+        "test_terminal_actions": []
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "supervisor-timeout",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/supervisor-timeout",
+      "module_path": "example.invalid/repotest-owned-corpus/supervisor-timeout",
+      "source_files": [
+        {
+          "path": "../corpus-source/supervisor-timeout/go.mod",
+          "sha256": "b2e291b18c162bbfe163f5c7788215c0b98f0f1ba61c415629514ab22785db86",
+          "bytes": 73
+        },
+        {
+          "path": "../corpus-source/supervisor-timeout/owned_test.go",
+          "sha256": "28a0cc7aeb3599acf9b395a45fd6aab29d053dad894ddc0d7d68dcbe32127f8f",
+          "bytes": 141
+        },
+        {
+          "path": "../corpus-source/supervisor-timeout/source.go",
+          "sha256": "25ad98da631bad5f720a253606afd63510c36f45a5330ce118aaf105fe638cb1",
+          "bytes": 57
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\supervisor-timeout\\cover.out",
+        "-count=1",
+        "-timeout=300ms",
+        "./..."
+      ],
+      "cwd": "../corpus-source/supervisor-timeout",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "incomplete",
+      "exit_code": 1,
+      "duration_seconds": 2.212133,
+      "supervisor": {
+        "enabled": true,
+        "triggered": true,
+        "timeout_ms": 30,
+        "reason": "30ms_after_observed_TestOwned_run",
+        "owned_go_pid": 26248,
+        "owned_go_cwd": "F:\\repotext\\work\\public-report-s1\\corpus-source\\supervisor-timeout"
+      },
+      "raw_path": "supervisor-timeout/output.raw",
+      "raw_sha256": "a4d0fb0e7adbd76709a35f957bc9f9f616cb971b0b9f9258d60fef2298e27d85",
+      "raw_bytes": 668,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "supervisor-timeout/cover.out",
+      "coverprofile_sha256": "22b0c386ce56856f44063cacf33009cf7f5bed9328092526b20e546186c2f3b8",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/supervisor-timeout",
+            "statements": 0,
+            "covered_statements": 0,
+            "independent_percent": null,
+            "blocks": []
+          }
+        ],
+        "report_semantic_percent": null,
+        "no_tests_semantic_null": false
+      },
+      "observed": {
+        "events": 4,
+        "non_json_lines": 0,
+        "package_terminal_actions": [],
+        "test_terminal_actions": []
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "empty-module",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/empty-module",
+      "module_path": "example.invalid/repotest-owned-corpus/empty-module",
+      "source_files": [
+        {
+          "path": "../corpus-source/empty-module/go.mod",
+          "sha256": "9482f5e6e47b72b063aae84dabd9414b7145fba692c99de4fe8bee7b78bc303f",
+          "bytes": 67
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\empty-module\\cover.out",
+        "-count=1",
+        "./..."
+      ],
+      "cwd": "../corpus-source/empty-module",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "empty_module",
+      "exit_code": 1,
+      "duration_seconds": 0.241405,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "empty-module/output.raw",
+      "raw_sha256": "6fc909d7e5b64c953df1896c658ac5d85de78f240498a8664295862616ecdf53",
+      "raw_bytes": 61,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": null,
+      "coverprofile_sha256": null,
+      "coverage_reference": {
+        "available": false,
+        "packages": [],
+        "report_semantic_percent": null
+      },
+      "observed": {
+        "events": 0,
+        "non_json_lines": 2,
+        "package_terminal_actions": [],
+        "test_terminal_actions": []
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "no-selected-tests",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/no-selected-tests",
+      "module_path": "example.invalid/repotest-owned-corpus/no-selected-tests",
+      "source_files": [
+        {
+          "path": "../corpus-source/no-selected-tests/go.mod",
+          "sha256": "7d2a8c39cf11924ca7e1924fe6595299646d5df6c01b79e7e94b6908fc31f441",
+          "bytes": 72
+        },
+        {
+          "path": "../corpus-source/no-selected-tests/owned_test.go",
+          "sha256": "d577138aaba0529ea00564786fbc797fd5602b4f22d381c4707f31b5fcabf8b3",
+          "bytes": 108
+        },
+        {
+          "path": "../corpus-source/no-selected-tests/source.go",
+          "sha256": "25ad98da631bad5f720a253606afd63510c36f45a5330ce118aaf105fe638cb1",
+          "bytes": 57
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\no-selected-tests\\cover.out",
+        "-count=1",
+        "-run=^NoSuchOwnedTest$",
+        "./..."
+      ],
+      "cwd": "../corpus-source/no-selected-tests",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "no_tests",
+      "exit_code": 0,
+      "duration_seconds": 2.373632,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "no-selected-tests/output.raw",
+      "raw_sha256": "0b885f3ea79304d2741cf373318140e2ab6a0b99c211a990630d28cccea81c33",
+      "raw_bytes": 1036,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "no-selected-tests/cover.out",
+      "coverprofile_sha256": "0eaa4b1703944ddc6cfa02e10df19edea0a61c84be63fd9069d20484fba5168a",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/no-selected-tests",
+            "statements": 1,
+            "covered_statements": 0,
+            "independent_percent": 0.0,
+            "blocks": [
+              {
+                "position": "example.invalid/repotest-owned-corpus/no-selected-tests/source.go:3.24,3.40",
+                "statements": 1,
+                "count": 0
+              }
+            ]
+          }
+        ],
+        "report_semantic_percent": null,
+        "no_tests_semantic_null": true
+      },
+      "observed": {
+        "events": 6,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "pass"
+        ],
+        "test_terminal_actions": []
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "unicode-output",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/unicode-output",
+      "module_path": "example.invalid/repotest-owned-corpus/unicode-output",
+      "source_files": [
+        {
+          "path": "../corpus-source/unicode-output/go.mod",
+          "sha256": "6b60f4c444f36d8b4d8736ffd673c088263d7dff097bb22295385df1c8a557b7",
+          "bytes": 69
+        },
+        {
+          "path": "../corpus-source/unicode-output/owned_test.go",
+          "sha256": "cece58a9883e11ae577fece6b9b6f2d20e54a20aafe28a73eebc68419dba4000",
+          "bytes": 146
+        },
+        {
+          "path": "../corpus-source/unicode-output/source.go",
+          "sha256": "25ad98da631bad5f720a253606afd63510c36f45a5330ce118aaf105fe638cb1",
+          "bytes": 57
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\unicode-output\\cover.out",
+        "-count=1",
+        "./..."
+      ],
+      "cwd": "../corpus-source/unicode-output",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "success",
+      "exit_code": 0,
+      "duration_seconds": 2.193938,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "unicode-output/output.raw",
+      "raw_sha256": "56b4f838c707d3e385cf89b9a6a41e10e43c415e944584028c7c6ed46c4404d2",
+      "raw_bytes": 1720,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "unicode-output/cover.out",
+      "coverprofile_sha256": "d462e1b24d5338ac723cfdae38caa9a433b02af8cd27d39ae83fb1ef7527b5cb",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/unicode-output",
+            "statements": 1,
+            "covered_statements": 1,
+            "independent_percent": 100.0,
+            "blocks": [
+              {
+                "position": "example.invalid/repotest-owned-corpus/unicode-output/source.go:3.24,3.40",
+                "statements": 1,
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "report_semantic_percent": 100.0,
+        "no_tests_semantic_null": false
+      },
+      "observed": {
+        "events": 10,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "pass"
+        ],
+        "test_terminal_actions": [
+          "pass"
+        ]
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    },
+    {
+      "id": "multiline-log",
+      "kind": "owned_fixture",
+      "origin": "collector-authored standard-library fixture; not public GitHub repository evidence",
+      "sourceRoot": "../corpus-source/multiline-log",
+      "module_path": "example.invalid/repotest-owned-corpus/multiline-log",
+      "source_files": [
+        {
+          "path": "../corpus-source/multiline-log/go.mod",
+          "sha256": "c79bfadeed957bf8f208829f330c219fc93778d218e4e6b93cd0a37d8e5920b4",
+          "bytes": 68
+        },
+        {
+          "path": "../corpus-source/multiline-log/owned_test.go",
+          "sha256": "cc3d67e93720fbb06e8b70eaf972947d4de41ac45c1aaf591895724f068d7a2f",
+          "bytes": 154
+        },
+        {
+          "path": "../corpus-source/multiline-log/source.go",
+          "sha256": "25ad98da631bad5f720a253606afd63510c36f45a5330ce118aaf105fe638cb1",
+          "bytes": 57
+        }
+      ],
+      "command": [
+        "go",
+        "test",
+        "-json",
+        "-cover",
+        "-coverprofile=F:\\repotext\\work\\public-report-s1\\corpus-capture\\multiline-log\\cover.out",
+        "-count=1",
+        "./..."
+      ],
+      "cwd": "../corpus-source/multiline-log",
+      "actual_go_version": "go version go1.26.3 windows/amd64",
+      "collector_environment_overrides": {
+        "GOCACHE": "F:\\repotext\\work\\gocache-current",
+        "GOTOOLCHAIN": "local",
+        "GOPROXY": "off",
+        "GOSUMDB": "off"
+      },
+      "expected": "success",
+      "exit_code": 0,
+      "duration_seconds": 2.319124,
+      "supervisor": {
+        "enabled": false,
+        "triggered": false,
+        "timeout_ms": null,
+        "reason": null
+      },
+      "raw_path": "multiline-log/output.raw",
+      "raw_sha256": "2819a9306fb4006ebb34a725531efd1cf34e25c63eb19bd7475a673bb38d1c18",
+      "raw_bytes": 2031,
+      "capture": "complete stdout+stderr merged raw bytes; no rewriting or consumer truncation",
+      "consumer_limit_bytes": 2097152,
+      "consumer_expected_truncated": false,
+      "coverprofile_path": "multiline-log/cover.out",
+      "coverprofile_sha256": "5bbfc3b45c8c62f12c3bfa5e2d0666bbc8e57db4fcdb52cdbc873a6be9828943",
+      "coverage_reference": {
+        "available": true,
+        "calculation": "sum(numStatements for blocks with count>0) / sum(numStatements) * 100",
+        "packages": [
+          {
+            "package": "example.invalid/repotest-owned-corpus/multiline-log",
+            "statements": 1,
+            "covered_statements": 1,
+            "independent_percent": 100.0,
+            "blocks": [
+              {
+                "position": "example.invalid/repotest-owned-corpus/multiline-log/source.go:3.24,3.40",
+                "statements": 1,
+                "count": 1
+              }
+            ]
+          }
+        ],
+        "report_semantic_percent": 100.0,
+        "no_tests_semantic_null": false
+      },
+      "observed": {
+        "events": 12,
+        "non_json_lines": 0,
+        "package_terminal_actions": [
+          "pass"
+        ],
+        "test_terminal_actions": [
+          "pass"
+        ]
+      },
+      "capture_issues": [],
+      "capture_status": "captured_expected"
+    }
+  ]
+}

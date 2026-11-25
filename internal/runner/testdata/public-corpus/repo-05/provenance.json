@@ -1,0 +1,19 @@
+{
+  "commit": "bb548d0473d4e1c9b7bbfd6602c7bf12f7a84dd2",
+  "error": "",
+  "exit_code": 1,
+  "fault_injection": false,
+  "finished_at": "2026-11-25T12:33:57.262714069Z",
+  "phases": [
+    "clone",
+    "deps",
+    "test"
+  ],
+  "raw_sha256": "d5ef68fa4732dacbacd2d2b386f250295fb8e4762c28abedc0f5ef67a7ba594d",
+  "raw_truncated": false,
+  "repo_url": "https://github.com/stretchr/testify",
+  "report_sha256": "b0ee1d8f225dcaa1f6eebdfe3455dfbcbe46852b2776e3100d41ae04ddbb91ad",
+  "source_modified": false,
+  "started_at": "2026-11-25T12:33:19.430391919Z",
+  "timed_out": false
+}

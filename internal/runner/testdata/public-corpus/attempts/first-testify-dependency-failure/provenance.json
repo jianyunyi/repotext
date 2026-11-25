@@ -1,0 +1,18 @@
+{
+  "commit": "bb548d0473d4e1c9b7bbfd6602c7bf12f7a84dd2",
+  "error": "download Go modules: exit status 1: go: github.com/davecgh/go-spew@v1.1.1: reading http://172.21.0.1:46371/github.com/davecgh/go-spew/@v/v1.1.1.mod: 502 Bad Gateway\n\tserver response: module proxy upstream unavailable\ngo: github.com/pmezard/go-difflib@v1.0.0: reading http://172.21.0.1:46371/github.com/pmezard/go-difflib/@v/v1.0.0.mod: 502 Bad Gateway\n\tserver response: module proxy upstream unavailable",
+  "exit_code": 0,
+  "fault_injection": false,
+  "finished_at": "2026-11-25T12:28:43.20883277Z",
+  "phases": [
+    "clone",
+    "deps"
+  ],
+  "raw_sha256": "ee8b16022c0ef5489cb976c84f6c1c98a32d52daf23c42e05992a4159214e69f",
+  "raw_truncated": false,
+  "repo_url": "https://github.com/stretchr/testify",
+  "report_sha256": "3ff928306fcff1ae0805414fdc02adfb0b4f4966c16f03aadac00a287166011a",
+  "source_modified": false,
+  "started_at": "2026-11-25T12:28:32.34551058Z",
+  "timed_out": false
+}

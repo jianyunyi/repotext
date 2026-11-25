@@ -1,0 +1,9 @@
+{"Time":"2026-11-25T19:06:33.1076497+08:00","Action":"start","Package":"example.invalid/repotest-owned-corpus/full-coverage"}
+{"Time":"2026-11-25T19:06:34.3222909+08:00","Action":"run","Package":"example.invalid/repotest-owned-corpus/full-coverage","Test":"TestOwned"}
+{"Time":"2026-11-25T19:06:34.3222909+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/full-coverage","Test":"TestOwned","Output":"=== RUN   TestOwned\n"}
+{"Time":"2026-11-25T19:06:34.3222909+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/full-coverage","Test":"TestOwned","Output":"--- PASS: TestOwned (0.00s)\n"}
+{"Time":"2026-11-25T19:06:34.3222909+08:00","Action":"pass","Package":"example.invalid/repotest-owned-corpus/full-coverage","Test":"TestOwned","Elapsed":0}
+{"Time":"2026-11-25T19:06:34.3277309+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/full-coverage","Output":"PASS\n"}
+{"Time":"2026-11-25T19:06:34.3277309+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/full-coverage","Output":"coverage: 100.0% of statements\n"}
+{"Time":"2026-11-25T19:06:34.3342177+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/full-coverage","Output":"ok  \texample.invalid/repotest-owned-corpus/full-coverage\t1.225s\tcoverage: 100.0% of statements\n"}
+{"Time":"2026-11-25T19:06:34.3342177+08:00","Action":"pass","Package":"example.invalid/repotest-owned-corpus/full-coverage","Elapsed":1.227}

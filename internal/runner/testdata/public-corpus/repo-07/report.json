@@ -1,0 +1,79 @@
+{
+  "task_id": "repo-07",
+  "go_version": "go1.27.1",
+  "goos": "linux",
+  "goarch": "amd64",
+  "no_tests": false,
+  "truncated": false,
+  "packages": [
+    {
+      "import_path": "github.com/tidwall/sjson",
+      "status": "passed",
+      "elapsed_ms": 1180,
+      "coverage_pct": 79.9,
+      "output": "PASS\ncoverage: 79.9% of statements\nok  \tgithub.com/tidwall/sjson\t1.180s\tcoverage: 79.9% of statements\n",
+      "tests": [
+        {
+          "name": "TestBasic",
+          "status": "passed",
+          "output": "=== RUN   TestBasic\n--- PASS: TestBasic (0.00s)\n"
+        },
+        {
+          "name": "TestDelete",
+          "status": "passed",
+          "output": "=== RUN   TestDelete\n--- PASS: TestDelete (0.00s)\n"
+        },
+        {
+          "name": "TestRandomData",
+          "status": "passed",
+          "elapsed_ms": 1180,
+          "output": "=== RUN   TestRandomData\n--- PASS: TestRandomData (1.18s)\n"
+        },
+        {
+          "name": "TestDeleteIssue21",
+          "status": "passed",
+          "output": "=== RUN   TestDeleteIssue21\n--- PASS: TestDeleteIssue21 (0.00s)\n"
+        },
+        {
+          "name": "TestSetDotKeyIssue10",
+          "status": "passed",
+          "output": "=== RUN   TestSetDotKeyIssue10\n--- PASS: TestSetDotKeyIssue10 (0.00s)\n"
+        },
+        {
+          "name": "TestDeleteDotKeyIssue19",
+          "status": "passed",
+          "output": "=== RUN   TestDeleteDotKeyIssue19\n--- PASS: TestDeleteDotKeyIssue19 (0.00s)\n"
+        },
+        {
+          "name": "TestIssue36",
+          "status": "passed",
+          "output": "=== RUN   TestIssue36\n--- PASS: TestIssue36 (0.00s)\n"
+        },
+        {
+          "name": "TestIndex",
+          "status": "passed",
+          "output": "=== RUN   TestIndex\n--- PASS: TestIndex (0.00s)\n"
+        },
+        {
+          "name": "TestIndexes",
+          "status": "passed",
+          "output": "=== RUN   TestIndexes\n--- PASS: TestIndexes (0.00s)\n"
+        },
+        {
+          "name": "TestIssue61",
+          "status": "passed",
+          "output": "=== RUN   TestIssue61\n--- PASS: TestIssue61 (0.00s)\n"
+        }
+      ]
+    }
+  ],
+  "repo_url": "https://github.com/tidwall/sjson",
+  "commit": "b279807a1bad9fa155988667d97a3d2fff4061b5",
+  "summary": {
+    "passed": 10,
+    "failed": 0,
+    "skipped": 0,
+    "incomplete": 0,
+    "package_failures": 0
+  }
+}

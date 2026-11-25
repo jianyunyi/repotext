@@ -1,0 +1,22 @@
+{"Time":"2026-11-25T19:06:24.9772662+08:00","Action":"start","Package":"example.invalid/repotest-owned-corpus/panic"}
+{"Time":"2026-11-25T19:06:26.2421038+08:00","Action":"run","Package":"example.invalid/repotest-owned-corpus/panic","Test":"TestOwned"}
+{"Time":"2026-11-25T19:06:26.242637+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/panic","Test":"TestOwned","Output":"=== RUN   TestOwned\n"}
+{"Time":"2026-11-25T19:06:26.242637+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/panic","Test":"TestOwned","Output":"--- FAIL: TestOwned (0.00s)\n"}
+{"Time":"2026-11-25T19:06:26.2452511+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/panic","Test":"TestOwned","Output":"panic: owned fixture panic [recovered, repanicked]\n"}
+{"Time":"2026-11-25T19:06:26.2510646+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/panic","Test":"TestOwned","Output":"\n"}
+{"Time":"2026-11-25T19:06:26.2510646+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/panic","Test":"TestOwned","Output":"goroutine 19 [running]:\n"}
+{"Time":"2026-11-25T19:06:26.2510646+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/panic","Test":"TestOwned","Output":"testing.tRunner.func1.2({0x7ff68fe782c0, 0x7ff68fec6a80})\n"}
+{"Time":"2026-11-25T19:06:26.2510646+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/panic","Test":"TestOwned","Output":"\tD:/Golang/src/testing/testing.go:1974 +0x239\n"}
+{"Time":"2026-11-25T19:06:26.2510646+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/panic","Test":"TestOwned","Output":"testing.tRunner.func1()\n"}
+{"Time":"2026-11-25T19:06:26.2510646+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/panic","Test":"TestOwned","Output":"\tD:/Golang/src/testing/testing.go:1977 +0x349\n"}
+{"Time":"2026-11-25T19:06:26.2510646+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/panic","Test":"TestOwned","Output":"panic({0x7ff68fe782c0?, 0x7ff68fec6a80?})\n"}
+{"Time":"2026-11-25T19:06:26.2510646+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/panic","Test":"TestOwned","Output":"\tD:/Golang/src/runtime/panic.go:860 +0x13a\n"}
+{"Time":"2026-11-25T19:06:26.2510646+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/panic","Test":"TestOwned","Output":"example.invalid/repotest-owned-corpus/panic.TestOwned(0x2dcc7f862200?)\n"}
+{"Time":"2026-11-25T19:06:26.2510646+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/panic","Test":"TestOwned","Output":"\tF:/repotext/work/public-report-s1/corpus-source/panic/owned_test.go:6 +0x25\n"}
+{"Time":"2026-11-25T19:06:26.2510646+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/panic","Test":"TestOwned","Output":"testing.tRunner(0x2dcc7f862200, 0x7ff68fec4dd0)\n"}
+{"Time":"2026-11-25T19:06:26.2510646+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/panic","Test":"TestOwned","Output":"\tD:/Golang/src/testing/testing.go:2036 +0xc3\n"}
+{"Time":"2026-11-25T19:06:26.2510646+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/panic","Test":"TestOwned","Output":"created by testing.(*T).Run in goroutine 1\n"}
+{"Time":"2026-11-25T19:06:26.2510646+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/panic","Test":"TestOwned","Output":"\tD:/Golang/src/testing/testing.go:2101 +0x4a9\n"}
+{"Time":"2026-11-25T19:06:26.2569171+08:00","Action":"fail","Package":"example.invalid/repotest-owned-corpus/panic","Test":"TestOwned","Elapsed":0}
+{"Time":"2026-11-25T19:06:26.2569171+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/panic","Output":"FAIL\texample.invalid/repotest-owned-corpus/panic\t1.278s\n"}
+{"Time":"2026-11-25T19:06:26.2569171+08:00","Action":"fail","Package":"example.invalid/repotest-owned-corpus/panic","Elapsed":1.28}

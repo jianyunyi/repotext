@@ -1,0 +1,626 @@
+{
+  "task_id": "repo-08",
+  "go_version": "go1.27.1",
+  "goos": "linux",
+  "goarch": "amd64",
+  "no_tests": false,
+  "truncated": false,
+  "packages": [
+    {
+      "import_path": "github.com/go-chi/chi/v5",
+      "status": "passed",
+      "elapsed_ms": 4219,
+      "coverage_pct": 95.5,
+      "output": "PASS\ncoverage: 95.5% of statements\nok  \tgithub.com/go-chi/chi/v5\t4.218s\tcoverage: 95.5% of statements\n",
+      "tests": [
+        {
+          "name": "TestRoutePattern",
+          "status": "passed",
+          "output": "=== RUN   TestRoutePattern\n--- PASS: TestRoutePattern (0.00s)\n"
+        },
+        {
+          "name": "TestMuxBasic",
+          "status": "passed",
+          "output": "=== RUN   TestMuxBasic\n--- PASS: TestMuxBasic (0.00s)\n"
+        },
+        {
+          "name": "TestMuxMounts",
+          "status": "passed",
+          "output": "=== RUN   TestMuxMounts\n--- PASS: TestMuxMounts (0.00s)\n"
+        },
+        {
+          "name": "TestMuxPlain",
+          "status": "passed",
+          "output": "=== RUN   TestMuxPlain\n--- PASS: TestMuxPlain (0.00s)\n"
+        },
+        {
+          "name": "TestMuxEmptyRoutes",
+          "status": "passed",
+          "output": "=== RUN   TestMuxEmptyRoutes\n--- PASS: TestMuxEmptyRoutes (0.00s)\n"
+        },
+        {
+          "name": "TestMuxTrailingSlash",
+          "status": "passed",
+          "output": "=== RUN   TestMuxTrailingSlash\n--- PASS: TestMuxTrailingSlash (0.00s)\n"
+        },
+        {
+          "name": "TestMuxNestedNotFound",
+          "status": "passed",
+          "output": "=== RUN   TestMuxNestedNotFound\n--- PASS: TestMuxNestedNotFound (0.00s)\n"
+        },
+        {
+          "name": "TestMethodNotAllowed",
+          "status": "passed",
+          "output": "=== RUN   TestMethodNotAllowed\n--- PASS: TestMethodNotAllowed (0.00s)\n"
+        },
+        {
+          "name": "TestMethodNotAllowed/Registered_Method",
+          "parent": "TestMethodNotAllowed",
+          "status": "passed",
+          "output": "=== RUN   TestMethodNotAllowed/Registered_Method\n--- PASS: TestMethodNotAllowed/Registered_Method (0.00s)\n"
+        },
+        {
+          "name": "TestMethodNotAllowed/Unregistered_Method",
+          "parent": "TestMethodNotAllowed",
+          "status": "passed",
+          "output": "=== RUN   TestMethodNotAllowed/Unregistered_Method\n--- PASS: TestMethodNotAllowed/Unregistered_Method (0.00s)\n"
+        },
+        {
+          "name": "TestMuxNestedMethodNotAllowed",
+          "status": "passed",
+          "output": "=== RUN   TestMuxNestedMethodNotAllowed\n--- PASS: TestMuxNestedMethodNotAllowed (0.00s)\n"
+        },
+        {
+          "name": "TestMuxComplicatedNotFound",
+          "status": "passed",
+          "output": "=== RUN   TestMuxComplicatedNotFound\n--- PASS: TestMuxComplicatedNotFound (0.00s)\n"
+        },
+        {
+          "name": "TestMuxComplicatedNotFound/pre",
+          "parent": "TestMuxComplicatedNotFound",
+          "status": "passed",
+          "output": "=== RUN   TestMuxComplicatedNotFound/pre\n--- PASS: TestMuxComplicatedNotFound/pre (0.00s)\n"
+        },
+        {
+          "name": "TestMuxComplicatedNotFound/post",
+          "parent": "TestMuxComplicatedNotFound",
+          "status": "passed",
+          "output": "=== RUN   TestMuxComplicatedNotFound/post\n--- PASS: TestMuxComplicatedNotFound/post (0.00s)\n"
+        },
+        {
+          "name": "TestMuxWith",
+          "status": "passed",
+          "output": "=== RUN   TestMuxWith\n--- PASS: TestMuxWith (0.00s)\n"
+        },
+        {
+          "name": "TestRouterFromMuxWith",
+          "status": "passed",
+          "output": "=== RUN   TestRouterFromMuxWith\n=== PAUSE TestRouterFromMuxWith\n=== CONT  TestRouterFromMuxWith\n--- PASS: TestRouterFromMuxWith (0.00s)\n"
+        },
+        {
+          "name": "TestMuxMiddlewareStack",
+          "status": "passed",
+          "output": "=== RUN   TestMuxMiddlewareStack\n--- PASS: TestMuxMiddlewareStack (0.00s)\n"
+        },
+        {
+          "name": "TestMuxRouteGroups",
+          "status": "passed",
+          "output": "=== RUN   TestMuxRouteGroups\n--- PASS: TestMuxRouteGroups (0.00s)\n"
+        },
+        {
+          "name": "TestMuxBig",
+          "status": "passed",
+          "output": "=== RUN   TestMuxBig\n--- PASS: TestMuxBig (0.00s)\n"
+        },
+        {
+          "name": "TestMuxSubroutesBasic",
+          "status": "passed",
+          "output": "=== RUN   TestMuxSubroutesBasic\n--- PASS: TestMuxSubroutesBasic (0.00s)\n"
+        },
+        {
+          "name": "TestMuxSubroutes",
+          "status": "passed",
+          "output": "=== RUN   TestMuxSubroutes\n--- PASS: TestMuxSubroutes (0.00s)\n"
+        },
+        {
+          "name": "TestSingleHandler",
+          "status": "passed",
+          "output": "=== RUN   TestSingleHandler\n--- PASS: TestSingleHandler (0.00s)\n"
+        },
+        {
+          "name": "TestServeHTTPExistingContext",
+          "status": "passed",
+          "output": "=== RUN   TestServeHTTPExistingContext\n--- PASS: TestServeHTTPExistingContext (0.00s)\n"
+        },
+        {
+          "name": "TestNestedGroups",
+          "status": "passed",
+          "output": "=== RUN   TestNestedGroups\n--- PASS: TestNestedGroups (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewarePanicOnLateUse",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewarePanicOnLateUse\n--- PASS: TestMiddlewarePanicOnLateUse (0.00s)\n"
+        },
+        {
+          "name": "TestMountingExistingPath",
+          "status": "passed",
+          "output": "=== RUN   TestMountingExistingPath\n--- PASS: TestMountingExistingPath (0.00s)\n"
+        },
+        {
+          "name": "TestMountingSimilarPattern",
+          "status": "passed",
+          "output": "=== RUN   TestMountingSimilarPattern\n--- PASS: TestMountingSimilarPattern (0.00s)\n"
+        },
+        {
+          "name": "TestMuxEmptyParams",
+          "status": "passed",
+          "output": "=== RUN   TestMuxEmptyParams\n--- PASS: TestMuxEmptyParams (0.00s)\n"
+        },
+        {
+          "name": "TestMuxMissingParams",
+          "status": "passed",
+          "output": "=== RUN   TestMuxMissingParams\n--- PASS: TestMuxMissingParams (0.00s)\n"
+        },
+        {
+          "name": "TestMuxWildcardRoute",
+          "status": "passed",
+          "output": "=== RUN   TestMuxWildcardRoute\n--- PASS: TestMuxWildcardRoute (0.00s)\n"
+        },
+        {
+          "name": "TestMuxWildcardRouteCheckTwo",
+          "status": "passed",
+          "output": "=== RUN   TestMuxWildcardRouteCheckTwo\n--- PASS: TestMuxWildcardRouteCheckTwo (0.00s)\n"
+        },
+        {
+          "name": "TestMuxRegexp",
+          "status": "passed",
+          "output": "=== RUN   TestMuxRegexp\n--- PASS: TestMuxRegexp (0.00s)\n"
+        },
+        {
+          "name": "TestMuxRegexp2",
+          "status": "passed",
+          "output": "=== RUN   TestMuxRegexp2\n--- PASS: TestMuxRegexp2 (0.00s)\n"
+        },
+        {
+          "name": "TestMuxRegexp3",
+          "status": "passed",
+          "output": "=== RUN   TestMuxRegexp3\n--- PASS: TestMuxRegexp3 (0.00s)\n"
+        },
+        {
+          "name": "TestMuxSubrouterWildcardParam",
+          "status": "passed",
+          "output": "=== RUN   TestMuxSubrouterWildcardParam\n--- PASS: TestMuxSubrouterWildcardParam (0.00s)\n"
+        },
+        {
+          "name": "TestMuxContextIsThreadSafe",
+          "status": "passed",
+          "elapsed_ms": 4200,
+          "output": "=== RUN   TestMuxContextIsThreadSafe\n--- PASS: TestMuxContextIsThreadSafe (4.20s)\n"
+        },
+        {
+          "name": "TestEscapedURLParams",
+          "status": "passed",
+          "output": "=== RUN   TestEscapedURLParams\n--- PASS: TestEscapedURLParams (0.00s)\n"
+        },
+        {
+          "name": "TestCustomHTTPMethod",
+          "status": "passed",
+          "output": "=== RUN   TestCustomHTTPMethod\n--- PASS: TestCustomHTTPMethod (0.00s)\n"
+        },
+        {
+          "name": "TestMuxMatch",
+          "status": "passed",
+          "output": "=== RUN   TestMuxMatch\n--- PASS: TestMuxMatch (0.00s)\n"
+        },
+        {
+          "name": "TestServerBaseContext",
+          "status": "passed",
+          "output": "=== RUN   TestServerBaseContext\n--- PASS: TestServerBaseContext (0.00s)\n"
+        },
+        {
+          "name": "TestTree",
+          "status": "passed",
+          "output": "=== RUN   TestTree\n--- PASS: TestTree (0.00s)\n"
+        },
+        {
+          "name": "TestTreeMoar",
+          "status": "passed",
+          "output": "=== RUN   TestTreeMoar\n--- PASS: TestTreeMoar (0.00s)\n"
+        },
+        {
+          "name": "TestTreeRegexp",
+          "status": "passed",
+          "output": "=== RUN   TestTreeRegexp\n--- PASS: TestTreeRegexp (0.00s)\n"
+        },
+        {
+          "name": "TestTreeRegexpRecursive",
+          "status": "passed",
+          "output": "=== RUN   TestTreeRegexpRecursive\n--- PASS: TestTreeRegexpRecursive (0.00s)\n"
+        },
+        {
+          "name": "TestTreeRegexMatchWholeParam",
+          "status": "passed",
+          "output": "=== RUN   TestTreeRegexMatchWholeParam\n--- PASS: TestTreeRegexMatchWholeParam (0.00s)\n"
+        },
+        {
+          "name": "TestTreeFindPattern",
+          "status": "passed",
+          "output": "=== RUN   TestTreeFindPattern\n--- PASS: TestTreeFindPattern (0.00s)\n"
+        },
+        {
+          "name": "TestWalker",
+          "status": "passed",
+          "output": "=== RUN   TestWalker\n    tree_test.go:517: GET /\n    tree_test.go:517: GET /favicon.ico\n    tree_test.go:517: GET /folders/\n    tree_test.go:517: GET /folders/public\n    tree_test.go:517: GET /hubs/{hubID}/view\n    tree_test.go:517: GET /hubs/{hubID}/view/*\n    tree_test.go:517: POST /hubs/{hubSlug}/view/*\n    tree_test.go:517: GET /hubs/{hubID}/\n    tree_test.go:517: GET /hubs/{hubID}/posts/\n    tree_test.go:517: GET /hubs/{hubID}/touch\n    tree_test.go:517: GET /hubs/{hubID}/webhooks/*\n    tree_test.go:517: PATCH /hubs/{hubID}/webhooks/*\n    tree_test.go:517: BOO /hubs/{hubID}/webhooks/*\n    tree_test.go:517: OPTIONS /hubs/{hubID}/webhooks/*\n    tree_test.go:517: HEAD /hubs/{hubID}/webhooks/*\n    tree_test.go:517: POST /hubs/{hubID}/webhooks/*\n    tree_test.go:517: TRACE /hubs/{hubID}/webhooks/*\n    tree_test.go:517: CONNECT /hubs/{hubID}/webhooks/*\n    tree_test.go:517: DELETE /hubs/{hubID}/webhooks/*\n    tree_test.go:517: PUT /hubs/{hubID}/webhooks/*\n    tree_test.go:517: GET /suggestions\n    tree_test.go:517: GET /woot/{wootID}/*\n--- PASS: TestWalker (0.00s)\n"
+        }
+      ]
+    },
+    {
+      "import_path": "github.com/go-chi/chi/v5/middleware",
+      "status": "passed",
+      "elapsed_ms": 25208,
+      "coverage_pct": 65.2,
+      "output": "PASS\ncoverage: 65.2% of statements\nok  \tgithub.com/go-chi/chi/v5/middleware\t25.208s\tcoverage: 65.2% of statements\n",
+      "tests": [
+        {
+          "name": "TestCompressor",
+          "status": "passed",
+          "output": "=== RUN   TestCompressor\n--- PASS: TestCompressor (0.00s)\n"
+        },
+        {
+          "name": "TestCompressor/no_expected_encodings_due_to_no_accepted_encodings",
+          "parent": "TestCompressor",
+          "status": "passed",
+          "output": "=== RUN   TestCompressor/no_expected_encodings_due_to_no_accepted_encodings\n--- PASS: TestCompressor/no_expected_encodings_due_to_no_accepted_encodings (0.00s)\n"
+        },
+        {
+          "name": "TestCompressor/no_expected_encodings_due_to_content_type",
+          "parent": "TestCompressor",
+          "status": "passed",
+          "output": "=== RUN   TestCompressor/no_expected_encodings_due_to_content_type\n--- PASS: TestCompressor/no_expected_encodings_due_to_content_type (0.00s)\n"
+        },
+        {
+          "name": "TestCompressor/gzip_is_only_encoding",
+          "parent": "TestCompressor",
+          "status": "passed",
+          "output": "=== RUN   TestCompressor/gzip_is_only_encoding\n--- PASS: TestCompressor/gzip_is_only_encoding (0.00s)\n"
+        },
+        {
+          "name": "TestCompressor/gzip_is_preferred_over_deflate",
+          "parent": "TestCompressor",
+          "status": "passed",
+          "output": "=== RUN   TestCompressor/gzip_is_preferred_over_deflate\n--- PASS: TestCompressor/gzip_is_preferred_over_deflate (0.00s)\n"
+        },
+        {
+          "name": "TestCompressor/deflate_is_used",
+          "parent": "TestCompressor",
+          "status": "passed",
+          "output": "=== RUN   TestCompressor/deflate_is_used\n--- PASS: TestCompressor/deflate_is_used (0.00s)\n"
+        },
+        {
+          "name": "TestCompressor/nop_is_preferred",
+          "parent": "TestCompressor",
+          "status": "passed",
+          "output": "=== RUN   TestCompressor/nop_is_preferred\n--- PASS: TestCompressor/nop_is_preferred (0.00s)\n"
+        },
+        {
+          "name": "TestCompressorWildcards",
+          "status": "passed",
+          "elapsed_ms": 70,
+          "output": "=== RUN   TestCompressorWildcards\n--- PASS: TestCompressorWildcards (0.07s)\n"
+        },
+        {
+          "name": "TestCompressorWildcards/defaults",
+          "parent": "TestCompressorWildcards",
+          "status": "passed",
+          "output": "=== RUN   TestCompressorWildcards/defaults\n--- PASS: TestCompressorWildcards/defaults (0.00s)\n"
+        },
+        {
+          "name": "TestCompressorWildcards/no_wildcard",
+          "parent": "TestCompressorWildcards",
+          "status": "passed",
+          "elapsed_ms": 70,
+          "output": "=== RUN   TestCompressorWildcards/no_wildcard\n--- PASS: TestCompressorWildcards/no_wildcard (0.07s)\n"
+        },
+        {
+          "name": "TestCompressorWildcards/invalid_wildcard_#1",
+          "parent": "TestCompressorWildcards",
+          "status": "passed",
+          "output": "=== RUN   TestCompressorWildcards/invalid_wildcard_#1\n--- PASS: TestCompressorWildcards/invalid_wildcard_#1 (0.00s)\n"
+        },
+        {
+          "name": "TestCompressorWildcards/invalid_wildcard_#2",
+          "parent": "TestCompressorWildcards",
+          "status": "passed",
+          "output": "=== RUN   TestCompressorWildcards/invalid_wildcard_#2\n--- PASS: TestCompressorWildcards/invalid_wildcard_#2 (0.00s)\n"
+        },
+        {
+          "name": "TestCompressorWildcards/valid_wildcard",
+          "parent": "TestCompressorWildcards",
+          "status": "passed",
+          "output": "=== RUN   TestCompressorWildcards/valid_wildcard\n--- PASS: TestCompressorWildcards/valid_wildcard (0.00s)\n"
+        },
+        {
+          "name": "TestCompressorWildcards/mixed",
+          "parent": "TestCompressorWildcards",
+          "status": "passed",
+          "output": "=== RUN   TestCompressorWildcards/mixed\n--- PASS: TestCompressorWildcards/mixed (0.00s)\n"
+        },
+        {
+          "name": "TestContentCharset",
+          "status": "passed",
+          "output": "=== RUN   TestContentCharset\n=== PAUSE TestContentCharset\n=== CONT  TestContentCharset\n--- PASS: TestContentCharset (0.00s)\n"
+        },
+        {
+          "name": "TestSplit",
+          "status": "passed",
+          "output": "=== RUN   TestSplit\n=== PAUSE TestSplit\n=== CONT  TestSplit\n--- PASS: TestSplit (0.00s)\n"
+        },
+        {
+          "name": "TestContentEncoding",
+          "status": "passed",
+          "output": "=== RUN   TestContentEncoding\n=== PAUSE TestContentEncoding\n=== CONT  TestContentEncoding\n--- PASS: TestContentEncoding (0.00s)\n"
+        },
+        {
+          "name": "TestContentEncodingMiddleware",
+          "status": "passed",
+          "output": "=== RUN   TestContentEncodingMiddleware\n=== PAUSE TestContentEncodingMiddleware\n=== CONT  TestContentEncodingMiddleware\n--- PASS: TestContentEncodingMiddleware (0.00s)\n"
+        },
+        {
+          "name": "TestContentType",
+          "status": "passed",
+          "output": "=== RUN   TestContentType\n=== PAUSE TestContentType\n=== CONT  TestContentType\n--- PASS: TestContentType (0.00s)\n"
+        },
+        {
+          "name": "TestGetHead",
+          "status": "passed",
+          "output": "=== RUN   TestGetHead\n--- PASS: TestGetHead (0.00s)\n"
+        },
+        {
+          "name": "TestRequestLogger",
+          "status": "passed",
+          "output": "=== RUN   TestRequestLogger\n2026/11/25 12:29:59 \"GET http://example.com/ HTTP/1.1\" from 192.0.2.1:1234 - 000 0B in 2.75µs\n--- PASS: TestRequestLogger (0.00s)\n"
+        },
+        {
+          "name": "TestRequestLoggerReadFrom",
+          "status": "passed",
+          "output": "=== RUN   TestRequestLoggerReadFrom\n2026/11/25 12:29:59 \"GET http://example.com/ HTTP/1.1\" from 192.0.2.1:1234 - 200 9B in 2.586292ms\n--- PASS: TestRequestLoggerReadFrom (0.00s)\n"
+        },
+        {
+          "name": "TestWrapWriterHTTP2",
+          "status": "passed",
+          "elapsed_ms": 100,
+          "output": "=== RUN   TestWrapWriterHTTP2\n--- PASS: TestWrapWriterHTTP2 (0.10s)\n"
+        },
+        {
+          "name": "TestXRealIP",
+          "status": "passed",
+          "output": "=== RUN   TestXRealIP\n--- PASS: TestXRealIP (0.00s)\n"
+        },
+        {
+          "name": "TestXForwardForIP",
+          "status": "passed",
+          "output": "=== RUN   TestXForwardForIP\n--- PASS: TestXForwardForIP (0.00s)\n"
+        },
+        {
+          "name": "TestXForwardForXRealIPPrecedence",
+          "status": "passed",
+          "output": "=== RUN   TestXForwardForXRealIPPrecedence\n--- PASS: TestXForwardForXRealIPPrecedence (0.00s)\n"
+        },
+        {
+          "name": "TestIvalidIP",
+          "status": "passed",
+          "output": "=== RUN   TestIvalidIP\n--- PASS: TestIvalidIP (0.00s)\n"
+        },
+        {
+          "name": "TestRecoverer",
+          "status": "passed",
+          "output": "=== RUN   TestRecoverer\n--- PASS: TestRecoverer (0.00s)\n"
+        },
+        {
+          "name": "TestRecovererAbortHandler",
+          "status": "passed",
+          "output": "=== RUN   TestRecovererAbortHandler\n--- PASS: TestRecovererAbortHandler (0.00s)\n"
+        },
+        {
+          "name": "TestRequestID",
+          "status": "passed",
+          "output": "=== RUN   TestRequestID\n--- PASS: TestRequestID (0.00s)\n"
+        },
+        {
+          "name": "TestStripSlashes",
+          "status": "passed",
+          "output": "=== RUN   TestStripSlashes\n--- PASS: TestStripSlashes (0.00s)\n"
+        },
+        {
+          "name": "TestStripSlashesInRoute",
+          "status": "passed",
+          "output": "=== RUN   TestStripSlashesInRoute\n--- PASS: TestStripSlashesInRoute (0.00s)\n"
+        },
+        {
+          "name": "TestRedirectSlashes",
+          "status": "passed",
+          "output": "=== RUN   TestRedirectSlashes\n--- PASS: TestRedirectSlashes (0.00s)\n"
+        },
+        {
+          "name": "TestStripSlashesWithNilContext",
+          "status": "passed",
+          "output": "=== RUN   TestStripSlashesWithNilContext\n--- PASS: TestStripSlashesWithNilContext (0.00s)\n"
+        },
+        {
+          "name": "TestThrottleBacklog",
+          "status": "passed",
+          "elapsed_ms": 4010,
+          "output": "=== RUN   TestThrottleBacklog\n--- PASS: TestThrottleBacklog (4.01s)\n"
+        },
+        {
+          "name": "TestThrottleClientTimeout",
+          "status": "passed",
+          "elapsed_ms": 5000,
+          "output": "=== RUN   TestThrottleClientTimeout\n--- PASS: TestThrottleClientTimeout (5.00s)\n"
+        },
+        {
+          "name": "TestThrottleTriggerGatewayTimeout",
+          "status": "passed",
+          "elapsed_ms": 10000,
+          "output": "=== RUN   TestThrottleTriggerGatewayTimeout\n--- PASS: TestThrottleTriggerGatewayTimeout (10.00s)\n"
+        },
+        {
+          "name": "TestThrottleMaximum",
+          "status": "passed",
+          "elapsed_ms": 6000,
+          "output": "=== RUN   TestThrottleMaximum\n--- PASS: TestThrottleMaximum (6.00s)\n"
+        },
+        {
+          "name": "TestURLFormat",
+          "status": "passed",
+          "output": "=== RUN   TestURLFormat\n--- PASS: TestURLFormat (0.00s)\n"
+        },
+        {
+          "name": "TestURLFormatInSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestURLFormatInSubRouter\n--- PASS: TestURLFormatInSubRouter (0.00s)\n"
+        },
+        {
+          "name": "TestHttpFancyWriterRemembersWroteHeaderWhenFlushed",
+          "status": "passed",
+          "output": "=== RUN   TestHttpFancyWriterRemembersWroteHeaderWhenFlushed\n--- PASS: TestHttpFancyWriterRemembersWroteHeaderWhenFlushed (0.00s)\n"
+        },
+        {
+          "name": "TestHttp2FancyWriterRemembersWroteHeaderWhenFlushed",
+          "status": "passed",
+          "output": "=== RUN   TestHttp2FancyWriterRemembersWroteHeaderWhenFlushed\n--- PASS: TestHttp2FancyWriterRemembersWroteHeaderWhenFlushed (0.00s)\n"
+        },
+        {
+          "name": "TestContentCharset/should_accept_requests_with_a_matching_charset",
+          "parent": "TestContentCharset",
+          "status": "passed",
+          "output": "=== RUN   TestContentCharset/should_accept_requests_with_a_matching_charset\n=== PAUSE TestContentCharset/should_accept_requests_with_a_matching_charset\n=== CONT  TestContentCharset/should_accept_requests_with_a_matching_charset\n--- PASS: TestContentCharset/should_accept_requests_with_a_matching_charset (0.00s)\n"
+        },
+        {
+          "name": "TestContentCharset/should_be_case-insensitive",
+          "parent": "TestContentCharset",
+          "status": "passed",
+          "output": "=== RUN   TestContentCharset/should_be_case-insensitive\n=== PAUSE TestContentCharset/should_be_case-insensitive\n=== CONT  TestContentCharset/should_be_case-insensitive\n--- PASS: TestContentCharset/should_be_case-insensitive (0.00s)\n"
+        },
+        {
+          "name": "TestContentCharset/should_accept_requests_with_a_matching_charset_with_extra_values",
+          "parent": "TestContentCharset",
+          "status": "passed",
+          "output": "=== RUN   TestContentCharset/should_accept_requests_with_a_matching_charset_with_extra_values\n=== PAUSE TestContentCharset/should_accept_requests_with_a_matching_charset_with_extra_values\n=== CONT  TestContentCharset/should_accept_requests_with_a_matching_charset_with_extra_values\n--- PASS: TestContentCharset/should_accept_requests_with_a_matching_charset_with_extra_values (0.00s)\n"
+        },
+        {
+          "name": "TestContentCharset/should_accept_requests_with_a_matching_charset_when_multiple_charsets_are_supported",
+          "parent": "TestContentCharset",
+          "status": "passed",
+          "output": "=== RUN   TestContentCharset/should_accept_requests_with_a_matching_charset_when_multiple_charsets_are_supported\n=== PAUSE TestContentCharset/should_accept_requests_with_a_matching_charset_when_multiple_charsets_are_supported\n=== CONT  TestContentCharset/should_accept_requests_with_a_matching_charset_when_multiple_charsets_are_supported\n--- PASS: TestContentCharset/should_accept_requests_with_a_matching_charset_when_multiple_charsets_are_supported (0.00s)\n"
+        },
+        {
+          "name": "TestContentCharset/should_accept_requests_with_no_charset_if_empty_charset_headers_are_allowed",
+          "parent": "TestContentCharset",
+          "status": "passed",
+          "output": "=== RUN   TestContentCharset/should_accept_requests_with_no_charset_if_empty_charset_headers_are_allowed\n=== PAUSE TestContentCharset/should_accept_requests_with_no_charset_if_empty_charset_headers_are_allowed\n=== CONT  TestContentCharset/should_accept_requests_with_no_charset_if_empty_charset_headers_are_allowed\n--- PASS: TestContentCharset/should_accept_requests_with_no_charset_if_empty_charset_headers_are_allowed (0.00s)\n"
+        },
+        {
+          "name": "TestContentCharset/should_not_accept_requests_with_no_charset_if_empty_charset_headers_are_not_allowed",
+          "parent": "TestContentCharset",
+          "status": "passed",
+          "output": "=== RUN   TestContentCharset/should_not_accept_requests_with_no_charset_if_empty_charset_headers_are_not_allowed\n=== PAUSE TestContentCharset/should_not_accept_requests_with_no_charset_if_empty_charset_headers_are_not_allowed\n=== CONT  TestContentCharset/should_not_accept_requests_with_no_charset_if_empty_charset_headers_are_not_allowed\n--- PASS: TestContentCharset/should_not_accept_requests_with_no_charset_if_empty_charset_headers_are_not_allowed (0.00s)\n"
+        },
+        {
+          "name": "TestContentCharset/should_not_accept_requests_with_a_mismatching_charset",
+          "parent": "TestContentCharset",
+          "status": "passed",
+          "output": "=== RUN   TestContentCharset/should_not_accept_requests_with_a_mismatching_charset\n=== PAUSE TestContentCharset/should_not_accept_requests_with_a_mismatching_charset\n=== CONT  TestContentCharset/should_not_accept_requests_with_a_mismatching_charset\n--- PASS: TestContentCharset/should_not_accept_requests_with_a_mismatching_charset (0.00s)\n"
+        },
+        {
+          "name": "TestContentCharset/should_not_accept_requests_with_a_mismatching_charset_even_if_empty_charsets_are_allowed",
+          "parent": "TestContentCharset",
+          "status": "passed",
+          "output": "=== RUN   TestContentCharset/should_not_accept_requests_with_a_mismatching_charset_even_if_empty_charsets_are_allowed\n=== PAUSE TestContentCharset/should_not_accept_requests_with_a_mismatching_charset_even_if_empty_charsets_are_allowed\n=== CONT  TestContentCharset/should_not_accept_requests_with_a_mismatching_charset_even_if_empty_charsets_are_allowed\n--- PASS: TestContentCharset/should_not_accept_requests_with_a_mismatching_charset_even_if_empty_charsets_are_allowed (0.00s)\n"
+        },
+        {
+          "name": "TestContentType/should_accept_requests_with_a_matching_content_type",
+          "parent": "TestContentType",
+          "status": "passed",
+          "output": "=== RUN   TestContentType/should_accept_requests_with_a_matching_content_type\n=== PAUSE TestContentType/should_accept_requests_with_a_matching_content_type\n=== CONT  TestContentType/should_accept_requests_with_a_matching_content_type\n--- PASS: TestContentType/should_accept_requests_with_a_matching_content_type (0.00s)\n"
+        },
+        {
+          "name": "TestContentType/should_accept_requests_with_a_matching_content_type_no_charset",
+          "parent": "TestContentType",
+          "status": "passed",
+          "output": "=== RUN   TestContentType/should_accept_requests_with_a_matching_content_type_no_charset\n=== PAUSE TestContentType/should_accept_requests_with_a_matching_content_type_no_charset\n=== CONT  TestContentType/should_accept_requests_with_a_matching_content_type_no_charset\n--- PASS: TestContentType/should_accept_requests_with_a_matching_content_type_no_charset (0.00s)\n"
+        },
+        {
+          "name": "TestContentType/should_accept_requests_with_a_matching_content-type_with_extra_values",
+          "parent": "TestContentType",
+          "status": "passed",
+          "output": "=== RUN   TestContentType/should_accept_requests_with_a_matching_content-type_with_extra_values\n=== PAUSE TestContentType/should_accept_requests_with_a_matching_content-type_with_extra_values\n=== CONT  TestContentType/should_accept_requests_with_a_matching_content-type_with_extra_values\n--- PASS: TestContentType/should_accept_requests_with_a_matching_content-type_with_extra_values (0.00s)\n"
+        },
+        {
+          "name": "TestContentType/should_accept_requests_with_a_matching_content_type_when_multiple_content_types_are_supported",
+          "parent": "TestContentType",
+          "status": "passed",
+          "output": "=== RUN   TestContentType/should_accept_requests_with_a_matching_content_type_when_multiple_content_types_are_supported\n=== PAUSE TestContentType/should_accept_requests_with_a_matching_content_type_when_multiple_content_types_are_supported\n=== CONT  TestContentType/should_accept_requests_with_a_matching_content_type_when_multiple_content_types_are_supported\n--- PASS: TestContentType/should_accept_requests_with_a_matching_content_type_when_multiple_content_types_are_supported (0.00s)\n"
+        },
+        {
+          "name": "TestContentType/should_not_accept_requests_with_a_mismatching_content_type",
+          "parent": "TestContentType",
+          "status": "passed",
+          "output": "=== RUN   TestContentType/should_not_accept_requests_with_a_mismatching_content_type\n=== PAUSE TestContentType/should_not_accept_requests_with_a_mismatching_content_type\n=== CONT  TestContentType/should_not_accept_requests_with_a_mismatching_content_type\n--- PASS: TestContentType/should_not_accept_requests_with_a_mismatching_content_type (0.00s)\n"
+        },
+        {
+          "name": "TestContentType/should_not_accept_requests_with_a_mismatching_content_type_even_if_multiple_content_types_are_allowed",
+          "parent": "TestContentType",
+          "status": "passed",
+          "output": "=== RUN   TestContentType/should_not_accept_requests_with_a_mismatching_content_type_even_if_multiple_content_types_are_allowed\n=== PAUSE TestContentType/should_not_accept_requests_with_a_mismatching_content_type_even_if_multiple_content_types_are_allowed\n=== CONT  TestContentType/should_not_accept_requests_with_a_mismatching_content_type_even_if_multiple_content_types_are_allowed\n--- PASS: TestContentType/should_not_accept_requests_with_a_mismatching_content_type_even_if_multiple_content_types_are_allowed (0.00s)\n"
+        },
+        {
+          "name": "TestContentEncodingMiddleware/Support_no_encoding",
+          "parent": "TestContentEncodingMiddleware",
+          "status": "passed",
+          "output": "=== RUN   TestContentEncodingMiddleware/Support_no_encoding\n=== PAUSE TestContentEncodingMiddleware/Support_no_encoding\n=== CONT  TestContentEncodingMiddleware/Support_no_encoding\n--- PASS: TestContentEncodingMiddleware/Support_no_encoding (0.00s)\n"
+        },
+        {
+          "name": "TestContentEncodingMiddleware/Support_gzip_encoding",
+          "parent": "TestContentEncodingMiddleware",
+          "status": "passed",
+          "output": "=== RUN   TestContentEncodingMiddleware/Support_gzip_encoding\n=== PAUSE TestContentEncodingMiddleware/Support_gzip_encoding\n=== CONT  TestContentEncodingMiddleware/Support_gzip_encoding\n--- PASS: TestContentEncodingMiddleware/Support_gzip_encoding (0.00s)\n"
+        },
+        {
+          "name": "TestContentEncodingMiddleware/No_support_for_br_encoding",
+          "parent": "TestContentEncodingMiddleware",
+          "status": "passed",
+          "output": "=== RUN   TestContentEncodingMiddleware/No_support_for_br_encoding\n=== PAUSE TestContentEncodingMiddleware/No_support_for_br_encoding\n=== CONT  TestContentEncodingMiddleware/No_support_for_br_encoding\n--- PASS: TestContentEncodingMiddleware/No_support_for_br_encoding (0.00s)\n"
+        },
+        {
+          "name": "TestContentEncodingMiddleware/Support_for_gzip_and_deflate_encoding",
+          "parent": "TestContentEncodingMiddleware",
+          "status": "passed",
+          "output": "=== RUN   TestContentEncodingMiddleware/Support_for_gzip_and_deflate_encoding\n=== PAUSE TestContentEncodingMiddleware/Support_for_gzip_and_deflate_encoding\n=== CONT  TestContentEncodingMiddleware/Support_for_gzip_and_deflate_encoding\n--- PASS: TestContentEncodingMiddleware/Support_for_gzip_and_deflate_encoding (0.00s)\n"
+        },
+        {
+          "name": "TestContentEncodingMiddleware/Support_for_deflate_and_gzip_encoding",
+          "parent": "TestContentEncodingMiddleware",
+          "status": "passed",
+          "output": "=== RUN   TestContentEncodingMiddleware/Support_for_deflate_and_gzip_encoding\n=== PAUSE TestContentEncodingMiddleware/Support_for_deflate_and_gzip_encoding\n=== CONT  TestContentEncodingMiddleware/Support_for_deflate_and_gzip_encoding\n--- PASS: TestContentEncodingMiddleware/Support_for_deflate_and_gzip_encoding (0.00s)\n"
+        },
+        {
+          "name": "TestContentEncodingMiddleware/No_support_for_deflate_and_br_encoding",
+          "parent": "TestContentEncodingMiddleware",
+          "status": "passed",
+          "output": "=== RUN   TestContentEncodingMiddleware/No_support_for_deflate_and_br_encoding\n=== PAUSE TestContentEncodingMiddleware/No_support_for_deflate_and_br_encoding\n=== CONT  TestContentEncodingMiddleware/No_support_for_deflate_and_br_encoding\n--- PASS: TestContentEncodingMiddleware/No_support_for_deflate_and_br_encoding (0.00s)\n"
+        }
+      ]
+    }
+  ],
+  "repo_url": "https://github.com/go-chi/chi",
+  "commit": "99bc99e0bf0edc147e82765f2848167922a5c644",
+  "summary": {
+    "passed": 102,
+    "failed": 0,
+    "skipped": 0,
+    "incomplete": 0,
+    "package_failures": 0
+  }
+}
