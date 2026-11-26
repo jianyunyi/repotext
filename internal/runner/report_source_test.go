@@ -88,3 +88,22 @@ func TestReportSourceRejectsTraversalInPackagePath(t *testing.T) {
 		t.Fatalf("package traversal linked: %+v", got.Packages[0].Tests[0].FailureLocation)
 	}
 }
+
+func TestReportSourceSymlinkAncestorRejected(t *testing.T) {
+	root := reportSourceFixture(t)
+	alias := filepath.Join(t.TempDir(), "source-parent-link")
+	if err := os.Symlink(filepath.Dir(root), alias); err != nil {
+		t.Skipf("symlink creation unavailable: %v", err)
+	}
+	t.Cleanup(func() {
+		if err := os.Remove(alias); err != nil {
+			t.Errorf("remove fixture symlink: %v", err)
+		}
+	})
+	if source := indexReportSource(filepath.Join(alias, filepath.Base(root)), domain.Task{}); source != nil {
+		t.Fatal("symlink ancestor accepted as validated source")
+	}
+	if source := indexReportSource(root, domain.Task{}); source == nil {
+		t.Fatal("symlink fixture damaged ordinary source root")
+	}
+}

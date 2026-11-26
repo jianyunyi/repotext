@@ -10,6 +10,7 @@ import (
 	"path"
 	"path/filepath"
 	"regexp"
+	"runtime"
 	"strconv"
 	"strings"
 
@@ -35,10 +36,23 @@ func indexReportSource(sourceRoot string, task domain.Task) *reportSource {
 	if err != nil {
 		return nil
 	}
+	// EvalSymlinks also expands Windows 8.3 names and disk casing. First reject
+	// actual redirects in every ancestor, so benign aliases can be canonicalized
+	// without admitting a source reached through a symlink or junction.
+	for ancestor := root; ; ancestor = filepath.Dir(ancestor) {
+		info, err := os.Lstat(ancestor)
+		if err != nil || !info.IsDir() || info.Mode()&(os.ModeSymlink|os.ModeIrregular) != 0 {
+			return nil
+		}
+		if filepath.Dir(ancestor) == ancestor {
+			break
+		}
+	}
 	resolved, err := filepath.EvalSymlinks(root)
-	if err != nil || resolved != root {
+	if err != nil || (runtime.GOOS != "windows" && resolved != root) {
 		return nil
 	}
+	root = resolved
 	info, err := os.Lstat(root)
 	if err != nil || !info.IsDir() || info.Mode()&os.ModeSymlink != 0 {
 		return nil
