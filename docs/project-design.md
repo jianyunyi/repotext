@@ -1,6 +1,6 @@
 # RepoTest 设计文档
 
-当前用户目标已在2026-11-25变更为公网化：按用户提供的7页改造清单推进，起步并发1。当前阶段PUBLIC-1报告层，功能分支feat/public-report-s1；新的设计与验收见[公网报告设计](superpowers/specs/2026-11-25-public-report-s1-design.md)及[公网化阶段报告](publicization-stage-report.md)。以下S1–S5是原单管理员/内网版本的设计与历史状态，不能代替新公网权限、沙箱和上线门槛。
+当前用户目标已在2026-11-25变更为公网化：按用户提供的7页改造清单推进，起步并发1。PUBLIC-1报告层已通过Go 1.23.12 Windows本机全量验证及GitHub Actions Linux/Windows jobs；PR #1已创建，最新PR状态查询暂不可用。PUBLIC-2只读分享本地验收通过。公网监听仍关闭；权威进度见[公网化阶段报告](publicization-stage-report.md)，阶段设计见[公网报告设计](superpowers/specs/2026-11-25-public-report-s1-design.md)。以下S1–S5是原单管理员/内网版本的设计与历史状态，不能代替新公网权限、沙箱和上线门槛。
 
 <!-- 状态块 -->
 模式：Full；沟通方式：连续执行（沿用保存对话授权）

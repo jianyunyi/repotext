@@ -23,19 +23,27 @@ const (
 	PhaseTest  Phase = "test"
 )
 
+type ExecutionIdentity struct {
+	RepoURL       string `json:"repo_url"`
+	CommitSHA     string `json:"commit_sha"`
+	GoVersion     string `json:"go_version"`
+	RunnerVersion string `json:"runner_version"`
+	ConfigDigest  string `json:"config_digest"`
+}
 type Task struct {
-	ID           string     `json:"id"`
-	RepoURL      string     `json:"repo_url"`
-	Ref          string     `json:"ref,omitempty"`
-	Commit       string     `json:"commit,omitempty"`
-	Status       Status     `json:"status"`
-	Phase        Phase      `json:"phase,omitempty"`
-	ErrorCode    string     `json:"error_code,omitempty"`
-	ErrorMessage string     `json:"error_message,omitempty"`
-	Attempt      int        `json:"attempt"`
-	CreatedAt    time.Time  `json:"created_at"`
-	StartedAt    *time.Time `json:"started_at,omitempty"`
-	FinishedAt   *time.Time `json:"finished_at,omitempty"`
+	ID                string             `json:"id"`
+	RepoURL           string             `json:"repo_url"`
+	Ref               string             `json:"ref,omitempty"`
+	Commit            string             `json:"commit,omitempty"`
+	Status            Status             `json:"status"`
+	Phase             Phase              `json:"phase,omitempty"`
+	ErrorCode         string             `json:"error_code,omitempty"`
+	ErrorMessage      string             `json:"error_message,omitempty"`
+	Attempt           int                `json:"attempt"`
+	CreatedAt         time.Time          `json:"created_at"`
+	StartedAt         *time.Time         `json:"started_at,omitempty"`
+	FinishedAt        *time.Time         `json:"finished_at,omitempty"`
+	ExecutionIdentity *ExecutionIdentity `json:"execution_identity,omitempty"`
 }
 type Package struct {
 	ImportPath      string           `json:"import_path"`

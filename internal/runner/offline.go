@@ -25,6 +25,13 @@ import (
 
 var imageID = regexp.MustCompile(`^sha256:[a-f0-9]{64}$`)
 
+type CleanupError struct {
+	Err error
+}
+
+func (e CleanupError) Error() string { return e.Err.Error() }
+func (e CleanupError) Unwrap() error { return e.Err }
+
 const offlineCommand = `set -eu
 mkdir -p /work/src /work/cache /work/modules /work/tmp
 tar -xf - -C /work
@@ -96,7 +103,7 @@ func runOfflineGoWithModules(ctx context.Context, image, source, modulesTar stri
 		defer cancel()
 		output, cleanupErr := exec.CommandContext(cleanupCtx, "docker", "container", "rm", "-f", name).CombinedOutput()
 		if cleanupErr != nil && !strings.Contains(string(output), "No such container: "+name) {
-			err = errors.Join(err, fmt.Errorf("remove offline container %s: %w", name, cleanupErr))
+			err = errors.Join(err, CleanupError{Err: fmt.Errorf("remove offline container %s: %w", name, cleanupErr)})
 		}
 	}()
 
@@ -177,7 +184,7 @@ func prepareModuleCache(ctx context.Context, image, source, scratch string) (mod
 		defer cancel()
 		_, cleanupErr := exec.CommandContext(cleanupCtx, "docker", "network", "rm", network).CombinedOutput()
 		if cleanupErr != nil {
-			err = errors.Join(err, fmt.Errorf("remove module network: %w", cleanupErr))
+			err = errors.Join(err, CleanupError{Err: fmt.Errorf("remove module network: %w", cleanupErr)})
 		}
 	}()
 	inspect, err := exec.CommandContext(ctx, "docker", "network", "inspect", "--format={{range .IPAM.Config}}{{.Gateway}} {{.Subnet}}{{end}}", network).CombinedOutput()

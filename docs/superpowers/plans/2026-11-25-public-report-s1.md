@@ -36,4 +36,4 @@ Files: internal/control/web/index.html; a reusable web/report.js if justified; i
 
 - [x] `go test -p=1 -count=1 ./...`, `go vet ./...`, `go build ./...`, gofmt checks; required affected Linux/container checks and browser QA.
 - [x] Independent spec review, then quality review of final diff and evidence. Do not hide AUD-001/002/003 behind report success; they remain future release blockers.
-- [ ] Update publicization-stage-report.md with exact PASS/FAIL/NOT RUN counts, corpus/repo evidence, measured diff, retries/blocks and next stage. Commit/push only the verified feature branch under existing repository authorization; do not merge/deploy public behavior or mark public opening approved.
+- [x] Update publicization-stage-report.md with exact PASS/FAIL/NOT RUN counts, corpus/repo evidence, measured diff, retries/blocks and next stage. Commit/push only the verified feature branch under existing repository authorization; do not merge/deploy public behavior or mark public opening approved.

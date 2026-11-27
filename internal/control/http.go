@@ -29,6 +29,8 @@ type API struct {
 	GoVersion     string
 	RunnerVersion string
 	RunnerConfig  []byte
+	Captcha       CaptchaVerifier
+	PublicOrigins []string
 }
 type Preview struct {
 	RepoURL       string     `json:"repo_url"`
@@ -178,6 +180,10 @@ type previewTokenStore interface {
 
 type previewConfirmationStore interface {
 	ConfirmPreview(context.Context, []byte, domain.Task, ExecutionIdentity, time.Time, time.Duration) (domain.Task, bool, error)
+}
+
+type publicPreviewConfirmationStore interface {
+	ConfirmPreviewWithToken(context.Context, []byte, domain.Task, ExecutionIdentity, []byte, time.Time, time.Duration) (domain.Task, bool, error)
 }
 
 type confirmRequest struct {

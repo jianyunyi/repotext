@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"repotest/internal/domain"
+	"repotest/internal/runner"
 )
 
 type TaskExecution struct {
@@ -31,6 +32,7 @@ type TaskWorker struct {
 	PollEvery   time.Duration
 	Lease       time.Duration
 	MaxAttempts int
+	Identity    ExecutionIdentity
 }
 
 func (w TaskWorker) now() time.Time {
@@ -73,6 +75,13 @@ func (w TaskWorker) ProcessOne(ctx context.Context) (bool, error) {
 	if !started {
 		return true, w.Store.AckOutbox(ctx, item.ID)
 	}
+	if w.Identity.isConfigured() && !taskIdentityMatches(task, w.Identity) {
+		_, completeErr := w.Store.CompleteTask(context.Background(), task.ID, task.Attempt, domain.StatusError, "execution_identity_mismatch", "任务执行身份与创建时不一致。", nil, nil, w.now())
+		if completeErr != nil {
+			return true, completeErr
+		}
+		return true, w.Store.AckOutbox(context.Background(), item.ID)
+	}
 	execute := func(taskCtx context.Context) error {
 		progress := func(phase domain.Phase) error {
 			if taskCtx.Err() != nil {
@@ -102,6 +111,13 @@ func (w TaskWorker) ProcessOne(ctx context.Context) (bool, error) {
 }
 
 func (w TaskWorker) finish(parent context.Context, task domain.Task, outboxID int64, result TaskExecution, execErr error) error {
+	var cleanupErr runner.CleanupError
+	if errors.As(execErr, &cleanupErr) {
+		if err := w.finishResult(task, outboxID, result, domain.StatusError, "cleanup_pending", "执行资源清理失败，任务保留待恢复。", w.now()); err != nil {
+			return err
+		}
+		return errors.Join(ErrCleanupPending, execErr)
+	}
 	now := w.now()
 	if parent.Err() != nil && errors.Is(execErr, context.Canceled) {
 		if len(result.Output) > 0 {

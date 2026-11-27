@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 	"regexp"
+	"repotest/internal/domain"
 	"repotest/internal/runner"
 	"strings"
 )
@@ -33,6 +34,9 @@ func ConfigurationDigest(config []byte) string {
 	return hex.EncodeToString(sum[:])
 }
 
+func NewExecutionIdentity(repoURL, commitSHA, goVersion, runnerVersion string, config []byte) ExecutionIdentity {
+	return ExecutionIdentity{repoURL: repoURL, commitSHA: commitSHA, goVersion: goVersion, runnerVersion: runnerVersion, config: append([]byte(nil), config...)}
+}
 func (e ExecutionIdentity) WorkKey() (string, error) {
 	repo, err := runner.ValidateRepoURL(e.repoURL)
 	if err != nil {
@@ -52,4 +56,28 @@ func (e ExecutionIdentity) WorkKey() (string, error) {
 	}
 	sum := sha256.Sum256(body)
 	return hex.EncodeToString(sum[:]), nil
+}
+
+func (e ExecutionIdentity) isConfigured() bool {
+	return strings.TrimSpace(e.goVersion) != "" && strings.TrimSpace(e.runnerVersion) != ""
+}
+
+func taskIdentityMatches(task domain.Task, current ExecutionIdentity) bool {
+	if task.ExecutionIdentity == nil || !current.isConfigured() {
+		return false
+	}
+	stored := task.ExecutionIdentity
+	repoMatch := true
+	if strings.TrimSpace(current.repoURL) != "" {
+		repo, err := runner.ValidateRepoURL(current.repoURL)
+		if err != nil {
+			return false
+		}
+		repoMatch = stored.RepoURL == repo
+	}
+	commitMatch := true
+	if strings.TrimSpace(current.commitSHA) != "" {
+		commitMatch = strings.EqualFold(stored.CommitSHA, current.commitSHA)
+	}
+	return repoMatch && commitMatch && stored.GoVersion == current.goVersion && stored.RunnerVersion == current.runnerVersion && stored.ConfigDigest == ConfigurationDigest(current.config)
 }

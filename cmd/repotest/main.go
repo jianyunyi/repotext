@@ -72,7 +72,7 @@ func run() error {
 		if _, err = store.RecoverInterrupted(context.Background(), time.Now().UTC()); err != nil {
 			return fmt.Errorf("recover interrupted tasks: %w", err)
 		}
-		worker = control.TaskWorker{Store: store, Executor: taskExecutorAdapter{executor}, Processes: processes}
+		worker = control.TaskWorker{Store: store, Executor: taskExecutorAdapter{executor}, Processes: processes, Identity: control.NewExecutionIdentity("", "", runnerGoVersion, runnerImage, []byte("linux-offline-v1;memory=768m;cpu=1;pids=128;test-tmpfs=384m;deps-memory=768m;deps-pids=96;deps-tmpfs=640m;module-response=100m;module-total=512m"))}
 	}
 
 	pairing, code, err := control.NewPairing(store, time.Now())
