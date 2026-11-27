@@ -24,10 +24,10 @@
 - **做了什么**：公开预览先验证 CAPTCHA；公开确认固定预览 commit，首次创建返回独立控制令牌；SQLite 同事务持久化任务、outbox、确认映射及令牌 SHA-256；Bearer 令牌用于远程取消/删除；任务持久化执行身份，worker 校验身份；清理失败保留任务并返回 `cleanup_pending`。
 - **优化手段与代价**：哈希比较使用常量时间路径，控制令牌不进入公开 task projection；事务故障注入证明确认完整回滚。CAPTCHA 仅提供 verifier 接口，未配置时 fail closed，供应商凭据未接入。
 - **没做什么**：未实现 PUBLIC-4 队列/限流、PUBLIC-5 专用沙箱重评审或 PUBLIC-6 TLS/封禁/告警/恢复上线门槛；未改变默认 loopback listener。
-- **告警与代码错误**：复核发现并修复空 repo/commit 的 worker 全局身份误判、公开确认任务/token hash 非原子写入；独立审查另发现 ISSUE-026（S2，并发取消 waiter 会卡住），已按红测修复为广播式共享结果。补齐空/无效 CAPTCHA、重复确认、合法取消/删除及清理失败路由回归。本轮不宣称完成 AUD-002。
-- **验收结果**：AC-301~307 本地 PASS；`go test -p=1 -count=1 ./...`、`go vet ./...`、`go build ./...`、`git diff --check` 退出 0。新增事务回滚注入测试、全局执行身份正向测试、公开取消/删除及 cleanup pending API 测试。远端 CI 仍待查询。
+- **告警与代码错误**：复核发现并修复空 repo/commit 的 worker 全局身份误判、公开确认任务/token hash 非原子写入；独立审查另发现 ISSUE-026（S2，并发取消 waiter 会卡住），已按红测修复为广播式共享结果。首轮 PR Linux CI 又暴露普通进程退出错误被误传播为旧删除 API 500，现仅传播 `cleanup_pending` 并补红绿回归；本地已定向验证，Linux 专属场景等待 CI 复验。本轮不宣称完成 AUD-002。
+- **验收结果**：AC-301~307 本地功能测试通过；当前修复后的全量测试、`vet`、构建须重新运行。首个 PR 头 `1eb9a19` 的远端 Windows CI 通过、Linux CI 失败于进程组删除回归；修复推送后须以新 CI 结论更新本报告。
 - **阶段度量**：本次 PR 暂存 30 个文件，`+1895/-31` 行（含 PUBLIC-2/3 实现、测试和阶段文档）；跟进复核发现三个需要补闭的实现缺口，均已补回归并通过针对性测试；阻塞 0。并发 race 工具因 `CGO_ENABLED=0` 未运行。
-- **下一步**：完成独立审查修复后的全仓验证，核对远端 PR #1 的状态和 base/head；提交当前 PUBLIC-2/3 改动、推送分支并更新 PR。保持公网 listener 关闭。
+- **下一步**：重跑修复后的全仓验证，提交并推送旧删除 API 错误传播修复，等待 PR #1 新 Linux/Windows checks；保持公网 listener 关闭且不合并。
 
 ## 2026-11-26 · PUBLIC-1 Windows 修复复验
 

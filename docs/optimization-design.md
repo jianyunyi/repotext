@@ -11,8 +11,9 @@
 - **AC-303 事务缺口与修复**：原公开确认先提交任务，再单独写控制令牌 hash，写入失败会留下无控制凭据的任务。公开确认现由 SQLite 单事务写入任务、outbox、确认映射和 token hash；注入 token 写入失败的回归证明事务回滚且预览仍可重试。公开响应仍只在首次新建时返回原始 token，重放不返回 token。
 - **AUD-003 验证**：cleanup failure 经 worker/process registry 传播为 `cleanup_pending`；公开删除收到冲突且任务保留。控制层与 worker 针对性测试通过。
 - **ISSUE-026 根因与修复**：并发 `CancelAndWait` 都可能捕获同一进程句柄，但原 buffered error channel 只能被一个 waiter 消费。现以一次性写入的共享结果和关闭广播通道供所有 waiter 读取；确定性并发测试先复现阻塞，再验证两方都收到同一清理错误。
+- **Linux CI 复验修复**：首轮推送后 Linux 专属进程组删除测试返回 500；根因为取消时 registry 把一般进程退出错误也透传给旧 loopback API。`CancelAndWait` 现仅透传 `ErrCleanupPending`，普通进程退出与取消仍由 worker 持久化后按既有语义成功完成；新回归先红后绿。WSL 在本机被系统拒绝启动，Linux 专属场景以远端 CI 作为最终验证。
 - **范围边界**：`PublicHandler` 仍独立挂载；主服务默认 listener 保持 `127.0.0.1:8080`，未接入公网 listener。CAPTCHA verifier 缺失时 fail closed，供应商凭据尚未接入；AUD-002、PUBLIC-4/5/6 未在本阶段解决。
-- **本地证据**：`go test -p=1 -count=1 ./...`、`go vet ./...`、`go build ./...`、`git diff --check` 退出 0；新增正向身份、事务回滚、重复确认、远程取消/删除及清理失败路由测试。并发 waiter 回归通过；race 检测未运行（`CGO_ENABLED=0` 且无本机 C 编译器）。远端 CI/PR 状态待检查。
+- **本地证据**：Linux CI 回归对应的普通退出错误测试由红转绿；`TestCancelAndWaitAllowsConcurrentWaitersToObserveResult` 50 次通过；cleanup pending worker 测试通过。完整本地回归待本次修复后重跑；race 检测未运行（`CGO_ENABLED=0` 且无本机 C 编译器）。Linux 专属进程组验证等待推送后 CI。
 
 ## 问题总表
 | 问题编号 | 所属阶段/验收 | 级别 | 类型 | 概要 | 状态 | 决策来源 |

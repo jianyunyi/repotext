@@ -2,10 +2,26 @@ package control
 
 import (
 	"context"
+	"errors"
 	"sync"
 	"testing"
 	"time"
 )
+
+func TestCancelAndWaitSuppressesOrdinaryProcessExitErrors(t *testing.T) {
+	registry := NewTaskProcessRegistry()
+	done := make(chan struct{})
+	close(done)
+	result := &processResult{ready: make(chan struct{})}
+	result.complete(errors.New("process exited after cancellation"))
+	_, err := registry.register("ordinary-exit", func() {}, done, result)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if err := registry.CancelAndWait(context.Background(), "ordinary-exit"); err != nil {
+		t.Fatalf("ordinary process exit escaped cancellation: %v", err)
+	}
+}
 
 func TestCancelAndWaitAllowsConcurrentWaitersToObserveResult(t *testing.T) {
 	registry := NewTaskProcessRegistry()

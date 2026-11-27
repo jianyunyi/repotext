@@ -86,7 +86,9 @@ func (r *TaskProcessRegistry) CancelAndWait(ctx context.Context, taskID string) 
 		}
 		r.mu.Unlock()
 		if h.result != nil {
-			return h.result.wait()
+			if err := h.result.wait(); errors.Is(err, ErrCleanupPending) {
+				return err
+			}
 		}
 		return nil
 	case <-ctx.Done():
