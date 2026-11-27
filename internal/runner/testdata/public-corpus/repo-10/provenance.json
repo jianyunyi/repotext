@@ -1,0 +1,19 @@
+{
+  "commit": "47a0ac1e0b750ee1f43718be223bb07601c66a1f",
+  "error": "",
+  "exit_code": 0,
+  "fault_injection": false,
+  "finished_at": "2026-11-25T12:31:11.545746239Z",
+  "phases": [
+    "clone",
+    "deps",
+    "test"
+  ],
+  "raw_sha256": "34bf85065562233196fe71d6a80a70939c82a116bcbf1d9ec40ab9339efb9da9",
+  "raw_truncated": false,
+  "repo_url": "https://github.com/rs/xid",
+  "report_sha256": "a3ea48dbef356042e17d3ef905df7384427be2269f6239bb27d16de311ba03fd",
+  "source_modified": false,
+  "started_at": "2026-11-25T12:30:54.077174585Z",
+  "timed_out": false
+}

@@ -1,0 +1,534 @@
+{
+  "task_id": "repo-06",
+  "go_version": "go1.27.1",
+  "goos": "linux",
+  "goarch": "amd64",
+  "no_tests": false,
+  "truncated": false,
+  "packages": [
+    {
+      "import_path": "github.com/tidwall/gjson",
+      "status": "failed",
+      "elapsed_ms": 7821,
+      "coverage_pct": 94.8,
+      "output": "FAIL\ncoverage: 94.8% of statements\nFAIL\tgithub.com/tidwall/gjson\t7.821s\n",
+      "tests": [
+        {
+          "name": "TestJSONString",
+          "status": "failed",
+          "output": "=== RUN   TestJSONString\n    gjson_test.go:2560: \"R\\xfd\\xfc\\a!\\x82eO\\x16?_\\x0f\\x9ab\\x1dr\"\n        \t\"R\\ufffd\\ufffd\\u0007!\\ufffdeO\\u0016?_\\u000f\\ufffdb\\u001dr\"\n        \t\"R��\\u0007!�eO\\u0016?_\\u000f�b\\u001dr\"\n        \t\u003c\u003c\u003c MISMATCH \u003e\u003e\u003e\n--- FAIL: TestJSONString (0.00s)\n",
+          "failure_location": {
+            "path": "gjson_test.go",
+            "line": 2560,
+            "github_url": "https://github.com/tidwall/gjson/blob/bbf40bb0e4f47860677c7115b2eaa5b3413ce23e/gjson_test.go#L2560"
+          }
+        },
+        {
+          "name": "TestRandomData",
+          "status": "passed",
+          "elapsed_ms": 710,
+          "output": "=== RUN   TestRandomData\n--- PASS: TestRandomData (0.71s)\n"
+        },
+        {
+          "name": "TestRandomValidStrings",
+          "status": "passed",
+          "elapsed_ms": 480,
+          "output": "=== RUN   TestRandomValidStrings\n--- PASS: TestRandomValidStrings (0.48s)\n"
+        },
+        {
+          "name": "TestEmoji",
+          "status": "passed",
+          "output": "=== RUN   TestEmoji\n--- PASS: TestEmoji (0.00s)\n"
+        },
+        {
+          "name": "TestEscapePath",
+          "status": "passed",
+          "output": "=== RUN   TestEscapePath\n--- PASS: TestEscapePath (0.00s)\n"
+        },
+        {
+          "name": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath\n--- PASS: TestPath (0.00s)\n"
+        },
+        {
+          "name": "TestTimeResult",
+          "status": "passed",
+          "output": "=== RUN   TestTimeResult\n--- PASS: TestTimeResult (0.00s)\n"
+        },
+        {
+          "name": "TestParseAny",
+          "status": "passed",
+          "output": "=== RUN   TestParseAny\n--- PASS: TestParseAny (0.00s)\n"
+        },
+        {
+          "name": "TestManyVariousPathCounts",
+          "status": "passed",
+          "output": "=== RUN   TestManyVariousPathCounts\n--- PASS: TestManyVariousPathCounts (0.00s)\n"
+        },
+        {
+          "name": "TestManyRecursion",
+          "status": "passed",
+          "output": "=== RUN   TestManyRecursion\n--- PASS: TestManyRecursion (0.00s)\n"
+        },
+        {
+          "name": "TestByteSafety",
+          "status": "passed",
+          "output": "=== RUN   TestByteSafety\n--- PASS: TestByteSafety (0.00s)\n"
+        },
+        {
+          "name": "TestBasic",
+          "status": "passed",
+          "output": "=== RUN   TestBasic\n--- PASS: TestBasic (0.00s)\n"
+        },
+        {
+          "name": "TestIsArrayIsObject",
+          "status": "passed",
+          "output": "=== RUN   TestIsArrayIsObject\n--- PASS: TestIsArrayIsObject (0.00s)\n"
+        },
+        {
+          "name": "TestPlus53BitInts",
+          "status": "passed",
+          "output": "=== RUN   TestPlus53BitInts\n--- PASS: TestPlus53BitInts (0.00s)\n"
+        },
+        {
+          "name": "TestIssue38",
+          "status": "passed",
+          "output": "=== RUN   TestIssue38\n--- PASS: TestIssue38 (0.00s)\n"
+        },
+        {
+          "name": "TestTypes",
+          "status": "passed",
+          "output": "=== RUN   TestTypes\n--- PASS: TestTypes (0.00s)\n"
+        },
+        {
+          "name": "TestForEach",
+          "status": "passed",
+          "output": "=== RUN   TestForEach\n--- PASS: TestForEach (0.00s)\n"
+        },
+        {
+          "name": "TestMap",
+          "status": "passed",
+          "output": "=== RUN   TestMap\n--- PASS: TestMap (0.00s)\n"
+        },
+        {
+          "name": "TestBasic1",
+          "status": "passed",
+          "output": "=== RUN   TestBasic1\n--- PASS: TestBasic1 (0.00s)\n"
+        },
+        {
+          "name": "TestBasic2",
+          "status": "passed",
+          "output": "=== RUN   TestBasic2\n--- PASS: TestBasic2 (0.00s)\n"
+        },
+        {
+          "name": "TestBasic3",
+          "status": "passed",
+          "output": "=== RUN   TestBasic3\n--- PASS: TestBasic3 (0.00s)\n"
+        },
+        {
+          "name": "TestBasic4",
+          "status": "passed",
+          "output": "=== RUN   TestBasic4\n--- PASS: TestBasic4 (0.00s)\n"
+        },
+        {
+          "name": "TestBasic5",
+          "status": "passed",
+          "output": "=== RUN   TestBasic5\n--- PASS: TestBasic5 (0.00s)\n"
+        },
+        {
+          "name": "TestUnicode",
+          "status": "passed",
+          "output": "=== RUN   TestUnicode\n--- PASS: TestUnicode (0.00s)\n"
+        },
+        {
+          "name": "TestUnescape",
+          "status": "passed",
+          "output": "=== RUN   TestUnescape\n--- PASS: TestUnescape (0.00s)\n"
+        },
+        {
+          "name": "TestLess",
+          "status": "passed",
+          "output": "=== RUN   TestLess\n--- PASS: TestLess (0.00s)\n"
+        },
+        {
+          "name": "TestIssue6",
+          "status": "passed",
+          "output": "=== RUN   TestIssue6\n--- PASS: TestIssue6 (0.00s)\n"
+        },
+        {
+          "name": "TestUnmarshalMap",
+          "status": "passed",
+          "output": "=== RUN   TestUnmarshalMap\n--- PASS: TestUnmarshalMap (0.00s)\n"
+        },
+        {
+          "name": "TestSingleArrayValue",
+          "status": "passed",
+          "output": "=== RUN   TestSingleArrayValue\n--- PASS: TestSingleArrayValue (0.00s)\n"
+        },
+        {
+          "name": "TestManyBasic",
+          "status": "passed",
+          "output": "=== RUN   TestManyBasic\n--- PASS: TestManyBasic (0.00s)\n"
+        },
+        {
+          "name": "TestIssue20",
+          "status": "passed",
+          "output": "=== RUN   TestIssue20\n--- PASS: TestIssue20 (0.00s)\n"
+        },
+        {
+          "name": "TestIssue20/SingleMany",
+          "parent": "TestIssue20",
+          "status": "passed",
+          "output": "=== RUN   TestIssue20/SingleMany\n--- PASS: TestIssue20/SingleMany (0.00s)\n"
+        },
+        {
+          "name": "TestIssue21",
+          "status": "passed",
+          "output": "=== RUN   TestIssue21\n--- PASS: TestIssue21 (0.00s)\n"
+        },
+        {
+          "name": "TestIssue21/SingleMany",
+          "parent": "TestIssue21",
+          "status": "passed",
+          "output": "=== RUN   TestIssue21/SingleMany\n--- PASS: TestIssue21/SingleMany (0.00s)\n"
+        },
+        {
+          "name": "TestRandomMany",
+          "status": "passed",
+          "elapsed_ms": 610,
+          "output": "=== RUN   TestRandomMany\n--- PASS: TestRandomMany (0.61s)\n"
+        },
+        {
+          "name": "TestValidBasic",
+          "status": "passed",
+          "output": "=== RUN   TestValidBasic\n--- PASS: TestValidBasic (0.00s)\n"
+        },
+        {
+          "name": "TestValidRandom",
+          "status": "passed",
+          "elapsed_ms": 6000,
+          "output": "=== RUN   TestValidRandom\n--- PASS: TestValidRandom (6.00s)\n"
+        },
+        {
+          "name": "TestGetMany47",
+          "status": "passed",
+          "output": "=== RUN   TestGetMany47\n--- PASS: TestGetMany47 (0.00s)\n"
+        },
+        {
+          "name": "TestGetMany48",
+          "status": "passed",
+          "output": "=== RUN   TestGetMany48\n--- PASS: TestGetMany48 (0.00s)\n"
+        },
+        {
+          "name": "TestResultRawForLiteral",
+          "status": "passed",
+          "output": "=== RUN   TestResultRawForLiteral\n--- PASS: TestResultRawForLiteral (0.00s)\n"
+        },
+        {
+          "name": "TestNullArray",
+          "status": "passed",
+          "output": "=== RUN   TestNullArray\n--- PASS: TestNullArray (0.00s)\n"
+        },
+        {
+          "name": "TestIssue54",
+          "status": "passed",
+          "output": "=== RUN   TestIssue54\n--- PASS: TestIssue54 (0.00s)\n"
+        },
+        {
+          "name": "TestIssue55",
+          "status": "passed",
+          "output": "=== RUN   TestIssue55\n--- PASS: TestIssue55 (0.00s)\n"
+        },
+        {
+          "name": "TestIssue58",
+          "status": "passed",
+          "output": "=== RUN   TestIssue58\n--- PASS: TestIssue58 (0.00s)\n"
+        },
+        {
+          "name": "TestObjectGrouping",
+          "status": "passed",
+          "output": "=== RUN   TestObjectGrouping\n--- PASS: TestObjectGrouping (0.00s)\n"
+        },
+        {
+          "name": "TestJSONLines",
+          "status": "passed",
+          "output": "=== RUN   TestJSONLines\n--- PASS: TestJSONLines (0.00s)\n"
+        },
+        {
+          "name": "TestNumUint64String",
+          "status": "passed",
+          "output": "=== RUN   TestNumUint64String\n--- PASS: TestNumUint64String (0.00s)\n"
+        },
+        {
+          "name": "TestNumInt64String",
+          "status": "passed",
+          "output": "=== RUN   TestNumInt64String\n--- PASS: TestNumInt64String (0.00s)\n"
+        },
+        {
+          "name": "TestNumBigString",
+          "status": "passed",
+          "output": "=== RUN   TestNumBigString\n--- PASS: TestNumBigString (0.00s)\n"
+        },
+        {
+          "name": "TestNumFloatString",
+          "status": "passed",
+          "output": "=== RUN   TestNumFloatString\n--- PASS: TestNumFloatString (0.00s)\n"
+        },
+        {
+          "name": "TestDuplicateKeys",
+          "status": "passed",
+          "output": "=== RUN   TestDuplicateKeys\n--- PASS: TestDuplicateKeys (0.00s)\n"
+        },
+        {
+          "name": "TestArrayValues",
+          "status": "passed",
+          "output": "=== RUN   TestArrayValues\n--- PASS: TestArrayValues (0.00s)\n"
+        },
+        {
+          "name": "TestModifier",
+          "status": "passed",
+          "output": "=== RUN   TestModifier\n--- PASS: TestModifier (0.00s)\n"
+        },
+        {
+          "name": "TestChaining",
+          "status": "passed",
+          "output": "=== RUN   TestChaining\n--- PASS: TestChaining (0.00s)\n"
+        },
+        {
+          "name": "TestSplitPipe",
+          "status": "passed",
+          "output": "=== RUN   TestSplitPipe\n--- PASS: TestSplitPipe (0.00s)\n"
+        },
+        {
+          "name": "TestArrayEx",
+          "status": "passed",
+          "output": "=== RUN   TestArrayEx\n--- PASS: TestArrayEx (0.00s)\n"
+        },
+        {
+          "name": "TestPipeDotMixing",
+          "status": "passed",
+          "output": "=== RUN   TestPipeDotMixing\n--- PASS: TestPipeDotMixing (0.00s)\n"
+        },
+        {
+          "name": "TestDeepSelectors",
+          "status": "passed",
+          "output": "=== RUN   TestDeepSelectors\n--- PASS: TestDeepSelectors (0.00s)\n"
+        },
+        {
+          "name": "TestMultiArrayEx",
+          "status": "passed",
+          "output": "=== RUN   TestMultiArrayEx\n--- PASS: TestMultiArrayEx (0.00s)\n"
+        },
+        {
+          "name": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries\n--- PASS: TestQueries (0.00s)\n"
+        },
+        {
+          "name": "TestQueryArrayValues",
+          "status": "passed",
+          "output": "=== RUN   TestQueryArrayValues\n--- PASS: TestQueryArrayValues (0.00s)\n"
+        },
+        {
+          "name": "TestParenQueries",
+          "status": "passed",
+          "output": "=== RUN   TestParenQueries\n--- PASS: TestParenQueries (0.00s)\n"
+        },
+        {
+          "name": "TestSubSelectors",
+          "status": "passed",
+          "output": "=== RUN   TestSubSelectors\n--- PASS: TestSubSelectors (0.00s)\n"
+        },
+        {
+          "name": "TestArrayCountRawOutput",
+          "status": "passed",
+          "output": "=== RUN   TestArrayCountRawOutput\n--- PASS: TestArrayCountRawOutput (0.00s)\n"
+        },
+        {
+          "name": "TestParseQuery",
+          "status": "passed",
+          "output": "=== RUN   TestParseQuery\n--- PASS: TestParseQuery (0.00s)\n"
+        },
+        {
+          "name": "TestParentSubQuery",
+          "status": "passed",
+          "output": "=== RUN   TestParentSubQuery\n--- PASS: TestParentSubQuery (0.00s)\n"
+        },
+        {
+          "name": "TestSingleModifier",
+          "status": "passed",
+          "output": "=== RUN   TestSingleModifier\n--- PASS: TestSingleModifier (0.00s)\n"
+        },
+        {
+          "name": "TestModifiersInMultipaths",
+          "status": "passed",
+          "output": "=== RUN   TestModifiersInMultipaths\n--- PASS: TestModifiersInMultipaths (0.00s)\n"
+        },
+        {
+          "name": "TestIssue141",
+          "status": "passed",
+          "output": "=== RUN   TestIssue141\n--- PASS: TestIssue141 (0.00s)\n"
+        },
+        {
+          "name": "TestChainedModifierStringArgs",
+          "status": "passed",
+          "output": "=== RUN   TestChainedModifierStringArgs\n--- PASS: TestChainedModifierStringArgs (0.00s)\n"
+        },
+        {
+          "name": "TestFlatten",
+          "status": "passed",
+          "output": "=== RUN   TestFlatten\n--- PASS: TestFlatten (0.00s)\n"
+        },
+        {
+          "name": "TestJoin",
+          "status": "passed",
+          "output": "=== RUN   TestJoin\n--- PASS: TestJoin (0.00s)\n"
+        },
+        {
+          "name": "TestValid",
+          "status": "passed",
+          "output": "=== RUN   TestValid\n--- PASS: TestValid (0.00s)\n"
+        },
+        {
+          "name": "TestJoin152",
+          "status": "passed",
+          "output": "=== RUN   TestJoin152\n--- PASS: TestJoin152 (0.00s)\n"
+        },
+        {
+          "name": "TestVariousFuzz",
+          "status": "passed",
+          "output": "=== RUN   TestVariousFuzz\n--- PASS: TestVariousFuzz (0.00s)\n"
+        },
+        {
+          "name": "TestSubpathsWithMultipaths",
+          "status": "passed",
+          "output": "=== RUN   TestSubpathsWithMultipaths\n--- PASS: TestSubpathsWithMultipaths (0.00s)\n"
+        },
+        {
+          "name": "TestFlattenRemoveNonExist",
+          "status": "passed",
+          "output": "=== RUN   TestFlattenRemoveNonExist\n--- PASS: TestFlattenRemoveNonExist (0.00s)\n"
+        },
+        {
+          "name": "TestPipeEmptyArray",
+          "status": "passed",
+          "output": "=== RUN   TestPipeEmptyArray\n--- PASS: TestPipeEmptyArray (0.00s)\n"
+        },
+        {
+          "name": "TestEncodedQueryString",
+          "status": "passed",
+          "output": "=== RUN   TestEncodedQueryString\n--- PASS: TestEncodedQueryString (0.00s)\n"
+        },
+        {
+          "name": "TestTildeQueries",
+          "status": "passed",
+          "output": "=== RUN   TestTildeQueries\n--- PASS: TestTildeQueries (0.00s)\n"
+        },
+        {
+          "name": "TestModifierDoubleQuotes",
+          "status": "passed",
+          "output": "=== RUN   TestModifierDoubleQuotes\n--- PASS: TestModifierDoubleQuotes (0.00s)\n"
+        },
+        {
+          "name": "TestIndexes",
+          "status": "passed",
+          "output": "=== RUN   TestIndexes\n--- PASS: TestIndexes (0.00s)\n"
+        },
+        {
+          "name": "TestIndexesMatchesRaw",
+          "status": "passed",
+          "output": "=== RUN   TestIndexesMatchesRaw\n--- PASS: TestIndexesMatchesRaw (0.00s)\n"
+        },
+        {
+          "name": "TestIssue240",
+          "status": "passed",
+          "output": "=== RUN   TestIssue240\n--- PASS: TestIssue240 (0.00s)\n"
+        },
+        {
+          "name": "TestKeysValuesModifier",
+          "status": "passed",
+          "output": "=== RUN   TestKeysValuesModifier\n--- PASS: TestKeysValuesModifier (0.00s)\n"
+        },
+        {
+          "name": "TestNaNInf",
+          "status": "passed",
+          "output": "=== RUN   TestNaNInf\n--- PASS: TestNaNInf (0.00s)\n"
+        },
+        {
+          "name": "TestEmptyValueQuery",
+          "status": "passed",
+          "output": "=== RUN   TestEmptyValueQuery\n--- PASS: TestEmptyValueQuery (0.00s)\n"
+        },
+        {
+          "name": "TestParseIndex",
+          "status": "passed",
+          "output": "=== RUN   TestParseIndex\n--- PASS: TestParseIndex (0.00s)\n"
+        },
+        {
+          "name": "TestRevSquash",
+          "status": "passed",
+          "output": "=== RUN   TestRevSquash\n--- PASS: TestRevSquash (0.00s)\n"
+        },
+        {
+          "name": "TestQueryGetPath",
+          "status": "passed",
+          "output": "=== RUN   TestQueryGetPath\n--- PASS: TestQueryGetPath (0.00s)\n"
+        },
+        {
+          "name": "TestStaticJSON",
+          "status": "passed",
+          "output": "=== RUN   TestStaticJSON\n--- PASS: TestStaticJSON (0.00s)\n"
+        },
+        {
+          "name": "TestArrayKeys",
+          "status": "passed",
+          "output": "=== RUN   TestArrayKeys\n--- PASS: TestArrayKeys (0.00s)\n"
+        },
+        {
+          "name": "TestToFromStr",
+          "status": "passed",
+          "output": "=== RUN   TestToFromStr\n--- PASS: TestToFromStr (0.00s)\n"
+        },
+        {
+          "name": "TestGroup",
+          "status": "passed",
+          "output": "=== RUN   TestGroup\n--- PASS: TestGroup (0.00s)\n"
+        },
+        {
+          "name": "TestIndexAtSymbol",
+          "status": "passed",
+          "output": "=== RUN   TestIndexAtSymbol\n--- PASS: TestIndexAtSymbol (0.00s)\n"
+        },
+        {
+          "name": "TestDeepModifierWithOptions",
+          "status": "passed",
+          "output": "=== RUN   TestDeepModifierWithOptions\n--- PASS: TestDeepModifierWithOptions (0.00s)\n"
+        },
+        {
+          "name": "TestIssue301",
+          "status": "passed",
+          "output": "=== RUN   TestIssue301\n--- PASS: TestIssue301 (0.00s)\n"
+        },
+        {
+          "name": "TestModDig",
+          "status": "passed",
+          "output": "=== RUN   TestModDig\n--- PASS: TestModDig (0.00s)\n"
+        },
+        {
+          "name": "TestEscape",
+          "status": "passed",
+          "output": "=== RUN   TestEscape\n--- PASS: TestEscape (0.00s)\n"
+        }
+      ]
+    }
+  ],
+  "repo_url": "https://github.com/tidwall/gjson",
+  "commit": "bbf40bb0e4f47860677c7115b2eaa5b3413ce23e",
+  "summary": {
+    "passed": 96,
+    "failed": 1,
+    "skipped": 0,
+    "incomplete": 0,
+    "package_failures": 1
+  }
+}

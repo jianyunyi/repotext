@@ -1,0 +1,45 @@
+{"Time":"2026-11-25T12:29:25.656093091Z","Action":"start","Package":"github.com/tidwall/sjson"}
+{"Time":"2026-11-25T12:29:25.657833672Z","Action":"run","Package":"github.com/tidwall/sjson","Test":"TestBasic"}
+{"Time":"2026-11-25T12:29:25.657910772Z","Action":"output","Package":"github.com/tidwall/sjson","Test":"TestBasic","Output":"=== RUN   TestBasic\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:25.658027512Z","Action":"output","Package":"github.com/tidwall/sjson","Test":"TestBasic","Output":"--- PASS: TestBasic (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:25.658043282Z","Action":"pass","Package":"github.com/tidwall/sjson","Test":"TestBasic","Elapsed":0}
+{"Time":"2026-11-25T12:29:25.658053952Z","Action":"run","Package":"github.com/tidwall/sjson","Test":"TestDelete"}
+{"Time":"2026-11-25T12:29:25.658056162Z","Action":"output","Package":"github.com/tidwall/sjson","Test":"TestDelete","Output":"=== RUN   TestDelete\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:25.658063442Z","Action":"output","Package":"github.com/tidwall/sjson","Test":"TestDelete","Output":"--- PASS: TestDelete (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:25.658065842Z","Action":"pass","Package":"github.com/tidwall/sjson","Test":"TestDelete","Elapsed":0}
+{"Time":"2026-11-25T12:29:25.658068992Z","Action":"run","Package":"github.com/tidwall/sjson","Test":"TestRandomData"}
+{"Time":"2026-11-25T12:29:25.658073032Z","Action":"output","Package":"github.com/tidwall/sjson","Test":"TestRandomData","Output":"=== RUN   TestRandomData\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:26.834557004Z","Action":"output","Package":"github.com/tidwall/sjson","Test":"TestRandomData","Output":"--- PASS: TestRandomData (1.18s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:26.834606954Z","Action":"pass","Package":"github.com/tidwall/sjson","Test":"TestRandomData","Elapsed":1.18}
+{"Time":"2026-11-25T12:29:26.834614024Z","Action":"run","Package":"github.com/tidwall/sjson","Test":"TestDeleteIssue21"}
+{"Time":"2026-11-25T12:29:26.834616944Z","Action":"output","Package":"github.com/tidwall/sjson","Test":"TestDeleteIssue21","Output":"=== RUN   TestDeleteIssue21\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:26.834624834Z","Action":"output","Package":"github.com/tidwall/sjson","Test":"TestDeleteIssue21","Output":"--- PASS: TestDeleteIssue21 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:26.834628044Z","Action":"pass","Package":"github.com/tidwall/sjson","Test":"TestDeleteIssue21","Elapsed":0}
+{"Time":"2026-11-25T12:29:26.834635414Z","Action":"run","Package":"github.com/tidwall/sjson","Test":"TestSetDotKeyIssue10"}
+{"Time":"2026-11-25T12:29:26.834636804Z","Action":"output","Package":"github.com/tidwall/sjson","Test":"TestSetDotKeyIssue10","Output":"=== RUN   TestSetDotKeyIssue10\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:26.834639484Z","Action":"output","Package":"github.com/tidwall/sjson","Test":"TestSetDotKeyIssue10","Output":"--- PASS: TestSetDotKeyIssue10 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:26.834641164Z","Action":"pass","Package":"github.com/tidwall/sjson","Test":"TestSetDotKeyIssue10","Elapsed":0}
+{"Time":"2026-11-25T12:29:26.834642824Z","Action":"run","Package":"github.com/tidwall/sjson","Test":"TestDeleteDotKeyIssue19"}
+{"Time":"2026-11-25T12:29:26.834643814Z","Action":"output","Package":"github.com/tidwall/sjson","Test":"TestDeleteDotKeyIssue19","Output":"=== RUN   TestDeleteDotKeyIssue19\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:26.834645364Z","Action":"output","Package":"github.com/tidwall/sjson","Test":"TestDeleteDotKeyIssue19","Output":"--- PASS: TestDeleteDotKeyIssue19 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:26.834647384Z","Action":"pass","Package":"github.com/tidwall/sjson","Test":"TestDeleteDotKeyIssue19","Elapsed":0}
+{"Time":"2026-11-25T12:29:26.834648684Z","Action":"run","Package":"github.com/tidwall/sjson","Test":"TestIssue36"}
+{"Time":"2026-11-25T12:29:26.834651164Z","Action":"output","Package":"github.com/tidwall/sjson","Test":"TestIssue36","Output":"=== RUN   TestIssue36\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:26.834653384Z","Action":"output","Package":"github.com/tidwall/sjson","Test":"TestIssue36","Output":"--- PASS: TestIssue36 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:26.834654764Z","Action":"pass","Package":"github.com/tidwall/sjson","Test":"TestIssue36","Elapsed":0}
+{"Time":"2026-11-25T12:29:26.834656154Z","Action":"run","Package":"github.com/tidwall/sjson","Test":"TestIndex"}
+{"Time":"2026-11-25T12:29:26.834658004Z","Action":"output","Package":"github.com/tidwall/sjson","Test":"TestIndex","Output":"=== RUN   TestIndex\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:26.834659454Z","Action":"output","Package":"github.com/tidwall/sjson","Test":"TestIndex","Output":"--- PASS: TestIndex (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:26.834660734Z","Action":"pass","Package":"github.com/tidwall/sjson","Test":"TestIndex","Elapsed":0}
+{"Time":"2026-11-25T12:29:26.834661854Z","Action":"run","Package":"github.com/tidwall/sjson","Test":"TestIndexes"}
+{"Time":"2026-11-25T12:29:26.834662994Z","Action":"output","Package":"github.com/tidwall/sjson","Test":"TestIndexes","Output":"=== RUN   TestIndexes\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:26.834664624Z","Action":"output","Package":"github.com/tidwall/sjson","Test":"TestIndexes","Output":"--- PASS: TestIndexes (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:26.834669594Z","Action":"pass","Package":"github.com/tidwall/sjson","Test":"TestIndexes","Elapsed":0}
+{"Time":"2026-11-25T12:29:26.834670924Z","Action":"run","Package":"github.com/tidwall/sjson","Test":"TestIssue61"}
+{"Time":"2026-11-25T12:29:26.834672024Z","Action":"output","Package":"github.com/tidwall/sjson","Test":"TestIssue61","Output":"=== RUN   TestIssue61\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:26.834673814Z","Action":"output","Package":"github.com/tidwall/sjson","Test":"TestIssue61","Output":"--- PASS: TestIssue61 (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:26.834675214Z","Action":"pass","Package":"github.com/tidwall/sjson","Test":"TestIssue61","Elapsed":0}
+{"Time":"2026-11-25T12:29:26.834676254Z","Action":"output","Package":"github.com/tidwall/sjson","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-25T12:29:26.835062154Z","Action":"output","Package":"github.com/tidwall/sjson","Output":"coverage: 79.9% of statements\n"}
+{"Time":"2026-11-25T12:29:26.836337845Z","Action":"output","Package":"github.com/tidwall/sjson","Output":"ok  \tgithub.com/tidwall/sjson\t1.180s\tcoverage: 79.9% of statements\n"}
+{"Time":"2026-11-25T12:29:26.836386435Z","Action":"pass","Package":"github.com/tidwall/sjson","Elapsed":1.18}

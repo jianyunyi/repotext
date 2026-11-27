@@ -1,11 +1,24 @@
 # RepoTest 优化与修复设计
 
+当前公网化改造的问题/方向依据见[公网化审查](publicization-review.md)，实施设计见[PUBLIC-1 设计](superpowers/specs/2026-11-25-public-report-s1-design.md)与[PUBLIC-3 设计](superpowers/specs/2026-11-26-public-report-s3-design.md)。PUBLIC-3 已在本地修复并验证 AUD-001 与 AUD-003；AUD-002、PUBLIC-5/6 仍是发布阻断。下方 ISSUE 记录保留原内网项目的历史关闭依据，不表示公网条件已满足。
+
 <!-- 状态块 -->
 更新：2026-11-25；状态：进行中；当前维护目录 F:/repotext。未关闭阻断项：ISSUE-010 七天观察未完成；延期风险 ISSUE-004。r22实际安装/固定work/恢复/监控与r23完整Linux回归通过，ISSUE-025/017/013已关闭；待决策：无，用户已批准具体部署。下一步核验2026-12-02T06:36:33Z后七天覆盖与退出回归；runner/LAN关闭。下方旧待授权/准备NOT RUN记述均为历史。
+
+## PUBLIC-3 本地复核增补（2026-11-27）
+
+- **AUD-001 根因与修复**：全局 worker 身份的 repo/commit 为空时，身份比较先无条件规范化空 repo，导致本应只比较 Go、runner 与配置摘要的任务被误判。空字段现跳过对应 repo/commit 比较；缺失任务身份仍 fail closed。正向全局身份与负向版本不匹配测试均通过。
+- **AC-303 事务缺口与修复**：原公开确认先提交任务，再单独写控制令牌 hash，写入失败会留下无控制凭据的任务。公开确认现由 SQLite 单事务写入任务、outbox、确认映射和 token hash；注入 token 写入失败的回归证明事务回滚且预览仍可重试。公开响应仍只在首次新建时返回原始 token，重放不返回 token。
+- **AUD-003 验证**：cleanup failure 经 worker/process registry 传播为 `cleanup_pending`；公开删除收到冲突且任务保留。控制层与 worker 针对性测试通过。
+- **ISSUE-026 根因与修复**：并发 `CancelAndWait` 都可能捕获同一进程句柄，但原 buffered error channel 只能被一个 waiter 消费。现以一次性写入的共享结果和关闭广播通道供所有 waiter 读取；确定性并发测试先复现阻塞，再验证两方都收到同一清理错误。
+- **Linux CI 复验修复**：首轮推送后 Linux 专属进程组删除测试返回 500；根因为取消时 registry 把一般进程退出错误也透传给旧 loopback API。`CancelAndWait` 现仅透传 `ErrCleanupPending`，普通进程退出与取消仍由 worker 持久化后按既有语义成功完成；新回归先红后绿。WSL 在本机被系统拒绝启动，Linux 专属场景以远端 CI 作为最终验证。
+- **范围边界**：`PublicHandler` 仍独立挂载；主服务默认 listener 保持 `127.0.0.1:8080`，未接入公网 listener。CAPTCHA verifier 缺失时 fail closed，供应商凭据尚未接入；AUD-002、PUBLIC-4/5/6 未在本阶段解决。
+- **本地证据**：Linux CI 回归对应的普通退出错误测试由红转绿；`TestCancelAndWaitAllowsConcurrentWaitersToObserveResult` 50 次通过；cleanup pending worker 测试通过。完整本地回归待本次修复后重跑；race 检测未运行（`CGO_ENABLED=0` 且无本机 C 编译器）。Linux 专属进程组验证等待推送后 CI。
 
 ## 问题总表
 | 问题编号 | 所属阶段/验收 | 级别 | 类型 | 概要 | 状态 | 决策来源 |
 |---|---|---|---|---|---|---|
+| ISSUE-026 | PUBLIC-3/AC-306 | S2 | 并发错误 | 同一运行任务的并发取消者竞争读取单消费者结果通道，后续等待者会永久阻塞 | 已关闭；共享完成信号并只读错误结果；确定性双等待者回归重复通过（race 检测受本机 CGO 配置限制未运行） | 2026-11-27 独立代码复核；用户继续授权覆盖 |
 | ISSUE-025 | S5/AC-009、AC-008工作盘 | S1 | 部署验收缺口 | 通用安装段只mkdir work，未建立持久固定容量挂载及失效启动门禁 | 已关闭；r22预分配/ENOSPC/隔离namespace同一guard拒绝/宿主依赖重挂载及cleanup PASS | 用户明确批准具体2 GiB工作盘与安装方案 |
 | ISSUE-024 | S5/AC-009 | S2 | 诊断准确性 | sudo -n true 被误标为安装权限，受限sudoers可能高估 | 已关闭；三场景RED/GREEN、八shell语法、84文件源包与独立复核PASS | 独立复核反馈；用户continue授权覆盖 |
 | ISSUE-022 | S5/AC-009 | S2 | 验证工具缺陷 | SSH 提前退出时 CopyTo 异常跳过 stdout/stderr/result 保存 | 已关闭；三场景 RED/GREEN、本轮 r16 完整失败日志与独立复核 | 2026-11-24 用户授权合并并继续 Linux 验收 |
@@ -210,3 +223,13 @@ ISSUE-014/015/016 已在副本通过新增五项集成覆盖（RED 为四项失�
 ISSUE-017 安装说明经独立复核，实际安装仍 NOT RUN。ISSUE-018 新命令能拒绝第二个坏脚本，旧命令 exit 0，新命令 exit 1；七脚本逐一语法通过。ISSUE-019 包/清单集合与逐字节哈希通过，CRLF 原字节检查成功、转换后检查失败；目标 S5 权限 fixture 和完整新回归仍 BLOCKED，不能以 Windows/Git Bash 结果代替。
 
 全部本轮 Go test/vet/build、格式与包发现通过；两个 Linux/amd64 命令仅交叉编译通过，未在目标运行。S5 规格由 continuation_review 复核，S3 规格同代理复核，S3 安全/代码质量由未参与该实现的 s5_readiness_review 复核；范围内未发现剩余 S0/S1 或必须修复的 S2。证据见 work/progress-repair-20261123，恢复按阶段前 .snapshot 文件，不改变原 F:/repotext。
+
+## ISSUE-020：PUBLIC-2 不可用分享页
+- 级别/类型：S2，错误；关联 PUBLIC-2 页面验收。状态：已关闭（2026-11-26，红绿回归与全量本地验证通过）。
+- 证据：`GET /r/{id}` 对不存在任务复用 API JSON 错误响应；新增页面回归测试失败，返回 `404 application/json`，浏览器分享链接没有解释文案。API 本身仍应维持 JSON 契约。
+- 根因：`publicPage` 将非过期错误直接委托 `writePublicReportError`，未区分 HTML 页面与 JSON API 的表示层。
+- 方案：页面路由对缺失/格式错误 ID 返回通用 HTML 404，对存储不可用返回不泄漏内部详情的 HTML 503；复用过期说明版式，不加载数据脚本。API 路由与错误码保持不变。过期/不可用页面不提供重提交按钮，公开提交依赖 PUBLIC-3，留在其阶段实现。
+- 替代方案：把详情留给前端 JSON bootstrap；但当服务端无法读取报告时，页面本身仍只显示空白/脚本加载状态，故不采用。
+- 风险与回退：只影响 `/r/{id}` 错误呈现；可回退 handler/template 增量及测试，不触及 API、数据库、监听器或 runner。
+- 验证：红绿测试覆盖已过期 410 HTML、物理缺失 404 HTML、错误页不加载公开数据脚本；重跑 `internal/control`、全量 test/vet/build 与 diff 检查。
+- 决策来源：PUBLIC-2 已批准的只读范围与连续执行授权；重提交能力未获本阶段范围授权，推迟 PUBLIC-3。

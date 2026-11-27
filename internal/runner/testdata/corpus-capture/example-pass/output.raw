@@ -1,0 +1,9 @@
+{"Time":"2026-11-25T19:06:38.2266084+08:00","Action":"start","Package":"example.invalid/repotest-owned-corpus/example-pass"}
+{"Time":"2026-11-25T19:06:39.1493545+08:00","Action":"run","Package":"example.invalid/repotest-owned-corpus/example-pass","Test":"ExampleDouble"}
+{"Time":"2026-11-25T19:06:39.1493545+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/example-pass","Test":"ExampleDouble","Output":"=== RUN   ExampleDouble\n"}
+{"Time":"2026-11-25T19:06:39.1493545+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/example-pass","Test":"ExampleDouble","Output":"--- PASS: ExampleDouble (0.00s)\n"}
+{"Time":"2026-11-25T19:06:39.1493545+08:00","Action":"pass","Package":"example.invalid/repotest-owned-corpus/example-pass","Test":"ExampleDouble","Elapsed":0}
+{"Time":"2026-11-25T19:06:39.1554797+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/example-pass","Output":"PASS\n"}
+{"Time":"2026-11-25T19:06:39.1554797+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/example-pass","Output":"coverage: 100.0% of statements\n"}
+{"Time":"2026-11-25T19:06:39.160523+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/example-pass","Output":"ok  \texample.invalid/repotest-owned-corpus/example-pass\t0.932s\tcoverage: 100.0% of statements\n"}
+{"Time":"2026-11-25T19:06:39.160523+08:00","Action":"pass","Package":"example.invalid/repotest-owned-corpus/example-pass","Elapsed":0.934}

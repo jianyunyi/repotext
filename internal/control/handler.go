@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-//go:embed web/*.html
+//go:embed web/*.html web/*.js web/*.css
 var pageFS embed.FS
 
 func (a API) Handler() http.Handler {
@@ -26,6 +26,23 @@ func (a API) Handler() http.Handler {
 	mux.Handle("POST /api/v1/tasks", loopbackOnly(http.HandlerFunc(a.confirm), token))
 	mux.HandleFunc("GET /api/v1/tasks/{id}", a.get)
 	mux.HandleFunc("GET /api/v1/tasks/{id}/report", a.report)
+	mux.Handle("GET /api/v1/tasks/{id}/log", loopbackOnly(http.HandlerFunc(a.log), token))
+	for _, asset := range []struct{ path, contentType string }{
+		{"report.js", "text/javascript; charset=utf-8"},
+		{"report.css", "text/css; charset=utf-8"},
+	} {
+		mux.HandleFunc("GET /assets/"+asset.path, func(w http.ResponseWriter, r *http.Request) {
+			if !isLoopbackRequest(r) {
+				writeError(w, http.StatusForbidden, "local_only")
+				return
+			}
+			w.Header().Set("Content-Type", asset.contentType)
+			w.Header().Set("X-Content-Type-Options", "nosniff")
+			w.Header().Set("Cache-Control", "no-store")
+			body, _ := pageFS.ReadFile("web/" + asset.path)
+			_, _ = w.Write(body)
+		})
+	}
 	mux.Handle("DELETE /api/v1/tasks/{id}", loopbackOnly(http.HandlerFunc(a.delete), token))
 	mux.Handle("POST /api/v1/tasks/{id}/cancel", loopbackOnly(http.HandlerFunc(a.cancel), token))
 	mux.Handle("GET /api/v1/sessions", loopbackOnly(http.HandlerFunc(a.listSessions), token))

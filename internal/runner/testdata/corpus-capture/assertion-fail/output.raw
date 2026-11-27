@@ -1,0 +1,10 @@
+{"Time":"2026-11-25T19:06:14.9121316+08:00","Action":"start","Package":"example.invalid/repotest-owned-corpus/assertion-fail"}
+{"Time":"2026-11-25T19:06:15.8314577+08:00","Action":"run","Package":"example.invalid/repotest-owned-corpus/assertion-fail","Test":"TestOwned"}
+{"Time":"2026-11-25T19:06:15.831986+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/assertion-fail","Test":"TestOwned","Output":"=== RUN   TestOwned\n"}
+{"Time":"2026-11-25T19:06:15.831986+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/assertion-fail","Test":"TestOwned","Output":"    owned_test.go:6: expected 5; got 4\n"}
+{"Time":"2026-11-25T19:06:15.831986+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/assertion-fail","Test":"TestOwned","Output":"--- FAIL: TestOwned (0.00s)\n"}
+{"Time":"2026-11-25T19:06:15.8370401+08:00","Action":"fail","Package":"example.invalid/repotest-owned-corpus/assertion-fail","Test":"TestOwned","Elapsed":0}
+{"Time":"2026-11-25T19:06:15.8375695+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/assertion-fail","Output":"FAIL\n"}
+{"Time":"2026-11-25T19:06:15.8375695+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/assertion-fail","Output":"coverage: 100.0% of statements\n"}
+{"Time":"2026-11-25T19:06:15.8414415+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/assertion-fail","Output":"FAIL\texample.invalid/repotest-owned-corpus/assertion-fail\t0.928s\n"}
+{"Time":"2026-11-25T19:06:15.8414415+08:00","Action":"fail","Package":"example.invalid/repotest-owned-corpus/assertion-fail","Elapsed":0.929}

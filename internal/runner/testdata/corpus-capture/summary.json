@@ -1,0 +1,19 @@
+{
+  "captured": 24,
+  "captured_expected": 24,
+  "captured_unexpected": 0,
+  "over_2mib": [
+    "oversize-output"
+  ],
+  "distribution": {
+    "build_failure": 1,
+    "empty_module": 1,
+    "failure": 4,
+    "go_timeout": 1,
+    "incomplete": 1,
+    "no_tests": 2,
+    "panic": 1,
+    "skipped": 1,
+    "success": 12
+  }
+}

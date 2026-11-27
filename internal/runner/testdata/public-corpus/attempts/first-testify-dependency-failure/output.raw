@@ -1,0 +1,4 @@
+go: github.com/davecgh/go-spew@v1.1.1: reading http://172.21.0.1:46371/github.com/davecgh/go-spew/@v/v1.1.1.mod: 502 Bad Gateway
+	server response: module proxy upstream unavailable
+go: github.com/pmezard/go-difflib@v1.0.0: reading http://172.21.0.1:46371/github.com/pmezard/go-difflib/@v/v1.0.0.mod: 502 Bad Gateway
+	server response: module proxy upstream unavailable

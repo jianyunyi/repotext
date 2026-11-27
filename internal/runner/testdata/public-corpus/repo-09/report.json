@@ -1,0 +1,1041 @@
+{
+  "task_id": "repo-09",
+  "go_version": "go1.27.1",
+  "goos": "linux",
+  "goarch": "amd64",
+  "no_tests": false,
+  "truncated": false,
+  "packages": [
+    {
+      "import_path": "github.com/golang-jwt/jwt/v5",
+      "status": "passed",
+      "elapsed_ms": 299,
+      "coverage_pct": 89.6,
+      "output": "2026/11/25 12:30:53 Listening...\nPASS\ncoverage: 89.6% of statements\nok  \tgithub.com/golang-jwt/jwt/v5\t0.299s\tcoverage: 89.6% of statements\n",
+      "tests": [
+        {
+          "name": "Test_joinErrors",
+          "status": "passed",
+          "output": "=== RUN   Test_joinErrors\n--- PASS: Test_joinErrors (0.00s)\n"
+        },
+        {
+          "name": "Test_joinErrors/multiple_errors",
+          "parent": "Test_joinErrors",
+          "status": "passed",
+          "output": "=== RUN   Test_joinErrors/multiple_errors\n--- PASS: Test_joinErrors/multiple_errors (0.00s)\n"
+        },
+        {
+          "name": "Test_newError",
+          "status": "passed",
+          "output": "=== RUN   Test_newError\n--- PASS: Test_newError (0.00s)\n"
+        },
+        {
+          "name": "Test_newError/single_error",
+          "parent": "Test_newError",
+          "status": "passed",
+          "output": "=== RUN   Test_newError/single_error\n--- PASS: Test_newError/single_error (0.00s)\n"
+        },
+        {
+          "name": "Test_newError/two_errors",
+          "parent": "Test_newError",
+          "status": "passed",
+          "output": "=== RUN   Test_newError/two_errors\n--- PASS: Test_newError/two_errors (0.00s)\n"
+        },
+        {
+          "name": "Test_newError/two_errors,_no_detail",
+          "parent": "Test_newError",
+          "status": "passed",
+          "output": "=== RUN   Test_newError/two_errors,_no_detail\n--- PASS: Test_newError/two_errors,_no_detail (0.00s)\n"
+        },
+        {
+          "name": "Test_newError/two_errors,_no_detail_and_join_error",
+          "parent": "Test_newError",
+          "status": "passed",
+          "output": "=== RUN   Test_newError/two_errors,_no_detail_and_join_error\n--- PASS: Test_newError/two_errors,_no_detail_and_join_error (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud\n--- PASS: TestVerifyAud (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud/String_Aud_matching_required",
+          "parent": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud/String_Aud_matching_required\n--- PASS: TestVerifyAud/String_Aud_matching_required (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud/[]String_Aud_with_match_required",
+          "parent": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud/[]String_Aud_with_match_required\n--- PASS: TestVerifyAud/[]String_Aud_with_match_required (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud/String_Aud_with_match_not_required",
+          "parent": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud/String_Aud_with_match_not_required\n--- PASS: TestVerifyAud/String_Aud_with_match_not_required (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud/Empty_String_Aud_with_match_not_required",
+          "parent": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud/Empty_String_Aud_with_match_not_required\n--- PASS: TestVerifyAud/Empty_String_Aud_with_match_not_required (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud/Empty_String_Aud_with_match_not_required#01",
+          "parent": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud/Empty_String_Aud_with_match_not_required#01\n--- PASS: TestVerifyAud/Empty_String_Aud_with_match_not_required#01 (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud/Nil_String_Aud_with_match_not_required",
+          "parent": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud/Nil_String_Aud_with_match_not_required\n--- PASS: TestVerifyAud/Nil_String_Aud_with_match_not_required (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud/[]String_Aud_with_match_not_required",
+          "parent": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud/[]String_Aud_with_match_not_required\n--- PASS: TestVerifyAud/[]String_Aud_with_match_not_required (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud/Empty_[]String_Aud_with_match_not_required",
+          "parent": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud/Empty_[]String_Aud_with_match_not_required\n--- PASS: TestVerifyAud/Empty_[]String_Aud_with_match_not_required (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud/String_Aud_without_match_required",
+          "parent": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud/String_Aud_without_match_required\n--- PASS: TestVerifyAud/String_Aud_without_match_required (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud/Empty_String_Aud_without_match_required",
+          "parent": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud/Empty_String_Aud_without_match_required\n--- PASS: TestVerifyAud/Empty_String_Aud_without_match_required (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud/[]String_Aud_without_match_required",
+          "parent": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud/[]String_Aud_without_match_required\n--- PASS: TestVerifyAud/[]String_Aud_without_match_required (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud/Empty_[]String_Aud_without_match_required",
+          "parent": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud/Empty_[]String_Aud_without_match_required\n--- PASS: TestVerifyAud/Empty_[]String_Aud_without_match_required (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud/String_Aud_without_match_not_required",
+          "parent": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud/String_Aud_without_match_not_required\n--- PASS: TestVerifyAud/String_Aud_without_match_not_required (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud/Empty_String_Aud_without_match_not_required",
+          "parent": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud/Empty_String_Aud_without_match_not_required\n--- PASS: TestVerifyAud/Empty_String_Aud_without_match_not_required (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud/[]String_Aud_without_match_not_required",
+          "parent": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud/[]String_Aud_without_match_not_required\n--- PASS: TestVerifyAud/[]String_Aud_without_match_not_required (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud/Empty_[]String_Aud_without_match_required#01",
+          "parent": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud/Empty_[]String_Aud_without_match_required#01\n--- PASS: TestVerifyAud/Empty_[]String_Aud_without_match_required#01 (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud/Empty_[]interface{}_Aud_without_match_required",
+          "parent": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud/Empty_[]interface{}_Aud_without_match_required\n--- PASS: TestVerifyAud/Empty_[]interface{}_Aud_without_match_required (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud/[]interface{}_Aud_with_match_required",
+          "parent": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud/[]interface{}_Aud_with_match_required\n--- PASS: TestVerifyAud/[]interface{}_Aud_with_match_required (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud/[]interface{}_Aud_with_match_but_invalid_types",
+          "parent": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud/[]interface{}_Aud_with_match_but_invalid_types\n--- PASS: TestVerifyAud/[]interface{}_Aud_with_match_but_invalid_types (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud/[]interface{}_Aud_int_with_match_required",
+          "parent": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud/[]interface{}_Aud_int_with_match_required\n--- PASS: TestVerifyAud/[]interface{}_Aud_int_with_match_required (0.00s)\n"
+        },
+        {
+          "name": "TestVerifyAud/Empty_interface{}_Aud_without_match_not_required",
+          "parent": "TestVerifyAud",
+          "status": "passed",
+          "output": "=== RUN   TestVerifyAud/Empty_interface{}_Aud_without_match_not_required\n--- PASS: TestVerifyAud/Empty_interface{}_Aud_without_match_not_required (0.00s)\n"
+        },
+        {
+          "name": "TestMapclaimsVerifyIssuedAtInvalidTypeString",
+          "status": "passed",
+          "output": "=== RUN   TestMapclaimsVerifyIssuedAtInvalidTypeString\n--- PASS: TestMapclaimsVerifyIssuedAtInvalidTypeString (0.00s)\n"
+        },
+        {
+          "name": "TestMapclaimsVerifyNotBeforeInvalidTypeString",
+          "status": "passed",
+          "output": "=== RUN   TestMapclaimsVerifyNotBeforeInvalidTypeString\n--- PASS: TestMapclaimsVerifyNotBeforeInvalidTypeString (0.00s)\n"
+        },
+        {
+          "name": "TestMapclaimsVerifyExpiresAtInvalidTypeString",
+          "status": "passed",
+          "output": "=== RUN   TestMapclaimsVerifyExpiresAtInvalidTypeString\n--- PASS: TestMapclaimsVerifyExpiresAtInvalidTypeString (0.00s)\n"
+        },
+        {
+          "name": "TestMapClaimsVerifyExpiresAtExpire",
+          "status": "passed",
+          "output": "=== RUN   TestMapClaimsVerifyExpiresAtExpire\n--- PASS: TestMapClaimsVerifyExpiresAtExpire (0.00s)\n"
+        },
+        {
+          "name": "TestMapClaims_parseString",
+          "status": "passed",
+          "output": "=== RUN   TestMapClaims_parseString\n--- PASS: TestMapClaims_parseString (0.00s)\n"
+        },
+        {
+          "name": "TestMapClaims_parseString/missing_key",
+          "parent": "TestMapClaims_parseString",
+          "status": "passed",
+          "output": "=== RUN   TestMapClaims_parseString/missing_key\n--- PASS: TestMapClaims_parseString/missing_key (0.00s)\n"
+        },
+        {
+          "name": "TestMapClaims_parseString/wrong_key_type",
+          "parent": "TestMapClaims_parseString",
+          "status": "passed",
+          "output": "=== RUN   TestMapClaims_parseString/wrong_key_type\n--- PASS: TestMapClaims_parseString/wrong_key_type (0.00s)\n"
+        },
+        {
+          "name": "TestMapClaims_parseString/correct_key_type",
+          "parent": "TestMapClaims_parseString",
+          "status": "passed",
+          "output": "=== RUN   TestMapClaims_parseString/correct_key_type\n--- PASS: TestMapClaims_parseString/correct_key_type (0.00s)\n"
+        },
+        {
+          "name": "Test_Validator_Validate",
+          "status": "passed",
+          "output": "=== RUN   Test_Validator_Validate\n--- PASS: Test_Validator_Validate (0.00s)\n"
+        },
+        {
+          "name": "Test_Validator_Validate/expected_iss_mismatch",
+          "parent": "Test_Validator_Validate",
+          "status": "passed",
+          "output": "=== RUN   Test_Validator_Validate/expected_iss_mismatch\n--- PASS: Test_Validator_Validate/expected_iss_mismatch (0.00s)\n"
+        },
+        {
+          "name": "Test_Validator_Validate/expected_iss_is_missing",
+          "parent": "Test_Validator_Validate",
+          "status": "passed",
+          "output": "=== RUN   Test_Validator_Validate/expected_iss_is_missing\n--- PASS: Test_Validator_Validate/expected_iss_is_missing (0.00s)\n"
+        },
+        {
+          "name": "Test_Validator_Validate/expected_sub_mismatch",
+          "parent": "Test_Validator_Validate",
+          "status": "passed",
+          "output": "=== RUN   Test_Validator_Validate/expected_sub_mismatch\n--- PASS: Test_Validator_Validate/expected_sub_mismatch (0.00s)\n"
+        },
+        {
+          "name": "Test_Validator_Validate/expected_sub_is_missing",
+          "parent": "Test_Validator_Validate",
+          "status": "passed",
+          "output": "=== RUN   Test_Validator_Validate/expected_sub_is_missing\n--- PASS: Test_Validator_Validate/expected_sub_is_missing (0.00s)\n"
+        },
+        {
+          "name": "Test_Validator_Validate/custom_validator",
+          "parent": "Test_Validator_Validate",
+          "status": "passed",
+          "output": "=== RUN   Test_Validator_Validate/custom_validator\n--- PASS: Test_Validator_Validate/custom_validator (0.00s)\n"
+        },
+        {
+          "name": "Test_Validator_verifyExpiresAt",
+          "status": "passed",
+          "output": "=== RUN   Test_Validator_verifyExpiresAt\n--- PASS: Test_Validator_verifyExpiresAt (0.00s)\n"
+        },
+        {
+          "name": "Test_Validator_verifyExpiresAt/good_claim",
+          "parent": "Test_Validator_verifyExpiresAt",
+          "status": "passed",
+          "output": "=== RUN   Test_Validator_verifyExpiresAt/good_claim\n--- PASS: Test_Validator_verifyExpiresAt/good_claim (0.00s)\n"
+        },
+        {
+          "name": "Test_Validator_verifyExpiresAt/claims_with_invalid_type",
+          "parent": "Test_Validator_verifyExpiresAt",
+          "status": "passed",
+          "output": "=== RUN   Test_Validator_verifyExpiresAt/claims_with_invalid_type\n--- PASS: Test_Validator_verifyExpiresAt/claims_with_invalid_type (0.00s)\n"
+        },
+        {
+          "name": "Test_Validator_verifyIssuer",
+          "status": "passed",
+          "output": "=== RUN   Test_Validator_verifyIssuer\n--- PASS: Test_Validator_verifyIssuer (0.00s)\n"
+        },
+        {
+          "name": "Test_Validator_verifyIssuer/good_claim",
+          "parent": "Test_Validator_verifyIssuer",
+          "status": "passed",
+          "output": "=== RUN   Test_Validator_verifyIssuer/good_claim\n--- PASS: Test_Validator_verifyIssuer/good_claim (0.00s)\n"
+        },
+        {
+          "name": "Test_Validator_verifyIssuer/claims_with_invalid_type",
+          "parent": "Test_Validator_verifyIssuer",
+          "status": "passed",
+          "output": "=== RUN   Test_Validator_verifyIssuer/claims_with_invalid_type\n--- PASS: Test_Validator_verifyIssuer/claims_with_invalid_type (0.00s)\n"
+        },
+        {
+          "name": "Test_Validator_verifySubject",
+          "status": "passed",
+          "output": "=== RUN   Test_Validator_verifySubject\n--- PASS: Test_Validator_verifySubject (0.00s)\n"
+        },
+        {
+          "name": "Test_Validator_verifySubject/good_claim",
+          "parent": "Test_Validator_verifySubject",
+          "status": "passed",
+          "output": "=== RUN   Test_Validator_verifySubject/good_claim\n--- PASS: Test_Validator_verifySubject/good_claim (0.00s)\n"
+        },
+        {
+          "name": "Test_Validator_verifySubject/claims_with_invalid_type",
+          "parent": "Test_Validator_verifySubject",
+          "status": "passed",
+          "output": "=== RUN   Test_Validator_verifySubject/claims_with_invalid_type\n--- PASS: Test_Validator_verifySubject/claims_with_invalid_type (0.00s)\n"
+        },
+        {
+          "name": "Test_Validator_verifyIssuedAt",
+          "status": "passed",
+          "output": "=== RUN   Test_Validator_verifyIssuedAt\n--- PASS: Test_Validator_verifyIssuedAt (0.00s)\n"
+        },
+        {
+          "name": "Test_Validator_verifyIssuedAt/good_claim_without_iat",
+          "parent": "Test_Validator_verifyIssuedAt",
+          "status": "passed",
+          "output": "=== RUN   Test_Validator_verifyIssuedAt/good_claim_without_iat\n--- PASS: Test_Validator_verifyIssuedAt/good_claim_without_iat (0.00s)\n"
+        },
+        {
+          "name": "Test_Validator_verifyIssuedAt/good_claim_with_iat",
+          "parent": "Test_Validator_verifyIssuedAt",
+          "status": "passed",
+          "output": "=== RUN   Test_Validator_verifyIssuedAt/good_claim_with_iat\n--- PASS: Test_Validator_verifyIssuedAt/good_claim_with_iat (0.00s)\n"
+        },
+        {
+          "name": "TestECDSAVerify",
+          "status": "passed",
+          "elapsed_ms": 10,
+          "output": "=== RUN   TestECDSAVerify\n--- PASS: TestECDSAVerify (0.01s)\n"
+        },
+        {
+          "name": "TestECDSASign",
+          "status": "passed",
+          "output": "=== RUN   TestECDSASign\n--- PASS: TestECDSASign (0.00s)\n"
+        },
+        {
+          "name": "TestEd25519Verify",
+          "status": "passed",
+          "output": "=== RUN   TestEd25519Verify\n--- PASS: TestEd25519Verify (0.00s)\n"
+        },
+        {
+          "name": "TestEd25519Sign",
+          "status": "passed",
+          "output": "=== RUN   TestEd25519Sign\n--- PASS: TestEd25519Sign (0.00s)\n"
+        },
+        {
+          "name": "TestHMACVerify",
+          "status": "passed",
+          "output": "=== RUN   TestHMACVerify\n--- PASS: TestHMACVerify (0.00s)\n"
+        },
+        {
+          "name": "TestHMACSign",
+          "status": "passed",
+          "output": "=== RUN   TestHMACSign\n--- PASS: TestHMACSign (0.00s)\n"
+        },
+        {
+          "name": "TestNoneVerify",
+          "status": "passed",
+          "output": "=== RUN   TestNoneVerify\n--- PASS: TestNoneVerify (0.00s)\n"
+        },
+        {
+          "name": "TestNoneSign",
+          "status": "passed",
+          "output": "=== RUN   TestNoneSign\n--- PASS: TestNoneSign (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse",
+          "status": "passed",
+          "elapsed_ms": 80,
+          "output": "=== RUN   TestParser_Parse\n--- PASS: TestParser_Parse (0.08s)\n"
+        },
+        {
+          "name": "TestParser_Parse/invalid_JWT",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/invalid_JWT\n--- PASS: TestParser_Parse/invalid_JWT (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/invalid_JSON_claim",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/invalid_JSON_claim\n--- PASS: TestParser_Parse/invalid_JSON_claim (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/bearer_in_JWT",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/bearer_in_JWT\n--- PASS: TestParser_Parse/bearer_in_JWT (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/basic",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/basic\n--- PASS: TestParser_Parse/basic (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/multiple_keys,_last_matches",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/multiple_keys,_last_matches\n--- PASS: TestParser_Parse/multiple_keys,_last_matches (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/multiple_keys_not_[]interface{}_type,_all_match",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/multiple_keys_not_[]interface{}_type,_all_match\n--- PASS: TestParser_Parse/multiple_keys_not_[]interface{}_type,_all_match (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/multiple_keys,_first_matches",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/multiple_keys,_first_matches\n--- PASS: TestParser_Parse/multiple_keys,_first_matches (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/public_keys_slice,_not_allowed",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/public_keys_slice,_not_allowed\n--- PASS: TestParser_Parse/public_keys_slice,_not_allowed (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/basic_expired",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/basic_expired\n--- PASS: TestParser_Parse/basic_expired (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/basic_nbf",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/basic_nbf\n--- PASS: TestParser_Parse/basic_nbf (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/expired_and_nbf",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/expired_and_nbf\n--- PASS: TestParser_Parse/expired_and_nbf (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/basic_invalid",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/basic_invalid\n--- PASS: TestParser_Parse/basic_invalid (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/basic_nokeyfunc",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/basic_nokeyfunc\n--- PASS: TestParser_Parse/basic_nokeyfunc (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/basic_nokey",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/basic_nokey\n--- PASS: TestParser_Parse/basic_nokey (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/multiple_nokey",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/multiple_nokey\n--- PASS: TestParser_Parse/multiple_nokey (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/empty_verification_key_set",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/empty_verification_key_set\n--- PASS: TestParser_Parse/empty_verification_key_set (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/zero_length_key_list",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/zero_length_key_list\n--- PASS: TestParser_Parse/zero_length_key_list (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/basic_errorkey",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/basic_errorkey\n--- PASS: TestParser_Parse/basic_errorkey (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/invalid_signing_method",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/invalid_signing_method\n--- PASS: TestParser_Parse/invalid_signing_method (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/valid_RSA_signing_method",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/valid_RSA_signing_method\n--- PASS: TestParser_Parse/valid_RSA_signing_method (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/ECDSA_signing_method_not_accepted",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/ECDSA_signing_method_not_accepted\n--- PASS: TestParser_Parse/ECDSA_signing_method_not_accepted (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/valid_ECDSA_signing_method",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/valid_ECDSA_signing_method\n--- PASS: TestParser_Parse/valid_ECDSA_signing_method (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/JSON_Number",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/JSON_Number\n--- PASS: TestParser_Parse/JSON_Number (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/JSON_Number_-_basic_expired",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/JSON_Number_-_basic_expired\n--- PASS: TestParser_Parse/JSON_Number_-_basic_expired (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/JSON_Number_-_basic_nbf",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/JSON_Number_-_basic_nbf\n--- PASS: TestParser_Parse/JSON_Number_-_basic_nbf (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/JSON_Number_-_expired_and_nbf",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/JSON_Number_-_expired_and_nbf\n--- PASS: TestParser_Parse/JSON_Number_-_expired_and_nbf (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/SkipClaimsValidation_during_token_parsing",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/SkipClaimsValidation_during_token_parsing\n--- PASS: TestParser_Parse/SkipClaimsValidation_during_token_parsing (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/RFC7519_Claims",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/RFC7519_Claims\n--- PASS: TestParser_Parse/RFC7519_Claims (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/RFC7519_Claims_-_single_aud",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/RFC7519_Claims_-_single_aud\n--- PASS: TestParser_Parse/RFC7519_Claims_-_single_aud (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/RFC7519_Claims_-_multiple_aud",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/RFC7519_Claims_-_multiple_aud\n--- PASS: TestParser_Parse/RFC7519_Claims_-_multiple_aud (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/RFC7519_Claims_-_single_aud_with_wrong_type",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/RFC7519_Claims_-_single_aud_with_wrong_type\n--- PASS: TestParser_Parse/RFC7519_Claims_-_single_aud_with_wrong_type (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/RFC7519_Claims_-_multiple_aud_with_wrong_types",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/RFC7519_Claims_-_multiple_aud_with_wrong_types\n--- PASS: TestParser_Parse/RFC7519_Claims_-_multiple_aud_with_wrong_types (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/RFC7519_Claims_-_nbf_with_60s_skew",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/RFC7519_Claims_-_nbf_with_60s_skew\n--- PASS: TestParser_Parse/RFC7519_Claims_-_nbf_with_60s_skew (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/RFC7519_Claims_-_nbf_with_120s_skew",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/RFC7519_Claims_-_nbf_with_120s_skew\n--- PASS: TestParser_Parse/RFC7519_Claims_-_nbf_with_120s_skew (0.00s)\n"
+        },
+        {
+          "name": "TestParser_Parse/rejects_if_exp_is_required_but_missing",
+          "parent": "TestParser_Parse",
+          "status": "passed",
+          "output": "=== RUN   TestParser_Parse/rejects_if_exp_is_required_but_missing\n--- PASS: TestParser_Parse/rejects_if_exp_is_required_but_missing (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified",
+          "status": "passed",
+          "elapsed_ms": 10,
+          "output": "=== RUN   TestParser_ParseUnverified\n--- PASS: TestParser_ParseUnverified (0.01s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/basic",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/basic\n--- PASS: TestParser_ParseUnverified/basic (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/multiple_keys,_last_matches",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/multiple_keys,_last_matches\n--- PASS: TestParser_ParseUnverified/multiple_keys,_last_matches (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/multiple_keys_not_[]interface{}_type,_all_match",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/multiple_keys_not_[]interface{}_type,_all_match\n--- PASS: TestParser_ParseUnverified/multiple_keys_not_[]interface{}_type,_all_match (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/multiple_keys,_first_matches",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/multiple_keys,_first_matches\n--- PASS: TestParser_ParseUnverified/multiple_keys,_first_matches (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/public_keys_slice,_not_allowed",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/public_keys_slice,_not_allowed\n--- PASS: TestParser_ParseUnverified/public_keys_slice,_not_allowed (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/basic_expired",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/basic_expired\n--- PASS: TestParser_ParseUnverified/basic_expired (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/basic_nbf",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/basic_nbf\n--- PASS: TestParser_ParseUnverified/basic_nbf (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/expired_and_nbf",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/expired_and_nbf\n--- PASS: TestParser_ParseUnverified/expired_and_nbf (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/basic_invalid",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/basic_invalid\n--- PASS: TestParser_ParseUnverified/basic_invalid (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/basic_nokeyfunc",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/basic_nokeyfunc\n--- PASS: TestParser_ParseUnverified/basic_nokeyfunc (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/basic_nokey",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/basic_nokey\n--- PASS: TestParser_ParseUnverified/basic_nokey (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/multiple_nokey",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/multiple_nokey\n--- PASS: TestParser_ParseUnverified/multiple_nokey (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/empty_verification_key_set",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/empty_verification_key_set\n--- PASS: TestParser_ParseUnverified/empty_verification_key_set (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/zero_length_key_list",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/zero_length_key_list\n--- PASS: TestParser_ParseUnverified/zero_length_key_list (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/basic_errorkey",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/basic_errorkey\n--- PASS: TestParser_ParseUnverified/basic_errorkey (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/invalid_signing_method",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/invalid_signing_method\n--- PASS: TestParser_ParseUnverified/invalid_signing_method (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/valid_RSA_signing_method",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/valid_RSA_signing_method\n--- PASS: TestParser_ParseUnverified/valid_RSA_signing_method (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/ECDSA_signing_method_not_accepted",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/ECDSA_signing_method_not_accepted\n--- PASS: TestParser_ParseUnverified/ECDSA_signing_method_not_accepted (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/valid_ECDSA_signing_method",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/valid_ECDSA_signing_method\n--- PASS: TestParser_ParseUnverified/valid_ECDSA_signing_method (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/JSON_Number",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/JSON_Number\n--- PASS: TestParser_ParseUnverified/JSON_Number (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/JSON_Number_-_basic_expired",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/JSON_Number_-_basic_expired\n--- PASS: TestParser_ParseUnverified/JSON_Number_-_basic_expired (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/JSON_Number_-_basic_nbf",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/JSON_Number_-_basic_nbf\n--- PASS: TestParser_ParseUnverified/JSON_Number_-_basic_nbf (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/JSON_Number_-_expired_and_nbf",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/JSON_Number_-_expired_and_nbf\n--- PASS: TestParser_ParseUnverified/JSON_Number_-_expired_and_nbf (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/SkipClaimsValidation_during_token_parsing",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/SkipClaimsValidation_during_token_parsing\n--- PASS: TestParser_ParseUnverified/SkipClaimsValidation_during_token_parsing (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/RFC7519_Claims",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/RFC7519_Claims\n--- PASS: TestParser_ParseUnverified/RFC7519_Claims (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/RFC7519_Claims_-_single_aud",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/RFC7519_Claims_-_single_aud\n--- PASS: TestParser_ParseUnverified/RFC7519_Claims_-_single_aud (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/RFC7519_Claims_-_multiple_aud",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/RFC7519_Claims_-_multiple_aud\n--- PASS: TestParser_ParseUnverified/RFC7519_Claims_-_multiple_aud (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/RFC7519_Claims_-_nbf_with_60s_skew",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/RFC7519_Claims_-_nbf_with_60s_skew\n--- PASS: TestParser_ParseUnverified/RFC7519_Claims_-_nbf_with_60s_skew (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/RFC7519_Claims_-_nbf_with_120s_skew",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/RFC7519_Claims_-_nbf_with_120s_skew\n--- PASS: TestParser_ParseUnverified/RFC7519_Claims_-_nbf_with_120s_skew (0.00s)\n"
+        },
+        {
+          "name": "TestParser_ParseUnverified/rejects_if_exp_is_required_but_missing",
+          "parent": "TestParser_ParseUnverified",
+          "status": "passed",
+          "output": "=== RUN   TestParser_ParseUnverified/rejects_if_exp_is_required_but_missing\n--- PASS: TestParser_ParseUnverified/rejects_if_exp_is_required_but_missing (0.00s)\n"
+        },
+        {
+          "name": "TestSetPadding",
+          "status": "passed",
+          "output": "=== RUN   TestSetPadding\n--- PASS: TestSetPadding (0.00s)\n"
+        },
+        {
+          "name": "TestSetPadding/Validated_non-padded_token_with_padding_disabled",
+          "parent": "TestSetPadding",
+          "status": "passed",
+          "output": "=== RUN   TestSetPadding/Validated_non-padded_token_with_padding_disabled\n--- PASS: TestSetPadding/Validated_non-padded_token_with_padding_disabled (0.00s)\n"
+        },
+        {
+          "name": "TestSetPadding/Validated_non-padded_token_with_padding_enabled",
+          "parent": "TestSetPadding",
+          "status": "passed",
+          "output": "=== RUN   TestSetPadding/Validated_non-padded_token_with_padding_enabled\n--- PASS: TestSetPadding/Validated_non-padded_token_with_padding_enabled (0.00s)\n"
+        },
+        {
+          "name": "TestSetPadding/Error_for_padded_token_with_padding_disabled",
+          "parent": "TestSetPadding",
+          "status": "passed",
+          "output": "=== RUN   TestSetPadding/Error_for_padded_token_with_padding_disabled\n--- PASS: TestSetPadding/Error_for_padded_token_with_padding_disabled (0.00s)\n"
+        },
+        {
+          "name": "TestSetPadding/Validated_padded_token_with_padding_enabled",
+          "parent": "TestSetPadding",
+          "status": "passed",
+          "output": "=== RUN   TestSetPadding/Validated_padded_token_with_padding_enabled\n--- PASS: TestSetPadding/Validated_padded_token_with_padding_enabled (0.00s)\n"
+        },
+        {
+          "name": "TestSetPadding/Error_for_example_padded_token_with_padding_disabled",
+          "parent": "TestSetPadding",
+          "status": "passed",
+          "output": "=== RUN   TestSetPadding/Error_for_example_padded_token_with_padding_disabled\n--- PASS: TestSetPadding/Error_for_example_padded_token_with_padding_disabled (0.00s)\n"
+        },
+        {
+          "name": "TestSetPadding/Validated_example_padded_token_with_padding_enabled",
+          "parent": "TestSetPadding",
+          "status": "passed",
+          "output": "=== RUN   TestSetPadding/Validated_example_padded_token_with_padding_enabled\n--- PASS: TestSetPadding/Validated_example_padded_token_with_padding_enabled (0.00s)\n"
+        },
+        {
+          "name": "TestSetPadding/Validated_non-padded_token_with_padding_disabled,_non-strict_decode,_non-tweaked_signature",
+          "parent": "TestSetPadding",
+          "status": "passed",
+          "output": "=== RUN   TestSetPadding/Validated_non-padded_token_with_padding_disabled,_non-strict_decode,_non-tweaked_signature\n--- PASS: TestSetPadding/Validated_non-padded_token_with_padding_disabled,_non-strict_decode,_non-tweaked_signature (0.00s)\n"
+        },
+        {
+          "name": "TestSetPadding/Validated_non-padded_token_with_padding_disabled,_non-strict_decode,_tweaked_signature",
+          "parent": "TestSetPadding",
+          "status": "passed",
+          "output": "=== RUN   TestSetPadding/Validated_non-padded_token_with_padding_disabled,_non-strict_decode,_tweaked_signature\n--- PASS: TestSetPadding/Validated_non-padded_token_with_padding_disabled,_non-strict_decode,_tweaked_signature (0.00s)\n"
+        },
+        {
+          "name": "TestSetPadding/Validated_non-padded_token_with_padding_disabled,_strict_decode,_non-tweaked_signature",
+          "parent": "TestSetPadding",
+          "status": "passed",
+          "output": "=== RUN   TestSetPadding/Validated_non-padded_token_with_padding_disabled,_strict_decode,_non-tweaked_signature\n--- PASS: TestSetPadding/Validated_non-padded_token_with_padding_disabled,_strict_decode,_non-tweaked_signature (0.00s)\n"
+        },
+        {
+          "name": "TestSetPadding/Error_for_non-padded_token_with_padding_disabled,_strict_decode,_tweaked_signature",
+          "parent": "TestSetPadding",
+          "status": "passed",
+          "output": "=== RUN   TestSetPadding/Error_for_non-padded_token_with_padding_disabled,_strict_decode,_tweaked_signature\n--- PASS: TestSetPadding/Error_for_non-padded_token_with_padding_disabled,_strict_decode,_tweaked_signature (0.00s)\n"
+        },
+        {
+          "name": "TestSetPadding/Validated_padded_token_with_padding_enabled,_non-strict_decode,_non-tweaked_signature",
+          "parent": "TestSetPadding",
+          "status": "passed",
+          "output": "=== RUN   TestSetPadding/Validated_padded_token_with_padding_enabled,_non-strict_decode,_non-tweaked_signature\n--- PASS: TestSetPadding/Validated_padded_token_with_padding_enabled,_non-strict_decode,_non-tweaked_signature (0.00s)\n"
+        },
+        {
+          "name": "TestSetPadding/Validated_padded_token_with_padding_enabled,_non-strict_decode,_tweaked_signature",
+          "parent": "TestSetPadding",
+          "status": "passed",
+          "output": "=== RUN   TestSetPadding/Validated_padded_token_with_padding_enabled,_non-strict_decode,_tweaked_signature\n--- PASS: TestSetPadding/Validated_padded_token_with_padding_enabled,_non-strict_decode,_tweaked_signature (0.00s)\n"
+        },
+        {
+          "name": "TestSetPadding/Validated_padded_token_with_padding_enabled,_strict_decode,_non-tweaked_signature",
+          "parent": "TestSetPadding",
+          "status": "passed",
+          "output": "=== RUN   TestSetPadding/Validated_padded_token_with_padding_enabled,_strict_decode,_non-tweaked_signature\n--- PASS: TestSetPadding/Validated_padded_token_with_padding_enabled,_strict_decode,_non-tweaked_signature (0.00s)\n"
+        },
+        {
+          "name": "TestSetPadding/Error_for_padded_token_with_padding_enabled,_strict_decode,_tweaked_signature",
+          "parent": "TestSetPadding",
+          "status": "passed",
+          "output": "=== RUN   TestSetPadding/Error_for_padded_token_with_padding_enabled,_strict_decode,_tweaked_signature\n--- PASS: TestSetPadding/Error_for_padded_token_with_padding_enabled,_strict_decode,_tweaked_signature (0.00s)\n"
+        },
+        {
+          "name": "TestRSAPSSVerify",
+          "status": "passed",
+          "output": "=== RUN   TestRSAPSSVerify\n--- PASS: TestRSAPSSVerify (0.00s)\n"
+        },
+        {
+          "name": "TestRSAPSSSign",
+          "status": "passed",
+          "output": "=== RUN   TestRSAPSSSign\n--- PASS: TestRSAPSSSign (0.00s)\n"
+        },
+        {
+          "name": "TestRSAPSSSaltLengthCompatibility",
+          "status": "passed",
+          "output": "=== RUN   TestRSAPSSSaltLengthCompatibility\n--- PASS: TestRSAPSSSaltLengthCompatibility (0.00s)\n"
+        },
+        {
+          "name": "TestRSAVerify",
+          "status": "passed",
+          "output": "=== RUN   TestRSAVerify\n--- PASS: TestRSAVerify (0.00s)\n"
+        },
+        {
+          "name": "TestRSASign",
+          "status": "passed",
+          "output": "=== RUN   TestRSASign\n--- PASS: TestRSASign (0.00s)\n"
+        },
+        {
+          "name": "TestRSAVerifyWithPreParsedPrivateKey",
+          "status": "passed",
+          "output": "=== RUN   TestRSAVerifyWithPreParsedPrivateKey\n--- PASS: TestRSAVerifyWithPreParsedPrivateKey (0.00s)\n"
+        },
+        {
+          "name": "TestRSAWithPreParsedPrivateKey",
+          "status": "passed",
+          "output": "=== RUN   TestRSAWithPreParsedPrivateKey\n--- PASS: TestRSAWithPreParsedPrivateKey (0.00s)\n"
+        },
+        {
+          "name": "TestRSAKeyParsing",
+          "status": "passed",
+          "elapsed_ms": 110,
+          "output": "=== RUN   TestRSAKeyParsing\n--- PASS: TestRSAKeyParsing (0.11s)\n"
+        },
+        {
+          "name": "TestToken_SigningString",
+          "status": "passed",
+          "output": "=== RUN   TestToken_SigningString\n--- PASS: TestToken_SigningString (0.00s)\n"
+        },
+        {
+          "name": "TestToken_SigningString/#00",
+          "parent": "TestToken_SigningString",
+          "status": "passed",
+          "output": "=== RUN   TestToken_SigningString/#00\n--- PASS: TestToken_SigningString/#00 (0.00s)\n"
+        },
+        {
+          "name": "TestNumericDate",
+          "status": "passed",
+          "output": "=== RUN   TestNumericDate\n--- PASS: TestNumericDate (0.00s)\n"
+        },
+        {
+          "name": "TestSingleArrayMarshal",
+          "status": "passed",
+          "output": "=== RUN   TestSingleArrayMarshal\n--- PASS: TestSingleArrayMarshal (0.00s)\n"
+        },
+        {
+          "name": "TestNumericDate_MarshalJSON",
+          "status": "passed",
+          "output": "=== RUN   TestNumericDate_MarshalJSON\n--- PASS: TestNumericDate_MarshalJSON (0.00s)\n"
+        },
+        {
+          "name": "ExampleNewWithClaims_registeredClaims",
+          "status": "passed",
+          "output": "=== RUN   ExampleNewWithClaims_registeredClaims\n--- PASS: ExampleNewWithClaims_registeredClaims (0.00s)\n"
+        },
+        {
+          "name": "ExampleNewWithClaims_customClaimsType",
+          "status": "passed",
+          "output": "=== RUN   ExampleNewWithClaims_customClaimsType\n--- PASS: ExampleNewWithClaims_customClaimsType (0.00s)\n"
+        },
+        {
+          "name": "ExampleParseWithClaims_customClaimsType",
+          "status": "passed",
+          "output": "=== RUN   ExampleParseWithClaims_customClaimsType\n--- PASS: ExampleParseWithClaims_customClaimsType (0.00s)\n"
+        },
+        {
+          "name": "ExampleParseWithClaims_validationOptions",
+          "status": "passed",
+          "output": "=== RUN   ExampleParseWithClaims_validationOptions\n--- PASS: ExampleParseWithClaims_validationOptions (0.00s)\n"
+        },
+        {
+          "name": "ExampleParseWithClaims_customValidation",
+          "status": "passed",
+          "output": "=== RUN   ExampleParseWithClaims_customValidation\n--- PASS: ExampleParseWithClaims_customValidation (0.00s)\n"
+        },
+        {
+          "name": "ExampleParse_errorChecking",
+          "status": "passed",
+          "output": "=== RUN   ExampleParse_errorChecking\n--- PASS: ExampleParse_errorChecking (0.00s)\n"
+        },
+        {
+          "name": "ExampleNew_hmac",
+          "status": "passed",
+          "output": "=== RUN   ExampleNew_hmac\n--- PASS: ExampleNew_hmac (0.00s)\n"
+        },
+        {
+          "name": "ExampleParse_hmac",
+          "status": "passed",
+          "output": "=== RUN   ExampleParse_hmac\n--- PASS: ExampleParse_hmac (0.00s)\n"
+        },
+        {
+          "name": "Example_getTokenViaHTTP",
+          "status": "passed",
+          "elapsed_ms": 70,
+          "output": "=== RUN   Example_getTokenViaHTTP\n2026/11/25 12:30:53 Authenticate: user[test] pass[known]\n--- PASS: Example_getTokenViaHTTP (0.07s)\n"
+        },
+        {
+          "name": "Example_useTokenViaHTTP",
+          "status": "passed",
+          "output": "=== RUN   Example_useTokenViaHTTP\n--- PASS: Example_useTokenViaHTTP (0.00s)\n"
+        }
+      ]
+    },
+    {
+      "import_path": "github.com/golang-jwt/jwt/v5/cmd/jwt",
+      "status": "no_tests",
+      "elapsed_ms": 902,
+      "output": "\tgithub.com/golang-jwt/jwt/v5/cmd/jwt\t\tcoverage: 0.0% of statements\n"
+    },
+    {
+      "import_path": "github.com/golang-jwt/jwt/v5/request",
+      "status": "passed",
+      "elapsed_ms": 5,
+      "coverage_pct": 83,
+      "output": "PASS\ncoverage: 83.0% of statements\nok  \tgithub.com/golang-jwt/jwt/v5/request\t0.005s\tcoverage: 83.0% of statements\n",
+      "tests": [
+        {
+          "name": "TestExtractor",
+          "status": "passed",
+          "output": "=== RUN   TestExtractor\n--- PASS: TestExtractor (0.00s)\n"
+        },
+        {
+          "name": "TestBearerExtractor",
+          "status": "passed",
+          "output": "=== RUN   TestBearerExtractor\n--- PASS: TestBearerExtractor (0.00s)\n"
+        },
+        {
+          "name": "TestParseRequest",
+          "status": "passed",
+          "output": "=== RUN   TestParseRequest\n--- PASS: TestParseRequest (0.00s)\n"
+        },
+        {
+          "name": "ExampleHeaderExtractor",
+          "status": "passed",
+          "output": "=== RUN   ExampleHeaderExtractor\n--- PASS: ExampleHeaderExtractor (0.00s)\n"
+        },
+        {
+          "name": "ExampleArgumentExtractor",
+          "status": "passed",
+          "output": "=== RUN   ExampleArgumentExtractor\n--- PASS: ExampleArgumentExtractor (0.00s)\n"
+        }
+      ]
+    },
+    {
+      "import_path": "github.com/golang-jwt/jwt/v5/test",
+      "status": "no_tests",
+      "elapsed_ms": 95,
+      "output": "\tgithub.com/golang-jwt/jwt/v5/test\t\tcoverage: 0.0% of statements\n"
+    }
+  ],
+  "repo_url": "https://github.com/golang-jwt/jwt",
+  "commit": "80dccb9209ebe7b503c067dc830fcbd4aa2e74eb",
+  "summary": {
+    "passed": 160,
+    "failed": 0,
+    "skipped": 0,
+    "incomplete": 0,
+    "package_failures": 0
+  }
+}

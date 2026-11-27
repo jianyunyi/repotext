@@ -25,12 +25,19 @@ import (
 
 var imageID = regexp.MustCompile(`^sha256:[a-f0-9]{64}$`)
 
+type CleanupError struct {
+	Err error
+}
+
+func (e CleanupError) Error() string { return e.Err.Error() }
+func (e CleanupError) Unwrap() error { return e.Err }
+
 const offlineCommand = `set -eu
 mkdir -p /work/src /work/cache /work/modules /work/tmp
 tar -xf - -C /work
 cd /work/src
 test -f go.mod
-exec go test -json -count=1 -mod=readonly -p=2 -parallel=2 ./...`
+exec go test -json -cover -count=1 -mod=readonly -p=2 -parallel=2 ./...`
 
 const moduleDownloadCommand = `set -eu
 mkdir -p /work/src /work/cache /work/modules /work/tmp
@@ -65,17 +72,19 @@ func runOfflineGoWithPhases(ctx context.Context, image, source string, setPhase 
 		return result, err
 	}
 	defer os.RemoveAll(scratch)
-	modulesTar, dependencyOutput, err := prepareModuleCache(ctx, image, source, scratch)
+	modulesTar, dependencyOutput, dependencyTruncated, err := prepareModuleCache(ctx, image, source, scratch)
 	if err != nil {
+		result.Output, result.Truncated = dependencyOutput, dependencyTruncated
 		return result, err
 	}
 	if setPhase != nil {
 		if err = setPhase(domain.PhaseTest); err != nil {
+			result.Output, result.Truncated = dependencyOutput, dependencyTruncated
 			return result, err
 		}
 	}
 	result, err = runOfflineGoWithModules(ctx, image, source, modulesTar)
-	result.Output, result.Truncated = joinLimitedOutput(result.Output, dependencyOutput, 2<<20, result.Truncated)
+	result.Output, result.Truncated = joinLimitedOutput(result.Output, dependencyOutput, 2<<20, result.Truncated || dependencyTruncated)
 	return result, err
 }
 
@@ -94,7 +103,7 @@ func runOfflineGoWithModules(ctx context.Context, image, source, modulesTar stri
 		defer cancel()
 		output, cleanupErr := exec.CommandContext(cleanupCtx, "docker", "container", "rm", "-f", name).CombinedOutput()
 		if cleanupErr != nil && !strings.Contains(string(output), "No such container: "+name) {
-			err = errors.Join(err, fmt.Errorf("remove offline container %s: %w", name, cleanupErr))
+			err = errors.Join(err, CleanupError{Err: fmt.Errorf("remove offline container %s: %w", name, cleanupErr)})
 		}
 	}()
 
@@ -156,45 +165,45 @@ func runOfflineGoWithModules(ctx context.Context, image, source, modulesTar stri
 	return result, nil
 }
 
-func prepareModuleCache(ctx context.Context, image, source, scratch string) (moduleTar string, output []byte, err error) {
+func prepareModuleCache(ctx context.Context, image, source, scratch string) (moduleTar string, output []byte, truncated bool, err error) {
 	if runtime.GOOS != "linux" || !imageID.MatchString(image) {
-		return "", nil, errors.New("dependency preparation requires Linux and a local Go image ID")
+		return "", nil, false, errors.New("dependency preparation requires Linux and a local Go image ID")
 	}
 	var nonce [16]byte
 	if _, err = rand.Read(nonce[:]); err != nil {
-		return "", nil, err
+		return "", nil, false, err
 	}
 	suffix := fmt.Sprintf("%x", nonce)
 	network := "repotest-deps-" + suffix
 	container := "repotest-modules-" + suffix
 	if out, createErr := exec.CommandContext(ctx, "docker", "network", "create", "--internal", "--label="+dockerManagedLabelValue(), "--label=io.repotest.kind=module-preparation", network).CombinedOutput(); createErr != nil {
-		return "", nil, fmt.Errorf("create isolated module network: %w: %s", createErr, strings.TrimSpace(string(out)))
+		return "", nil, false, fmt.Errorf("create isolated module network: %w: %s", createErr, strings.TrimSpace(string(out)))
 	}
 	defer func() {
 		cleanupCtx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 		defer cancel()
 		_, cleanupErr := exec.CommandContext(cleanupCtx, "docker", "network", "rm", network).CombinedOutput()
 		if cleanupErr != nil {
-			err = errors.Join(err, fmt.Errorf("remove module network: %w", cleanupErr))
+			err = errors.Join(err, CleanupError{Err: fmt.Errorf("remove module network: %w", cleanupErr)})
 		}
 	}()
 	inspect, err := exec.CommandContext(ctx, "docker", "network", "inspect", "--format={{range .IPAM.Config}}{{.Gateway}} {{.Subnet}}{{end}}", network).CombinedOutput()
 	if err != nil {
-		return "", nil, fmt.Errorf("inspect isolated module network: %w: %s", err, strings.TrimSpace(string(inspect)))
+		return "", nil, false, fmt.Errorf("inspect isolated module network: %w: %s", err, strings.TrimSpace(string(inspect)))
 	}
 	fields := strings.Fields(string(inspect))
 	if len(fields) != 2 {
-		return "", nil, errors.New("module network did not return one gateway and subnet")
+		return "", nil, false, errors.New("module network did not return one gateway and subnet")
 	}
 	gateway := net.ParseIP(fields[0])
 	subnet, parseErr := netip.ParsePrefix(fields[1])
 	if gateway == nil || parseErr != nil || !subnet.Contains(netip.MustParseAddr(gateway.String())) {
-		return "", nil, errors.New("module network gateway is invalid")
+		return "", nil, false, errors.New("module network gateway is invalid")
 	}
 	proxy := newPublicModuleProxy()
 	listener, err := net.Listen("tcp", net.JoinHostPort(gateway.String(), "0"))
 	if err != nil {
-		return "", nil, fmt.Errorf("bind module proxy to isolated network gateway: %w", err)
+		return "", nil, false, fmt.Errorf("bind module proxy to isolated network gateway: %w", err)
 	}
 	defer listener.Close()
 	proxyServer := &http.Server{Handler: moduleNetworkOnly{next: proxy, subnet: subnet}, ReadHeaderTimeout: 3 * time.Second, IdleTimeout: 20 * time.Second}
@@ -217,7 +226,7 @@ func prepareModuleCache(ctx context.Context, image, source, scratch string) (mod
 	created, createErr := exec.CommandContext(createCtx, "docker", append([]string{"create"}, args...)...).CombinedOutput()
 	stopCreate()
 	if createErr != nil {
-		return "", nil, fmt.Errorf("create dependency container: %w: %s", createErr, strings.TrimSpace(string(created)))
+		return "", nil, false, fmt.Errorf("create dependency container: %w: %s", createErr, strings.TrimSpace(string(created)))
 	}
 	defer func() {
 		cleanupCtx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
@@ -233,7 +242,7 @@ func prepareModuleCache(ctx context.Context, image, source, scratch string) (mod
 	moduleTar = filepath.Join(scratch, "modules.tar")
 	file, err := os.OpenFile(moduleTar, os.O_CREATE|os.O_EXCL|os.O_WRONLY, 0o600)
 	if err != nil {
-		return "", nil, err
+		return "", nil, false, err
 	}
 	input, writer := io.Pipe()
 	writeDone := make(chan error, 1)
@@ -254,15 +263,16 @@ func prepareModuleCache(ctx context.Context, image, source, scratch string) (mod
 	writeErr := <-writeDone
 	closeErr := file.Close()
 	output = logs.buf.Bytes()
+	truncated = logs.truncated
 	if ctx.Err() != nil {
 		_ = os.Remove(moduleTar)
-		return "", output, ctx.Err()
+		return "", output, truncated, ctx.Err()
 	}
 	if writeErr != nil || startErr != nil || closeErr != nil {
 		_ = os.Remove(moduleTar)
-		return "", output, fmt.Errorf("download Go modules: %w: %s", errors.Join(writeErr, startErr, closeErr), strings.TrimSpace(string(output)))
+		return "", output, truncated, fmt.Errorf("download Go modules: %w: %s", errors.Join(writeErr, startErr, closeErr), strings.TrimSpace(string(output)))
 	}
-	return moduleTar, output, nil
+	return moduleTar, output, truncated, nil
 }
 
 func dependencyContainerArgs(network, proxy string) []string {

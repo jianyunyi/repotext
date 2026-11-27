@@ -1,0 +1,19 @@
+{
+  "commit": "b279807a1bad9fa155988667d97a3d2fff4061b5",
+  "error": "",
+  "exit_code": 0,
+  "fault_injection": false,
+  "finished_at": "2026-11-25T12:29:26.910342148Z",
+  "phases": [
+    "clone",
+    "deps",
+    "test"
+  ],
+  "raw_sha256": "56cde03bfec50335e93d2b7452d4d34b24927c51737df53569f76001bc976104",
+  "raw_truncated": false,
+  "repo_url": "https://github.com/tidwall/sjson",
+  "report_sha256": "cc97df11dac3d7b6e8df76ce0f6e60bc8ddf99c7e7daadd472e58720c53da3d7",
+  "source_modified": false,
+  "started_at": "2026-11-25T12:29:08.199060505Z",
+  "timed_out": false
+}

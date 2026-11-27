@@ -1,0 +1,4 @@
+{"Time":"2026-11-25T19:06:57.6720344+08:00","Action":"start","Package":"example.invalid/repotest-owned-corpus/supervisor-timeout"}
+{"Time":"2026-11-25T19:06:58.5812125+08:00","Action":"run","Package":"example.invalid/repotest-owned-corpus/supervisor-timeout","Test":"TestOwned"}
+{"Time":"2026-11-25T19:06:58.5812125+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/supervisor-timeout","Test":"TestOwned","Output":"=== RUN   TestOwned\n"}
+{"Time":"2026-11-25T19:06:58.5812125+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/supervisor-timeout","Test":"TestOwned","Output":"    owned_test.go:6: owned bounded sleep\n"}

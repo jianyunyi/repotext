@@ -1,0 +1,19 @@
+{
+  "commit": "80dccb9209ebe7b503c067dc830fcbd4aa2e74eb",
+  "error": "",
+  "exit_code": 0,
+  "fault_injection": false,
+  "finished_at": "2026-11-25T12:30:54.074930943Z",
+  "phases": [
+    "clone",
+    "deps",
+    "test"
+  ],
+  "raw_sha256": "5dd021fcdca7d77c243dfcd92a9eafcfced0ad803276bbf5bec6eff11ced0d13",
+  "raw_truncated": false,
+  "repo_url": "https://github.com/golang-jwt/jwt",
+  "report_sha256": "55ef23ba94dc0916a8c9b6ba87283c16b8808adfea741f13b6541849803c8a47",
+  "source_modified": false,
+  "started_at": "2026-11-25T12:30:24.801426665Z",
+  "timed_out": false
+}

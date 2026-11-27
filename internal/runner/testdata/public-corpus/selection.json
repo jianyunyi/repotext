@@ -1,0 +1,76 @@
+{
+  "kind": "selection_of_preserved_execution_attempts",
+  "prior_failure_retained": "attempts/first-testify-dependency-failure",
+  "records": [
+    {
+      "repository": "https://github.com/google/uuid",
+      "source_attempt": "full-corpus-r2",
+      "raw_sha256": "82bf9eb63666988b3dab175ad611affbb3cb5a52e54adfc0c553c28b191aec5a",
+      "report_sha256": "9ed7d6699675e3df74c010ac26ad501bb4b190645b18f6f81d8419fc53c6517f",
+      "exit_code": 0
+    },
+    {
+      "repository": "https://github.com/dustin/go-humanize",
+      "source_attempt": "full-corpus-r2",
+      "raw_sha256": "4e6283e4bf20b5fafc5e93ca456bbc76d286875807d2df5a4516ba5d58baeff1",
+      "report_sha256": "e79a496058638c6f305fa71c9a7d441c4bbef778c3f2bef813de035c155cac52",
+      "exit_code": 0
+    },
+    {
+      "repository": "https://github.com/gorilla/mux",
+      "source_attempt": "full-corpus-r2",
+      "raw_sha256": "3d39a82c108570dcb2195cd721de727b621bb1a9e8c4d389b071d33bca837831",
+      "report_sha256": "d5ab8c53a425dc3af8de474d9433b5f932ce42c000289ec15655057d1c06d8f7",
+      "exit_code": 0
+    },
+    {
+      "repository": "https://github.com/google/go-cmp",
+      "source_attempt": "full-corpus-r2",
+      "raw_sha256": "ebc115523a1d3ed4c7364fc4514a2119a46f3eb6c189d7d85a23cd4202348844",
+      "report_sha256": "d5a9940656d0791a8c213a966284674e672efbf00bacb62d559385d2ba94423a",
+      "exit_code": 0
+    },
+    {
+      "repository": "https://github.com/stretchr/testify",
+      "source_attempt": "single-repository-retry",
+      "raw_sha256": "d5ef68fa4732dacbacd2d2b386f250295fb8e4762c28abedc0f5ef67a7ba594d",
+      "report_sha256": "b0ee1d8f225dcaa1f6eebdfe3455dfbcbe46852b2776e3100d41ae04ddbb91ad",
+      "exit_code": 1
+    },
+    {
+      "repository": "https://github.com/tidwall/gjson",
+      "source_attempt": "full-corpus-r2",
+      "raw_sha256": "8f366ddef8ba2b60b74accf26a6acbe090a98b9c734b6f919fa9595cfbff1e10",
+      "report_sha256": "9f6f336a5c2ec96571d6abbcaee308550e53f7ac48a65b406bc7ebd5e9b9fd6b",
+      "exit_code": 1
+    },
+    {
+      "repository": "https://github.com/tidwall/sjson",
+      "source_attempt": "full-corpus-r2",
+      "raw_sha256": "56cde03bfec50335e93d2b7452d4d34b24927c51737df53569f76001bc976104",
+      "report_sha256": "cc97df11dac3d7b6e8df76ce0f6e60bc8ddf99c7e7daadd472e58720c53da3d7",
+      "exit_code": 0
+    },
+    {
+      "repository": "https://github.com/go-chi/chi",
+      "source_attempt": "full-corpus-r2",
+      "raw_sha256": "2bbe91c41ef3052c5b2d88b107fbd05faeb93e5ac403f4ab19ff72faa491ee33",
+      "report_sha256": "894e9e1828ea065ef4e5015fe8bf7735335f7c2db35e1f83232b731eaae2556a",
+      "exit_code": 0
+    },
+    {
+      "repository": "https://github.com/golang-jwt/jwt",
+      "source_attempt": "full-corpus-r2",
+      "raw_sha256": "5dd021fcdca7d77c243dfcd92a9eafcfced0ad803276bbf5bec6eff11ced0d13",
+      "report_sha256": "55ef23ba94dc0916a8c9b6ba87283c16b8808adfea741f13b6541849803c8a47",
+      "exit_code": 0
+    },
+    {
+      "repository": "https://github.com/rs/xid",
+      "source_attempt": "full-corpus-r2",
+      "raw_sha256": "34bf85065562233196fe71d6a80a70939c82a116bcbf1d9ec40ab9339efb9da9",
+      "report_sha256": "a3ea48dbef356042e17d3ef905df7384427be2269f6239bb27d16de311ba03fd",
+      "exit_code": 0
+    }
+  ]
+}

@@ -43,6 +43,41 @@ func TestConfirmPreviewCreatesOnePersistentTaskAndOutbox(t *testing.T) {
 	}
 }
 
+func TestConfirmPreviewWithTokenRollsBackTaskWhenTokenPersistenceFails(t *testing.T) {
+	s := authStore(t)
+	ctx := context.Background()
+	now := time.Now().UTC().Truncate(time.Second)
+	previewHash := sha256.Sum256([]byte("atomic-confirm-preview"))
+	controlHash := sha256.Sum256([]byte("atomic-control-token"))
+	preview := StoredPreview{RepoURL: "https://github.com/acme/repo", Ref: "main", CommitSHA: strings.Repeat("a", 40), ExpiresAt: now.Add(10 * time.Minute)}
+	if err := s.StorePreview(ctx, previewHash[:], preview); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := s.db.Exec("CREATE TRIGGER reject_task_token BEFORE INSERT ON task_tokens BEGIN SELECT RAISE(ABORT, 'token persistence rejected'); END"); err != nil {
+		t.Fatal(err)
+	}
+	task := domain.Task{ID: "atomic-confirm-task", Status: domain.StatusQueued, CreatedAt: now}
+	if _, _, err := s.ConfirmPreviewWithToken(ctx, previewHash[:], task, testExecutionIdentity(), controlHash[:], now, 10*time.Minute); err == nil {
+		t.Fatal("confirmation succeeded despite token persistence failure")
+	}
+	for _, table := range []string{"tasks", "outbox", "confirmed_previews", "task_tokens"} {
+		var count int
+		if err := s.db.QueryRow("SELECT COUNT(*) FROM " + table).Scan(&count); err != nil {
+			t.Fatal(err)
+		}
+		if count != 0 {
+			t.Errorf("%s contains %d rows after rollback", table, count)
+		}
+	}
+	var previews int
+	if err := s.db.QueryRow("SELECT COUNT(*) FROM previews").Scan(&previews); err != nil {
+		t.Fatal(err)
+	}
+	if previews != 1 {
+		t.Fatalf("preview count after rollback=%d, want 1", previews)
+	}
+}
+
 func TestConfirmPreviewRejectsExpiredOrMismatchedExecution(t *testing.T) {
 	s := authStore(t)
 	ctx := context.Background()

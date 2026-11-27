@@ -1,0 +1,12 @@
+{"Time":"2026-11-25T19:07:04.9170676+08:00","Action":"start","Package":"example.invalid/repotest-owned-corpus/multiline-log"}
+{"Time":"2026-11-25T19:07:05.9826697+08:00","Action":"run","Package":"example.invalid/repotest-owned-corpus/multiline-log","Test":"TestOwned"}
+{"Time":"2026-11-25T19:07:05.9826697+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/multiline-log","Test":"TestOwned","Output":"=== RUN   TestOwned\n"}
+{"Time":"2026-11-25T19:07:05.9826697+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/multiline-log","Test":"TestOwned","Output":"    owned_test.go:6: first line\n"}
+{"Time":"2026-11-25T19:07:05.9826697+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/multiline-log","Test":"TestOwned","Output":"        second line\n"}
+{"Time":"2026-11-25T19:07:05.9883186+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/multiline-log","Test":"TestOwned","Output":"        third line\n"}
+{"Time":"2026-11-25T19:07:05.9883186+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/multiline-log","Test":"TestOwned","Output":"--- PASS: TestOwned (0.00s)\n"}
+{"Time":"2026-11-25T19:07:05.9883186+08:00","Action":"pass","Package":"example.invalid/repotest-owned-corpus/multiline-log","Test":"TestOwned","Elapsed":0}
+{"Time":"2026-11-25T19:07:05.9883186+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/multiline-log","Output":"PASS\n"}
+{"Time":"2026-11-25T19:07:05.9883186+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/multiline-log","Output":"coverage: 100.0% of statements\n"}
+{"Time":"2026-11-25T19:07:05.996627+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/multiline-log","Output":"ok  \texample.invalid/repotest-owned-corpus/multiline-log\t1.078s\tcoverage: 100.0% of statements\n"}
+{"Time":"2026-11-25T19:07:05.996627+08:00","Action":"pass","Package":"example.invalid/repotest-owned-corpus/multiline-log","Elapsed":1.08}

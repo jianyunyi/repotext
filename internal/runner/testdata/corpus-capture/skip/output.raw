@@ -1,0 +1,10 @@
+{"Time":"2026-11-25T19:06:17.1310395+08:00","Action":"start","Package":"example.invalid/repotest-owned-corpus/skip"}
+{"Time":"2026-11-25T19:06:18.1776084+08:00","Action":"run","Package":"example.invalid/repotest-owned-corpus/skip","Test":"TestOwned"}
+{"Time":"2026-11-25T19:06:18.1776084+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/skip","Test":"TestOwned","Output":"=== RUN   TestOwned\n"}
+{"Time":"2026-11-25T19:06:18.1776084+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/skip","Test":"TestOwned","Output":"    owned_test.go:6: owned skip reason\n"}
+{"Time":"2026-11-25T19:06:18.1776084+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/skip","Test":"TestOwned","Output":"--- SKIP: TestOwned (0.00s)\n"}
+{"Time":"2026-11-25T19:06:18.1835454+08:00","Action":"skip","Package":"example.invalid/repotest-owned-corpus/skip","Test":"TestOwned","Elapsed":0}
+{"Time":"2026-11-25T19:06:18.1835454+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/skip","Output":"PASS\n"}
+{"Time":"2026-11-25T19:06:18.1835454+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/skip","Output":"coverage: 0.0% of statements\n"}
+{"Time":"2026-11-25T19:06:18.1877825+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/skip","Output":"ok  \texample.invalid/repotest-owned-corpus/skip\t1.055s\tcoverage: 0.0% of statements\n"}
+{"Time":"2026-11-25T19:06:18.1877825+08:00","Action":"pass","Package":"example.invalid/repotest-owned-corpus/skip","Elapsed":1.057}

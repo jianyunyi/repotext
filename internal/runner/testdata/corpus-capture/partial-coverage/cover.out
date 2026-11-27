@@ -1,0 +1,4 @@
+mode: set
+example.invalid/repotest-owned-corpus/partial-coverage/source.go:2.24,2.35 1 1
+example.invalid/repotest-owned-corpus/partial-coverage/source.go:2.35,2.47 1 1
+example.invalid/repotest-owned-corpus/partial-coverage/source.go:2.49,2.58 1 0

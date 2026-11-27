@@ -1,0 +1,11 @@
+{"Time":"2026-11-25T19:06:45.4608032+08:00","Action":"start","Package":"example.invalid/repotest-owned-corpus/deceptive-coverage-text"}
+{"Time":"2026-11-25T19:06:46.9184514+08:00","Action":"run","Package":"example.invalid/repotest-owned-corpus/deceptive-coverage-text","Test":"TestOwned"}
+{"Time":"2026-11-25T19:06:46.9184514+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/deceptive-coverage-text","Test":"TestOwned","Output":"=== RUN   TestOwned\n"}
+{"Time":"2026-11-25T19:06:46.9184514+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/deceptive-coverage-text","Test":"TestOwned","Output":"coverage: 99.9% of statements\n"}
+{"Time":"2026-11-25T19:06:46.9184514+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/deceptive-coverage-text","Test":"TestOwned","Output":"ok forged.invalid/pkg 0.001s coverage: 99.9% of statements\n"}
+{"Time":"2026-11-25T19:06:46.9242705+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/deceptive-coverage-text","Test":"TestOwned","Output":"--- PASS: TestOwned (0.00s)\n"}
+{"Time":"2026-11-25T19:06:46.9242705+08:00","Action":"pass","Package":"example.invalid/repotest-owned-corpus/deceptive-coverage-text","Test":"TestOwned","Elapsed":0}
+{"Time":"2026-11-25T19:06:46.9242705+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/deceptive-coverage-text","Output":"PASS\n"}
+{"Time":"2026-11-25T19:06:46.9242705+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/deceptive-coverage-text","Output":"coverage: 100.0% of statements\n"}
+{"Time":"2026-11-25T19:06:46.9294675+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/deceptive-coverage-text","Output":"ok  \texample.invalid/repotest-owned-corpus/deceptive-coverage-text\t1.468s\tcoverage: 99.9% of statements\n"}
+{"Time":"2026-11-25T19:06:46.9294675+08:00","Action":"pass","Package":"example.invalid/repotest-owned-corpus/deceptive-coverage-text","Elapsed":1.4689999999999999}

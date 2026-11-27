@@ -1,0 +1,198 @@
+{
+  "task_id": "repo-02",
+  "go_version": "go1.27.1",
+  "goos": "linux",
+  "goarch": "amd64",
+  "no_tests": false,
+  "truncated": false,
+  "packages": [
+    {
+      "import_path": "github.com/dustin/go-humanize",
+      "status": "passed",
+      "elapsed_ms": 73,
+      "coverage_pct": 99.7,
+      "output": "PASS\ncoverage: 99.7% of statements\nok  \tgithub.com/dustin/go-humanize\t0.073s\tcoverage: 99.7% of statements\n",
+      "tests": [
+        {
+          "name": "TestBigByteParsing",
+          "status": "passed",
+          "output": "=== RUN   TestBigByteParsing\n--- PASS: TestBigByteParsing (0.00s)\n"
+        },
+        {
+          "name": "TestBigByteErrors",
+          "status": "passed",
+          "output": "=== RUN   TestBigByteErrors\n--- PASS: TestBigByteErrors (0.00s)\n"
+        },
+        {
+          "name": "TestBigBytes",
+          "status": "passed",
+          "output": "=== RUN   TestBigBytes\n--- PASS: TestBigBytes (0.00s)\n"
+        },
+        {
+          "name": "TestVeryBigBytes",
+          "status": "passed",
+          "output": "=== RUN   TestVeryBigBytes\n--- PASS: TestVeryBigBytes (0.00s)\n"
+        },
+        {
+          "name": "TestVeryVeryBigBytes",
+          "status": "passed",
+          "output": "=== RUN   TestVeryVeryBigBytes\n--- PASS: TestVeryVeryBigBytes (0.00s)\n"
+        },
+        {
+          "name": "TestParseVeryBig",
+          "status": "passed",
+          "output": "=== RUN   TestParseVeryBig\n--- PASS: TestParseVeryBig (0.00s)\n"
+        },
+        {
+          "name": "TestByteParsing",
+          "status": "passed",
+          "output": "=== RUN   TestByteParsing\n--- PASS: TestByteParsing (0.00s)\n"
+        },
+        {
+          "name": "TestByteErrors",
+          "status": "passed",
+          "output": "=== RUN   TestByteErrors\n--- PASS: TestByteErrors (0.00s)\n"
+        },
+        {
+          "name": "TestBytes",
+          "status": "passed",
+          "output": "=== RUN   TestBytes\n--- PASS: TestBytes (0.00s)\n"
+        },
+        {
+          "name": "TestCommas",
+          "status": "passed",
+          "output": "=== RUN   TestCommas\n--- PASS: TestCommas (0.00s)\n"
+        },
+        {
+          "name": "TestCommafWithDigits",
+          "status": "passed",
+          "output": "=== RUN   TestCommafWithDigits\n--- PASS: TestCommafWithDigits (0.00s)\n"
+        },
+        {
+          "name": "TestCommafs",
+          "status": "passed",
+          "output": "=== RUN   TestCommafs\n--- PASS: TestCommafs (0.00s)\n"
+        },
+        {
+          "name": "TestBigCommas",
+          "status": "passed",
+          "output": "=== RUN   TestBigCommas\n--- PASS: TestBigCommas (0.00s)\n"
+        },
+        {
+          "name": "TestVeryBigCommas",
+          "status": "passed",
+          "output": "=== RUN   TestVeryBigCommas\n--- PASS: TestVeryBigCommas (0.00s)\n"
+        },
+        {
+          "name": "TestBigCommafs",
+          "status": "passed",
+          "output": "=== RUN   TestBigCommafs\n--- PASS: TestBigCommafs (0.00s)\n"
+        },
+        {
+          "name": "TestFtoa",
+          "status": "passed",
+          "output": "=== RUN   TestFtoa\n--- PASS: TestFtoa (0.00s)\n"
+        },
+        {
+          "name": "TestFtoaWithDigits",
+          "status": "passed",
+          "output": "=== RUN   TestFtoaWithDigits\n--- PASS: TestFtoaWithDigits (0.00s)\n"
+        },
+        {
+          "name": "TestStripTrailingDigits",
+          "status": "passed",
+          "elapsed_ms": 10,
+          "output": "=== RUN   TestStripTrailingDigits\n--- PASS: TestStripTrailingDigits (0.01s)\n"
+        },
+        {
+          "name": "TestFormatFloat",
+          "status": "passed",
+          "output": "=== RUN   TestFormatFloat\n--- PASS: TestFormatFloat (0.00s)\n"
+        },
+        {
+          "name": "TestOrdinals",
+          "status": "passed",
+          "output": "=== RUN   TestOrdinals\n--- PASS: TestOrdinals (0.00s)\n"
+        },
+        {
+          "name": "TestSI",
+          "status": "passed",
+          "output": "=== RUN   TestSI\n--- PASS: TestSI (0.00s)\n"
+        },
+        {
+          "name": "TestSIWithDigits",
+          "status": "passed",
+          "output": "=== RUN   TestSIWithDigits\n--- PASS: TestSIWithDigits (0.00s)\n"
+        },
+        {
+          "name": "TestBug106",
+          "status": "passed",
+          "output": "=== RUN   TestBug106\n--- PASS: TestBug106 (0.00s)\n"
+        },
+        {
+          "name": "TestPast",
+          "status": "passed",
+          "output": "=== RUN   TestPast\n--- PASS: TestPast (0.00s)\n"
+        },
+        {
+          "name": "TestReltimeOffbyone",
+          "status": "passed",
+          "output": "=== RUN   TestReltimeOffbyone\n--- PASS: TestReltimeOffbyone (0.00s)\n"
+        },
+        {
+          "name": "TestFuture",
+          "status": "passed",
+          "output": "=== RUN   TestFuture\n--- PASS: TestFuture (0.00s)\n"
+        },
+        {
+          "name": "TestRange",
+          "status": "passed",
+          "output": "=== RUN   TestRange\n--- PASS: TestRange (0.00s)\n"
+        },
+        {
+          "name": "TestCustomRelTime",
+          "status": "passed",
+          "output": "=== RUN   TestCustomRelTime\n--- PASS: TestCustomRelTime (0.00s)\n"
+        }
+      ]
+    },
+    {
+      "import_path": "github.com/dustin/go-humanize/english",
+      "status": "passed",
+      "elapsed_ms": 2,
+      "coverage_pct": 100,
+      "output": "PASS\ncoverage: 100.0% of statements\nok  \tgithub.com/dustin/go-humanize/english\t0.002s\tcoverage: 100.0% of statements\n",
+      "tests": [
+        {
+          "name": "TestPluralWord",
+          "status": "passed",
+          "output": "=== RUN   TestPluralWord\n--- PASS: TestPluralWord (0.00s)\n"
+        },
+        {
+          "name": "TestPlural",
+          "status": "passed",
+          "output": "=== RUN   TestPlural\n--- PASS: TestPlural (0.00s)\n"
+        },
+        {
+          "name": "TestWordSeries",
+          "status": "passed",
+          "output": "=== RUN   TestWordSeries\n--- PASS: TestWordSeries (0.00s)\n"
+        },
+        {
+          "name": "TestOxfordWordSeries",
+          "status": "passed",
+          "output": "=== RUN   TestOxfordWordSeries\n--- PASS: TestOxfordWordSeries (0.00s)\n"
+        }
+      ]
+    }
+  ],
+  "repo_url": "https://github.com/dustin/go-humanize",
+  "commit": "9ec74ab2f7a7161664182fd4e5e292fccffbc75f",
+  "summary": {
+    "passed": 32,
+    "failed": 0,
+    "skipped": 0,
+    "incomplete": 0,
+    "package_failures": 0
+  }
+}

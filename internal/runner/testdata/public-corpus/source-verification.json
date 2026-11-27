@@ -1,0 +1,85 @@
+{
+  "kind": "independent_pinned_github_file_verification",
+  "files": [
+    {
+      "repo_url": "https://github.com/stretchr/testify",
+      "commit": "bb548d0473d4e1c9b7bbfd6602c7bf12f7a84dd2",
+      "path": "suite/suite_test.go",
+      "source_sha256": "0219721ba96ba6a0afca069a9e56a3b203dedf8d24788b855760c2975d6da91d",
+      "git_blob_sha1": "db57a5fd2ded8a2948604f382d37d8d1c578a359",
+      "line_count": 718,
+      "api_url": "https://api.github.com/repos/stretchr/testify/contents/suite/suite_test.go?ref=bb548d0473d4e1c9b7bbfd6602c7bf12f7a84dd2",
+      "verified_at": "2026-11-25T12:45:49.408402+00:00",
+      "checked_lines": [
+        {
+          "line": 42,
+          "source_text": "\tr.Equal(1, 2)"
+        },
+        {
+          "line": 47,
+          "source_text": "\tr.Equal(1, 2)"
+        },
+        {
+          "line": 63,
+          "source_text": "\t\tpanic(\"oops in setup suite\")"
+        },
+        {
+          "line": 69,
+          "source_text": "\t\tpanic(\"oops in setup test\")"
+        },
+        {
+          "line": 75,
+          "source_text": "\t\tpanic(\"oops in before test\")"
+        },
+        {
+          "line": 81,
+          "source_text": "\t\tpanic(\"oops in test\")"
+        },
+        {
+          "line": 87,
+          "source_text": "\t\tpanic(\"oops in after test\")"
+        },
+        {
+          "line": 93,
+          "source_text": "\t\tpanic(\"oops in tear down test\")"
+        },
+        {
+          "line": 99,
+          "source_text": "\t\tpanic(\"oops in tear down suite\")"
+        },
+        {
+          "line": 549,
+          "source_text": "\tpanic(\"oops\")"
+        },
+        {
+          "line": 620,
+          "source_text": "\tt.Log(\"Running go test -v -race -run TestFailfastSuite -failfast\")"
+        },
+        {
+          "line": 645,
+          "source_text": "\ts.T().Error(\"Test A meant to fail\")"
+        },
+        {
+          "line": 674,
+          "source_text": "\t\tpanic(\"panic\")"
+        }
+      ]
+    },
+    {
+      "repo_url": "https://github.com/tidwall/gjson",
+      "commit": "bbf40bb0e4f47860677c7115b2eaa5b3413ce23e",
+      "path": "gjson_test.go",
+      "source_sha256": "aac5253811b8ec80d25af8ff5c314dde299fcd8a5dbdb424a52ac213af97c99a",
+      "git_blob_sha1": "61c21f92e0d7856c5f47313c43c9307eccc61fe7",
+      "line_count": 2721,
+      "api_url": "https://api.github.com/repos/tidwall/gjson/contents/gjson_test.go?ref=bbf40bb0e4f47860677c7115b2eaa5b3413ce23e",
+      "verified_at": "2026-11-25T12:45:48.438789+00:00",
+      "checked_lines": [
+        {
+          "line": 2560,
+          "source_text": "\t\tt.Fatal(strconv.Quote(str) + \"\\n\\t\" +"
+        }
+      ]
+    }
+  ]
+}

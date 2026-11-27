@@ -29,6 +29,8 @@ type API struct {
 	GoVersion     string
 	RunnerVersion string
 	RunnerConfig  []byte
+	Captcha       CaptchaVerifier
+	PublicOrigins []string
 }
 type Preview struct {
 	RepoURL       string     `json:"repo_url"`
@@ -180,6 +182,10 @@ type previewConfirmationStore interface {
 	ConfirmPreview(context.Context, []byte, domain.Task, ExecutionIdentity, time.Time, time.Duration) (domain.Task, bool, error)
 }
 
+type publicPreviewConfirmationStore interface {
+	ConfirmPreviewWithToken(context.Context, []byte, domain.Task, ExecutionIdentity, []byte, time.Time, time.Duration) (domain.Task, bool, error)
+}
+
 type confirmRequest struct {
 	PreviewID string `json:"preview_id"`
 }
@@ -246,6 +252,26 @@ func (a API) report(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 	_, _ = w.Write(body)
 }
+
+func (a API) log(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Cache-Control", "no-store")
+	w.Header().Set("X-Content-Type-Options", "nosniff")
+	store, ok := a.Store.(interface {
+		GetLog(context.Context, string) ([]byte, error)
+	})
+	if !ok {
+		writeError(w, http.StatusServiceUnavailable, "storage_unavailable")
+		return
+	}
+	body, err := store.GetLog(r.Context(), r.PathValue("id"))
+	if err != nil {
+		writeError(w, http.StatusNotFound, "log_not_found")
+		return
+	}
+	w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+	_, _ = w.Write(body)
+}
+
 func resolveRef(ctx context.Context, c *http.Client, owner, name, kind, value string) (string, error) {
 	base := "https://api.github.com/repos/" + url.PathEscape(owner) + "/" + url.PathEscape(name)
 	var ref struct {

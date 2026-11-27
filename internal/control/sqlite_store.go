@@ -31,7 +31,7 @@ func OpenSQLiteStore(path string) (*SQLiteStore, error) {
 		return nil, e
 	}
 	db.SetMaxOpenConns(1)
-	for _, q := range []string{"PRAGMA journal_mode=WAL", "PRAGMA foreign_keys=ON", "CREATE TABLE IF NOT EXISTS tasks(id TEXT PRIMARY KEY,status TEXT NOT NULL,task_json BLOB NOT NULL,created_at INTEGER NOT NULL,finished_at INTEGER,work_key TEXT)", "CREATE INDEX IF NOT EXISTS tasks_status_created ON tasks(status,created_at)", "CREATE TABLE IF NOT EXISTS sessions(token_hash BLOB PRIMARY KEY,expires_at INTEGER NOT NULL,revoked INTEGER NOT NULL DEFAULT 0)", "CREATE TABLE IF NOT EXISTS previews(token_hash BLOB PRIMARY KEY,repo_url TEXT NOT NULL,ref TEXT NOT NULL,commit_sha TEXT NOT NULL,expires_at INTEGER NOT NULL)", "CREATE TABLE IF NOT EXISTS confirmed_previews(token_hash BLOB PRIMARY KEY,task_id TEXT NOT NULL REFERENCES tasks(id) ON DELETE CASCADE,expires_at INTEGER NOT NULL)", "CREATE TABLE IF NOT EXISTS reports(task_id TEXT PRIMARY KEY REFERENCES tasks(id) ON DELETE CASCADE,body BLOB NOT NULL)", "CREATE TABLE IF NOT EXISTS logs(task_id TEXT PRIMARY KEY REFERENCES tasks(id) ON DELETE CASCADE,body BLOB NOT NULL)"} {
+	for _, q := range []string{"PRAGMA journal_mode=WAL", "PRAGMA foreign_keys=ON", "CREATE TABLE IF NOT EXISTS tasks(id TEXT PRIMARY KEY,status TEXT NOT NULL,task_json BLOB NOT NULL,created_at INTEGER NOT NULL,finished_at INTEGER,work_key TEXT)", "CREATE INDEX IF NOT EXISTS tasks_status_created ON tasks(status,created_at)", "CREATE TABLE IF NOT EXISTS sessions(token_hash BLOB PRIMARY KEY,expires_at INTEGER NOT NULL,revoked INTEGER NOT NULL DEFAULT 0)", "CREATE TABLE IF NOT EXISTS previews(token_hash BLOB PRIMARY KEY,repo_url TEXT NOT NULL,ref TEXT NOT NULL,commit_sha TEXT NOT NULL,expires_at INTEGER NOT NULL)", "CREATE TABLE IF NOT EXISTS confirmed_previews(token_hash BLOB PRIMARY KEY,task_id TEXT NOT NULL REFERENCES tasks(id) ON DELETE CASCADE,expires_at INTEGER NOT NULL)", "CREATE TABLE IF NOT EXISTS reports(task_id TEXT PRIMARY KEY REFERENCES tasks(id) ON DELETE CASCADE,body BLOB NOT NULL)", "CREATE TABLE IF NOT EXISTS logs(task_id TEXT PRIMARY KEY REFERENCES tasks(id) ON DELETE CASCADE,body BLOB NOT NULL)", "CREATE TABLE IF NOT EXISTS task_tokens(task_id TEXT PRIMARY KEY REFERENCES tasks(id) ON DELETE CASCADE,token_hash BLOB NOT NULL)"} {
 		if _, e = db.Exec(q); e != nil {
 			db.Close()
 			return nil, e
@@ -380,6 +380,23 @@ func (s *SQLiteStore) DeleteExpired(c context.Context, before time.Time, limit i
 	}
 	return res.RowsAffected()
 }
+
+func (s *SQLiteStore) StoreTaskToken(ctx context.Context, taskID string, hash []byte) error {
+	if taskID == "" || len(hash) != sha256.Size {
+		return errors.New("invalid task token")
+	}
+	_, err := s.db.ExecContext(ctx, "INSERT INTO task_tokens(task_id,token_hash) VALUES(?,?) ON CONFLICT(task_id) DO UPDATE SET token_hash=excluded.token_hash", taskID, hash)
+	return err
+}
+
+func (s *SQLiteStore) GetTaskTokenHash(ctx context.Context, taskID string) ([]byte, error) {
+	var hash []byte
+	err := s.db.QueryRowContext(ctx, "SELECT token_hash FROM task_tokens WHERE task_id=?", taskID).Scan(&hash)
+	if errors.Is(err, sql.ErrNoRows) {
+		return nil, ErrNotFound
+	}
+	return hash, err
+}
 func (s *SQLiteStore) PutReport(c context.Context, id string, b []byte) error {
 	_, e := s.db.ExecContext(c, "INSERT INTO reports(task_id,body) VALUES(?,?) ON CONFLICT(task_id) DO UPDATE SET body=excluded.body", id, b)
 	return e
@@ -461,6 +478,7 @@ func (s *SQLiteStore) CreateIdempotent(ctx context.Context, task domain.Task, id
 	if err != nil || identityErr != nil || repo != identityRepo || strings.ToLower(task.Commit) != strings.ToLower(identity.commitSHA) {
 		return domain.Task{}, false, errors.New("task does not match execution identity")
 	}
+	task.ExecutionIdentity = &domain.ExecutionIdentity{RepoURL: identity.repoURL, CommitSHA: strings.ToLower(identity.commitSHA), GoVersion: identity.goVersion, RunnerVersion: identity.runnerVersion, ConfigDigest: ConfigurationDigest(identity.config)}
 	return s.createIdempotent(ctx, task, key, now, window)
 }
 
@@ -545,6 +563,17 @@ func (s *SQLiteStore) StorePreview(ctx context.Context, tokenHash []byte, previe
 }
 
 func (s *SQLiteStore) ConfirmPreview(ctx context.Context, tokenHash []byte, task domain.Task, identity ExecutionIdentity, now time.Time, window time.Duration) (domain.Task, bool, error) {
+	return s.confirmPreview(ctx, tokenHash, task, identity, nil, now, window)
+}
+
+func (s *SQLiteStore) ConfirmPreviewWithToken(ctx context.Context, tokenHash []byte, task domain.Task, identity ExecutionIdentity, controlHash []byte, now time.Time, window time.Duration) (domain.Task, bool, error) {
+	if len(controlHash) != sha256.Size {
+		return domain.Task{}, false, errors.New("invalid task token")
+	}
+	return s.confirmPreview(ctx, tokenHash, task, identity, controlHash, now, window)
+}
+
+func (s *SQLiteStore) confirmPreview(ctx context.Context, tokenHash []byte, task domain.Task, identity ExecutionIdentity, controlHash []byte, now time.Time, window time.Duration) (domain.Task, bool, error) {
 	if len(tokenHash) != sha256.Size || task.ID == "" || task.Status != domain.StatusQueued || strings.TrimSpace(identity.goVersion) == "" || strings.TrimSpace(identity.runnerVersion) == "" {
 		return domain.Task{}, false, ErrPreviewInvalid
 	}
@@ -609,6 +638,7 @@ func (s *SQLiteStore) ConfirmPreview(ctx context.Context, tokenHash []byte, task
 	if task.CreatedAt.IsZero() {
 		task.CreatedAt = now.UTC()
 	}
+	task.ExecutionIdentity = &domain.ExecutionIdentity{RepoURL: identity.repoURL, CommitSHA: strings.ToLower(identity.commitSHA), GoVersion: identity.goVersion, RunnerVersion: identity.runnerVersion, ConfigDigest: ConfigurationDigest(identity.config)}
 	if _, err = tx.ExecContext(ctx, "DELETE FROM previews WHERE token_hash=?", tokenHash); err != nil {
 		return domain.Task{}, false, err
 	}
@@ -618,6 +648,11 @@ func (s *SQLiteStore) ConfirmPreview(ctx context.Context, tokenHash []byte, task
 	}
 	if _, err = tx.ExecContext(ctx, "INSERT INTO confirmed_previews(token_hash,task_id,expires_at) VALUES(?,?,?)", tokenHash, result.ID, now.Add(10*time.Minute).Unix()); err != nil {
 		return domain.Task{}, false, err
+	}
+	if !reused && len(controlHash) == sha256.Size {
+		if _, err = tx.ExecContext(ctx, "INSERT INTO task_tokens(task_id,token_hash) VALUES(?,?)", result.ID, controlHash); err != nil {
+			return domain.Task{}, false, err
+		}
 	}
 	if err = tx.Commit(); err != nil {
 		return domain.Task{}, false, err

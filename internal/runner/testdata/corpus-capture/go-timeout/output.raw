@@ -1,0 +1,40 @@
+{"Time":"2026-11-25T19:06:55.5924909+08:00","Action":"start","Package":"example.invalid/repotest-owned-corpus/go-timeout"}
+{"Time":"2026-11-25T19:06:56.5418477+08:00","Action":"run","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned"}
+{"Time":"2026-11-25T19:06:56.5418477+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"=== RUN   TestOwned\n"}
+{"Time":"2026-11-25T19:06:56.5418477+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"    owned_test.go:6: owned bounded sleep\n"}
+{"Time":"2026-11-25T19:06:56.5750141+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"coverage: 0.0% of statements\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"panic: test timed out after 30ms\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"\trunning tests:\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"\t\tTestOwned (0s)\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"goroutine 7 [running]:\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"testing.(*M).startAlarm.func1()\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"\tD:/Golang/src/testing/testing.go:2802 +0x354\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"created by time.goFunc\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"\tD:/Golang/src/time/sleep.go:215 +0x2d\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"goroutine 1 [chan receive]:\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"testing.(*T).Run(0x39da4ed5a200, {0x7ff609d3491b?, 0x7ff609cab12e?}, 0x7ff609d44dd8)\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"\tD:/Golang/src/testing/testing.go:2109 +0x4c7\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"testing.runTests.func1(0x39da4ed5a200)\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"\tD:/Golang/src/testing/testing.go:2585 +0x3e\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"testing.tRunner(0x39da4ed5a200, 0x39da4edd9c58)\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"\tD:/Golang/src/testing/testing.go:2036 +0xc3\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"testing.runTests({0x7ff609d41ff3, 0x30}, {0x7ff609d41ff3, 0x30}, 0x39da4ed62258, {0x7ff609eb2a80, 0x1, 0x1}, {0xc2b9ce342215b414, 0x1dcd77d, ...})\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"\tD:/Golang/src/testing/testing.go:2583 +0x4f0\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"testing.(*M).Run(0x39da4edf46e0)\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"\tD:/Golang/src/testing/testing.go:2443 +0x6ac\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"main.main()\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"\t_testmain.go:56 +0x9b\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"goroutine 6 [sleep]:\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"time.Sleep(0x8f0d180)\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"\tD:/Golang/src/runtime/time.go:363 +0x167\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"example.invalid/repotest-owned-corpus/go-timeout.TestOwned(0x39da4ed5a400?)\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"\tF:/repotext/work/public-report-s1/corpus-source/go-timeout/owned_test.go:6 +0x45\n"}
+{"Time":"2026-11-25T19:06:56.5806194+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"testing.tRunner(0x39da4ed5a400, 0x7ff609d44dd8)\n"}
+{"Time":"2026-11-25T19:06:56.5811233+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"\tD:/Golang/src/testing/testing.go:2036 +0xc3\n"}
+{"Time":"2026-11-25T19:06:56.5811233+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"created by testing.(*T).Run in goroutine 1\n"}
+{"Time":"2026-11-25T19:06:56.5811233+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Test":"TestOwned","Output":"\tD:/Golang/src/testing/testing.go:2101 +0x4a9\n"}
+{"Time":"2026-11-25T19:06:56.5821295+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/go-timeout","Output":"FAIL\texample.invalid/repotest-owned-corpus/go-timeout\t0.989s\n"}
+{"Time":"2026-11-25T19:06:56.5821295+08:00","Action":"fail","Package":"example.invalid/repotest-owned-corpus/go-timeout","Elapsed":0.99}

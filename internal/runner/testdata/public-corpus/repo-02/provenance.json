@@ -1,0 +1,19 @@
+{
+  "commit": "9ec74ab2f7a7161664182fd4e5e292fccffbc75f",
+  "error": "",
+  "exit_code": 0,
+  "fault_injection": false,
+  "finished_at": "2026-11-25T12:27:38.556456297Z",
+  "phases": [
+    "clone",
+    "deps",
+    "test"
+  ],
+  "raw_sha256": "4e6283e4bf20b5fafc5e93ca456bbc76d286875807d2df5a4516ba5d58baeff1",
+  "raw_truncated": false,
+  "repo_url": "https://github.com/dustin/go-humanize",
+  "report_sha256": "e79a496058638c6f305fa71c9a7d441c4bbef778c3f2bef813de035c155cac52",
+  "source_modified": false,
+  "started_at": "2026-11-25T12:27:20.952359546Z",
+  "timed_out": false
+}

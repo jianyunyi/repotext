@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="description" content="{{.Description}}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{.Title}}">
+<meta property="og:description" content="{{.Description}}">
+<title>{{.Title}}</title>
+<link rel="stylesheet" href="/assets/report.css">
+<link rel="stylesheet" href="/assets/public.css">
+{{if and (not .Expired) (not .Unavailable)}}
+<script defer src="/assets/report.js"></script>
+<script defer src="/assets/public.js"></script>
+{{end}}
+</head>
+<body>
+<div class="public-shell">
+<header class="public-header"><span class="public-brand">RepoTest</span><span class="public-mode">共享报告</span></header>
+<main>
+{{if .Expired}}
+<section class="public-expired" role="status"><h1>报告已过期</h1><p>此报告已超过 7 天保留期，数据已清除。新的公开提交尚未开放。</p></section>
+{{else if .Unavailable}}
+<section class="public-expired" role="status"><h1>报告暂不可用</h1><p>{{.UnavailableMessage}}</p></section>
+{{else}}
+<section class="public-heading"><h1>{{.RepoName}}</h1><p id="public-status" aria-live="polite" role="status">正在读取报告…</p></section>
+<div id="public-report" class="public-report" data-task-id="{{.TaskID}}"><div id="report-mount" aria-live="polite"></div></div>
+{{end}}
+</main>
+<footer class="public-footer"><span>RepoTest</span><span>测试结果来自仓库代码，不构成真实性证明。</span></footer>
+</div>
+</body>
+</html>

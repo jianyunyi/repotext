@@ -1,0 +1,1902 @@
+{
+  "task_id": "repo-03",
+  "go_version": "go1.27.1",
+  "goos": "linux",
+  "goarch": "amd64",
+  "no_tests": false,
+  "truncated": false,
+  "packages": [
+    {
+      "import_path": "github.com/gorilla/mux",
+      "status": "passed",
+      "elapsed_ms": 15,
+      "coverage_pct": 88,
+      "output": "PASS\ncoverage: 88.0% of statements\nok  \tgithub.com/gorilla/mux\t0.015s\tcoverage: 88.0% of statements\n",
+      "tests": [
+        {
+          "name": "TestMiddlewareAdd",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareAdd\n--- PASS: TestMiddlewareAdd (0.00s)\n"
+        },
+        {
+          "name": "TestMiddleware",
+          "status": "passed",
+          "output": "=== RUN   TestMiddleware\n--- PASS: TestMiddleware (0.00s)\n"
+        },
+        {
+          "name": "TestMiddleware/regular_middleware_call",
+          "parent": "TestMiddleware",
+          "status": "passed",
+          "output": "=== RUN   TestMiddleware/regular_middleware_call\n--- PASS: TestMiddleware/regular_middleware_call (0.00s)\n"
+        },
+        {
+          "name": "TestMiddleware/not_called_for_404",
+          "parent": "TestMiddleware",
+          "status": "passed",
+          "output": "=== RUN   TestMiddleware/not_called_for_404\n--- PASS: TestMiddleware/not_called_for_404 (0.00s)\n"
+        },
+        {
+          "name": "TestMiddleware/not_called_for_method_mismatch",
+          "parent": "TestMiddleware",
+          "status": "passed",
+          "output": "=== RUN   TestMiddleware/not_called_for_method_mismatch\n--- PASS: TestMiddleware/not_called_for_method_mismatch (0.00s)\n"
+        },
+        {
+          "name": "TestMiddleware/regular_call_using_function_middleware",
+          "parent": "TestMiddleware",
+          "status": "passed",
+          "output": "=== RUN   TestMiddleware/regular_call_using_function_middleware\n--- PASS: TestMiddleware/regular_call_using_function_middleware (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareSubrouter",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareSubrouter\n--- PASS: TestMiddlewareSubrouter (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareSubrouter/not_called_for_route_outside_subrouter",
+          "parent": "TestMiddlewareSubrouter",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareSubrouter/not_called_for_route_outside_subrouter\n--- PASS: TestMiddlewareSubrouter/not_called_for_route_outside_subrouter (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareSubrouter/not_called_for_subrouter_root_404",
+          "parent": "TestMiddlewareSubrouter",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareSubrouter/not_called_for_subrouter_root_404\n--- PASS: TestMiddlewareSubrouter/not_called_for_subrouter_root_404 (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareSubrouter/called_once_for_route_inside_subrouter",
+          "parent": "TestMiddlewareSubrouter",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareSubrouter/called_once_for_route_inside_subrouter\n--- PASS: TestMiddlewareSubrouter/called_once_for_route_inside_subrouter (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareSubrouter/not_called_for_404_inside_subrouter",
+          "parent": "TestMiddlewareSubrouter",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareSubrouter/not_called_for_404_inside_subrouter\n--- PASS: TestMiddlewareSubrouter/not_called_for_404_inside_subrouter (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareSubrouter/middleware_added_to_router",
+          "parent": "TestMiddlewareSubrouter",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareSubrouter/middleware_added_to_router\n--- PASS: TestMiddlewareSubrouter/middleware_added_to_router (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareSubrouter/middleware_added_to_router/called_once_for_route_outside_subrouter",
+          "parent": "TestMiddlewareSubrouter/middleware_added_to_router",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareSubrouter/middleware_added_to_router/called_once_for_route_outside_subrouter\n--- PASS: TestMiddlewareSubrouter/middleware_added_to_router/called_once_for_route_outside_subrouter (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareSubrouter/middleware_added_to_router/called_twice_for_route_inside_subrouter",
+          "parent": "TestMiddlewareSubrouter/middleware_added_to_router",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareSubrouter/middleware_added_to_router/called_twice_for_route_inside_subrouter\n--- PASS: TestMiddlewareSubrouter/middleware_added_to_router/called_twice_for_route_inside_subrouter (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareExecution",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareExecution\n--- PASS: TestMiddlewareExecution (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareExecution/responds_normally_without_middleware",
+          "parent": "TestMiddlewareExecution",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareExecution/responds_normally_without_middleware\n--- PASS: TestMiddlewareExecution/responds_normally_without_middleware (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareExecution/responds_with_handler_and_middleware_response",
+          "parent": "TestMiddlewareExecution",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareExecution/responds_with_handler_and_middleware_response\n--- PASS: TestMiddlewareExecution/responds_with_handler_and_middleware_response (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareNotFound",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareNotFound\n--- PASS: TestMiddlewareNotFound (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareNotFound/not_called",
+          "parent": "TestMiddlewareNotFound",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareNotFound/not_called\n--- PASS: TestMiddlewareNotFound/not_called (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareNotFound/not_called_with_custom_not_found_handler",
+          "parent": "TestMiddlewareNotFound",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareNotFound/not_called_with_custom_not_found_handler\n--- PASS: TestMiddlewareNotFound/not_called_with_custom_not_found_handler (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareMethodMismatch",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareMethodMismatch\n--- PASS: TestMiddlewareMethodMismatch (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareMethodMismatch/not_called",
+          "parent": "TestMiddlewareMethodMismatch",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareMethodMismatch/not_called\n--- PASS: TestMiddlewareMethodMismatch/not_called (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareMethodMismatch/not_called_with_custom_method_not_allowed_handler",
+          "parent": "TestMiddlewareMethodMismatch",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareMethodMismatch/not_called_with_custom_method_not_allowed_handler\n--- PASS: TestMiddlewareMethodMismatch/not_called_with_custom_method_not_allowed_handler (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareNotFoundSubrouter",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareNotFoundSubrouter\n--- PASS: TestMiddlewareNotFoundSubrouter (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareNotFoundSubrouter/not_called",
+          "parent": "TestMiddlewareNotFoundSubrouter",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareNotFoundSubrouter/not_called\n--- PASS: TestMiddlewareNotFoundSubrouter/not_called (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareNotFoundSubrouter/not_called_with_custom_not_found_handler",
+          "parent": "TestMiddlewareNotFoundSubrouter",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareNotFoundSubrouter/not_called_with_custom_not_found_handler\n--- PASS: TestMiddlewareNotFoundSubrouter/not_called_with_custom_not_found_handler (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareMethodMismatchSubrouter",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareMethodMismatchSubrouter\n--- PASS: TestMiddlewareMethodMismatchSubrouter (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareMethodMismatchSubrouter/not_called",
+          "parent": "TestMiddlewareMethodMismatchSubrouter",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareMethodMismatchSubrouter/not_called\n--- PASS: TestMiddlewareMethodMismatchSubrouter/not_called (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareMethodMismatchSubrouter/not_called_with_custom_method_not_allowed_handler",
+          "parent": "TestMiddlewareMethodMismatchSubrouter",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareMethodMismatchSubrouter/not_called_with_custom_method_not_allowed_handler\n--- PASS: TestMiddlewareMethodMismatchSubrouter/not_called_with_custom_method_not_allowed_handler (0.00s)\n"
+        },
+        {
+          "name": "TestCORSMethodMiddleware",
+          "status": "passed",
+          "output": "=== RUN   TestCORSMethodMiddleware\n--- PASS: TestCORSMethodMiddleware (0.00s)\n"
+        },
+        {
+          "name": "TestCORSMethodMiddleware/does_not_set_without_OPTIONS_matcher",
+          "parent": "TestCORSMethodMiddleware",
+          "status": "passed",
+          "output": "=== RUN   TestCORSMethodMiddleware/does_not_set_without_OPTIONS_matcher\n--- PASS: TestCORSMethodMiddleware/does_not_set_without_OPTIONS_matcher (0.00s)\n"
+        },
+        {
+          "name": "TestCORSMethodMiddleware/sets_on_non_OPTIONS",
+          "parent": "TestCORSMethodMiddleware",
+          "status": "passed",
+          "output": "=== RUN   TestCORSMethodMiddleware/sets_on_non_OPTIONS\n--- PASS: TestCORSMethodMiddleware/sets_on_non_OPTIONS (0.00s)\n"
+        },
+        {
+          "name": "TestCORSMethodMiddleware/sets_without_preflight_headers",
+          "parent": "TestCORSMethodMiddleware",
+          "status": "passed",
+          "output": "=== RUN   TestCORSMethodMiddleware/sets_without_preflight_headers\n--- PASS: TestCORSMethodMiddleware/sets_without_preflight_headers (0.00s)\n"
+        },
+        {
+          "name": "TestCORSMethodMiddleware/does_not_set_on_error",
+          "parent": "TestCORSMethodMiddleware",
+          "status": "passed",
+          "output": "=== RUN   TestCORSMethodMiddleware/does_not_set_on_error\n--- PASS: TestCORSMethodMiddleware/does_not_set_on_error (0.00s)\n"
+        },
+        {
+          "name": "TestCORSMethodMiddleware/sets_header_on_valid_preflight",
+          "parent": "TestCORSMethodMiddleware",
+          "status": "passed",
+          "output": "=== RUN   TestCORSMethodMiddleware/sets_header_on_valid_preflight\n--- PASS: TestCORSMethodMiddleware/sets_header_on_valid_preflight (0.00s)\n"
+        },
+        {
+          "name": "TestCORSMethodMiddleware/does_not_set_methods_from_unmatching_routes",
+          "parent": "TestCORSMethodMiddleware",
+          "status": "passed",
+          "output": "=== RUN   TestCORSMethodMiddleware/does_not_set_methods_from_unmatching_routes\n--- PASS: TestCORSMethodMiddleware/does_not_set_methods_from_unmatching_routes (0.00s)\n"
+        },
+        {
+          "name": "TestCORSMethodMiddlewareSubrouter",
+          "status": "passed",
+          "output": "=== RUN   TestCORSMethodMiddlewareSubrouter\n--- PASS: TestCORSMethodMiddlewareSubrouter (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareOnMultiSubrouter",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareOnMultiSubrouter\n--- PASS: TestMiddlewareOnMultiSubrouter (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareOnMultiSubrouter//first_uses_first_middleware",
+          "parent": "TestMiddlewareOnMultiSubrouter/",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareOnMultiSubrouter//first_uses_first_middleware\n--- PASS: TestMiddlewareOnMultiSubrouter//first_uses_first_middleware (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareOnMultiSubrouter//second_uses_second_middleware",
+          "parent": "TestMiddlewareOnMultiSubrouter/",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareOnMultiSubrouter//second_uses_second_middleware\n--- PASS: TestMiddlewareOnMultiSubrouter//second_uses_second_middleware (0.00s)\n"
+        },
+        {
+          "name": "TestMiddlewareOnMultiSubrouter/uses_not_found_handler",
+          "parent": "TestMiddlewareOnMultiSubrouter",
+          "status": "passed",
+          "output": "=== RUN   TestMiddlewareOnMultiSubrouter/uses_not_found_handler\n--- PASS: TestMiddlewareOnMultiSubrouter/uses_not_found_handler (0.00s)\n"
+        },
+        {
+          "name": "TestSchemeMatchers",
+          "status": "passed",
+          "output": "=== RUN   TestSchemeMatchers\n--- PASS: TestSchemeMatchers (0.00s)\n"
+        },
+        {
+          "name": "TestSchemeMatchers/httpServer",
+          "parent": "TestSchemeMatchers",
+          "status": "passed",
+          "output": "=== RUN   TestSchemeMatchers/httpServer\n--- PASS: TestSchemeMatchers/httpServer (0.00s)\n"
+        },
+        {
+          "name": "TestSchemeMatchers/httpsServer",
+          "parent": "TestSchemeMatchers",
+          "status": "passed",
+          "output": "=== RUN   TestSchemeMatchers/httpsServer\n--- PASS: TestSchemeMatchers/httpsServer (0.00s)\n"
+        },
+        {
+          "name": "TestHost",
+          "status": "passed",
+          "output": "=== RUN   TestHost\n--- PASS: TestHost (0.00s)\n"
+        },
+        {
+          "name": "TestHost/Host_route_match",
+          "parent": "TestHost",
+          "status": "passed",
+          "output": "=== RUN   TestHost/Host_route_match\n--- PASS: TestHost/Host_route_match (0.00s)\n"
+        },
+        {
+          "name": "TestHost/Host_route,_wrong_host_in_request_URL",
+          "parent": "TestHost",
+          "status": "passed",
+          "output": "=== RUN   TestHost/Host_route,_wrong_host_in_request_URL\n--- PASS: TestHost/Host_route,_wrong_host_in_request_URL (0.00s)\n"
+        },
+        {
+          "name": "TestHost/Host_route_with_port,_match",
+          "parent": "TestHost",
+          "status": "passed",
+          "output": "=== RUN   TestHost/Host_route_with_port,_match\n--- PASS: TestHost/Host_route_with_port,_match (0.00s)\n"
+        },
+        {
+          "name": "TestHost/Host_route_with_port,_wrong_port_in_request_URL",
+          "parent": "TestHost",
+          "status": "passed",
+          "output": "=== RUN   TestHost/Host_route_with_port,_wrong_port_in_request_URL\n--- PASS: TestHost/Host_route_with_port,_wrong_port_in_request_URL (0.00s)\n"
+        },
+        {
+          "name": "TestHost/Host_route,_match_with_host_in_request_header",
+          "parent": "TestHost",
+          "status": "passed",
+          "output": "=== RUN   TestHost/Host_route,_match_with_host_in_request_header\n--- PASS: TestHost/Host_route,_match_with_host_in_request_header (0.00s)\n"
+        },
+        {
+          "name": "TestHost/Host_route,_wrong_host_in_request_header",
+          "parent": "TestHost",
+          "status": "passed",
+          "output": "=== RUN   TestHost/Host_route,_wrong_host_in_request_header\n--- PASS: TestHost/Host_route,_wrong_host_in_request_header (0.00s)\n"
+        },
+        {
+          "name": "TestHost/Host_route_with_port,_match_with_request_header",
+          "parent": "TestHost",
+          "status": "passed",
+          "output": "=== RUN   TestHost/Host_route_with_port,_match_with_request_header\n--- PASS: TestHost/Host_route_with_port,_match_with_request_header (0.00s)\n"
+        },
+        {
+          "name": "TestHost/Host_route_with_port,_wrong_host_in_request_header",
+          "parent": "TestHost",
+          "status": "passed",
+          "output": "=== RUN   TestHost/Host_route_with_port,_wrong_host_in_request_header\n--- PASS: TestHost/Host_route_with_port,_wrong_host_in_request_header (0.00s)\n"
+        },
+        {
+          "name": "TestHost/Host_route_with_pattern,_match_with_request_header",
+          "parent": "TestHost",
+          "status": "passed",
+          "output": "=== RUN   TestHost/Host_route_with_pattern,_match_with_request_header\n--- PASS: TestHost/Host_route_with_pattern,_match_with_request_header (0.00s)\n"
+        },
+        {
+          "name": "TestHost/Host_route_with_pattern,_match",
+          "parent": "TestHost",
+          "status": "passed",
+          "output": "=== RUN   TestHost/Host_route_with_pattern,_match\n--- PASS: TestHost/Host_route_with_pattern,_match (0.00s)\n"
+        },
+        {
+          "name": "TestHost/Host_route_with_pattern,_additional_capturing_group,_match",
+          "parent": "TestHost",
+          "status": "passed",
+          "output": "=== RUN   TestHost/Host_route_with_pattern,_additional_capturing_group,_match\n--- PASS: TestHost/Host_route_with_pattern,_additional_capturing_group,_match (0.00s)\n"
+        },
+        {
+          "name": "TestHost/Host_route_with_pattern,_wrong_host_in_request_URL",
+          "parent": "TestHost",
+          "status": "passed",
+          "output": "=== RUN   TestHost/Host_route_with_pattern,_wrong_host_in_request_URL\n--- PASS: TestHost/Host_route_with_pattern,_wrong_host_in_request_URL (0.00s)\n"
+        },
+        {
+          "name": "TestHost/Host_route_with_multiple_patterns,_match",
+          "parent": "TestHost",
+          "status": "passed",
+          "output": "=== RUN   TestHost/Host_route_with_multiple_patterns,_match\n--- PASS: TestHost/Host_route_with_multiple_patterns,_match (0.00s)\n"
+        },
+        {
+          "name": "TestHost/Host_route_with_multiple_patterns,_wrong_host_in_request_URL",
+          "parent": "TestHost",
+          "status": "passed",
+          "output": "=== RUN   TestHost/Host_route_with_multiple_patterns,_wrong_host_in_request_URL\n--- PASS: TestHost/Host_route_with_multiple_patterns,_wrong_host_in_request_URL (0.00s)\n"
+        },
+        {
+          "name": "TestHost/Host_route_with_hyphenated_name_and_pattern,_match",
+          "parent": "TestHost",
+          "status": "passed",
+          "output": "=== RUN   TestHost/Host_route_with_hyphenated_name_and_pattern,_match\n--- PASS: TestHost/Host_route_with_hyphenated_name_and_pattern,_match (0.00s)\n"
+        },
+        {
+          "name": "TestHost/Host_route_with_hyphenated_name_and_pattern,_additional_capturing_group,_match",
+          "parent": "TestHost",
+          "status": "passed",
+          "output": "=== RUN   TestHost/Host_route_with_hyphenated_name_and_pattern,_additional_capturing_group,_match\n--- PASS: TestHost/Host_route_with_hyphenated_name_and_pattern,_additional_capturing_group,_match (0.00s)\n"
+        },
+        {
+          "name": "TestHost/Host_route_with_multiple_hyphenated_names_and_patterns,_match",
+          "parent": "TestHost",
+          "status": "passed",
+          "output": "=== RUN   TestHost/Host_route_with_multiple_hyphenated_names_and_patterns,_match\n--- PASS: TestHost/Host_route_with_multiple_hyphenated_names_and_patterns,_match (0.00s)\n"
+        },
+        {
+          "name": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath\n--- PASS: TestPath (0.00s)\n"
+        },
+        {
+          "name": "TestPath/Path_route,_match",
+          "parent": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath/Path_route,_match\n--- PASS: TestPath/Path_route,_match (0.00s)\n"
+        },
+        {
+          "name": "TestPath/Path_route,_match_with_trailing_slash_in_request_and_path",
+          "parent": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath/Path_route,_match_with_trailing_slash_in_request_and_path\n--- PASS: TestPath/Path_route,_match_with_trailing_slash_in_request_and_path (0.00s)\n"
+        },
+        {
+          "name": "TestPath/Path_route,_do_not_match_with_trailing_slash_in_path",
+          "parent": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath/Path_route,_do_not_match_with_trailing_slash_in_path\n--- PASS: TestPath/Path_route,_do_not_match_with_trailing_slash_in_path (0.00s)\n"
+        },
+        {
+          "name": "TestPath/Path_route,_do_not_match_with_trailing_slash_in_request",
+          "parent": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath/Path_route,_do_not_match_with_trailing_slash_in_request\n--- PASS: TestPath/Path_route,_do_not_match_with_trailing_slash_in_request (0.00s)\n"
+        },
+        {
+          "name": "TestPath/Path_route,_match_root_with_no_host",
+          "parent": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath/Path_route,_match_root_with_no_host\n--- PASS: TestPath/Path_route,_match_root_with_no_host (0.00s)\n"
+        },
+        {
+          "name": "TestPath/Path_route,_match_root_with_no_host,_App_Engine_format",
+          "parent": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath/Path_route,_match_root_with_no_host,_App_Engine_format\n--- PASS: TestPath/Path_route,_match_root_with_no_host,_App_Engine_format (0.00s)\n"
+        },
+        {
+          "name": "TestPath/Path_route,_wrong_path_in_request_in_request_URL",
+          "parent": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath/Path_route,_wrong_path_in_request_in_request_URL\n--- PASS: TestPath/Path_route,_wrong_path_in_request_in_request_URL (0.00s)\n"
+        },
+        {
+          "name": "TestPath/Path_route_with_pattern,_match",
+          "parent": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath/Path_route_with_pattern,_match\n--- PASS: TestPath/Path_route_with_pattern,_match (0.00s)\n"
+        },
+        {
+          "name": "TestPath/Path_route_with_pattern,_URL_in_request_does_not_match",
+          "parent": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath/Path_route_with_pattern,_URL_in_request_does_not_match\n--- PASS: TestPath/Path_route_with_pattern,_URL_in_request_does_not_match (0.00s)\n"
+        },
+        {
+          "name": "TestPath/Path_route_with_multiple_patterns,_match",
+          "parent": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath/Path_route_with_multiple_patterns,_match\n--- PASS: TestPath/Path_route_with_multiple_patterns,_match (0.00s)\n"
+        },
+        {
+          "name": "TestPath/Path_route_with_multiple_patterns,_URL_in_request_does_not_match",
+          "parent": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath/Path_route_with_multiple_patterns,_URL_in_request_does_not_match\n--- PASS: TestPath/Path_route_with_multiple_patterns,_URL_in_request_does_not_match (0.00s)\n"
+        },
+        {
+          "name": "TestPath/Path_route_with_multiple_patterns_with_pipe,_match",
+          "parent": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath/Path_route_with_multiple_patterns_with_pipe,_match\n--- PASS: TestPath/Path_route_with_multiple_patterns_with_pipe,_match (0.00s)\n"
+        },
+        {
+          "name": "TestPath/Path_route_with_hyphenated_name_and_pattern,_match",
+          "parent": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath/Path_route_with_hyphenated_name_and_pattern,_match\n--- PASS: TestPath/Path_route_with_hyphenated_name_and_pattern,_match (0.00s)\n"
+        },
+        {
+          "name": "TestPath/Path_route_with_multiple_hyphenated_names_and_patterns,_match",
+          "parent": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath/Path_route_with_multiple_hyphenated_names_and_patterns,_match\n--- PASS: TestPath/Path_route_with_multiple_hyphenated_names_and_patterns,_match (0.00s)\n"
+        },
+        {
+          "name": "TestPath/Path_route_with_multiple_hyphenated_names_and_patterns_with_pipe,_match",
+          "parent": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath/Path_route_with_multiple_hyphenated_names_and_patterns_with_pipe,_match\n--- PASS: TestPath/Path_route_with_multiple_hyphenated_names_and_patterns_with_pipe,_match (0.00s)\n"
+        },
+        {
+          "name": "TestPath/Path_route_with_multiple_hyphenated_names_and_patterns_with_pipe_and_case_insensitive,_match",
+          "parent": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath/Path_route_with_multiple_hyphenated_names_and_patterns_with_pipe_and_case_insensitive,_match\n--- PASS: TestPath/Path_route_with_multiple_hyphenated_names_and_patterns_with_pipe_and_case_insensitive,_match (0.00s)\n"
+        },
+        {
+          "name": "TestPath/Path_route_with_empty_match_right_after_other_match",
+          "parent": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath/Path_route_with_empty_match_right_after_other_match\n--- PASS: TestPath/Path_route_with_empty_match_right_after_other_match (0.00s)\n"
+        },
+        {
+          "name": "TestPath/Path_route_with_single_pattern_with_pipe,_match",
+          "parent": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath/Path_route_with_single_pattern_with_pipe,_match\n--- PASS: TestPath/Path_route_with_single_pattern_with_pipe,_match (0.00s)\n"
+        },
+        {
+          "name": "TestPath/Path_route_with_single_pattern_with_pipe,_match#01",
+          "parent": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath/Path_route_with_single_pattern_with_pipe,_match#01\n--- PASS: TestPath/Path_route_with_single_pattern_with_pipe,_match#01 (0.00s)\n"
+        },
+        {
+          "name": "TestPath/Path_route_with_multiple_patterns_with_pipe,_match#01",
+          "parent": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath/Path_route_with_multiple_patterns_with_pipe,_match#01\n--- PASS: TestPath/Path_route_with_multiple_patterns_with_pipe,_match#01 (0.00s)\n"
+        },
+        {
+          "name": "TestPath/Path_route_with_multiple_patterns_with_pipe,_match#02",
+          "parent": "TestPath",
+          "status": "passed",
+          "output": "=== RUN   TestPath/Path_route_with_multiple_patterns_with_pipe,_match#02\n--- PASS: TestPath/Path_route_with_multiple_patterns_with_pipe,_match#02 (0.00s)\n"
+        },
+        {
+          "name": "TestPathPrefix",
+          "status": "passed",
+          "output": "=== RUN   TestPathPrefix\n--- PASS: TestPathPrefix (0.00s)\n"
+        },
+        {
+          "name": "TestPathPrefix/PathPrefix_route,_match",
+          "parent": "TestPathPrefix",
+          "status": "passed",
+          "output": "=== RUN   TestPathPrefix/PathPrefix_route,_match\n--- PASS: TestPathPrefix/PathPrefix_route,_match (0.00s)\n"
+        },
+        {
+          "name": "TestPathPrefix/PathPrefix_route,_match_substring",
+          "parent": "TestPathPrefix",
+          "status": "passed",
+          "output": "=== RUN   TestPathPrefix/PathPrefix_route,_match_substring\n--- PASS: TestPathPrefix/PathPrefix_route,_match_substring (0.00s)\n"
+        },
+        {
+          "name": "TestPathPrefix/PathPrefix_route,_URL_prefix_in_request_does_not_match",
+          "parent": "TestPathPrefix",
+          "status": "passed",
+          "output": "=== RUN   TestPathPrefix/PathPrefix_route,_URL_prefix_in_request_does_not_match\n--- PASS: TestPathPrefix/PathPrefix_route,_URL_prefix_in_request_does_not_match (0.00s)\n"
+        },
+        {
+          "name": "TestPathPrefix/PathPrefix_route_with_pattern,_match",
+          "parent": "TestPathPrefix",
+          "status": "passed",
+          "output": "=== RUN   TestPathPrefix/PathPrefix_route_with_pattern,_match\n--- PASS: TestPathPrefix/PathPrefix_route_with_pattern,_match (0.00s)\n"
+        },
+        {
+          "name": "TestPathPrefix/PathPrefix_route_with_pattern,_URL_prefix_in_request_does_not_match",
+          "parent": "TestPathPrefix",
+          "status": "passed",
+          "output": "=== RUN   TestPathPrefix/PathPrefix_route_with_pattern,_URL_prefix_in_request_does_not_match\n--- PASS: TestPathPrefix/PathPrefix_route_with_pattern,_URL_prefix_in_request_does_not_match (0.00s)\n"
+        },
+        {
+          "name": "TestPathPrefix/PathPrefix_route_with_multiple_patterns,_match",
+          "parent": "TestPathPrefix",
+          "status": "passed",
+          "output": "=== RUN   TestPathPrefix/PathPrefix_route_with_multiple_patterns,_match\n--- PASS: TestPathPrefix/PathPrefix_route_with_multiple_patterns,_match (0.00s)\n"
+        },
+        {
+          "name": "TestPathPrefix/PathPrefix_route_with_multiple_patterns,_URL_prefix_in_request_does_not_match",
+          "parent": "TestPathPrefix",
+          "status": "passed",
+          "output": "=== RUN   TestPathPrefix/PathPrefix_route_with_multiple_patterns,_URL_prefix_in_request_does_not_match\n--- PASS: TestPathPrefix/PathPrefix_route_with_multiple_patterns,_URL_prefix_in_request_does_not_match (0.00s)\n"
+        },
+        {
+          "name": "TestSchemeHostPath",
+          "status": "passed",
+          "output": "=== RUN   TestSchemeHostPath\n--- PASS: TestSchemeHostPath (0.00s)\n"
+        },
+        {
+          "name": "TestSchemeHostPath/Host_and_Path_route,_match",
+          "parent": "TestSchemeHostPath",
+          "status": "passed",
+          "output": "=== RUN   TestSchemeHostPath/Host_and_Path_route,_match\n--- PASS: TestSchemeHostPath/Host_and_Path_route,_match (0.00s)\n"
+        },
+        {
+          "name": "TestSchemeHostPath/Scheme,_Host,_and_Path_route,_match",
+          "parent": "TestSchemeHostPath",
+          "status": "passed",
+          "output": "=== RUN   TestSchemeHostPath/Scheme,_Host,_and_Path_route,_match\n--- PASS: TestSchemeHostPath/Scheme,_Host,_and_Path_route,_match (0.00s)\n"
+        },
+        {
+          "name": "TestSchemeHostPath/Host_and_Path_route,_wrong_host_in_request_URL",
+          "parent": "TestSchemeHostPath",
+          "status": "passed",
+          "output": "=== RUN   TestSchemeHostPath/Host_and_Path_route,_wrong_host_in_request_URL\n--- PASS: TestSchemeHostPath/Host_and_Path_route,_wrong_host_in_request_URL (0.00s)\n"
+        },
+        {
+          "name": "TestSchemeHostPath/Host_and_Path_route_with_pattern,_match",
+          "parent": "TestSchemeHostPath",
+          "status": "passed",
+          "output": "=== RUN   TestSchemeHostPath/Host_and_Path_route_with_pattern,_match\n--- PASS: TestSchemeHostPath/Host_and_Path_route_with_pattern,_match (0.00s)\n"
+        },
+        {
+          "name": "TestSchemeHostPath/Scheme,_Host,_and_Path_route_with_host_and_path_patterns,_match",
+          "parent": "TestSchemeHostPath",
+          "status": "passed",
+          "output": "=== RUN   TestSchemeHostPath/Scheme,_Host,_and_Path_route_with_host_and_path_patterns,_match\n--- PASS: TestSchemeHostPath/Scheme,_Host,_and_Path_route_with_host_and_path_patterns,_match (0.00s)\n"
+        },
+        {
+          "name": "TestSchemeHostPath/Host_and_Path_route_with_pattern,_URL_in_request_does_not_match",
+          "parent": "TestSchemeHostPath",
+          "status": "passed",
+          "output": "=== RUN   TestSchemeHostPath/Host_and_Path_route_with_pattern,_URL_in_request_does_not_match\n--- PASS: TestSchemeHostPath/Host_and_Path_route_with_pattern,_URL_in_request_does_not_match (0.00s)\n"
+        },
+        {
+          "name": "TestSchemeHostPath/Host_and_Path_route_with_multiple_patterns,_match",
+          "parent": "TestSchemeHostPath",
+          "status": "passed",
+          "output": "=== RUN   TestSchemeHostPath/Host_and_Path_route_with_multiple_patterns,_match\n--- PASS: TestSchemeHostPath/Host_and_Path_route_with_multiple_patterns,_match (0.00s)\n"
+        },
+        {
+          "name": "TestSchemeHostPath/Host_and_Path_route_with_multiple_patterns,_URL_in_request_does_not_match",
+          "parent": "TestSchemeHostPath",
+          "status": "passed",
+          "output": "=== RUN   TestSchemeHostPath/Host_and_Path_route_with_multiple_patterns,_URL_in_request_does_not_match\n--- PASS: TestSchemeHostPath/Host_and_Path_route_with_multiple_patterns,_URL_in_request_does_not_match (0.00s)\n"
+        },
+        {
+          "name": "TestHeaders",
+          "status": "passed",
+          "output": "=== RUN   TestHeaders\n--- PASS: TestHeaders (0.00s)\n"
+        },
+        {
+          "name": "TestHeaders/Headers_route,_match",
+          "parent": "TestHeaders",
+          "status": "passed",
+          "output": "=== RUN   TestHeaders/Headers_route,_match\n--- PASS: TestHeaders/Headers_route,_match (0.00s)\n"
+        },
+        {
+          "name": "TestHeaders/Headers_route,_bad_header_values",
+          "parent": "TestHeaders",
+          "status": "passed",
+          "output": "=== RUN   TestHeaders/Headers_route,_bad_header_values\n--- PASS: TestHeaders/Headers_route,_bad_header_values (0.00s)\n"
+        },
+        {
+          "name": "TestHeaders/Headers_route,_regex_header_values_to_match",
+          "parent": "TestHeaders",
+          "status": "passed",
+          "output": "=== RUN   TestHeaders/Headers_route,_regex_header_values_to_match\n--- PASS: TestHeaders/Headers_route,_regex_header_values_to_match (0.00s)\n"
+        },
+        {
+          "name": "TestHeaders/Headers_route,_regex_header_values_to_match#01",
+          "parent": "TestHeaders",
+          "status": "passed",
+          "output": "=== RUN   TestHeaders/Headers_route,_regex_header_values_to_match#01\n--- PASS: TestHeaders/Headers_route,_regex_header_values_to_match#01 (0.00s)\n"
+        },
+        {
+          "name": "TestMethods",
+          "status": "passed",
+          "output": "=== RUN   TestMethods\n--- PASS: TestMethods (0.00s)\n"
+        },
+        {
+          "name": "TestMethods/Methods_route,_match_GET",
+          "parent": "TestMethods",
+          "status": "passed",
+          "output": "=== RUN   TestMethods/Methods_route,_match_GET\n--- PASS: TestMethods/Methods_route,_match_GET (0.00s)\n"
+        },
+        {
+          "name": "TestMethods/Methods_route,_match_POST",
+          "parent": "TestMethods",
+          "status": "passed",
+          "output": "=== RUN   TestMethods/Methods_route,_match_POST\n--- PASS: TestMethods/Methods_route,_match_POST (0.00s)\n"
+        },
+        {
+          "name": "TestMethods/Methods_route,_bad_method",
+          "parent": "TestMethods",
+          "status": "passed",
+          "output": "=== RUN   TestMethods/Methods_route,_bad_method\n--- PASS: TestMethods/Methods_route,_bad_method (0.00s)\n"
+        },
+        {
+          "name": "TestMethods/Route_without_methods",
+          "parent": "TestMethods",
+          "status": "passed",
+          "output": "=== RUN   TestMethods/Route_without_methods\n--- PASS: TestMethods/Route_without_methods (0.00s)\n"
+        },
+        {
+          "name": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries\n--- PASS: TestQueries (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route,_match",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route,_match\n--- PASS: TestQueries/Queries_route,_match (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route,_match_with_a_query_string",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route,_match_with_a_query_string\n--- PASS: TestQueries/Queries_route,_match_with_a_query_string (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route,_match_with_a_query_string_out_of_order",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route,_match_with_a_query_string_out_of_order\n--- PASS: TestQueries/Queries_route,_match_with_a_query_string_out_of_order (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route,_bad_query",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route,_bad_query\n--- PASS: TestQueries/Queries_route,_bad_query (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route_with_pattern,_match",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route_with_pattern,_match\n--- PASS: TestQueries/Queries_route_with_pattern,_match (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route_with_multiple_patterns,_match",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route_with_multiple_patterns,_match\n--- PASS: TestQueries/Queries_route_with_multiple_patterns,_match (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route_with_regexp_pattern,_match",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route_with_regexp_pattern,_match\n--- PASS: TestQueries/Queries_route_with_regexp_pattern,_match (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route_with_regexp_pattern,_regexp_does_not_match",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route_with_regexp_pattern,_regexp_does_not_match\n--- PASS: TestQueries/Queries_route_with_regexp_pattern,_regexp_does_not_match (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route_with_regexp_pattern_with_quantifier,_match",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route_with_regexp_pattern_with_quantifier,_match\n--- PASS: TestQueries/Queries_route_with_regexp_pattern_with_quantifier,_match (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route_with_regexp_pattern_with_quantifier,_additional_variable_in_query_string,_match",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route_with_regexp_pattern_with_quantifier,_additional_variable_in_query_string,_match\n--- PASS: TestQueries/Queries_route_with_regexp_pattern_with_quantifier,_additional_variable_in_query_string,_match (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route_with_regexp_pattern_with_quantifier,_regexp_does_not_match",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route_with_regexp_pattern_with_quantifier,_regexp_does_not_match\n--- PASS: TestQueries/Queries_route_with_regexp_pattern_with_quantifier,_regexp_does_not_match (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route_with_regexp_pattern_with_quantifier,_additional_capturing_group",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route_with_regexp_pattern_with_quantifier,_additional_capturing_group\n--- PASS: TestQueries/Queries_route_with_regexp_pattern_with_quantifier,_additional_capturing_group (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route_with_regexp_pattern_with_quantifier,_additional_variable_in_query_string,_regexp_does_not_match",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route_with_regexp_pattern_with_quantifier,_additional_variable_in_query_string,_regexp_does_not_match\n--- PASS: TestQueries/Queries_route_with_regexp_pattern_with_quantifier,_additional_variable_in_query_string,_regexp_does_not_match (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route_with_hyphenated_name,_match",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route_with_hyphenated_name,_match\n--- PASS: TestQueries/Queries_route_with_hyphenated_name,_match (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route_with_multiple_hyphenated_names,_match",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route_with_multiple_hyphenated_names,_match\n--- PASS: TestQueries/Queries_route_with_multiple_hyphenated_names,_match (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route_with_hyphenate_name_and_pattern,_match",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route_with_hyphenate_name_and_pattern,_match\n--- PASS: TestQueries/Queries_route_with_hyphenate_name_and_pattern,_match (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route_with_hyphenated_name_and_pattern_with_quantifier,_additional_capturing_group",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route_with_hyphenated_name_and_pattern_with_quantifier,_additional_capturing_group\n--- PASS: TestQueries/Queries_route_with_hyphenated_name_and_pattern_with_quantifier,_additional_capturing_group (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route_with_empty_value,_should_match",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route_with_empty_value,_should_match\n--- PASS: TestQueries/Queries_route_with_empty_value,_should_match (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route_with_empty_value_and_no_parameter_in_request,_should_not_match",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route_with_empty_value_and_no_parameter_in_request,_should_not_match\n--- PASS: TestQueries/Queries_route_with_empty_value_and_no_parameter_in_request,_should_not_match (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route_with_empty_value_and_empty_parameter_in_request,_should_match",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route_with_empty_value_and_empty_parameter_in_request,_should_match\n--- PASS: TestQueries/Queries_route_with_empty_value_and_empty_parameter_in_request,_should_match (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route_with_overlapping_value,_should_not_match",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route_with_overlapping_value,_should_not_match\n--- PASS: TestQueries/Queries_route_with_overlapping_value,_should_not_match (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route_with_no_parameter_in_request,_should_not_match",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route_with_no_parameter_in_request,_should_not_match\n--- PASS: TestQueries/Queries_route_with_no_parameter_in_request,_should_not_match (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route_with_empty_parameter_in_request,_should_match",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route_with_empty_parameter_in_request,_should_match\n--- PASS: TestQueries/Queries_route_with_empty_parameter_in_request,_should_match (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route,_bad_submatch",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route,_bad_submatch\n--- PASS: TestQueries/Queries_route,_bad_submatch (0.00s)\n"
+        },
+        {
+          "name": "TestQueries/Queries_route_with_pattern,_match,_escaped_value",
+          "parent": "TestQueries",
+          "status": "passed",
+          "output": "=== RUN   TestQueries/Queries_route_with_pattern,_match,_escaped_value\n--- PASS: TestQueries/Queries_route_with_pattern,_match,_escaped_value (0.00s)\n"
+        },
+        {
+          "name": "TestSchemes",
+          "status": "passed",
+          "output": "=== RUN   TestSchemes\n--- PASS: TestSchemes (0.00s)\n"
+        },
+        {
+          "name": "TestSchemes/Schemes_route,_default_scheme,_match_http,_build_http",
+          "parent": "TestSchemes",
+          "status": "passed",
+          "output": "=== RUN   TestSchemes/Schemes_route,_default_scheme,_match_http,_build_http\n--- PASS: TestSchemes/Schemes_route,_default_scheme,_match_http,_build_http (0.00s)\n"
+        },
+        {
+          "name": "TestSchemes/Schemes_route,_match_https,_build_https",
+          "parent": "TestSchemes",
+          "status": "passed",
+          "output": "=== RUN   TestSchemes/Schemes_route,_match_https,_build_https\n--- PASS: TestSchemes/Schemes_route,_match_https,_build_https (0.00s)\n"
+        },
+        {
+          "name": "TestSchemes/Schemes_route,_match_ftp,_build_https",
+          "parent": "TestSchemes",
+          "status": "passed",
+          "output": "=== RUN   TestSchemes/Schemes_route,_match_ftp,_build_https\n--- PASS: TestSchemes/Schemes_route,_match_ftp,_build_https (0.00s)\n"
+        },
+        {
+          "name": "TestSchemes/Schemes_route,_match_ftp,_build_ftp",
+          "parent": "TestSchemes",
+          "status": "passed",
+          "output": "=== RUN   TestSchemes/Schemes_route,_match_ftp,_build_ftp\n--- PASS: TestSchemes/Schemes_route,_match_ftp,_build_ftp (0.00s)\n"
+        },
+        {
+          "name": "TestSchemes/Schemes_route,_bad_scheme",
+          "parent": "TestSchemes",
+          "status": "passed",
+          "output": "=== RUN   TestSchemes/Schemes_route,_bad_scheme\n--- PASS: TestSchemes/Schemes_route,_bad_scheme (0.00s)\n"
+        },
+        {
+          "name": "TestMatcherFunc",
+          "status": "passed",
+          "output": "=== RUN   TestMatcherFunc\n--- PASS: TestMatcherFunc (0.00s)\n"
+        },
+        {
+          "name": "TestMatcherFunc/MatchFunc_route,_match",
+          "parent": "TestMatcherFunc",
+          "status": "passed",
+          "output": "=== RUN   TestMatcherFunc/MatchFunc_route,_match\n--- PASS: TestMatcherFunc/MatchFunc_route,_match (0.00s)\n"
+        },
+        {
+          "name": "TestMatcherFunc/MatchFunc_route,_non-match",
+          "parent": "TestMatcherFunc",
+          "status": "passed",
+          "output": "=== RUN   TestMatcherFunc/MatchFunc_route,_non-match\n--- PASS: TestMatcherFunc/MatchFunc_route,_non-match (0.00s)\n"
+        },
+        {
+          "name": "TestBuildVarsFunc",
+          "status": "passed",
+          "output": "=== RUN   TestBuildVarsFunc\n--- PASS: TestBuildVarsFunc (0.00s)\n"
+        },
+        {
+          "name": "TestBuildVarsFunc/BuildVarsFunc_set_on_route",
+          "parent": "TestBuildVarsFunc",
+          "status": "passed",
+          "output": "=== RUN   TestBuildVarsFunc/BuildVarsFunc_set_on_route\n--- PASS: TestBuildVarsFunc/BuildVarsFunc_set_on_route (0.00s)\n"
+        },
+        {
+          "name": "TestBuildVarsFunc/BuildVarsFunc_set_on_route_and_parent_route",
+          "parent": "TestBuildVarsFunc",
+          "status": "passed",
+          "output": "=== RUN   TestBuildVarsFunc/BuildVarsFunc_set_on_route_and_parent_route\n--- PASS: TestBuildVarsFunc/BuildVarsFunc_set_on_route_and_parent_route (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter\n--- PASS: TestSubRouter (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/#00",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/#00\n--- PASS: TestSubRouter/#00 (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/#01",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/#01\n--- PASS: TestSubRouter/#01 (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/#02",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/#02\n--- PASS: TestSubRouter/#02 (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/#03",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/#03\n--- PASS: TestSubRouter/#03 (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/#04",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/#04\n--- PASS: TestSubRouter/#04 (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/#05",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/#05\n--- PASS: TestSubRouter/#05 (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/#06",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/#06\n--- PASS: TestSubRouter/#06 (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/#07",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/#07\n--- PASS: TestSubRouter/#07 (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/#08",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/#08\n--- PASS: TestSubRouter/#08 (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/#09",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/#09\n--- PASS: TestSubRouter/#09 (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/Mismatch_method_specified_on_parent_route",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/Mismatch_method_specified_on_parent_route\n--- PASS: TestSubRouter/Mismatch_method_specified_on_parent_route (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/Match_method_specified_on_parent_route",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/Match_method_specified_on_parent_route\n--- PASS: TestSubRouter/Match_method_specified_on_parent_route (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/Mismatch_scheme_specified_on_parent_route",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/Mismatch_scheme_specified_on_parent_route\n--- PASS: TestSubRouter/Mismatch_scheme_specified_on_parent_route (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/Match_scheme_specified_on_parent_route",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/Match_scheme_specified_on_parent_route\n--- PASS: TestSubRouter/Match_scheme_specified_on_parent_route (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/No_match_header_specified_on_parent_route",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/No_match_header_specified_on_parent_route\n--- PASS: TestSubRouter/No_match_header_specified_on_parent_route (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/Header_mismatch_value_specified_on_parent_route",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/Header_mismatch_value_specified_on_parent_route\n--- PASS: TestSubRouter/Header_mismatch_value_specified_on_parent_route (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/Header_match_value_specified_on_parent_route",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/Header_match_value_specified_on_parent_route\n--- PASS: TestSubRouter/Header_match_value_specified_on_parent_route (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/Query_specified_on_parent_route_not_present",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/Query_specified_on_parent_route_not_present\n--- PASS: TestSubRouter/Query_specified_on_parent_route_not_present (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/Query_mismatch_value_specified_on_parent_route",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/Query_mismatch_value_specified_on_parent_route\n--- PASS: TestSubRouter/Query_mismatch_value_specified_on_parent_route (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/Query_match_value_specified_on_subroute",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/Query_match_value_specified_on_subroute\n--- PASS: TestSubRouter/Query_match_value_specified_on_subroute (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/Build_with_scheme_on_parent_router",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/Build_with_scheme_on_parent_router\n--- PASS: TestSubRouter/Build_with_scheme_on_parent_router (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouter/Prefer_scheme_on_child_route_when_building_URLs",
+          "parent": "TestSubRouter",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouter/Prefer_scheme_on_child_route_when_building_URLs\n--- PASS: TestSubRouter/Prefer_scheme_on_child_route_when_building_URLs (0.00s)\n"
+        },
+        {
+          "name": "TestNamedRoutes",
+          "status": "passed",
+          "output": "=== RUN   TestNamedRoutes\n--- PASS: TestNamedRoutes (0.00s)\n"
+        },
+        {
+          "name": "TestNameMultipleCalls",
+          "status": "passed",
+          "output": "=== RUN   TestNameMultipleCalls\n--- PASS: TestNameMultipleCalls (0.00s)\n"
+        },
+        {
+          "name": "TestStrictSlash",
+          "status": "passed",
+          "output": "=== RUN   TestStrictSlash\n--- PASS: TestStrictSlash (0.00s)\n"
+        },
+        {
+          "name": "TestStrictSlash/Redirect_path_without_slash",
+          "parent": "TestStrictSlash",
+          "status": "passed",
+          "output": "=== RUN   TestStrictSlash/Redirect_path_without_slash\n--- PASS: TestStrictSlash/Redirect_path_without_slash (0.00s)\n"
+        },
+        {
+          "name": "TestStrictSlash/Do_not_redirect_path_with_slash",
+          "parent": "TestStrictSlash",
+          "status": "passed",
+          "output": "=== RUN   TestStrictSlash/Do_not_redirect_path_with_slash\n--- PASS: TestStrictSlash/Do_not_redirect_path_with_slash (0.00s)\n"
+        },
+        {
+          "name": "TestStrictSlash/Redirect_path_with_slash",
+          "parent": "TestStrictSlash",
+          "status": "passed",
+          "output": "=== RUN   TestStrictSlash/Redirect_path_with_slash\n--- PASS: TestStrictSlash/Redirect_path_with_slash (0.00s)\n"
+        },
+        {
+          "name": "TestStrictSlash/Do_not_redirect_path_without_slash",
+          "parent": "TestStrictSlash",
+          "status": "passed",
+          "output": "=== RUN   TestStrictSlash/Do_not_redirect_path_without_slash\n--- PASS: TestStrictSlash/Do_not_redirect_path_without_slash (0.00s)\n"
+        },
+        {
+          "name": "TestStrictSlash/Propagate_StrictSlash_to_subrouters",
+          "parent": "TestStrictSlash",
+          "status": "passed",
+          "output": "=== RUN   TestStrictSlash/Propagate_StrictSlash_to_subrouters\n--- PASS: TestStrictSlash/Propagate_StrictSlash_to_subrouters (0.00s)\n"
+        },
+        {
+          "name": "TestStrictSlash/Ignore_StrictSlash_for_path_prefix",
+          "parent": "TestStrictSlash",
+          "status": "passed",
+          "output": "=== RUN   TestStrictSlash/Ignore_StrictSlash_for_path_prefix\n--- PASS: TestStrictSlash/Ignore_StrictSlash_for_path_prefix (0.00s)\n"
+        },
+        {
+          "name": "TestUseEncodedPath",
+          "status": "passed",
+          "output": "=== RUN   TestUseEncodedPath\n--- PASS: TestUseEncodedPath (0.00s)\n"
+        },
+        {
+          "name": "TestUseEncodedPath/Router_with_useEncodedPath,_URL_with_encoded_slash_does_match",
+          "parent": "TestUseEncodedPath",
+          "status": "passed",
+          "output": "=== RUN   TestUseEncodedPath/Router_with_useEncodedPath,_URL_with_encoded_slash_does_match\n--- PASS: TestUseEncodedPath/Router_with_useEncodedPath,_URL_with_encoded_slash_does_match (0.00s)\n"
+        },
+        {
+          "name": "TestUseEncodedPath/Router_with_useEncodedPath,_URL_with_encoded_slash_doesn't_match",
+          "parent": "TestUseEncodedPath",
+          "status": "passed",
+          "output": "=== RUN   TestUseEncodedPath/Router_with_useEncodedPath,_URL_with_encoded_slash_doesn't_match\n--- PASS: TestUseEncodedPath/Router_with_useEncodedPath,_URL_with_encoded_slash_doesn't_match (0.00s)\n"
+        },
+        {
+          "name": "TestWalkSingleDepth",
+          "status": "passed",
+          "output": "=== RUN   TestWalkSingleDepth\n--- PASS: TestWalkSingleDepth (0.00s)\n"
+        },
+        {
+          "name": "TestWalkNested",
+          "status": "passed",
+          "output": "=== RUN   TestWalkNested\n--- PASS: TestWalkNested (0.00s)\n"
+        },
+        {
+          "name": "TestWalkSubrouters",
+          "status": "passed",
+          "output": "=== RUN   TestWalkSubrouters\n--- PASS: TestWalkSubrouters (0.00s)\n"
+        },
+        {
+          "name": "TestWalkErrorRoute",
+          "status": "passed",
+          "output": "=== RUN   TestWalkErrorRoute\n--- PASS: TestWalkErrorRoute (0.00s)\n"
+        },
+        {
+          "name": "TestWalkErrorMatcher",
+          "status": "passed",
+          "output": "=== RUN   TestWalkErrorMatcher\n--- PASS: TestWalkErrorMatcher (0.00s)\n"
+        },
+        {
+          "name": "TestWalkErrorHandler",
+          "status": "passed",
+          "output": "=== RUN   TestWalkErrorHandler\n--- PASS: TestWalkErrorHandler (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterErrorHandling",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterErrorHandling\n--- PASS: TestSubrouterErrorHandling (0.00s)\n"
+        },
+        {
+          "name": "TestPanicOnCapturingGroups",
+          "status": "passed",
+          "output": "=== RUN   TestPanicOnCapturingGroups\n--- PASS: TestPanicOnCapturingGroups (0.00s)\n"
+        },
+        {
+          "name": "Test301Redirect",
+          "status": "passed",
+          "output": "=== RUN   Test301Redirect\n--- PASS: Test301Redirect (0.00s)\n"
+        },
+        {
+          "name": "TestSkipClean",
+          "status": "passed",
+          "output": "=== RUN   TestSkipClean\n--- PASS: TestSkipClean (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterHeader",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterHeader\n--- PASS: TestSubrouterHeader (0.00s)\n"
+        },
+        {
+          "name": "TestNoMatchMethodErrorHandler",
+          "status": "passed",
+          "output": "=== RUN   TestNoMatchMethodErrorHandler\n--- PASS: TestNoMatchMethodErrorHandler (0.00s)\n"
+        },
+        {
+          "name": "TestMultipleDefinitionOfSamePathWithDifferentMethods",
+          "status": "passed",
+          "output": "=== RUN   TestMultipleDefinitionOfSamePathWithDifferentMethods\n--- PASS: TestMultipleDefinitionOfSamePathWithDifferentMethods (0.00s)\n"
+        },
+        {
+          "name": "TestMultipleDefinitionOfSamePathWithDifferentMethods/Post_Method_should_be_matched_properly",
+          "parent": "TestMultipleDefinitionOfSamePathWithDifferentMethods",
+          "status": "passed",
+          "output": "=== RUN   TestMultipleDefinitionOfSamePathWithDifferentMethods/Post_Method_should_be_matched_properly\n--- PASS: TestMultipleDefinitionOfSamePathWithDifferentMethods/Post_Method_should_be_matched_properly (0.00s)\n"
+        },
+        {
+          "name": "TestMultipleDefinitionOfSamePathWithDifferentMethods/Get_Method_with_invalid_query_value_should_not_match",
+          "parent": "TestMultipleDefinitionOfSamePathWithDifferentMethods",
+          "status": "passed",
+          "output": "=== RUN   TestMultipleDefinitionOfSamePathWithDifferentMethods/Get_Method_with_invalid_query_value_should_not_match\n--- PASS: TestMultipleDefinitionOfSamePathWithDifferentMethods/Get_Method_with_invalid_query_value_should_not_match (0.00s)\n"
+        },
+        {
+          "name": "TestMultipleDefinitionOfSamePathWithDifferentMethods/A_mismach_method_of_a_valid_path_should_return_ErrMethodMismatch",
+          "parent": "TestMultipleDefinitionOfSamePathWithDifferentMethods",
+          "status": "passed",
+          "output": "=== RUN   TestMultipleDefinitionOfSamePathWithDifferentMethods/A_mismach_method_of_a_valid_path_should_return_ErrMethodMismatch\n--- PASS: TestMultipleDefinitionOfSamePathWithDifferentMethods/A_mismach_method_of_a_valid_path_should_return_ErrMethodMismatch (0.00s)\n"
+        },
+        {
+          "name": "TestErrMatchNotFound",
+          "status": "passed",
+          "output": "=== RUN   TestErrMatchNotFound\n--- PASS: TestErrMatchNotFound (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterCatchall",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterCatchall\n=== PAUSE TestMethodsSubrouterCatchall\n=== CONT  TestMethodsSubrouterCatchall\n--- PASS: TestMethodsSubrouterCatchall (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterStrictSlash",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterStrictSlash\n=== PAUSE TestMethodsSubrouterStrictSlash\n=== CONT  TestMethodsSubrouterStrictSlash\n--- PASS: TestMethodsSubrouterStrictSlash (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterPathPrefix",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterPathPrefix\n=== PAUSE TestMethodsSubrouterPathPrefix\n=== CONT  TestMethodsSubrouterPathPrefix\n--- PASS: TestMethodsSubrouterPathPrefix (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterSubrouter",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterSubrouter\n=== PAUSE TestMethodsSubrouterSubrouter\n=== CONT  TestMethodsSubrouterSubrouter\n--- PASS: TestMethodsSubrouterSubrouter (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterPathVariable",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterPathVariable\n=== PAUSE TestMethodsSubrouterPathVariable\n=== CONT  TestMethodsSubrouterPathVariable\n--- PASS: TestMethodsSubrouterPathVariable (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching\n--- PASS: TestSubrouterMatching (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/pathPrefix",
+          "parent": "TestSubrouterMatching",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/pathPrefix\n--- PASS: TestSubrouterMatching/pathPrefix (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/pathPrefix/no_match_final_path_prefix",
+          "parent": "TestSubrouterMatching/pathPrefix",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/pathPrefix/no_match_final_path_prefix\n--- PASS: TestSubrouterMatching/pathPrefix/no_match_final_path_prefix (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/pathPrefix/no_match_parent_path_prefix",
+          "parent": "TestSubrouterMatching/pathPrefix",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/pathPrefix/no_match_parent_path_prefix\n--- PASS: TestSubrouterMatching/pathPrefix/no_match_parent_path_prefix (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/pathPrefix/matches_append",
+          "parent": "TestSubrouterMatching/pathPrefix",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/pathPrefix/matches_append\n--- PASS: TestSubrouterMatching/pathPrefix/matches_append (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/pathPrefix/matches_as_prefix",
+          "parent": "TestSubrouterMatching/pathPrefix",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/pathPrefix/matches_as_prefix\n--- PASS: TestSubrouterMatching/pathPrefix/matches_as_prefix (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/path",
+          "parent": "TestSubrouterMatching",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/path\n--- PASS: TestSubrouterMatching/path (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/path/no_match_subroute_path",
+          "parent": "TestSubrouterMatching/path",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/path/no_match_subroute_path\n--- PASS: TestSubrouterMatching/path/no_match_subroute_path (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/path/no_match_parent_path",
+          "parent": "TestSubrouterMatching/path",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/path/no_match_parent_path\n--- PASS: TestSubrouterMatching/path/no_match_parent_path (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/path/no_match_as_prefix",
+          "parent": "TestSubrouterMatching/path",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/path/no_match_as_prefix\n--- PASS: TestSubrouterMatching/path/no_match_as_prefix (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/path/no_match_append",
+          "parent": "TestSubrouterMatching/path",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/path/no_match_append\n--- PASS: TestSubrouterMatching/path/no_match_append (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/host",
+          "parent": "TestSubrouterMatching",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/host\n--- PASS: TestSubrouterMatching/host (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/host/no_match_before",
+          "parent": "TestSubrouterMatching/host",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/host/no_match_before\n--- PASS: TestSubrouterMatching/host/no_match_before (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/host/no_match_other",
+          "parent": "TestSubrouterMatching/host",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/host/no_match_other\n--- PASS: TestSubrouterMatching/host/no_match_other (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/host/matches_after",
+          "parent": "TestSubrouterMatching/host",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/host/matches_after\n--- PASS: TestSubrouterMatching/host/matches_after (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/queries_variant_keys",
+          "parent": "TestSubrouterMatching",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/queries_variant_keys\n--- PASS: TestSubrouterMatching/queries_variant_keys (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/queries_variant_keys/matches_with_all",
+          "parent": "TestSubrouterMatching/queries_variant_keys",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/queries_variant_keys/matches_with_all\n--- PASS: TestSubrouterMatching/queries_variant_keys/matches_with_all (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/queries_variant_keys/matches_with_more",
+          "parent": "TestSubrouterMatching/queries_variant_keys",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/queries_variant_keys/matches_with_more\n--- PASS: TestSubrouterMatching/queries_variant_keys/matches_with_more (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/queries_variant_keys/no_match_with_none",
+          "parent": "TestSubrouterMatching/queries_variant_keys",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/queries_variant_keys/no_match_with_none\n--- PASS: TestSubrouterMatching/queries_variant_keys/no_match_with_none (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/queries_variant_keys/no_match_with_some",
+          "parent": "TestSubrouterMatching/queries_variant_keys",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/queries_variant_keys/no_match_with_some\n--- PASS: TestSubrouterMatching/queries_variant_keys/no_match_with_some (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/queries_overlapping_keys",
+          "parent": "TestSubrouterMatching",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/queries_overlapping_keys\n--- PASS: TestSubrouterMatching/queries_overlapping_keys (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/queries_overlapping_keys/no_match_old_value",
+          "parent": "TestSubrouterMatching/queries_overlapping_keys",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/queries_overlapping_keys/no_match_old_value\n--- PASS: TestSubrouterMatching/queries_overlapping_keys/no_match_old_value (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/queries_overlapping_keys/no_match_diff_value",
+          "parent": "TestSubrouterMatching/queries_overlapping_keys",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/queries_overlapping_keys/no_match_diff_value\n--- PASS: TestSubrouterMatching/queries_overlapping_keys/no_match_diff_value (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/queries_overlapping_keys/no_match_with_none",
+          "parent": "TestSubrouterMatching/queries_overlapping_keys",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/queries_overlapping_keys/no_match_with_none\n--- PASS: TestSubrouterMatching/queries_overlapping_keys/no_match_with_none (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/queries_overlapping_keys/matches_override",
+          "parent": "TestSubrouterMatching/queries_overlapping_keys",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/queries_overlapping_keys/matches_override\n--- PASS: TestSubrouterMatching/queries_overlapping_keys/matches_override (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/header_variant_keys",
+          "parent": "TestSubrouterMatching",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/header_variant_keys\n--- PASS: TestSubrouterMatching/header_variant_keys (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/header_variant_keys/matches_with_all",
+          "parent": "TestSubrouterMatching/header_variant_keys",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/header_variant_keys/matches_with_all\n--- PASS: TestSubrouterMatching/header_variant_keys/matches_with_all (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/header_variant_keys/matches_with_more",
+          "parent": "TestSubrouterMatching/header_variant_keys",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/header_variant_keys/matches_with_more\n--- PASS: TestSubrouterMatching/header_variant_keys/matches_with_more (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/header_variant_keys/no_match_with_none",
+          "parent": "TestSubrouterMatching/header_variant_keys",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/header_variant_keys/no_match_with_none\n--- PASS: TestSubrouterMatching/header_variant_keys/no_match_with_none (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/header_variant_keys/no_match_with_some",
+          "parent": "TestSubrouterMatching/header_variant_keys",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/header_variant_keys/no_match_with_some\n--- PASS: TestSubrouterMatching/header_variant_keys/no_match_with_some (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/header_overlapping_keys",
+          "parent": "TestSubrouterMatching",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/header_overlapping_keys\n--- PASS: TestSubrouterMatching/header_overlapping_keys (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/header_overlapping_keys/no_match_old_value",
+          "parent": "TestSubrouterMatching/header_overlapping_keys",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/header_overlapping_keys/no_match_old_value\n--- PASS: TestSubrouterMatching/header_overlapping_keys/no_match_old_value (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/header_overlapping_keys/no_match_diff_value",
+          "parent": "TestSubrouterMatching/header_overlapping_keys",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/header_overlapping_keys/no_match_diff_value\n--- PASS: TestSubrouterMatching/header_overlapping_keys/no_match_diff_value (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/header_overlapping_keys/no_match_with_none",
+          "parent": "TestSubrouterMatching/header_overlapping_keys",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/header_overlapping_keys/no_match_with_none\n--- PASS: TestSubrouterMatching/header_overlapping_keys/no_match_with_none (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/header_overlapping_keys/matches_override",
+          "parent": "TestSubrouterMatching/header_overlapping_keys",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/header_overlapping_keys/matches_override\n--- PASS: TestSubrouterMatching/header_overlapping_keys/matches_override (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/method",
+          "parent": "TestSubrouterMatching",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/method\n--- PASS: TestSubrouterMatching/method (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/method/matches_before",
+          "parent": "TestSubrouterMatching/method",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/method/matches_before\n--- PASS: TestSubrouterMatching/method/matches_before (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/method/no_match_other",
+          "parent": "TestSubrouterMatching/method",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/method/no_match_other\n--- PASS: TestSubrouterMatching/method/no_match_other (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/method/matches_override",
+          "parent": "TestSubrouterMatching/method",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/method/matches_override\n--- PASS: TestSubrouterMatching/method/matches_override (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/schemes",
+          "parent": "TestSubrouterMatching",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/schemes\n--- PASS: TestSubrouterMatching/schemes (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/schemes/matches_overrides",
+          "parent": "TestSubrouterMatching/schemes",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/schemes/matches_overrides\n--- PASS: TestSubrouterMatching/schemes/matches_overrides (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/schemes/matches_original",
+          "parent": "TestSubrouterMatching/schemes",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/schemes/matches_original\n--- PASS: TestSubrouterMatching/schemes/matches_original (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterMatching/schemes/no_match_other",
+          "parent": "TestSubrouterMatching/schemes",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterMatching/schemes/no_match_other\n--- PASS: TestSubrouterMatching/schemes/no_match_other (0.00s)\n"
+        },
+        {
+          "name": "Test_copyRouteConf",
+          "status": "passed",
+          "output": "=== RUN   Test_copyRouteConf\n--- PASS: Test_copyRouteConf (0.00s)\n"
+        },
+        {
+          "name": "Test_copyRouteConf/empty",
+          "parent": "Test_copyRouteConf",
+          "status": "passed",
+          "output": "=== RUN   Test_copyRouteConf/empty\n--- PASS: Test_copyRouteConf/empty (0.00s)\n"
+        },
+        {
+          "name": "Test_copyRouteConf/full",
+          "parent": "Test_copyRouteConf",
+          "status": "passed",
+          "output": "=== RUN   Test_copyRouteConf/full\n--- PASS: Test_copyRouteConf/full (0.00s)\n"
+        },
+        {
+          "name": "TestMethodNotAllowed",
+          "status": "passed",
+          "output": "=== RUN   TestMethodNotAllowed\n--- PASS: TestMethodNotAllowed (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterCustomMethodNotAllowed",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterCustomMethodNotAllowed\n--- PASS: TestSubrouterCustomMethodNotAllowed (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterCustomMethodNotAllowed/router_method_not_allowed",
+          "parent": "TestSubrouterCustomMethodNotAllowed",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterCustomMethodNotAllowed/router_method_not_allowed\n--- PASS: TestSubrouterCustomMethodNotAllowed/router_method_not_allowed (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterCustomMethodNotAllowed/subrouter_method_not_allowed",
+          "parent": "TestSubrouterCustomMethodNotAllowed",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterCustomMethodNotAllowed/subrouter_method_not_allowed\n--- PASS: TestSubrouterCustomMethodNotAllowed/subrouter_method_not_allowed (0.00s)\n"
+        },
+        {
+          "name": "TestSubrouterNotFound",
+          "status": "passed",
+          "output": "=== RUN   TestSubrouterNotFound\n--- PASS: TestSubrouterNotFound (0.00s)\n"
+        },
+        {
+          "name": "TestContextMiddleware",
+          "status": "passed",
+          "output": "=== RUN   TestContextMiddleware\n--- PASS: TestContextMiddleware (0.00s)\n"
+        },
+        {
+          "name": "TestGetVarNames",
+          "status": "passed",
+          "output": "=== RUN   TestGetVarNames\n--- PASS: TestGetVarNames (0.00s)\n"
+        },
+        {
+          "name": "TestRouteMatchers",
+          "status": "passed",
+          "output": "=== RUN   TestRouteMatchers\n--- PASS: TestRouteMatchers (0.00s)\n"
+        },
+        {
+          "name": "TestHeaderMatcher",
+          "status": "passed",
+          "output": "=== RUN   TestHeaderMatcher\n--- PASS: TestHeaderMatcher (0.00s)\n"
+        },
+        {
+          "name": "TestHostMatcher",
+          "status": "passed",
+          "output": "=== RUN   TestHostMatcher\n--- PASS: TestHostMatcher (0.00s)\n"
+        },
+        {
+          "name": "TestMethodMatcher",
+          "status": "passed",
+          "output": "=== RUN   TestMethodMatcher\n--- PASS: TestMethodMatcher (0.00s)\n"
+        },
+        {
+          "name": "TestPathMatcher",
+          "status": "passed",
+          "output": "=== RUN   TestPathMatcher\n--- PASS: TestPathMatcher (0.00s)\n"
+        },
+        {
+          "name": "TestSchemeMatcher",
+          "status": "passed",
+          "output": "=== RUN   TestSchemeMatcher\n--- PASS: TestSchemeMatcher (0.00s)\n"
+        },
+        {
+          "name": "TestUrlBuilding",
+          "status": "passed",
+          "output": "=== RUN   TestUrlBuilding\n--- PASS: TestUrlBuilding (0.00s)\n"
+        },
+        {
+          "name": "TestMatchedRouteName",
+          "status": "passed",
+          "output": "=== RUN   TestMatchedRouteName\n--- PASS: TestMatchedRouteName (0.00s)\n"
+        },
+        {
+          "name": "TestSubRouting",
+          "status": "passed",
+          "output": "=== RUN   TestSubRouting\n--- PASS: TestSubRouting (0.00s)\n"
+        },
+        {
+          "name": "TestVariableNames",
+          "status": "passed",
+          "output": "=== RUN   TestVariableNames\n--- PASS: TestVariableNames (0.00s)\n"
+        },
+        {
+          "name": "TestRedirectSlash",
+          "status": "passed",
+          "output": "=== RUN   TestRedirectSlash\n--- PASS: TestRedirectSlash (0.00s)\n"
+        },
+        {
+          "name": "TestNewRegexp",
+          "status": "passed",
+          "output": "=== RUN   TestNewRegexp\n--- PASS: TestNewRegexp (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey\n--- PASS: Test_findFirstQueryKey (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a=1\u0026b=2",
+          "parent": "Test_findFirstQueryKey",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a=1\u0026b=2\n--- PASS: Test_findFirstQueryKey/a=1\u0026b=2 (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a=1\u0026b=2/a",
+          "parent": "Test_findFirstQueryKey/a=1\u0026b=2",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a=1\u0026b=2/a\n--- PASS: Test_findFirstQueryKey/a=1\u0026b=2/a (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a=1\u0026b=2/b",
+          "parent": "Test_findFirstQueryKey/a=1\u0026b=2",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a=1\u0026b=2/b\n--- PASS: Test_findFirstQueryKey/a=1\u0026b=2/b (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a=1\u0026a=2\u0026a=banana",
+          "parent": "Test_findFirstQueryKey",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a=1\u0026a=2\u0026a=banana\n--- PASS: Test_findFirstQueryKey/a=1\u0026a=2\u0026a=banana (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a=1\u0026a=2\u0026a=banana/a",
+          "parent": "Test_findFirstQueryKey/a=1\u0026a=2\u0026a=banana",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a=1\u0026a=2\u0026a=banana/a\n--- PASS: Test_findFirstQueryKey/a=1\u0026a=2\u0026a=banana/a (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/ascii=%3Ckey%3A+0x90%3E",
+          "parent": "Test_findFirstQueryKey",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/ascii=%3Ckey%3A+0x90%3E\n--- PASS: Test_findFirstQueryKey/ascii=%3Ckey%3A+0x90%3E (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/ascii=%3Ckey%3A+0x90%3E/ascii",
+          "parent": "Test_findFirstQueryKey/ascii=%3Ckey%3A+0x90%3E",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/ascii=%3Ckey%3A+0x90%3E/ascii\n--- PASS: Test_findFirstQueryKey/ascii=%3Ckey%3A+0x90%3E/ascii (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a=1;b=2",
+          "parent": "Test_findFirstQueryKey",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a=1;b=2\n--- PASS: Test_findFirstQueryKey/a=1;b=2 (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a=1\u0026a=2;a=banana",
+          "parent": "Test_findFirstQueryKey",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a=1\u0026a=2;a=banana\n--- PASS: Test_findFirstQueryKey/a=1\u0026a=2;a=banana (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a=1\u0026a=2;a=banana/a",
+          "parent": "Test_findFirstQueryKey/a=1\u0026a=2;a=banana",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a=1\u0026a=2;a=banana/a\n--- PASS: Test_findFirstQueryKey/a=1\u0026a=2;a=banana/a (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a==",
+          "parent": "Test_findFirstQueryKey",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a==\n--- PASS: Test_findFirstQueryKey/a== (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a==/a",
+          "parent": "Test_findFirstQueryKey/a==",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a==/a\n--- PASS: Test_findFirstQueryKey/a==/a (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a=%2",
+          "parent": "Test_findFirstQueryKey",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a=%2\n--- PASS: Test_findFirstQueryKey/a=%2 (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a=20\u0026%20%3F\u0026=%23+%25%21%3C%3E%23%22%7B%7D%7C%5C%5E%5B%5D%60%E2%98%BA%09:%2F@$%27%28%29%2A%2C%3B\u0026a=30",
+          "parent": "Test_findFirstQueryKey",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a=20\u0026%20%3F\u0026=%23+%25%21%3C%3E%23%22%7B%7D%7C%5C%5E%5B%5D%60%E2%98%BA%09:%2F@$%27%28%29%2A%2C%3B\u0026a=30\n--- PASS: Test_findFirstQueryKey/a=20\u0026%20%3F\u0026=%23+%25%21%3C%3E%23%22%7B%7D%7C%5C%5E%5B%5D%60%E2%98%BA%09:%2F@$%27%28%29%2A%2C%3B\u0026a=30 (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a=20\u0026%20%3F\u0026=%23+%25%21%3C%3E%23%22%7B%7D%7C%5C%5E%5B%5D%60%E2%98%BA%09:%2F@$%27%28%29%2A%2C%3B\u0026a=30/a",
+          "parent": "Test_findFirstQueryKey/a=20\u0026%20%3F\u0026=%23+%25%21%3C%3E%23%22%7B%7D%7C%5C%5E%5B%5D%60%E2%98%BA%09:%2F@$%27%28%29%2A%2C%3B\u0026a=30",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a=20\u0026%20%3F\u0026=%23+%25%21%3C%3E%23%22%7B%7D%7C%5C%5E%5B%5D%60%E2%98%BA%09:%2F@$%27%28%29%2A%2C%3B\u0026a=30/a\n--- PASS: Test_findFirstQueryKey/a=20\u0026%20%3F\u0026=%23+%25%21%3C%3E%23%22%7B%7D%7C%5C%5E%5B%5D%60%E2%98%BA%09:%2F@$%27%28%29%2A%2C%3B\u0026a=30/a (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a=20\u0026%20%3F\u0026=%23+%25%21%3C%3E%23%22%7B%7D%7C%5C%5E%5B%5D%60%E2%98%BA%09:%2F@$%27%28%29%2A%2C%3B\u0026a=30/_?",
+          "parent": "Test_findFirstQueryKey/a=20\u0026%20%3F\u0026=%23+%25%21%3C%3E%23%22%7B%7D%7C%5C%5E%5B%5D%60%E2%98%BA%09:%2F@$%27%28%29%2A%2C%3B\u0026a=30",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a=20\u0026%20%3F\u0026=%23+%25%21%3C%3E%23%22%7B%7D%7C%5C%5E%5B%5D%60%E2%98%BA%09:%2F@$%27%28%29%2A%2C%3B\u0026a=30/_?\n--- PASS: Test_findFirstQueryKey/a=20\u0026%20%3F\u0026=%23+%25%21%3C%3E%23%22%7B%7D%7C%5C%5E%5B%5D%60%E2%98%BA%09:%2F@$%27%28%29%2A%2C%3B\u0026a=30/_? (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a=20\u0026%20%3F\u0026=%23+%25%21%3C%3E%23%22%7B%7D%7C%5C%5E%5B%5D%60%E2%98%BA%09:%2F@$%27%28%29%2A%2C%3B\u0026a=30/#00",
+          "parent": "Test_findFirstQueryKey/a=20\u0026%20%3F\u0026=%23+%25%21%3C%3E%23%22%7B%7D%7C%5C%5E%5B%5D%60%E2%98%BA%09:%2F@$%27%28%29%2A%2C%3B\u0026a=30",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a=20\u0026%20%3F\u0026=%23+%25%21%3C%3E%23%22%7B%7D%7C%5C%5E%5B%5D%60%E2%98%BA%09:%2F@$%27%28%29%2A%2C%3B\u0026a=30/#00\n--- PASS: Test_findFirstQueryKey/a=20\u0026%20%3F\u0026=%23+%25%21%3C%3E%23%22%7B%7D%7C%5C%5E%5B%5D%60%E2%98%BA%09:%2F@$%27%28%29%2A%2C%3B\u0026a=30/#00 (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a=1\u0026_?\u0026=#+%!\u003c\u003e#\"{}|\\^[]`☺_:/@$'()*,;\u0026a=5",
+          "parent": "Test_findFirstQueryKey/a=1\u0026_?\u0026=#+%!\u003c\u003e#\"{}|\\^[]`☺_:",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a=1\u0026_?\u0026=#+%!\u003c\u003e#\"{}|\\^[]`☺_:/@$'()*,;\u0026a=5\n--- PASS: Test_findFirstQueryKey/a=1\u0026_?\u0026=#+%!\u003c\u003e#\"{}|\\^[]`☺_:/@$'()*,;\u0026a=5 (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a=1\u0026_?\u0026=#+%!\u003c\u003e#\"{}|\\^[]`☺_:/@$'()*,;\u0026a=5/_?",
+          "parent": "Test_findFirstQueryKey/a=1\u0026_?\u0026=#+%!\u003c\u003e#\"{}|\\^[]`☺_:/@$'()*,;\u0026a=5",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a=1\u0026_?\u0026=#+%!\u003c\u003e#\"{}|\\^[]`☺_:/@$'()*,;\u0026a=5/_?\n--- PASS: Test_findFirstQueryKey/a=1\u0026_?\u0026=#+%!\u003c\u003e#\"{}|\\^[]`☺_:/@$'()*,;\u0026a=5/_? (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a=1\u0026_?\u0026=#+%!\u003c\u003e#\"{}|\\^[]`☺_:/@$'()*,;\u0026a=5/a",
+          "parent": "Test_findFirstQueryKey/a=1\u0026_?\u0026=#+%!\u003c\u003e#\"{}|\\^[]`☺_:/@$'()*,;\u0026a=5",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a=1\u0026_?\u0026=#+%!\u003c\u003e#\"{}|\\^[]`☺_:/@$'()*,;\u0026a=5/a\n--- PASS: Test_findFirstQueryKey/a=1\u0026_?\u0026=#+%!\u003c\u003e#\"{}|\\^[]`☺_:/@$'()*,;\u0026a=5/a (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a=xxxxxxxxxxxxxxxx\u0026b=YYYYYYYYYYYYYYY\u0026c=ppppppppppppppppppp\u0026f=ttttttttttttttttt\u0026a=uuuuuuuuuuuuu",
+          "parent": "Test_findFirstQueryKey",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a=xxxxxxxxxxxxxxxx\u0026b=YYYYYYYYYYYYYYY\u0026c=ppppppppppppppppppp\u0026f=ttttttttttttttttt\u0026a=uuuuuuuuuuuuu\n--- PASS: Test_findFirstQueryKey/a=xxxxxxxxxxxxxxxx\u0026b=YYYYYYYYYYYYYYY\u0026c=ppppppppppppppppppp\u0026f=ttttttttttttttttt\u0026a=uuuuuuuuuuuuu (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a=xxxxxxxxxxxxxxxx\u0026b=YYYYYYYYYYYYYYY\u0026c=ppppppppppppppppppp\u0026f=ttttttttttttttttt\u0026a=uuuuuuuuuuuuu/a",
+          "parent": "Test_findFirstQueryKey/a=xxxxxxxxxxxxxxxx\u0026b=YYYYYYYYYYYYYYY\u0026c=ppppppppppppppppppp\u0026f=ttttttttttttttttt\u0026a=uuuuuuuuuuuuu",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a=xxxxxxxxxxxxxxxx\u0026b=YYYYYYYYYYYYYYY\u0026c=ppppppppppppppppppp\u0026f=ttttttttttttttttt\u0026a=uuuuuuuuuuuuu/a\n--- PASS: Test_findFirstQueryKey/a=xxxxxxxxxxxxxxxx\u0026b=YYYYYYYYYYYYYYY\u0026c=ppppppppppppppppppp\u0026f=ttttttttttttttttt\u0026a=uuuuuuuuuuuuu/a (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a=xxxxxxxxxxxxxxxx\u0026b=YYYYYYYYYYYYYYY\u0026c=ppppppppppppppppppp\u0026f=ttttttttttttttttt\u0026a=uuuuuuuuuuuuu/b",
+          "parent": "Test_findFirstQueryKey/a=xxxxxxxxxxxxxxxx\u0026b=YYYYYYYYYYYYYYY\u0026c=ppppppppppppppppppp\u0026f=ttttttttttttttttt\u0026a=uuuuuuuuuuuuu",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a=xxxxxxxxxxxxxxxx\u0026b=YYYYYYYYYYYYYYY\u0026c=ppppppppppppppppppp\u0026f=ttttttttttttttttt\u0026a=uuuuuuuuuuuuu/b\n--- PASS: Test_findFirstQueryKey/a=xxxxxxxxxxxxxxxx\u0026b=YYYYYYYYYYYYYYY\u0026c=ppppppppppppppppppp\u0026f=ttttttttttttttttt\u0026a=uuuuuuuuuuuuu/b (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a=xxxxxxxxxxxxxxxx\u0026b=YYYYYYYYYYYYYYY\u0026c=ppppppppppppppppppp\u0026f=ttttttttttttttttt\u0026a=uuuuuuuuuuuuu/c",
+          "parent": "Test_findFirstQueryKey/a=xxxxxxxxxxxxxxxx\u0026b=YYYYYYYYYYYYYYY\u0026c=ppppppppppppppppppp\u0026f=ttttttttttttttttt\u0026a=uuuuuuuuuuuuu",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a=xxxxxxxxxxxxxxxx\u0026b=YYYYYYYYYYYYYYY\u0026c=ppppppppppppppppppp\u0026f=ttttttttttttttttt\u0026a=uuuuuuuuuuuuu/c\n--- PASS: Test_findFirstQueryKey/a=xxxxxxxxxxxxxxxx\u0026b=YYYYYYYYYYYYYYY\u0026c=ppppppppppppppppppp\u0026f=ttttttttttttttttt\u0026a=uuuuuuuuuuuuu/c (0.00s)\n"
+        },
+        {
+          "name": "Test_findFirstQueryKey/a=xxxxxxxxxxxxxxxx\u0026b=YYYYYYYYYYYYYYY\u0026c=ppppppppppppppppppp\u0026f=ttttttttttttttttt\u0026a=uuuuuuuuuuuuu/f",
+          "parent": "Test_findFirstQueryKey/a=xxxxxxxxxxxxxxxx\u0026b=YYYYYYYYYYYYYYY\u0026c=ppppppppppppppppppp\u0026f=ttttttttttttttttt\u0026a=uuuuuuuuuuuuu",
+          "status": "passed",
+          "output": "=== RUN   Test_findFirstQueryKey/a=xxxxxxxxxxxxxxxx\u0026b=YYYYYYYYYYYYYYY\u0026c=ppppppppppppppppppp\u0026f=ttttttttttttttttt\u0026a=uuuuuuuuuuuuu/f\n--- PASS: Test_findFirstQueryKey/a=xxxxxxxxxxxxxxxx\u0026b=YYYYYYYYYYYYYYY\u0026c=ppppppppppppppppppp\u0026f=ttttttttttttttttt\u0026a=uuuuuuuuuuuuu/f (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterCatchall/match_GET_handler",
+          "parent": "TestMethodsSubrouterCatchall",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterCatchall/match_GET_handler\n--- PASS: TestMethodsSubrouterCatchall/match_GET_handler (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterCatchall/match_POST_handler",
+          "parent": "TestMethodsSubrouterCatchall",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterCatchall/match_POST_handler\n--- PASS: TestMethodsSubrouterCatchall/match_POST_handler (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterCatchall/match_DELETE_handler",
+          "parent": "TestMethodsSubrouterCatchall",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterCatchall/match_DELETE_handler\n--- PASS: TestMethodsSubrouterCatchall/match_DELETE_handler (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterCatchall/disallow_PUT_method",
+          "parent": "TestMethodsSubrouterCatchall",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterCatchall/disallow_PUT_method\n--- PASS: TestMethodsSubrouterCatchall/disallow_PUT_method (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterPathVariable/match_GET_handler",
+          "parent": "TestMethodsSubrouterPathVariable",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterPathVariable/match_GET_handler\n--- PASS: TestMethodsSubrouterPathVariable/match_GET_handler (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterPathVariable/match_POST_handler",
+          "parent": "TestMethodsSubrouterPathVariable",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterPathVariable/match_POST_handler\n--- PASS: TestMethodsSubrouterPathVariable/match_POST_handler (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterPathVariable/match_DELETE_handler",
+          "parent": "TestMethodsSubrouterPathVariable",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterPathVariable/match_DELETE_handler\n--- PASS: TestMethodsSubrouterPathVariable/match_DELETE_handler (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterPathVariable/match_PUT_handler",
+          "parent": "TestMethodsSubrouterPathVariable",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterPathVariable/match_PUT_handler\n--- PASS: TestMethodsSubrouterPathVariable/match_PUT_handler (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterPathVariable/disallow_PATCH_method",
+          "parent": "TestMethodsSubrouterPathVariable",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterPathVariable/disallow_PATCH_method\n--- PASS: TestMethodsSubrouterPathVariable/disallow_PATCH_method (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterSubrouter/match_first_POST_handler",
+          "parent": "TestMethodsSubrouterSubrouter",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterSubrouter/match_first_POST_handler\n--- PASS: TestMethodsSubrouterSubrouter/match_first_POST_handler (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterSubrouter/match_GET_handler",
+          "parent": "TestMethodsSubrouterSubrouter",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterSubrouter/match_GET_handler\n--- PASS: TestMethodsSubrouterSubrouter/match_GET_handler (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterSubrouter/match_PATCH_handler",
+          "parent": "TestMethodsSubrouterSubrouter",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterSubrouter/match_PATCH_handler\n--- PASS: TestMethodsSubrouterSubrouter/match_PATCH_handler (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterSubrouter/match_PUT_handler",
+          "parent": "TestMethodsSubrouterSubrouter",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterSubrouter/match_PUT_handler\n--- PASS: TestMethodsSubrouterSubrouter/match_PUT_handler (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterSubrouter/disallow_DELETE_method",
+          "parent": "TestMethodsSubrouterSubrouter",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterSubrouter/disallow_DELETE_method\n--- PASS: TestMethodsSubrouterSubrouter/disallow_DELETE_method (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterPathPrefix/match_first_POST_handler",
+          "parent": "TestMethodsSubrouterPathPrefix",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterPathPrefix/match_first_POST_handler\n--- PASS: TestMethodsSubrouterPathPrefix/match_first_POST_handler (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterPathPrefix/match_DELETE_handler",
+          "parent": "TestMethodsSubrouterPathPrefix",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterPathPrefix/match_DELETE_handler\n--- PASS: TestMethodsSubrouterPathPrefix/match_DELETE_handler (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterPathPrefix/match_PUT_handler",
+          "parent": "TestMethodsSubrouterPathPrefix",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterPathPrefix/match_PUT_handler\n--- PASS: TestMethodsSubrouterPathPrefix/match_PUT_handler (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterPathPrefix/disallow_PATCH_method",
+          "parent": "TestMethodsSubrouterPathPrefix",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterPathPrefix/disallow_PATCH_method\n--- PASS: TestMethodsSubrouterPathPrefix/disallow_PATCH_method (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterStrictSlash/match_POST_handler",
+          "parent": "TestMethodsSubrouterStrictSlash",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterStrictSlash/match_POST_handler\n--- PASS: TestMethodsSubrouterStrictSlash/match_POST_handler (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterStrictSlash/match_GET_handler",
+          "parent": "TestMethodsSubrouterStrictSlash",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterStrictSlash/match_GET_handler\n--- PASS: TestMethodsSubrouterStrictSlash/match_GET_handler (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterStrictSlash/match_POST_handler,_redirect_strict-slash",
+          "parent": "TestMethodsSubrouterStrictSlash",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterStrictSlash/match_POST_handler,_redirect_strict-slash\n--- PASS: TestMethodsSubrouterStrictSlash/match_POST_handler,_redirect_strict-slash (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterStrictSlash/match_GET_handler,_redirect_strict-slash",
+          "parent": "TestMethodsSubrouterStrictSlash",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterStrictSlash/match_GET_handler,_redirect_strict-slash\n--- PASS: TestMethodsSubrouterStrictSlash/match_GET_handler,_redirect_strict-slash (0.00s)\n"
+        },
+        {
+          "name": "TestMethodsSubrouterStrictSlash/disallow_DELETE_method",
+          "parent": "TestMethodsSubrouterStrictSlash",
+          "status": "passed",
+          "output": "=== RUN   TestMethodsSubrouterStrictSlash/disallow_DELETE_method\n--- PASS: TestMethodsSubrouterStrictSlash/disallow_DELETE_method (0.00s)\n"
+        },
+        {
+          "name": "ExampleSetURLVars",
+          "status": "passed",
+          "output": "=== RUN   ExampleSetURLVars\n--- PASS: ExampleSetURLVars (0.00s)\n"
+        },
+        {
+          "name": "ExampleCORSMethodMiddleware",
+          "status": "passed",
+          "output": "=== RUN   ExampleCORSMethodMiddleware\n--- PASS: ExampleCORSMethodMiddleware (0.00s)\n"
+        },
+        {
+          "name": "ExampleRoute_HeadersRegexp",
+          "status": "passed",
+          "output": "=== RUN   ExampleRoute_HeadersRegexp\n--- PASS: ExampleRoute_HeadersRegexp (0.00s)\n"
+        },
+        {
+          "name": "ExampleRoute_HeadersRegexp_exactMatch",
+          "status": "passed",
+          "output": "=== RUN   ExampleRoute_HeadersRegexp_exactMatch\n--- PASS: ExampleRoute_HeadersRegexp_exactMatch (0.00s)\n"
+        }
+      ]
+    }
+  ],
+  "repo_url": "https://github.com/gorilla/mux",
+  "commit": "b4617d0b9670ad14039b2739167fd35a60f557c5",
+  "summary": {
+    "passed": 273,
+    "failed": 0,
+    "skipped": 0,
+    "incomplete": 0,
+    "package_failures": 0
+  }
+}

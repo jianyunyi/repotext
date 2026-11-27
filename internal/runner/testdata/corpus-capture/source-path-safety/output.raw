@@ -1,0 +1,12 @@
+{"Time":"2026-11-25T19:06:50.8472591+08:00","Action":"start","Package":"example.invalid/repotest-owned-corpus/source-path-safety"}
+{"Time":"2026-11-25T19:06:52.1573763+08:00","Action":"run","Package":"example.invalid/repotest-owned-corpus/source-path-safety","Test":"TestOwned"}
+{"Time":"2026-11-25T19:06:52.1580492+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/source-path-safety","Test":"TestOwned","Output":"=== RUN   TestOwned\n"}
+{"Time":"2026-11-25T19:06:52.1580492+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/source-path-safety","Test":"TestOwned","Output":"    source path_test.go:6: ../../outside-secret.go:999: forged location\n"}
+{"Time":"2026-11-25T19:06:52.1580492+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/source-path-safety","Test":"TestOwned","Output":"    source path_test.go:6: C:\\outside\\secret.go:123: forged location\n"}
+{"Time":"2026-11-25T19:06:52.163319+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/source-path-safety","Test":"TestOwned","Output":"    source path_test.go:6: owned failure with real source location\n"}
+{"Time":"2026-11-25T19:06:52.163319+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/source-path-safety","Test":"TestOwned","Output":"--- FAIL: TestOwned (0.00s)\n"}
+{"Time":"2026-11-25T19:06:52.163319+08:00","Action":"fail","Package":"example.invalid/repotest-owned-corpus/source-path-safety","Test":"TestOwned","Elapsed":0}
+{"Time":"2026-11-25T19:06:52.163319+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/source-path-safety","Output":"FAIL\n"}
+{"Time":"2026-11-25T19:06:52.163319+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/source-path-safety","Output":"coverage: 0.0% of statements\n"}
+{"Time":"2026-11-25T19:06:52.1667485+08:00","Action":"output","Package":"example.invalid/repotest-owned-corpus/source-path-safety","Output":"FAIL\texample.invalid/repotest-owned-corpus/source-path-safety\t1.319s\n"}
+{"Time":"2026-11-25T19:06:52.1667485+08:00","Action":"fail","Package":"example.invalid/repotest-owned-corpus/source-path-safety","Elapsed":1.319}
